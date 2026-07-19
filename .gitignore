@@ -1,0 +1,36 @@
+# 第二大脑知识库 — Git 忽略规则
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# 配置文件（个人环境相关）
+.obsidian/
+.claude/
+
+# 数据库（二进制，不适合版本控制）
+07_数据库/
+*.db
+*.db-journal
+
+# 大文件区（不纳入版本控制）
+08_杂项/
+
+# 附件（图片、PDF、Excel 等二进制文件）
+附件/
+笔记同步助手/attachments/
+笔记同步助手/images/
+
+# 临时文件和回收站
+99_收件箱/*.ps1
+99_收件箱/Vault体检报告-*.md
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# Excalidraw 自动备份
+Excalidraw/*.excalidraw.md.bak
