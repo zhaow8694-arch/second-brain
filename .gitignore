@@ -34,3 +34,17 @@ __pycache__/
 
 # Excalidraw 自动备份
 Excalidraw/*.excalidraw.md.bak
+
+# 回测归档（大量小文件，不适合版本控制）
+02_市场分析/CODEXMACD/HCSJ/backtest_archive/
+02_市场分析/CODEXMACD/HCSJ/*.txt
+02_市场分析/CODEXMACD/HCSJ/*.set
+02_市场分析/CODEXMACD/HCSJ/*.ini
+02_市场分析/CODEXMACD/HCSJ/*.ps1
+
+# 笔记同步助手存档
+笔记同步助手/
+
+# 零散缓存
+.tmp/
+*.log
