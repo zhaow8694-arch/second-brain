@@ -1,0 +1,197 @@
+# -*- coding: utf-8 -*-
+"""
+👑 V20.7.1 守护地球 [适配币安新规·最终版]
+部署：新加坡 (SG) | 演习：Binance Demo Trading
+修正：废除旧 Sandbox，对接新 Demo 接口。
+"""
+import os, time, json, traceback, requests, threading, logging
+import numpy as np
+import pandas as pd
+import ccxt
+from dotenv import load_dotenv
+from datetime import timedelta, datetime
+
+# ==================== 📝 军工级日志系统 ====================
+logger = logging.getLogger("Guardian")
+logger.setLevel(logging.INFO)
+fh = logging.FileHandler('guardian_earth.log', encoding='utf-8')
+fh.setFormatter(logging.Formatter('%(asctime)s | %(levelname)s | %(message)s'))
+logger.addHandler(fh)
+
+try:
+    from rich.console import Console
+    from rich.table import Table
+    from rich.panel import Panel
+    from rich import box
+    console = Console() 
+    RICH_AVAILABLE = True
+except:
+    RICH_AVAILABLE = False
+
+load_dotenv()
+
+# ==================== 1. 核心风控参数 (1:1 还原) ====================
+RISK_PCT = 0.008
+DAILY_MAX_LOSS = 0.10
+MAX_POSITIONS = 6  
+MAX_REGULAR_POSITIONS = 4  
+VIP_COINS = {'BTC', 'ETH', 'SOL', 'DOGE'} # 👑 统帅钦定四核
+
+MAX_MARGIN_PER_TRADE = 0.10
+COOLDOWN_TIME = 3600
+STATE_FILE = 'guardian_earth_state_core.json'
+DING_WEBHOOK = os.getenv('DING_WEBHOOK')
+
+SYMBOL_LIST = [
+    'BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'DOGE/USDT', 'BNB/USDT', 
+    'XRP/USDT', 'ADA/USDT', 'AVAX/USDT', 'SHIB/USDT', 'DOT/USDT'
+]
+
+HIGH_LEV_COINS = set([s.split('/')[0] for s in SYMBOL_LIST])
+VALID_SYMBOLS = [] 
+
+# ==================== 🛡️ 状态机系统 ====================
+LEVEL_LOG = {}; BASE_SIZE_LOG = {}; HIGH_WATER_MARK = {}; POSITION_TIMERS = {}
+ENTRY_PRICE_LOG = {}; TARGET_PRICE_LOG = {}; ACTUAL_LEVERAGE = {}; DYNAMIC_SL_LOG = {}
+SYNCED_POSITIONS = set(); COOLDOWN_LOG = {}; PARTIAL_CLOSED = {}; ENTRY_ATR_LOG = {}
+DATA_CACHE = {}; GLOBAL_FUNDING_RATES = {}
+LAST_FUNDING_FETCH = LAST_REPORT_TIME = LAST_DISPLAY = SCAN_INDEX = 0
+INITIAL_WALLET = DAILY_START_WALLET = DAILY_DATE = None
+CAN_TRADE_TODAY = True
+
+# ==================== 🛠️ 核心引擎通讯 ====================
+def send_alert(msg):
+    if not DING_WEBHOOK: return
+    full_msg = f"🧪 [新版演习]\n{msg}"
+    threading.Thread(target=lambda: requests.post(DING_WEBHOOK, json={"msgtype": "text", "text": {"content": full_msg}}, timeout=5), daemon=True).start()
+
+# 🛡️ 修正：适配币安 2026 最新 Demo Trading 接口
+exchange = ccxt.binance({
+    'apiKey': os.getenv('BINANCE_API_KEY'),
+    'secret': os.getenv('BINANCE_SECRET'),
+    'timeout': 15000,
+    'options': {
+        'defaultType': 'future',
+        'adjustForTimeDifference': True,
+        'recvWindow': 10000 
+    },
+    'enableRateLimit': True
+})
+# exchange.set_sandbox_mode(True) # ❌ 修正：旧沙盒已废弃
+exchange.enable_demo_trading(True) # ✅ 修正：对接新版实战模拟
+
+# ==================== 💾 记忆管理函数 ====================
+def load_all():
+    global INITIAL_WALLET, DAILY_START_WALLET, DAILY_DATE
+    if os.path.exists(STATE_FILE):
+        try:
+            with open(STATE_FILE, 'r') as f:
+                s = json.load(f)
+                for d, name in [(LEVEL_LOG, 'LEVEL_LOG'), (BASE_SIZE_LOG, 'BASE_SIZE_LOG'), (HIGH_WATER_MARK, 'HIGH_WATER_MARK'), (POSITION_TIMERS, 'POSITION_TIMERS'), (ENTRY_PRICE_LOG, 'ENTRY_PRICE_LOG'), (TARGET_PRICE_LOG, 'TARGET_PRICE_LOG'), (ACTUAL_LEVERAGE, 'ACTUAL_LEVERAGE'), (COOLDOWN_LOG, 'COOLDOWN_LOG'), (PARTIAL_CLOSED, 'PARTIAL_CLOSED'), (ENTRY_ATR_LOG, 'ENTRY_ATR_LOG'), (DYNAMIC_SL_LOG, 'DYNAMIC_SL_LOG')]: d.update(s.get(name, {}))
+                SYNCED_POSITIONS.update(s.get('SYNCED_POSITIONS', []))
+                INITIAL_WALLET, DAILY_START_WALLET, DAILY_DATE = s.get('INITIAL_WALLET'), s.get('DAILY_START_WALLET'), s.get('DAILY_DATE')
+        except: pass
+
+def save_state():
+    try:
+        with open(STATE_FILE, 'w') as f:
+            json.dump({'LEVEL_LOG': LEVEL_LOG, 'BASE_SIZE_LOG': BASE_SIZE_LOG, 'HIGH_WATER_MARK': HIGH_WATER_MARK, 'POSITION_TIMERS': POSITION_TIMERS, 'ENTRY_PRICE_LOG': ENTRY_PRICE_LOG, 'TARGET_PRICE_LOG': TARGET_PRICE_LOG, 'ACTUAL_LEVERAGE': ACTUAL_LEVERAGE, 'SYNCED_POSITIONS': list(SYNCED_POSITIONS), 'COOLDOWN_LOG': COOLDOWN_LOG, 'PARTIAL_CLOSED': PARTIAL_CLOSED, 'ENTRY_ATR_LOG': ENTRY_ATR_LOG, 'DYNAMIC_SL_LOG': DYNAMIC_SL_LOG, 'INITIAL_WALLET': INITIAL_WALLET, 'DAILY_START_WALLET': DAILY_START_WALLET, 'DAILY_DATE': DAILY_DATE}, f)
+    except: pass
+
+def clear_state(n, is_cooldown=True):
+    for d in [LEVEL_LOG, BASE_SIZE_LOG, HIGH_WATER_MARK, POSITION_TIMERS, ENTRY_PRICE_LOG, TARGET_PRICE_LOG, ACTUAL_LEVERAGE, DYNAMIC_SL_LOG, PARTIAL_CLOSED, ENTRY_ATR_LOG]: d.pop(n, None)
+    SYNCED_POSITIONS.discard(n)
+    if is_cooldown: COOLDOWN_LOG[n] = time.time() + COOLDOWN_TIME
+
+# ==================== ⚔️ 核心巡航函数 ====================
+def init_symbols():
+    global VALID_SYMBOLS
+    if not VALID_SYMBOLS:
+        try:
+            exchange.load_markets(True)
+            for s in SYMBOL_LIST:
+                if s in exchange.markets: VALID_SYMBOLS.append(s)
+            logger.info(f"✅ 雷达载入战区: {len(VALID_SYMBOLS)} 个")
+        except Exception as e: logger.error(f"🚨 加载失败: {e}")
+
+def get_data_cached(sym, tf):
+    now = time.time(); cache_key = f"{sym}_{tf}"
+    cache_time = 120 if tf == '15m' else (300 if tf == '1h' else 600)
+    if cache_key in DATA_CACHE and (now - DATA_CACHE[cache_key]['time']) < cache_time: return DATA_CACHE[cache_key]['data']
+    try:
+        ohlcv = exchange.fetch_ohlcv(sym, tf, limit=500)
+        df = pd.DataFrame(ohlcv, columns=['t','o','h','l','c','v'])
+        if tf == '4h': df['ema576'] = df['c'].ewm(span=576).mean()
+        elif tf == '1h':
+            df['ema12'], df['ema26'] = df['c'].ewm(span=12, adjust=False).mean(), df['c'].ewm(span=26, adjust=False).mean()
+            df['macd_hist'] = (df['ema12'] - df['ema26']) - (df['ema12'] - df['ema26']).ewm(span=9, adjust=False).mean()
+        elif tf == '15m':
+            df['ema14'], df['ema21'], df['ema60'] = df['c'].ewm(span=14).mean(), df['c'].ewm(span=21).mean(), df['c'].ewm(span=60).mean()
+            df['vol_sma20'] = df['v'].rolling(20).mean(); df['prev_c'] = df['c'].shift(1)
+            df['tr'] = df[['h','l','prev_c']].apply(lambda x: max(x['h']-x['l'], abs(x['h']-x['prev_c']), abs(x['l']-x['prev_c'])) if not pd.isna(x['prev_c']) else x['h']-x['l'], axis=1)
+            df['atr'] = df['tr'].ewm(alpha=1/14).mean()
+        DATA_CACHE[cache_key] = {'time': now, 'data': df}; return df
+    except: return None
+
+def assassin_fire(sym, side, nom_u, lev):
+    try:
+        exchange.set_leverage(lev, sym)
+        p = exchange.fetch_ticker(sym).get('last')
+        amt = float(exchange.amount_to_precision(sym, nom_u / p))
+        exchange.create_market_order(sym, 'buy' if side=='buy' else 'sell', amt)
+        return True
+    except Exception as e: logger.error(f"❌ 进攻受阻: {e}"); return False
+
+def armor_close(sym, side, amt):
+    try:
+        exchange.create_market_order(sym, 'sell' if side == 'long' else 'buy', amt, params={'reduceOnly': True})
+        return True
+    except: return False
+
+def run_assassin_room():
+    global INITIAL_WALLET, DAILY_START_WALLET, DAILY_DATE, LAST_DISPLAY, SCAN_INDEX, CAN_TRADE_TODAY, VALID_SYMBOLS
+    try:
+        print(f"📡 {datetime.now().strftime('%H:%M:%S')} | 母舰正在进行 2026 版新规演习...")
+        init_symbols()
+        if not VALID_SYMBOLS: return
+        cur_t, cur_d = time.time(), datetime.now().strftime('%Y-%m-%d')
+        bal = exchange.fetch_balance(params={'type':'future'})
+        raw_pos = exchange.fetch_positions()
+        wallet = float(bal.get('total',{}).get('USDT') or 0)
+        cur_pos = {p['symbol'].split('/')[0].replace(':', ''): p for p in raw_pos if abs(float(p.get('contracts') or 0)) > 0}
+        equity = wallet + sum([float(p.get('unrealizedPnl', 0)) for p in cur_pos.values()])
+
+        if INITIAL_WALLET is None: INITIAL_WALLET = equity
+        if DAILY_START_WALLET is None or DAILY_DATE != cur_d: DAILY_DATE, DAILY_START_WALLET, CAN_TRADE_TODAY = cur_d, equity, True
+        
+        if cur_t - LAST_DISPLAY >= 10 and RICH_AVAILABLE:
+            console.clear()
+            grid = Table.grid(expand=True)
+            grid.add_column(justify="center", ratio=1)
+            grid.add_row(f"[bold yellow]🌍 V20.7.1 守护地球·新加坡演习[最终版][/bold yellow]")
+            grid.add_row(f"💰 资产: {equity:.2f} U | 🔥 火力: {len(cur_pos)}/{MAX_POSITIONS}")
+            console.print(Panel(grid, border_style="cyan"))
+            LAST_DISPLAY = cur_t
+
+        if CAN_TRADE_TODAY and len(cur_pos) < MAX_POSITIONS:
+            sym = SYMBOL_LIST[SCAN_INDEX]; SCAN_INDEX = (SCAN_INDEX + 1) % len(SYMBOL_LIST)
+            n = sym.split('/')[0]
+            if n in cur_pos: return
+            df4, df1h, df15 = get_data_cached(sym, '4h'), get_data_cached(sym, '1h'), get_data_cached(sym, '15m')
+            if df4 is None or df1h is None or df15 is None: return
+            c15, ema14, ema21, ema60, ema576 = df15['c'].iloc[-1], df15['ema14'].iloc[-1], df15['ema21'].iloc[-1], df15['ema60'].iloc[-1], df4['ema576'].iloc[-1]
+            prev_v, prev_v_sma, macd_h = df15['v'].iloc[-2], df15['vol_sma20'].iloc[-3], df1h['macd_hist'].iloc[-1]
+            
+            side = 'buy' if (ema14>ema21>ema60 and c15>ema576 and c15>ema14 and prev_v>prev_v_sma*1.2 and macd_h > 0) else None
+            if not side: side = 'sell' if (ema14<ema21<ema60 and c15<ema576 and c15<ema14 and prev_v>prev_v_sma*1.2 and macd_h < 0) else None
+            
+            if side:
+                lev = 20 if n in VIP_COINS else 5
+                sz = min((wallet*RISK_PCT)/(df15['atr'].iloc[-1]/c15), (wallet*MAX_MARGIN_PER_TRADE)*lev)
+                if assassin_fire(sym, side, sz, lev): send_alert(f"🔫 破甲进攻: {n} ({side.upper()})"); save_state()
+    except Exception as e: logger.error(f"🚨 循环异常: {traceback.format_exc()}")
+
+if __name__ == "__main__":
+    load_all(); init_symbols()
+    send_alert("🚀 守护地球·新加坡旗舰正式起飞 (2026 版)！")
+    while True: run_assassin_room(); time.sleep(5)  看下

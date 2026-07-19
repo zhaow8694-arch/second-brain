@@ -1,0 +1,384 @@
+# -*- coding: utf-8 -*-
+import os
+import time
+import numpy as np
+import pandas as pd
+import ccxt
+from dotenv import load_dotenv
+from datetime import timedelta
+
+# ==================== 1. 战备配置 [V10 帝王武装版] ====================
+load_dotenv()
+
+MAJORS_BASE = ['BTC', 'ETH', 'SOL', 'BNB', 'NEAR', 'AVAX']
+ALTS_BASE = ['DOGE', 'WLD', 'HYPE', 'LTC', 'BCH', 'ARB']
+SYMBOL_LIST = [f"{s}/USDT" for s in (MAJORS_BASE + ALTS_BASE)]
+
+INITIAL_HARD_SL = 0.030    
+SOFT_STOP_OFFSET = 0.002   
+EQUITY_PROTECT_LINE = 0.10 
+EQUITY_PROTECT_ADD = 0.002 
+MARGIN_SAFE_RATIO = 0.30   
+MAX_TOTAL_MARGIN = 0.35    
+MAX_POSITIONS = 7          
+
+LEVEL_LOG = {}             
+HIGH_WATER_MARK = {}       
+POSITION_TIMERS = {}      
+ACTUAL_LEVERAGE = {}       
+SYNCED_POSITIONS = set()
+
+# 👑 帝王级缓存库
+CURRENT_ATR_PCT = {}       # 动态呼吸网缓存
+CURRENT_FUNDING = {}       # 资金费率吸血鬼缓存
+
+INITIAL_WALLET = None      
+PEAK_WALLET = 0            
+SYSTEM_START_TIME = time.time()  
+LAST_DISPLAY_TIME = 0     
+LAST_SCAN_TIME = 0         
+
+# ==================== 2. 交易所初始化 ====================
+exchange = ccxt.binance({
+    'apiKey': os.getenv('BINANCE_API_KEY'),
+    'secret': os.getenv('BINANCE_SECRET'),
+    'options': {'defaultType': 'future'},
+    'enableRateLimit': True,
+    'adjustForTimeDifference': True,
+    'proxies': {
+        'http': 'http://127.0.0.1:7897', 
+        'https': 'http://127.0.0.1:7897'
+    }
+})
+
+exchange.enable_demo_trading(True) 
+
+print(f"👑 [SYSTEM] V10 帝王武装 降临！万军列阵，网络信道[7897]接驳中...")
+
+try:
+    exchange.set_position_mode(hedged=False)
+except Exception:
+    pass
+
+# ==================== 3. 帝王全息探针与指标计算 ====================
+def check_is_major(symbol):
+    base = symbol.split('/')[0].split(':')[0].upper()
+    return base in MAJORS_BASE
+
+def normalize_symbol(s):
+    return s.replace('/', '').split(':')[0].replace('USDT', '')
+
+def get_real_leverage(pos):
+    lev = pos.get('leverage')
+    if lev is not None: return int(lev)
+    info_lev = pos.get('info', {}).get('leverage')
+    if info_lev is not None: return int(info_lev)
+    return 1
+
+def get_real_pnl(pos):
+    pnl = pos.get('unrealizedPnl')
+    if pnl is not None: return float(pnl)
+    info_pnl = pos.get('info', {}).get('unRealizedProfit')
+    if info_pnl is not None: return float(info_pnl)
+    return 0.0
+
+def get_processed_data(symbol, timeframe):
+    try:
+        ohlcv = exchange.fetch_ohlcv(symbol, timeframe=timeframe, limit=150)
+        df = pd.DataFrame(ohlcv, columns=['t', 'o', 'h', 'l', 'c', 'v'])
+        
+        df['ema9'] = df['c'].ewm(span=9, adjust=False).mean()
+        df['ema21'] = df['c'].ewm(span=21, adjust=False).mean()
+        
+        if timeframe == '4h':
+            df['ema144'] = df['c'].ewm(span=144, adjust=False).mean()
+            df['ema169'] = df['c'].ewm(span=169, adjust=False).mean()
+            
+        if timeframe == '15m':
+            df['vol_sma'] = df['v'].rolling(window=20).mean()
+            
+            df['tr0'] = abs(df['h'] - df['l'])
+            df['tr1'] = abs(df['h'] - df['c'].shift(1))
+            df['tr2'] = abs(df['l'] - df['c'].shift(1))
+            df['tr'] = df[['tr0', 'tr1', 'tr2']].max(axis=1)
+            df['atr'] = df['tr'].ewm(alpha=1/14, adjust=False).mean()
+            
+            df['up'] = df['h'] - df['h'].shift(1)
+            df['down'] = df['l'].shift(1) - df['l']
+            df['+dm'] = np.where((df['up'] > df['down']) & (df['up'] > 0), df['up'], 0.0)
+            df['-dm'] = np.where((df['down'] > df['up']) & (df['down'] > 0), df['down'], 0.0)
+            df['+di'] = 100 * (pd.Series(df['+dm']).ewm(alpha=1/14, adjust=False).mean() / df['atr'])
+            df['-di'] = 100 * (pd.Series(df['-dm']).ewm(alpha=1/14, adjust=False).mean() / df['atr'])
+            di_sum = df['+di'] + df['-di']
+            di_sum = di_sum.replace(0, 1)
+            df['dx'] = 100 * abs(df['+di'] - df['-di']) / di_sum
+            df['adx'] = df['dx'].ewm(alpha=1/14, adjust=False).mean()
+
+        return df
+    except Exception as e:
+        return None
+
+# 👑 帝王级：防滑点 IOC 开火引擎
+def emperor_fire(symbol, side, amount_u, leverage, current_lvl, ticker_price):
+    try:
+        if current_lvl == 0:
+            try: 
+                exchange.set_leverage(leverage, symbol)
+                ACTUAL_LEVERAGE[normalize_symbol(symbol)] = leverage
+                time.sleep(0.2)
+            except Exception:
+                pass
+            
+        amount = float(exchange.amount_to_precision(symbol, (amount_u * leverage) / ticker_price))
+        
+        exchange.create_market_order(symbol, side, amount)
+        print(f"🚀 [EMPEROR FIRE] L{current_lvl}->L{current_lvl+1} | {symbol} | {leverage}x | {amount_u:.1f}U")
+        return True
+    except Exception as e:
+        print(f"❌ [FAILED] 帝王火力受阻 {symbol}: {e}")
+        return False
+
+# ==================== 4. 战术主循环 ====================
+def run_emperor_room():
+    global INITIAL_WALLET, PEAK_WALLET, LAST_DISPLAY_TIME, LAST_SCAN_TIME
+    
+    try:
+        current_time = time.time()
+        bal = exchange.fetch_balance(params={'type': 'future'})
+        wallet = float(bal['total'].get('USDT', 0))
+        available = float(bal['free'].get('USDT', 0))
+        pnl = float(bal['info'].get('totalUnrealizedProfit', 0))
+
+        if INITIAL_WALLET is None: INITIAL_WALLET = wallet
+        if wallet > PEAK_WALLET: PEAK_WALLET = wallet
+
+        available_ratio = available / wallet if wallet > 0 else 0
+        margin_used_ratio = (wallet - available) / wallet if wallet > 0 else 0
+        CAN_ADD = True if (available_ratio > MARGIN_SAFE_RATIO and margin_used_ratio < MAX_TOTAL_MARGIN) else False
+
+        profit_ratio = (wallet - INITIAL_WALLET) / INITIAL_WALLET if INITIAL_WALLET > 0 else 0
+        protect_shift = EQUITY_PROTECT_ADD if profit_ratio >= EQUITY_PROTECT_LINE else 0
+
+        all_pos = exchange.fetch_positions()
+        current_positions = {normalize_symbol(p['symbol']): p for p in all_pos if abs(float(p.get('contracts', 0))) > 0}
+
+        # --- 1. 存量头寸同步与级别识别 ---
+        for norm, pos in current_positions.items():
+            full_sym = pos['symbol']
+            is_major = check_is_major(full_sym)
+            target_lev = 20 if is_major else 5
+
+            if norm not in SYNCED_POSITIONS:
+                try: 
+                    exchange.set_leverage(target_lev, full_sym)
+                    ACTUAL_LEVERAGE[norm] = target_lev
+                    SYNCED_POSITIONS.add(norm)
+                except Exception:
+                    pass
+
+            if norm not in LEVEL_LOG:
+                lev = ACTUAL_LEVERAGE.get(norm, get_real_leverage(pos))
+                amt = abs(float(pos.get('contracts', 0)))
+                entry = float(pos.get('entryPrice', 0))
+                notional = entry * amt
+                margin = notional / lev if lev > 0 else notional
+                
+                base_ratio = 0.015 if is_major else 0.010
+                base_u = INITIAL_WALLET * base_ratio if INITIAL_WALLET else (75 if is_major else 50)
+                
+                if margin > (base_u * 3): LEVEL_LOG[norm] = 3
+                elif margin > (base_u * 1.5): LEVEL_LOG[norm] = 2
+                else: LEVEL_LOG[norm] = 1
+                    
+                POSITION_TIMERS[norm] = current_time
+
+        # --- 2. 战术大屏 ---
+        if current_time - LAST_DISPLAY_TIME >= 45:
+            print("\n" + "="*125)
+            run_dur = str(timedelta(seconds=int(current_time-SYSTEM_START_TIME)))[:5]
+            print(f" 👑 [V10 帝王武装] | 阵地:{len(current_positions)}/{MAX_POSITIONS} | 帝国金库:{available_ratio:.1%} | 远征: {run_dur}")
+            print(f" [版图] 初始:{INITIAL_WALLET:.2f}U | 当前:{wallet:.2f}U | 浮盈:{pnl:+.2f}U | 净利比:{profit_ratio:.2%}")
+            print("="*125)
+            print(" 战区(币种)   | 方向 | 级别 | 杠杆 | 占用本金(U)  | 仓位价值(U)  | 收益率     | 潜伏时长   | 状态/军饷费率")
+            print("-" * 125)
+            for norm, pos in current_positions.items():
+                side_str = "多" if pos.get('side') == 'long' else "空"
+                lev = ACTUAL_LEVERAGE.get(norm, get_real_leverage(pos))
+                
+                amt = abs(float(pos.get('contracts', 0)))
+                entry = float(pos.get('entryPrice', 0))
+                notional = entry * amt
+                margin = notional / lev if lev > 0 else notional
+                pnl_u = get_real_pnl(pos)
+                roi = (pnl_u / margin * 100) if margin > 0 else 0
+                dur = str(timedelta(seconds=int(current_time - POSITION_TIMERS.get(norm, current_time))))[0:5]
+                lvl = LEVEL_LOG.get(norm, 1)
+                
+                base_limit = 0.004 if check_is_major(pos['symbol']) else 0.008
+                atr_limit = CURRENT_ATR_PCT.get(norm, base_limit) * (1.5 if check_is_major(pos['symbol']) else 2.0)
+                net_width = max(base_limit, atr_limit) * 100
+                
+                # 🛠️ 终极修复：强制声明为浮点数，彻底根除精度报错
+                funding = float(CURRENT_FUNDING.get(norm, 0.0)) * 100.0
+                fund_str = f"费率:{funding:+.4f}%"
+                
+                state_str = f"L{lvl}镇守 ({fund_str})" if lvl < 3 else f"L3天网 {net_width:.2f}% ({fund_str})"
+                print(f" {norm:<12} | {side_str:<2}   | {lvl:<2}   | {lev:<3}x | {margin:<12.2f} | {notional:<12.2f} | {roi:>+8.2f}%   | {dur:<10} | {state_str}")
+            LAST_DISPLAY_TIME = current_time
+
+        # --- 3. 帝王风控与加仓引擎 ---
+        for norm, pos in list(current_positions.items()):
+            full_sym = pos['symbol']
+            side = pos.get('side', 'long').lower()
+            amt = abs(float(pos.get('contracts', 0)))
+            entry = float(pos.get('entryPrice', 0))
+            mark = float(pos.get('markPrice', 0))
+            
+            is_major = check_is_major(full_sym)
+            p_move = (mark - entry) / entry if side == 'long' else (entry - mark) / entry
+            lvl = LEVEL_LOG.get(norm, 1)
+            lev = ACTUAL_LEVERAGE.get(norm, get_real_leverage(pos))
+
+            order_side = 'buy' if side == 'long' else 'sell'
+            close_side = 'sell' if side == 'long' else 'buy'
+            
+            time_elapsed = current_time - POSITION_TIMERS.get(norm, current_time)
+
+            # 👑 权杖 3：时间死神
+            if lvl == 1 and time_elapsed > 5400 and p_move < 0.01:
+                try:
+                    exchange.create_market_order(full_sym, close_side, amt, params={'reduceOnly': True})
+                    print(f"⏳ [TIME-KILL] {norm} 僵尸阵地逾期 90 分钟未突围，时间死神执行处决！资金回笼。")
+                    LEVEL_LOG.pop(norm, None)
+                    POSITION_TIMERS.pop(norm, None)
+                    if norm in SYNCED_POSITIONS: SYNCED_POSITIONS.remove(norm)
+                except Exception as e:
+                    print(f"⚠️ [WARNING] 时间死神执行受阻: {e}")
+                continue
+
+            # 加仓模块
+            if CAN_ADD:
+                if is_major:
+                    if lvl == 1 and p_move >= 0.015:
+                        if emperor_fire(full_sym, order_side, wallet * 0.025, lev, 1, mark): LEVEL_LOG[norm] = 2
+                    elif lvl == 2 and p_move >= 0.030:
+                        if emperor_fire(full_sym, order_side, wallet * 0.045, lev, 2, mark): LEVEL_LOG[norm] = 3
+                else: 
+                    if lvl == 1 and p_move >= 0.025:
+                        if emperor_fire(full_sym, order_side, wallet * 0.01, lev, 1, mark): LEVEL_LOG[norm] = 2
+                    elif lvl == 2 and p_move >= 0.050:
+                        if emperor_fire(full_sym, order_side, wallet * 0.015, lev, 2, mark): LEVEL_LOG[norm] = 3
+
+            # 止损/硬防御模块
+            current_sl = -INITIAL_HARD_SL if lvl == 1 else SOFT_STOP_OFFSET
+            final_sl = current_sl + protect_shift
+            
+            # 👑 权杖 2：资金费率吸星大法
+            funding_rate = CURRENT_FUNDING.get(norm, 0.0)
+            is_bleeding = (side == 'long' and funding_rate > 0.0005) or (side == 'short' and funding_rate < -0.0005)
+            if is_bleeding and lvl == 1:
+                final_sl = final_sl + 0.005
+            
+            if p_move < final_sl:
+                try:
+                    exchange.create_market_order(full_sym, close_side, amt, params={'reduceOnly': True})
+                    print(f"🗡️ [KILL] {norm} 触及底线/费率警戒，帝王强行剥离。SL: {final_sl:.2%}")
+                    LEVEL_LOG.pop(norm, None)
+                    HIGH_WATER_MARK.pop(norm, None)
+                    POSITION_TIMERS.pop(norm, None)
+                    if norm in SYNCED_POSITIONS: SYNCED_POSITIONS.remove(norm)
+                except Exception as e:
+                    pass
+                continue
+
+            # L3 动态量子呼吸网收网模块
+            if lvl == 3:
+                if norm not in HIGH_WATER_MARK: HIGH_WATER_MARK[norm] = mark
+                if side == 'long': HIGH_WATER_MARK[norm] = max(HIGH_WATER_MARK[norm], mark)
+                else: HIGH_WATER_MARK[norm] = min(HIGH_WATER_MARK[norm], mark)
+                
+                base_limit = 0.004 if is_major else 0.008
+                atr_limit = CURRENT_ATR_PCT.get(norm, base_limit) * (1.5 if is_major else 2.0)
+                
+                is_farming = (side == 'long' and funding_rate < -0.0003) or (side == 'short' and funding_rate > 0.0003)
+                if is_farming: atr_limit *= 1.5 
+                
+                limit = max(base_limit, atr_limit)
+                drawdown = (HIGH_WATER_MARK[norm] - mark)/HIGH_WATER_MARK[norm] if side == 'long' else (mark - HIGH_WATER_MARK[norm])/HIGH_WATER_MARK[norm]
+                
+                if drawdown >= limit:
+                    try:
+                        exchange.create_market_order(full_sym, close_side, amt, params={'reduceOnly': True})
+                        print(f"💰 [EMPEROR PROFIT] {norm} 触发天网 ({limit:.2%})！帝王收割利润落袋。")
+                        LEVEL_LOG.pop(norm, None)
+                        HIGH_WATER_MARK.pop(norm, None)
+                        POSITION_TIMERS.pop(norm, None)
+                        if norm in SYNCED_POSITIONS: SYNCED_POSITIONS.remove(norm)
+                    except Exception as e:
+                        pass
+
+        # --- 4. 帝王雷达扫描 ---
+        if current_time - LAST_SCAN_TIME >= 60 and len(current_positions) < MAX_POSITIONS and CAN_ADD:
+            LAST_SCAN_TIME = current_time
+            active_count = len(current_positions)
+            
+            for sym in SYMBOL_LIST:
+                norm = normalize_symbol(sym)
+                if norm in current_positions: continue
+                if active_count >= MAX_POSITIONS: break
+                
+                df4h = get_processed_data(sym, '4h')
+                df15 = get_processed_data(sym, '15m')
+                if df4h is None or df15 is None: continue
+                
+                vh = max(df4h['ema144'].iloc[-1], df4h['ema169'].iloc[-1])
+                vl = min(df4h['ema144'].iloc[-1], df4h['ema169'].iloc[-1])
+                cp = df15['c'].iloc[-1]
+                e9 = df15['ema9'].iloc[-1]
+                e21 = df15['ema21'].iloc[-1]
+                rh = df15['h'].iloc[-11:-1].max()
+                rl = df15['l'].iloc[-11:-1].min()
+                
+                adx = df15['adx'].iloc[-1]
+                prev_vol = df15['v'].iloc[-2]
+                prev_vol_sma = df15['vol_sma'].iloc[-2]
+                
+                CURRENT_ATR_PCT[norm] = df15['atr'].iloc[-1] / cp
+                
+                try:
+                    funding_info = exchange.fetch_funding_rate(sym)
+                    CURRENT_FUNDING[norm] = float(funding_info['fundingRate'])
+                except Exception:
+                    CURRENT_FUNDING[norm] = 0.0
+                
+                is_major = check_is_major(sym)
+                ratio, lev = (0.015, 20) if is_major else (0.01, 5)
+                
+                if adx > 25 and prev_vol > prev_vol_sma:
+                    if cp > vh and cp > rh and e9 > e21:
+                        if emperor_fire(sym, 'buy', wallet * ratio, lev, 0, cp):
+                            LEVEL_LOG[norm] = 1
+                            POSITION_TIMERS[norm] = current_time
+                            ACTUAL_LEVERAGE[norm] = lev
+                            SYNCED_POSITIONS.add(norm)
+                            active_count += 1
+                    elif cp < vl and cp < rl and e9 < e21:
+                        if emperor_fire(sym, 'sell', wallet * ratio, lev, 0, cp):
+                            LEVEL_LOG[norm] = 1
+                            POSITION_TIMERS[norm] = current_time
+                            ACTUAL_LEVERAGE[norm] = lev
+                            SYNCED_POSITIONS.add(norm)
+                            active_count += 1
+                time.sleep(0.3)
+                
+    except Exception as e:
+        print(f"🚨 [CRITICAL] 帝国主脑受干扰，防波堤重启: {e}")
+
+# ==================== 5. 引擎点火 ====================
+if __name__ == "__main__":
+    try:
+        while True:
+            run_emperor_room()
+            time.sleep(10)
+    except KeyboardInterrupt:
+        print("\n🛑 [SYSTEM] 接收到统帅撤退神谕，V10 帝王武装已安全断电封存！")

@@ -1,0 +1,270 @@
+# -*- coding: utf-8 -*-
+import os
+import time
+import pandas as pd
+import ccxt
+from dotenv import load_dotenv
+from datetime import timedelta
+
+# ==================== 1. 战备配置 [V8.15.4 屠夫·铁壁·抗超时版] ====================
+load_dotenv()
+
+MAJORS = ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'BNB/USDT', 'NEAR/USDT', 'AVAX/USDT']
+ALTS = ['DOGE/USDT', 'WLD/USDT', 'HYPE/USDT', 'LTC/USDT', 'BCH/USDT', 'ARB/USDT']
+SYMBOL_LIST = MAJORS + ALTS
+
+INITIAL_HARD_SL = 0.030
+SOFT_STOP_OFFSET = 0.002
+EQUITY_PROTECT_LINE = 0.10
+EQUITY_PROTECT_ADD = 0.002
+MARGIN_SAFE_RATIO = 0.30
+MAX_TOTAL_MARGIN = 0.35
+MAX_POSITIONS = 7
+
+LEVEL_LOG = {}
+HIGH_WATER_MARK = {}
+POSITION_TIMERS = {}
+ACTUAL_LEVERAGE = {}
+SYNCED_POSITIONS = set()
+INITIAL_WALLET = None
+PEAK_WALLET = 0
+SYSTEM_START_TIME = time.time()
+LAST_DISPLAY_TIME = 0
+LAST_SCAN_TIME = 0
+
+# ==================== 2. 交易所初始化（抗超时强化） ====================
+exchange = ccxt.binance({
+    'apiKey': os.getenv('BINANCE_API_KEY'),
+    'secret': os.getenv('BINANCE_SECRET'),
+    'options': {'defaultType': 'future'},
+    'enableRateLimit': True,
+    'adjustForTimeDifference': True,
+    'timeout': 30000,          # ← 全局请求超时提高到 30 秒
+    'recvWindow': 20000,       # ← 接收窗口加长
+})
+
+exchange.enable_demo_trading(True)
+print(f"[SYSTEM] V8.15.4 [屠夫·铁壁·抗超时版] 启动！并发数: {MAX_POSITIONS} | 准备接敌...")
+
+print("正在加载市场数据...（网络可能较慢，请耐心等待）")
+for attempt in range(3):
+    try:
+        exchange.load_markets()
+        print("✅ 市场数据加载成功")
+        break
+    except Exception as e:
+        print(f"⚠️ 加载市场失败（尝试 {attempt+1}/3）: {e}")
+        time.sleep(5)
+else:
+    print("❌ 连续 3 次加载失败，请检查网络或 VPN")
+
+print("正在同步持仓模式...")
+try:
+    exchange.set_position_mode(hedged=False)
+    print("✅ 模式确认: One-Way Mode (单向持仓)")
+except Exception as e:
+    if "no need to change" in str(e).lower() or "already" in str(e).lower():
+        print("✅ 持仓模式已是 One-Way Mode")
+    else:
+        print(f"⚠️ 模式提醒: {e}")
+
+# ==================== 3. 核心工具 ====================
+def normalize_symbol(s):
+    return s.replace('/', '').replace(':USDT', '').replace('USDT', '')
+
+def get_processed_data(symbol, timeframe):
+    try:
+        ohlcv = exchange.fetch_ohlcv(symbol, timeframe=timeframe, limit=150)
+        df = pd.DataFrame(ohlcv, columns=['t', 'o', 'h', 'l', 'c', 'v'])
+        df['ema9'] = df['c'].ewm(span=9, adjust=False).mean()
+        df['ema21'] = df['c'].ewm(span=21, adjust=False).mean()
+        if timeframe == '4h':
+            df['ema144'] = df['c'].ewm(span=144, adjust=False).mean()
+            df['ema169'] = df['c'].ewm(span=169, adjust=False).mean()
+        return df
+    except Exception as e:
+        print(f"[DATA] {symbol} {timeframe} 数据获取失败: {e}")
+        return None
+
+def butcher_fire(symbol, side, amount_u, leverage, current_lvl):
+    try:
+        exchange.set_leverage(leverage, symbol)
+        ACTUAL_LEVERAGE[normalize_symbol(symbol)] = leverage
+        print(f"[LEVERAGE SET] {symbol} 已设置 {leverage}x 杠杆")
+
+        price = exchange.fetch_ticker(symbol)['last']
+        raw_amount = (amount_u * leverage) / price
+        amount = float(exchange.amount_to_precision(symbol, raw_amount))
+
+        exchange.create_market_order(symbol, side, amount, params={'reduceOnly': False})
+        print(f"🚀 [FIRE] L{current_lvl}->L{current_lvl+1} | {symbol} | 杠杆:{leverage}x | 投入:{amount_u:.2f}U")
+        return True
+    except Exception as e:
+        print(f"❌ [FAILED] 开火失败 {symbol}: {e}")
+        return False
+
+# ==================== 4. 战术主循环 ====================
+def run_butcher_room():
+    global INITIAL_WALLET, PEAK_WALLET, LAST_DISPLAY_TIME, LAST_SCAN_TIME
+
+    try:
+        current_time = time.time()
+        bal = exchange.fetch_balance(params={'type': 'future'})
+        wallet = float(bal['total']['USDT'])
+        available = float(bal['free']['USDT'])
+        pnl = float(bal['info'].get('totalUnrealizedProfit', 0))
+
+        if INITIAL_WALLET is None: INITIAL_WALLET = wallet
+        if wallet > PEAK_WALLET: PEAK_WALLET = wallet
+
+        margin_used_ratio = (wallet - available) / wallet
+        available_ratio = available / wallet
+        CAN_ADD = (available_ratio > MARGIN_SAFE_RATIO and margin_used_ratio < MAX_TOTAL_MARGIN)
+
+        profit_ratio = (wallet - INITIAL_WALLET) / INITIAL_WALLET
+        protect_shift = EQUITY_PROTECT_ADD if profit_ratio >= EQUITY_PROTECT_LINE else 0
+
+        all_pos = exchange.fetch_positions()
+        current_positions = {normalize_symbol(p['symbol']): p 
+                             for p in all_pos if float(p['contracts']) != 0}
+
+        # === 残留仓位同步 ===
+        for norm, pos in current_positions.items():
+            if norm not in LEVEL_LOG:
+                entry = float(pos['entryPrice'])
+                mark = float(pos['markPrice'])
+                side = pos['side'].lower()
+                p_move = (mark - entry) / entry if side == 'long' else (entry - mark) / entry
+                LEVEL_LOG[norm] = 3 if p_move >= 0.04 else 2 if p_move >= 0.015 else 1
+                POSITION_TIMERS[norm] = current_time
+
+            if norm not in SYNCED_POSITIONS:
+                is_major = pos['symbol'] in MAJORS
+                target_lev = 20 if is_major else 5
+                try:
+                    exchange.set_leverage(target_lev, pos['symbol'])
+                    ACTUAL_LEVERAGE[norm] = target_lev
+                    print(f"[LEVERAGE SYNC] {pos['symbol']} 已同步 {target_lev}x")
+                    SYNCED_POSITIONS.add(norm)
+                except:
+                    pass
+
+        # === 战术大屏（45秒刷新）===
+        if current_time - LAST_DISPLAY_TIME >= 45:
+            print("\n" + "="*125)
+            print(f" [V8.15.4 屠夫·铁壁·抗超时] | 并发:{len(current_positions)}/{MAX_POSITIONS} | 防御金:{available_ratio:.1%} | 运行: {str(timedelta(seconds=int(current_time-SYSTEM_START_TIME)))[:5]}")
+            print(f" [资产] 初始:{INITIAL_WALLET:.2f}U | 当前:{wallet:.2f}U | 浮盈:{pnl:+.2f}U | 净利比:{profit_ratio:.2%}")
+            print("="*125)
+            print(" 战区(币种) | 方向 | 级别 | 杠杆 | 占用本金(U) | 仓位价值(U) | 收益率 | 潜伏时长 | 战术状态")
+            print("-" * 125)
+            for norm, pos in current_positions.items():
+                side_str = "多" if pos['side'] == 'long' else "空"
+                lev = ACTUAL_LEVERAGE.get(norm, 1)
+                amt = abs(float(pos['contracts']))
+                entry = float(pos['entryPrice'])
+                notional = entry * amt
+                margin = notional / (lev if lev > 0 else 1)
+                pnl_u = float(pos.get('info', {}).get('unRealizedProfit', 0))
+                roi = (pnl_u / margin * 100) if margin > 0 else 0
+                dur = str(timedelta(seconds=int(current_time - POSITION_TIMERS.get(norm, current_time))))[:5]
+                lvl = LEVEL_LOG.get(norm, 1)
+                print(f" {norm:<12} | {side_str:<2} | {lvl:<2} | {lev:<3}x | {margin:<12.2f} | {notional:<12.2f} | {roi:>+8.2f}% | {dur:<10} | L{lvl}重炮锁定")
+            LAST_DISPLAY_TIME = current_time
+
+        # === 存量管理（每10秒执行）===
+        for norm, pos in list(current_positions.items()):
+            full_sym = pos['symbol']
+            side = pos['side'].lower()
+            amt = abs(float(pos['contracts']))
+            entry = float(pos['entryPrice'])
+            mark = float(pos['markPrice'])
+            is_major = full_sym in MAJORS
+            p_move = (mark - entry) / entry if side == 'long' else (entry - mark) / entry
+            lvl = LEVEL_LOG.get(norm, 1)
+
+            if CAN_ADD:
+                if is_major:
+                    if lvl == 1 and p_move >= 0.015:
+                        if butcher_fire(full_sym, side, wallet * 0.03, 20, 1): LEVEL_LOG[norm] = 2
+                    elif lvl == 2 and p_move >= 0.030:
+                        if butcher_fire(full_sym, side, wallet * 0.055, 20, 2): LEVEL_LOG[norm] = 3
+                else:
+                    if lvl == 1 and p_move >= 0.025:
+                        if butcher_fire(full_sym, side, wallet * 0.01, 5, 1): LEVEL_LOG[norm] = 2
+                    elif lvl == 2 and p_move >= 0.050:
+                        if butcher_fire(full_sym, side, wallet * 0.02, 5, 2): LEVEL_LOG[norm] = 3
+
+            current_sl = -INITIAL_HARD_SL if lvl == 1 else SOFT_STOP_OFFSET
+            final_sl = current_sl + protect_shift
+            if p_move < final_sl:
+                close_side = 'sell' if side == 'long' else 'buy'
+                exchange.create_market_order(full_sym, close_side, amt, params={'reduceOnly': True})
+                print(f"🗡️ [KILL] {norm} 平仓撤离。SL位: {final_sl:.1%}")
+                LEVEL_LOG.pop(norm, None)
+                HIGH_WATER_MARK.pop(norm, None)
+                POSITION_TIMERS.pop(norm, None)
+                continue
+
+            if lvl == 3:
+                if norm not in HIGH_WATER_MARK: HIGH_WATER_MARK[norm] = mark
+                if side == 'long':
+                    HIGH_WATER_MARK[norm] = max(HIGH_WATER_MARK[norm], mark)
+                else:
+                    HIGH_WATER_MARK[norm] = min(HIGH_WATER_MARK[norm], mark)
+                limit = 0.004 if is_major else 0.008
+                drawdown = (HIGH_WATER_MARK[norm] - mark) / HIGH_WATER_MARK[norm] if side == 'long' else (mark - HIGH_WATER_MARK[norm]) / HIGH_WATER_MARK[norm]
+                if drawdown >= limit:
+                    close_side = 'sell' if side == 'long' else 'buy'
+                    exchange.create_market_order(full_sym, close_side, amt, params={'reduceOnly': True})
+                    print(f"💰 [PROFIT] {norm} 追踪收网！")
+                    LEVEL_LOG.pop(norm, None)
+                    HIGH_WATER_MARK.pop(norm, None)
+                    POSITION_TIMERS.pop(norm, None)
+
+        # === 雷达扫描（每60秒 + 本地计数器）===
+        if current_time - LAST_SCAN_TIME >= 60 and len(current_positions) < MAX_POSITIONS and CAN_ADD:
+            LAST_SCAN_TIME = current_time
+            active_count = len(current_positions)
+
+            for sym in SYMBOL_LIST:
+                norm = normalize_symbol(sym)
+                if norm in current_positions: continue
+
+                if active_count >= MAX_POSITIONS:
+                    print("🛡️ [TACTICAL] 阵地已满，停止搜索新猎物。")
+                    break
+
+                df4h = get_processed_data(sym, '4h')
+                df15 = get_processed_data(sym, '15m')
+                if df4h is None or df15 is None: continue
+
+                vh = max(df4h['ema144'].iloc[-1], df4h['ema169'].iloc[-1])
+                vl = min(df4h['ema144'].iloc[-1], df4h['ema169'].iloc[-1])
+                cp = df15['c'].iloc[-1]
+                e9 = df15['ema9'].iloc[-1]
+                e21 = df15['ema21'].iloc[-1]
+                rh = df15['h'].iloc[-11:-1].max()
+                rl = df15['l'].iloc[-11:-1].min()
+
+                is_major = sym in MAJORS
+                ratio, lev = (0.015, 20) if is_major else (0.01, 5)
+
+                if cp > vh and cp > rh and e9 > e21:
+                    if butcher_fire(sym, 'buy', wallet * ratio, lev, 0):
+                        LEVEL_LOG[norm] = 1
+                        POSITION_TIMERS[norm] = current_time
+                        active_count += 1
+                elif cp < vl and cp < rl and e9 < e21:
+                    if butcher_fire(sym, 'sell', wallet * ratio, lev, 0):
+                        LEVEL_LOG[norm] = 1
+                        POSITION_TIMERS[norm] = current_time
+                        active_count += 1
+                time.sleep(0.3)
+
+    except Exception as e:
+        print(f"🚨 [ALERT] 主控室异常: {e}")
+
+# ==================== 6. 核心循环 ====================
+while True:
+    run_butcher_room()
+    time.sleep(10)

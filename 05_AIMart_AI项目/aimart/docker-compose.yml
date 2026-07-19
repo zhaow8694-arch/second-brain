@@ -1,0 +1,141 @@
+services:
+  # ---- AIMart API ----------------------------------------------------------
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://aimart:aimart@postgres:5432/aimart_dev
+      - REDIS_URL=redis://redis:6379/0
+      - KAFKA_BROKERS=kafka:9092
+      - CLICKHOUSE_URL=clickhouse://clickhouse:9000/default
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+      - MINIO_ENDPOINT=minio:9000
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+
+  # ---- PostgreSQL ----------------------------------------------------------
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: aimart
+      POSTGRES_PASSWORD: aimart
+      POSTGRES_DB: aimart_dev
+    volumes:
+      - aimart_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aimart -d aimart_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ---- Redis ---------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ---- Zookeeper -----------------------------------------------------------
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.0
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  # ---- Kafka ---------------------------------------------------------------
+  kafka:
+    image: confluentinc/cp-kafka:7.6.0
+    ports:
+      - "9093:9093"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_HOST://0.0.0.0:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+    depends_on:
+      zookeeper:
+        condition: service_started
+    healthcheck:
+      test: ["CMD-SHELL", "kafka-topics --bootstrap-server localhost:9092 --list || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+
+  # ---- ClickHouse ----------------------------------------------------------
+  clickhouse:
+    image: clickhouse/clickhouse-server:24-alpine
+    ports:
+      - "8123:8123"   # HTTP interface
+      - "9000:9000"   # Native TCP interface
+    volumes:
+      - aimart_chdata:/var/lib/clickhouse
+    environment:
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: ""
+    healthcheck:
+      test: ["CMD-SHELL", "clickhouse-client --query 'SELECT 1' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  # ---- Elasticsearch -------------------------------------------------------
+  elasticsearch:
+    image: elasticsearch:8.13.0
+    ports:
+      - "9200:9200"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:9200/_cluster/health | grep -q '\"status\":\"green\"\\|\"status\":\"yellow\"' || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+
+  # ---- MinIO ---------------------------------------------------------------
+  minio:
+    image: minio/minio
+    ports:
+      - "9002:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data
+    volumes:
+      - aimart_miniodata:/data
+
+volumes:
+  aimart_pgdata:
+  aimart_chdata:
+  aimart_miniodata:

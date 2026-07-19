@@ -1,0 +1,50 @@
+{
+  "twitter": [
+    {
+      "name": "TechInvestor_AI",
+      "lang": "en",
+      "bio": "AI & Crypto enthusiast. Algorithmic trader.",
+      "region": "us"
+    },
+    {
+      "name": "CryptoNinja_22",
+      "lang": "en",
+      "bio": "Trading since 2017. Sharing alpha.",
+      "region": "sg"
+    },
+    {
+      "name": "デジタル戦士",
+      "lang": "ja",
+      "bio": "AIエージェントで自動取引。",
+      "region": "jp"
+    }
+  ],
+  "reddit": [
+    {
+      "name": "u/algotrader_ai",
+      "lang": "en",
+      "bio": "Building AI trading agents",
+      "region": "us"
+    },
+    {
+      "name": "u/quant_pioneer",
+      "lang": "en",
+      "bio": "Quant researcher. ML enthusiast.",
+      "region": "uk"
+    }
+  ],
+  "telegram": [
+    {
+      "name": "AlphaSignal_Bot",
+      "lang": "en",
+      "bio": "Automated trading signals",
+      "region": "us"
+    },
+    {
+      "name": "CryptoPulse_AI",
+      "lang": "en",
+      "bio": "Real-time market analysis",
+      "region": "hk"
+    }
+  ]
+}

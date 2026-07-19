@@ -1,0 +1,55 @@
+# ===================================================
+# 硅基远征军 (Silicon Group) — .gitignore
+# ===================================================
+
+# --- 最高机密：API 密钥 ---
+.env
+*.env.*
+
+# --- 数据库（含交易记录和作战日志，禁止外传）---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- 运行时日志与报告 ---
+battle_logs/
+battle_snapshots/
+backtest_log/
+campaign_log/
+chief_log/
+evolution_log/
+logistics_log/
+market_cache/
+portfolio_log/
+scheduler_log/
+shadow_tests/
+cost_log.json
+finance_log.json
+guard_dog_log.json
+DEPT_REPORT_LATEST.md
+GLOBAL_BATTLE_REPORT.md
+SILICON_GROUP_REPORT.md
+
+# --- 兵工厂产品输出（临时产物）---
+arsenal_output/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# --- 测试与临时文件 ---
+_test_*.py
+_check_*.py
+*.whl
+
+# --- 系统文件 ---
+.DS_Store
+Thumbs.db
+desktop.ini

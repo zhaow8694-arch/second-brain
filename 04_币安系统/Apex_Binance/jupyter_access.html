@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Binance Jupyter 测试环境</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .status {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+        }
+        
+        .status.running {
+            border-left-color: #2ecc71;
+        }
+        
+        .status.error {
+            border-left-color: #e74c3c;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background: #2ecc71;
+        }
+        
+        .btn-primary:hover {
+            background: #27ae60;
+        }
+        
+        .btn-danger {
+            background: #e74c3c;
+        }
+        
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+        
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .test-pass {
+            background: #d4edda;
+            color: #155724;
+            border-left: 5px solid #28a745;
+        }
+        
+        .test-fail {
+            background: #f8d7da;
+            color: #721c24;
+            border-left: 5px solid #dc3545;
+        }
+        
+        .instructions {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Apex Binance Jupyter 测试环境</h1>
+        
+        <div class="status running">
+            <h2>✅ Jupyter Notebook 正在运行</h2>
+            <p>服务器已成功启动，您可以访问以下链接：</p>
+            <div class="code-block">
+                http://localhost:8888/tree?token=66110c5facfd73f3b20a5a14ca4d4393660597c1fb376065
+            </div>
+            <p>或者：</p>
+            <div class="code-block">
+                http://127.0.0.1:8888/tree?token=66110c5facfd73f3b20a5a14ca4d4393660597c1fb376065
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>📋 访问说明：</h3>
+            <ol>
+                <li>点击上面的链接（可能需要复制到浏览器）</li>
+                <li>在文件列表中，找到并打开 <strong>test_apex_system.ipynb</strong></li>
+                <li>在notebook中，按顺序运行所有单元格</li>
+                <li>观察测试结果和系统状态</li>
+            </ol>
+        </div>
+        
+        <div class="test-section">
+            <h2>🧪 可用测试脚本</h2>
+            
+            <div class="test-result test-pass">
+                ✅ test_apex_system.ipynb - 完整系统测试notebook
+            </div>
+            
+            <div class="test-result test-pass">
+                ✅ jupyter_test.py - 详细测试脚本
+            </div>
+            
+            <div class="test-result test-pass">
+                ✅ jupyter_quick_test.py - 快速测试脚本
+            </div>
+            
+            <div class="test-result test-pass">
+                ✅ test_system.py - 完整系统测试
+            </div>
+            
+            <div class="test-result test-pass">
+                ✅ test_connection_v2.py - 连接测试
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>🔧 快速测试命令</h2>
+            <p>在Jupyter中运行以下代码：</p>
+            
+            <div class="code-block">
+# 快速测试系统
+%run jupyter_quick_test.py
+            </div>
+            
+            <p>或者运行详细测试：</p>
+            
+            <div class="code-block">
+# 详细测试系统
+%run jupyter_test.py
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>📊 系统信息</h2>
+            <div class="code-block">
+系统版本: v2.0.0
+重构完成: ✅ 2026-04-23
+测试状态: ✅ 所有模块通过
+Telegram通知: ✅ 已配置
+风险管理: ✅ 已启用
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="http://localhost:8888/tree?token=66110c5facfd73f3b20a5a14ca4d4393660597c1fb376065" class="btn btn-primary">
+                🔗 打开Jupyter Notebook
+            </a>
+            
+            <button onclick="runQuickTest()" class="btn">
+                🧪 运行快速测试
+            </button>
+            
+            <button onclick="showTerminalCommands()" class="btn">
+                💻 显示终端命令
+            </button>
+        </div>
+        
+        <div id="terminal-commands" style="display: none; margin-top: 20px;">
+            <div class="code-block">
+# 在终端中运行完整测试
+python test_system.py
+
+# 运行连接测试
+python test_connection_v2.py
+
+# 启动交易系统
+python start.py
+
+# 查看日志
+tail -f trading_system.log
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function runQuickTest() {
+            alert('请在Jupyter中运行：%run jupyter_quick_test.py');
+        }
+        
+        function showTerminalCommands() {
+            const element = document.getElementById('terminal-commands');
+            element.style.display = element.style.display === 'none' ? 'block' : 'none';
+        }
+        
+        // 自动复制链接到剪贴板
+        function copyLink() {
+            const link = 'http://localhost:8888/tree?token=66110c5facfd73f3b20a5a14ca4d4393660597c1fb376065';
+            navigator.clipboard.writeText(link).then(() => {
+                alert('链接已复制到剪贴板！');
+            });
+        }
+    </script>
+</body>
+</html>

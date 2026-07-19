@@ -1,0 +1,42 @@
+PRODUCT_BLUEPRINTS = {
+    "外汇信号工具": {
+        "type": "web_app",
+        "description": "实时外汇交易信号推送工具，看广告解锁信号",
+        "tech_stack": ["html", "css", "js"],
+        "features": ["实时信号推送", "广告解锁机制", "通知提醒"],
+        "monetization": "广告插屏 + 积分系统",
+        "target_audience": "东南亚/印度散户交易者",
+    },
+    "幸运转盘小游戏": {
+        "type": "mini_game",
+        "description": "每日签到转盘抽奖小游戏，激励裂变分享",
+        "tech_stack": ["html", "css", "js"],
+        "features": ["每日签到", "转盘抽奖", "分享得次数", "积分排行榜"],
+        "monetization": "激励视频广告 + 积分兑换",
+        "target_audience": "泛娱乐用户",
+    },
+    "AI 运势测算": {
+        "type": "web_app",
+        "description": "AI 生成每日运势/星座运势，分享裂变",
+        "tech_stack": ["html", "css", "js"],
+        "features": ["每日运势生成", "星座匹配", "分享海报"],
+        "monetization": "插屏广告 + 付费解锁详细版",
+        "target_audience": "年轻女性用户",
+    },
+    "自律打卡助手": {
+        "type": "web_app",
+        "description": "习惯打卡追踪工具，组队监督机制",
+        "tech_stack": ["html", "css", "js"],
+        "features": ["每日打卡", "习惯追踪", "组队监督", "数据统计"],
+        "monetization": "激励视频广告 + 高级功能订阅",
+        "target_audience": "自我提升用户",
+    },
+    "汇率计算器": {
+        "type": "web_app",
+        "description": "多币种实时汇率换算，简洁工具类应用",
+        "tech_stack": ["html", "css", "js"],
+        "features": ["实时汇率", "多币种换算", "离线缓存"],
+        "monetization": "底部横幅广告",
+        "target_audience": "跨境/旅游用户",
+    },
+}

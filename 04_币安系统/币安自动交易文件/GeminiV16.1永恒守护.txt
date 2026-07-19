@@ -1,0 +1,374 @@
+# -*- coding: utf-8 -*-
+"""
+👑 V16.1 守护地球 [天基武库·通讯修复版]
+核心说明：完全自主的底层架构。已修复钉钉“永恒守护”安全关键词拦截问题。
+"""
+import os, time, json, joblib, traceback, requests, threading
+import numpy as np
+import pandas as pd
+import ccxt
+from dotenv import load_dotenv
+from datetime import timedelta, datetime
+from sklearn.ensemble import RandomForestRegressor
+
+try:
+    from rich.console import Console
+    from rich.table import Table
+    RICH_AVAILABLE, console = True, Console()
+except:
+    RICH_AVAILABLE = False
+
+load_dotenv()
+
+# ==================== 1. 钛金级核心风控 ====================
+RISK_PCT = 0.008
+DAILY_MAX_LOSS = 0.04
+MAX_POSITIONS = 5
+AI_THRESHOLD = 70
+MAX_MARGIN_PER_TRADE = 0.10
+COOLDOWN_TIME = 3600
+TUNNEL_GAP_MIN = 0.012
+DECAY_TIME = 300
+ATR_SL_MULTIPLIER = 2.5
+REPORT_INTERVAL = 14400
+
+STATE_FILE = 'guardian_earth_state.json'
+MODEL_FILE = 'guardian_earth_model.joblib'
+
+# 📡 统帅专属天网密令 (物理焊死，确保100%炸响)
+DING_WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=a3a2f79d741ad12f7306ddda28d08825f6eb2b0ffdb4af9404c8563a0f4ba55f"
+
+MAJORS = ['BTC', 'ETH', 'SOL', 'BNB', 'SUI', 'NEAR']
+SECTOR_MAP = {
+    'BTC': 'POW', 'BCH': 'POW', 'LTC': 'POW',
+    'ETH': 'L1', 'SOL': 'L1', 'BNB': 'L1', 'SUI': 'L1', 'NEAR': 'L1',
+    'OP': 'L2', 'ARB': 'L2', 'STRK': 'L2',
+    'DOGE': 'MEME', 'SHIB': 'MEME', 'PEPE': 'MEME', 'WIF': 'MEME', 'FLOKI': 'MEME',
+    'TAO': 'AI', 'FET': 'AI', 'WLD': 'AI', 'AGIX': 'AI'
+}
+
+# ==================== 🛡️ 状态机隔离初始化 ====================
+LEVEL_LOG = {}
+BASE_SIZE_LOG = {}
+HIGH_WATER_MARK = {}
+POSITION_TIMERS = {}
+ENTRY_PRICE_LOG = {}
+ACTUAL_LEVERAGE = {}
+DYNAMIC_SL_LOG = {}
+SYNCED_POSITIONS = set()  # 严格锁定为集合类型
+COOLDOWN_LOG = {}
+PARTIAL_CLOSED = {}
+ENTRY_ATR_LOG = {}
+DATA_CACHE = {}
+GLOBAL_FUNDING_RATES = {}
+
+LAST_FUNDING_FETCH = LAST_REPORT_TIME = LAST_DISPLAY = SCAN_INDEX = 0
+INITIAL_WALLET = DAILY_START_WALLET = DAILY_DATE = None
+CAN_TRADE_TODAY = True
+SYSTEM_START = time.time()
+GLOBAL_AI_MODEL = None
+SYMBOL_LIST = []
+
+# ==================== 2. 天网通讯连 ====================
+def _send_alert_sync(msg):
+    if not DING_WEBHOOK: return
+    # 🚨 必须包含安全关键词“永恒守护”，否则钉钉机器人会直接拦截！
+    full_msg = f"👑 永恒守护战报 (守护地球)\n时间: {datetime.now().strftime('%H:%M:%S')}\n{msg}"
+    try:
+        response = requests.post(DING_WEBHOOK, json={"msgtype": "text", "text": {"content": full_msg}}, headers={'Content-Type': 'application/json'}, timeout=5)
+        # 如果钉钉报错，打印在控制台
+        if response.status_code != 200 or response.json().get("errcode") != 0:
+            print(f"❌ 钉钉拦截/发送失败: {response.text}")
+    except Exception as e:
+        print(f"❌ 钉钉网络异常: {e}")
+
+def send_alert(msg):
+    # daemon=True 守护线程
+    threading.Thread(target=_send_alert_sync, args=(msg,), daemon=True).start()
+
+# ==================== 3. 交易所与AI重装引擎 ====================
+exchange = ccxt.binance({
+    'apiKey': os.getenv('BINANCE_API_KEY'),
+    'secret': os.getenv('BINANCE_SECRET'),
+    'timeout': 15000,
+    'options': {'defaultType': 'future'},
+    'enableRateLimit': True
+})
+exchange.enable_demo_trading(True)   # ⚠️ 实盘出击前，请将军务必改为 False
+
+def load_or_train_model():
+    global GLOBAL_AI_MODEL
+    if os.path.exists(MODEL_FILE):
+        GLOBAL_AI_MODEL = joblib.load(MODEL_FILE)
+        return
+    try:
+        ohlcv = exchange.fetch_ohlcv('BTC/USDT', '15m', limit=1000)
+        df = pd.DataFrame(ohlcv, columns=['t','o','h','l','c','v'])
+        df['vol_sma'] = df['v'].rolling(20).mean()
+        df['ema144'] = df['c'].ewm(span=144).mean()
+        df['bias'] = abs(df['c'] - df['ema144']) / (df['ema144'] + 1e-9)
+        df['mom'] = df['c'].pct_change(5)
+        df['vol_r'] = df['v'] / (df['vol_sma'] + 1e-9)
+        df['target'] = (df['c'].shift(-5) - df['c']) / (df['c'] + 1e-9) * 1000 + 70
+        df.dropna(inplace=True)
+        GLOBAL_AI_MODEL = RandomForestRegressor(n_estimators=30, max_depth=5).fit(df[['bias', 'vol_r', 'mom']], df['target'].clip(0, 100))
+        joblib.dump(GLOBAL_AI_MODEL, MODEL_FILE)
+    except:
+        X = pd.DataFrame(np.random.rand(100, 3), columns=['bias', 'vol_r', 'mom'])
+        GLOBAL_AI_MODEL = RandomForestRegressor(n_estimators=10).fit(X, np.full(100, 70))
+
+def load_dynamic_markets():
+    global SYMBOL_LIST
+    try:
+        m = exchange.load_markets()
+        valid = [s for s in m if m[s].get('linear') and m[s].get('type') == 'swap' and m[s].get('active')]
+        tickers = exchange.fetch_tickers(valid)
+        sorted_syms = sorted(tickers.keys(), key=lambda x: float(tickers[x].get('quoteVolume', 0)), reverse=True)
+        SYMBOL_LIST = [s for s in sorted_syms if s not in ['USDC/USDT', 'FDUSD/USDT']][:90]
+    except:
+        SYMBOL_LIST = [f"{s}/USDT" for s in MAJORS + ['DOGE','PEPE','WLD','FET','TAO']]
+
+def update_funding_rates():
+    global GLOBAL_FUNDING_RATES, LAST_FUNDING_FETCH
+    if time.time() - LAST_FUNDING_FETCH > 3600:
+        try:
+            for s, data in exchange.fetch_funding_rates().items(): 
+                GLOBAL_FUNDING_RATES[s] = abs(float(data.get('fundingRate', 0)))
+            LAST_FUNDING_FETCH = time.time()
+        except: pass
+
+def get_ls_ratio(sym):
+    try: return float(exchange.fapiPublicGetGlobalLongShortAccountRatio({'symbol': sym.replace('/',''), 'period': '15m', 'limit': 1})[0]['longShortRatio'])
+    except: return 1.0
+
+def get_data_cached(sym, tf):
+    now = time.time()
+    cache_key = f"{sym}_{tf}"
+    if cache_key in DATA_CACHE and (now - DATA_CACHE[cache_key]['time']) < (180 if tf == '15m' else 900):
+        return DATA_CACHE[cache_key]['data']
+    try:
+        ohlcv = exchange.fetch_ohlcv(sym, tf, limit=1000 if tf == '4h' else 500)
+        df = pd.DataFrame(ohlcv, columns=['t','o','h','l','c','v'])
+        if tf == '4h':
+            df['ema144'], df['ema169'], df['ema576'] = df['c'].ewm(span=144).mean(), df['c'].ewm(span=169).mean(), df['c'].ewm(span=576).mean()
+        if tf == '15m':
+            df['ema14'], df['ema28'], df['ema20_p'] = df['c'].ewm(span=14).mean(), df['c'].ewm(span=28).mean(), df['c'].ewm(span=20).mean()
+            df['ema144'], df['vol_sma20'] = df['c'].ewm(span=144).mean(), df['v'].rolling(20).mean()
+            df['h10'], df['l10'] = df['h'].rolling(10).max().shift(1), df['l'].rolling(10).min().shift(1)
+            # 严格的真实波幅缺口计算
+            df['prev_c'] = df['c'].shift(1)
+            df['tr'] = df[['h','l','prev_c']].apply(lambda x: max(x['h']-x['l'], abs(x['h']-x['prev_c']), abs(x['l']-x['prev_c'])) if not pd.isna(x['prev_c']) else x['h']-x['l'], axis=1)
+            df['atr'] = df['tr'].ewm(alpha=1/14).mean()
+        DATA_CACHE[cache_key] = {'time': now, 'data': df}
+        return df
+    except: return None
+
+# ==================== 4. 状态黑匣子管理 ====================
+def clear_state(n, is_cooldown=True):
+    for d in [LEVEL_LOG, BASE_SIZE_LOG, HIGH_WATER_MARK, POSITION_TIMERS, ENTRY_PRICE_LOG, ACTUAL_LEVERAGE, DYNAMIC_SL_LOG, PARTIAL_CLOSED, ENTRY_ATR_LOG]:
+        d.pop(n, None)
+    SYNCED_POSITIONS.discard(n)
+    if is_cooldown:
+        COOLDOWN_LOG[n] = time.time() + COOLDOWN_TIME
+
+def load_all():
+    global INITIAL_WALLET, DAILY_START_WALLET, DAILY_DATE
+    if os.path.exists(STATE_FILE):
+        try:
+            with open(STATE_FILE, 'r') as f:
+                s = json.load(f)
+                for d, name in [(LEVEL_LOG, 'LEVEL_LOG'), (BASE_SIZE_LOG, 'BASE_SIZE_LOG'), (HIGH_WATER_MARK, 'HIGH_WATER_MARK'), (POSITION_TIMERS, 'POSITION_TIMERS'), (ENTRY_PRICE_LOG, 'ENTRY_PRICE_LOG'), (COOLDOWN_LOG, 'COOLDOWN_LOG'), (PARTIAL_CLOSED, 'PARTIAL_CLOSED'), (ENTRY_ATR_LOG, 'ENTRY_ATR_LOG'), (DYNAMIC_SL_LOG, 'DYNAMIC_SL_LOG')]:
+                    d.update(s.get(name, {}))
+                SYNCED_POSITIONS.update(s.get('SYNCED_POSITIONS', []))
+                INITIAL_WALLET = s.get('INITIAL_WALLET')
+                DAILY_START_WALLET = s.get('DAILY_START_WALLET')
+                DAILY_DATE = s.get('DAILY_DATE')
+        except: pass
+
+def save_state():
+    try:
+        with open(STATE_FILE, 'w') as f:
+            json.dump({
+                'LEVEL_LOG': LEVEL_LOG, 'BASE_SIZE_LOG': BASE_SIZE_LOG,
+                'HIGH_WATER_MARK': HIGH_WATER_MARK, 'POSITION_TIMERS': POSITION_TIMERS,
+                'ENTRY_PRICE_LOG': ENTRY_PRICE_LOG, 'SYNCED_POSITIONS': list(SYNCED_POSITIONS),
+                'COOLDOWN_LOG': COOLDOWN_LOG, 'PARTIAL_CLOSED': PARTIAL_CLOSED,
+                'ENTRY_ATR_LOG': ENTRY_ATR_LOG, 'DYNAMIC_SL_LOG': DYNAMIC_SL_LOG,
+                'INITIAL_WALLET': INITIAL_WALLET, 'DAILY_START_WALLET': DAILY_START_WALLET,
+                'DAILY_DATE': DAILY_DATE
+            }, f)
+    except: pass
+
+def assassin_fire(sym, side, nom_u, lev):
+    try:
+        try: exchange.set_leverage(lev, sym)
+        except: pass
+        p = exchange.fetch_ticker(sym).get('last')
+        amt = float(exchange.amount_to_precision(sym, nom_u / p))
+        exchange.create_market_order(sym, 'buy' if side=='buy' else 'sell', amt)
+        return True
+    except: return False
+
+def armor_close(sym, side, amt):
+    try:
+        exchange.create_market_order(sym, 'sell' if side == 'long' else 'buy', amt, params={'reduceOnly': True})
+        return True
+    except: return False
+
+# ==================== 5. 核心战场巡航 ====================
+def run_assassin_room():
+    global INITIAL_WALLET, DAILY_START_WALLET, DAILY_DATE, LAST_DISPLAY, SCAN_INDEX, CAN_TRADE_TODAY, LAST_REPORT_TIME
+    try:
+        update_funding_rates()
+        cur_t, cur_d = time.time(), datetime.now().strftime('%Y-%m-%d')
+        bal = exchange.fetch_balance(params={'type':'future'})
+        raw_pos = exchange.fetch_positions()
+        
+        wallet = float(bal.get('total',{}).get('USDT') or 0)
+        available = float(bal.get('free',{}).get('USDT') or 0)
+        cur_pos = {p['symbol'].replace('/USDT',''): p for p in raw_pos if abs(float(p.get('contracts') or 0)) > 0}
+        equity = wallet + sum([float(p.get('unrealizedPnl', 0)) if 'unrealizedPnl' in p else float(p.get('info', {}).get('unRealizedProfit', 0)) for p in cur_pos.values()])
+
+        if INITIAL_WALLET is None: INITIAL_WALLET = equity
+        if DAILY_START_WALLET is None or DAILY_DATE != cur_d: 
+            DAILY_DATE, DAILY_START_WALLET, CAN_TRADE_TODAY = cur_d, equity, True
+            
+        daily_pnl = (equity - DAILY_START_WALLET) / (DAILY_START_WALLET + 1e-9)
+
+        if daily_pnl <= -DAILY_MAX_LOSS:
+            CAN_TRADE_TODAY = False
+            for n, p in cur_pos.items(): 
+                armor_close(p['symbol'], p['side'].lower(), abs(float(p.get('contracts',0))))
+                clear_state(n)
+            save_state()
+            send_alert(f"🚨 触发日极寒熔断 ({daily_pnl:.2%})，全军强制撤退并进入休整！")
+            return
+
+        if cur_t - LAST_REPORT_TIME >= REPORT_INTERVAL:
+            msg = f"📊 【4小时常规战报】\n💰 总资产: {equity:.2f} U\n📈 总盈亏: {(equity-INITIAL_WALLET)/(INITIAL_WALLET+1e-9):+.2%}\n⚔️ 持仓数: {len(cur_pos)}/5"
+            for n, p in cur_pos.items(): 
+                msg += f"\n · {n}: {float(p.get('unrealizedPnl', 0)):+.2f} U"
+            send_alert(msg)
+            LAST_REPORT_TIME = cur_t
+
+        if cur_t - LAST_DISPLAY >= 10:
+            if RICH_AVAILABLE:
+                console.clear()
+                console.print(f" [bold cyan][帝国版图][/bold cyan] 初始:{INITIAL_WALLET:.2f}U | 净利:{(equity-INITIAL_WALLET)/(INITIAL_WALLET+1e-9):+.2%} | 日盈亏:{daily_pnl:+.2%}")
+                console.print(f" 🛡️ [bold yellow][V16.1 守护地球·天基武库版][/bold yellow] | 并发:{len(cur_pos)}/{MAX_POSITIONS} | 可用:{available/(wallet+1e-9):.1%}")
+                tbl = Table(box=None)
+                for c in ["战区","板块","方向","状态","浮盈(U)","强平防线"]: tbl.add_column(c, justify="center")
+                for n, p in cur_pos.items():
+                    if n not in SYNCED_POSITIONS:
+                        SYNCED_POSITIONS.add(n)
+                        ep = float(p.get('entryPrice') or 0)
+                        ENTRY_PRICE_LOG[n], POSITION_TIMERS[n], ACTUAL_LEVERAGE[n], LEVEL_LOG[n] = ep, cur_t, 20 if n in MAJORS else 5, 1
+                        BASE_SIZE_LOG[n] = ep * abs(float(p.get('contracts',0)))
+                        df15_s = get_data_cached(p['symbol'], '15m')
+                        ENTRY_ATR_LOG[n] = df15_s['atr'].iloc[-1] if df15_s is not None else (ep * 0.02)
+                        DYNAMIC_SL_LOG[n] = ep - ATR_SL_MULTIPLIER*ENTRY_ATR_LOG[n] if p['side'].lower()=='long' else ep + ATR_SL_MULTIPLIER*ENTRY_ATR_LOG[n]
+                        save_state()
+                    tbl.add_row(n, SECTOR_MAP.get(n, 'ALT'), "多" if p['side'].lower() == 'long' else "空", "半仓落袋" if n in PARTIAL_CLOSED else f"全仓 L{LEVEL_LOG.get(n,1)}", f"{float(p.get('unrealizedPnl', 0)):+.2f}", f"{DYNAMIC_SL_LOG.get(n, 0):.4f}")
+                console.print(tbl)
+            LAST_DISPLAY = cur_t
+
+        for n, p in list(cur_pos.items()):
+            sym, side, amt, ep = p['symbol'], p['side'].lower(), abs(float(p.get('contracts',0))), ENTRY_PRICE_LOG.get(n,0)
+            mk, dur = float(p.get('markPrice',0)), cur_t - POSITION_TIMERS.get(n, cur_t)
+            pm = (mk-ep)/(ep+1e-9) if side=='long' else (ep-mk)/(ep+1e-9)
+            lvl = LEVEL_LOG.get(n,1)
+            
+            should_close = False
+            if lvl == 1 and (pm <= -0.03 or (dur > DECAY_TIME and pm < 0.003)): should_close = True
+            elif lvl == 3 and abs(pm) < 0.01: should_close = True
+            elif n in DYNAMIC_SL_LOG and ((side == 'long' and mk <= DYNAMIC_SL_LOG[n]) or (side == 'short' and mk >= DYNAMIC_SL_LOG[n])): should_close = True
+            
+            df15 = get_data_cached(sym, '15m')
+            if df15 is not None and ((side == 'long' and mk < df15['ema144'].iloc[-1]) or (side == 'short' and mk > df15['ema144'].iloc[-1])): should_close = True
+
+            if should_close:
+                if armor_close(sym, side, amt):
+                    clear_state(n, is_cooldown=True)
+                    save_state()
+                    send_alert(f"🛡️ 战区撤退: {n}\n方向: {'多(Long)' if side=='long' else '空(Short)'}\n盈亏: {pm:.2%}\n动作: 触发风控或趋势反转，已安全撤离。")
+                continue
+
+            if n not in PARTIAL_CLOSED and pm >= 0.025:
+                HIGH_WATER_MARK[n] = max(HIGH_WATER_MARK.get(n, mk), mk) if side=='long' else min(HIGH_WATER_MARK.get(n, mk), mk)
+                if abs(HIGH_WATER_MARK[n] - mk) / (HIGH_WATER_MARK[n] + 1e-9) >= 0.012:
+                    if armor_close(sym, side, amt * 0.5):
+                        PARTIAL_CLOSED[n], LEVEL_LOG[n] = True, 99
+                        save_state()
+                        send_alert(f"💰 利润锁定: {n}\n已达目标水位，平仓50%落袋为安！")
+
+            if lvl < 3 and n not in PARTIAL_CLOSED and available/wallet > 0.1 and pm >= 0.02 * lvl:
+                if assassin_fire(sym, 'buy' if side == 'long' else 'sell', BASE_SIZE_LOG.get(n, 0), ACTUAL_LEVERAGE.get(n,5)):
+                    LEVEL_LOG[n] += 1
+                    save_state()
+
+        if CAN_TRADE_TODAY and len(cur_pos) < MAX_POSITIONS and len(SYMBOL_LIST) > 0:
+            active_sectors = [SECTOR_MAP.get(x, 'ALT') for x in cur_pos.keys()]
+            st_t, sc_cnt = cur_t, 0
+            while sc_cnt < len(SYMBOL_LIST):
+                sym = SYMBOL_LIST[SCAN_INDEX]
+                SCAN_INDEX = (SCAN_INDEX + 1) % len(SYMBOL_LIST)
+                sc_cnt += 1
+                n = sym.replace('/USDT','')
+                
+                if n in cur_pos or n in LEVEL_LOG or (n in COOLDOWN_LOG and cur_t < COOLDOWN_LOG[n]): continue
+                
+                target_sector = SECTOR_MAP.get(n, 'ALT')
+                if active_sectors.count(target_sector) >= 2 and target_sector != 'ALT': continue
+
+                df4, df15 = get_data_cached(sym, '4h'), get_data_cached(sym, '15m')
+                if df4 is None or df15 is None: continue
+
+                c15 = df15['c'].iloc[-1]
+                vh, vl = max(df4['ema144'].iloc[-1], df4['ema169'].iloc[-1]), min(df4['ema144'].iloc[-1], df4['ema169'].iloc[-1])
+                is_in_tunnel, gap_ok = (vl <= c15 <= vh), (vh - vl) / (c15 + 1e-9) >= TUNNEL_GAP_MIN
+
+                side = None
+                if df15['ema14'].iloc[-1] > df15['ema28'].iloc[-1] and c15 > df15['h10'].iloc[-1]:
+                    if (not is_in_tunnel) or (is_in_tunnel and gap_ok and c15 > df15['ema20_p'].iloc[-1]): side = 'buy'
+                elif df15['ema14'].iloc[-1] < df15['ema28'].iloc[-1] and c15 < df15['l10'].iloc[-1]:
+                    if (not is_in_tunnel) or (is_in_tunnel and gap_ok and c15 < df15['ema20_p'].iloc[-1]): side = 'sell'
+
+                if (side == 'buy' and c15 < df4['ema576'].iloc[-1]) or (side == 'sell' and c15 > df4['ema576'].iloc[-1]): side = None
+                if side and GLOBAL_FUNDING_RATES.get(sym, 0.0) > 0.0015: side = None
+
+                if side and df15['v'].iloc[-1] > df15['vol_sma20'].iloc[-2] * 1.3:
+                    bias = abs(c15 - df15['ema144'].iloc[-1]) / (df15['ema144'].iloc[-1] + 1e-9)
+                    vol_r = df15['v'].iloc[-1] / (df15['vol_sma20'].iloc[-2] + 1e-9) if not pd.isna(df15['vol_sma20'].iloc[-2]) else 1.0
+                    mom = (c15 - df15['c'].iloc[-5]) / (df15['c'].iloc[-5] + 1e-9)
+                    
+                    score = float(GLOBAL_AI_MODEL.predict(pd.DataFrame([{'bias': bias, 'vol_r': vol_r, 'mom': mom}]))[0])
+                    
+                    ls_ratio = get_ls_ratio(sym)
+                    if (side == 'buy' and ls_ratio > 1.8) or (side == 'sell' and ls_ratio < 0.6): score -= 15
+                    
+                    if score >= AI_THRESHOLD:
+                        lev = 20 if n in MAJORS else 5
+                        curr_atr = df15['atr'].iloc[-1]
+                        sz = min((wallet * RISK_PCT) / (curr_atr / c15 if curr_atr > 0 else 0.01), (wallet * MAX_MARGIN_PER_TRADE) * lev)
+                        if assassin_fire(sym, side, sz, lev):
+                            LEVEL_LOG[n], BASE_SIZE_LOG[n], POSITION_TIMERS[n], ENTRY_PRICE_LOG[n] = 1, sz, time.time(), c15
+                            ENTRY_ATR_LOG[n] = curr_atr
+                            DYNAMIC_SL_LOG[n] = c15 - ATR_SL_MULTIPLIER*curr_atr if side == 'buy' else c15 + ATR_SL_MULTIPLIER*curr_atr
+                            save_state()
+                            active_sectors.append(target_sector)
+                            send_alert(f"🔫 守护地球·天基打击\n目标: {n} ({side.upper()})\nAI评分: {score:.1f} | 市场情绪(LS): {ls_ratio:.2f}")
+                            break
+                if time.time() - st_t > 2.0: break
+    except Exception as e:
+        print(f"🚨 引擎异常:\n{traceback.format_exc()}")
+
+if __name__ == "__main__":
+    load_dynamic_markets()
+    update_funding_rates()
+    load_or_train_model()
+    load_all()
+    LAST_REPORT_TIME = time.time()
+    send_alert("🚀 【守护地球·天基武库版】已点火！通讯修复完毕，天网重新上线！")
+    while True: 
+        run_assassin_room()
+        time.sleep(5)

@@ -1,0 +1,340 @@
+# -*- coding: utf-8 -*-
+"""
+👑 V20.6 守护地球 [利润绝对防御版]
+核心加固：
+1. 焊死保本线：触发 50% 高水位落袋后，剩余 50% 仓位的强平红线瞬间移动至开仓均价，达成“零风险交易”！
+2. 撤退日志细化：精准区分“3.5倍ATR止损”、“L3保本撤离”与“半仓保本底线撤离”。
+3. 档案无缝继承：保留 core.json 自动继承逻辑，初始资金永不丢失。
+4. 双轨制满血版：总槽位 6，常规硬顶 4。VIP专属 2 槽位，满编智能静默雷达。
+"""
+import os, time, json, traceback, requests, threading, logging
+import numpy as np
+import pandas as pd
+import ccxt
+from dotenv import load_dotenv
+from datetime import timedelta, datetime
+
+# ==================== 📝 军工级全息日志 ====================
+logger = logging.getLogger("Guardian")
+logger.setLevel(logging.INFO)
+fh = logging.FileHandler('guardian_earth.log', encoding='utf-8')
+fh.setFormatter(logging.Formatter('%(asctime)s | %(levelname)s | %(message)s'))
+logger.addHandler(fh)
+
+try:
+    from rich.console import Console
+    from rich.table import Table
+    from rich.panel import Panel
+    from rich import box
+    console = Console() 
+    RICH_AVAILABLE = True
+except:
+    RICH_AVAILABLE = False
+
+load_dotenv()
+
+# ==================== 1. 核心风控与编制参数 ====================
+RISK_PCT = 0.008
+DAILY_MAX_LOSS = 0.04
+MAX_POSITIONS = 6  
+MAX_REGULAR_POSITIONS = 4  
+VIP_COINS = {'BTC', 'ETH', 'SOL', 'DOGE'}  
+
+MAX_MARGIN_PER_TRADE = 0.10
+COOLDOWN_TIME = 3600
+ATR_SL_MULTIPLIER = 3.5
+REPORT_INTERVAL = 14400
+
+STATE_FILE = 'guardian_earth_state_core.json'
+DING_WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=a3a2f79d741ad12f7306ddda28d08825f6eb2b0ffdb4af9404c8563a0f4ba55f"
+
+SYMBOL_LIST = [
+    'BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'BNB/USDT', 'XRP/USDT',
+    'DOGE/USDT', 'ADA/USDT', 'AVAX/USDT', 'SHIB/USDT', 'DOT/USDT',
+    'LINK/USDT', 'BCH/USDT', 'NEAR/USDT', 'MATIC/USDT', 'UNI/USDT',
+    'LTC/USDT', 'ICP/USDT', 'APT/USDT', 'STX/USDT', 'ARB/USDT',
+    'OP/USDT', 'INJ/USDT', 'RNDR/USDT', 'TIA/USDT', 'SUI/USDT',
+    'SEI/USDT', 'FET/USDT', 'TAO/USDT', 'WLD/USDT', 'PEPE/USDT'
+]
+
+HIGH_LEV_COINS = {'BTC', 'ETH', 'SOL', 'BNB', 'XRP', 'DOGE', 'ADA', 'AVAX', 'SHIB', 'DOT', 'LINK', 'BCH', 'NEAR', 'MATIC', 'UNI', 'LTC', 'ICP', 'APT', 'STX', 'ARB', 'OP', 'INJ', 'RNDR', 'TIA', 'SUI', 'SEI', 'FET', 'TAO', 'WLD', 'PEPE'}
+VALID_SYMBOLS = [] 
+
+SECTOR_MAP = {
+    'BTC': 'POW', 'BCH': 'POW', 'LTC': 'POW',
+    'ETH': 'L1', 'SOL': 'L1', 'BNB': 'L1', 'SUI': 'L1', 'NEAR': 'L1',
+    'OP': 'L2', 'ARB': 'L2', 'STRK': 'L2',
+    'DOGE': 'MEME', 'SHIB': 'MEME', 'PEPE': 'MEME',
+    'TAO': 'AI', 'FET': 'AI', 'WLD': 'AI'
+}
+
+# ==================== 🛡️ 状态机 ====================
+LEVEL_LOG = {}; BASE_SIZE_LOG = {}; HIGH_WATER_MARK = {}; POSITION_TIMERS = {}
+ENTRY_PRICE_LOG = {}; TARGET_PRICE_LOG = {}; ACTUAL_LEVERAGE = {}; DYNAMIC_SL_LOG = {}
+SYNCED_POSITIONS = set(); COOLDOWN_LOG = {}; PARTIAL_CLOSED = {}; ENTRY_ATR_LOG = {}
+DATA_CACHE = {}; GLOBAL_FUNDING_RATES = {}
+LAST_FUNDING_FETCH = LAST_REPORT_TIME = LAST_DISPLAY = SCAN_INDEX = 0
+INITIAL_WALLET = DAILY_START_WALLET = DAILY_DATE = None
+CAN_TRADE_TODAY = True
+
+# ==================== 🛠️ 核心引擎通讯 ====================
+def _send_alert_sync(msg):
+    if not DING_WEBHOOK: return
+    full_msg = f"👑 永恒守护战报 (守护地球)\n时间: {datetime.now().strftime('%H:%M:%S')}\n{msg}"
+    try: requests.post(DING_WEBHOOK, json={"msgtype": "text", "text": {"content": full_msg}}, headers={'Content-Type': 'application/json'}, timeout=5)
+    except: pass
+
+def send_alert(msg):
+    threading.Thread(target=_send_alert_sync, args=(msg,), daemon=True).start()
+
+exchange = ccxt.binance({
+    'apiKey': os.getenv('BINANCE_API_KEY'),
+    'secret': os.getenv('BINANCE_SECRET'),
+    'timeout': 15000,
+    'options': {'defaultType': 'future'},
+    'enableRateLimit': True
+})
+exchange.enable_demo_trading(True)
+
+def update_funding_rates():
+    global GLOBAL_FUNDING_RATES, LAST_FUNDING_FETCH
+    if time.time() - LAST_FUNDING_FETCH > 3600:
+        try:
+            for s, data in exchange.fetch_funding_rates().items(): GLOBAL_FUNDING_RATES[s] = abs(float(data.get('fundingRate', 0)))
+            LAST_FUNDING_FETCH = time.time()
+        except: pass
+
+def get_data_cached(sym, tf):
+    now = time.time()
+    cache_key = f"{sym}_{tf}"
+    if cache_key in DATA_CACHE and (now - DATA_CACHE[cache_key]['time']) < (120 if tf == '15m' else 600): return DATA_CACHE[cache_key]['data']
+    try:
+        ohlcv = exchange.fetch_ohlcv(sym, tf, limit=1000 if tf == '4h' else 500)
+        df = pd.DataFrame(ohlcv, columns=['t','o','h','l','c','v'])
+        if tf == '4h': df['ema576'] = df['c'].ewm(span=576).mean()
+        if tf == '15m':
+            df['ema14'], df['ema21'], df['ema60'] = df['c'].ewm(span=14).mean(), df['c'].ewm(span=21).mean(), df['c'].ewm(span=60).mean()
+            df['vol_sma20'] = df['v'].rolling(20).mean()
+            df['prev_c'] = df['c'].shift(1)
+            df['tr'] = df[['h','l','prev_c']].apply(lambda x: max(x['h']-x['l'], abs(x['h']-x['prev_c']), abs(x['l']-x['prev_c'])) if not pd.isna(x['prev_c']) else x['h']-x['l'], axis=1)
+            df['atr'] = df['tr'].ewm(alpha=1/14).mean()
+        DATA_CACHE[cache_key] = {'time': now, 'data': df}
+        return df
+    except: return None
+
+def clear_state(n, is_cooldown=True):
+    for d in [LEVEL_LOG, BASE_SIZE_LOG, HIGH_WATER_MARK, POSITION_TIMERS, ENTRY_PRICE_LOG, TARGET_PRICE_LOG, ACTUAL_LEVERAGE, DYNAMIC_SL_LOG, PARTIAL_CLOSED, ENTRY_ATR_LOG]: d.pop(n, None)
+    SYNCED_POSITIONS.discard(n)
+    if is_cooldown: COOLDOWN_LOG[n] = time.time() + COOLDOWN_TIME
+
+def load_all():
+    global INITIAL_WALLET, DAILY_START_WALLET, DAILY_DATE
+    fallback_files = [STATE_FILE, 'guardian_earth_state_v20_5.json', 'guardian_earth_state_v20_4.json', 'guardian_earth_state_v20_3.json', 'guardian_earth_state_v20_2.json', 'guardian_earth_state_v20_1.json']
+    for file_name in fallback_files:
+        if os.path.exists(file_name):
+            try:
+                with open(file_name, 'r') as f:
+                    s = json.load(f)
+                    for d, name in [(LEVEL_LOG, 'LEVEL_LOG'), (BASE_SIZE_LOG, 'BASE_SIZE_LOG'), (HIGH_WATER_MARK, 'HIGH_WATER_MARK'), (POSITION_TIMERS, 'POSITION_TIMERS'), (ENTRY_PRICE_LOG, 'ENTRY_PRICE_LOG'), (TARGET_PRICE_LOG, 'TARGET_PRICE_LOG'), (ACTUAL_LEVERAGE, 'ACTUAL_LEVERAGE'), (COOLDOWN_LOG, 'COOLDOWN_LOG'), (PARTIAL_CLOSED, 'PARTIAL_CLOSED'), (ENTRY_ATR_LOG, 'ENTRY_ATR_LOG'), (DYNAMIC_SL_LOG, 'DYNAMIC_SL_LOG')]: d.update(s.get(name, {}))
+                    SYNCED_POSITIONS.update(s.get('SYNCED_POSITIONS', []))
+                    INITIAL_WALLET, DAILY_START_WALLET, DAILY_DATE = s.get('INITIAL_WALLET'), s.get('DAILY_START_WALLET'), s.get('DAILY_DATE')
+                break
+            except: pass
+
+def save_state():
+    try:
+        with open(STATE_FILE, 'w') as f:
+            json.dump({'LEVEL_LOG': LEVEL_LOG, 'BASE_SIZE_LOG': BASE_SIZE_LOG, 'HIGH_WATER_MARK': HIGH_WATER_MARK, 'POSITION_TIMERS': POSITION_TIMERS, 'ENTRY_PRICE_LOG': ENTRY_PRICE_LOG, 'TARGET_PRICE_LOG': TARGET_PRICE_LOG, 'ACTUAL_LEVERAGE': ACTUAL_LEVERAGE, 'SYNCED_POSITIONS': list(SYNCED_POSITIONS), 'COOLDOWN_LOG': COOLDOWN_LOG, 'PARTIAL_CLOSED': PARTIAL_CLOSED, 'ENTRY_ATR_LOG': ENTRY_ATR_LOG, 'DYNAMIC_SL_LOG': DYNAMIC_SL_LOG, 'INITIAL_WALLET': INITIAL_WALLET, 'DAILY_START_WALLET': DAILY_START_WALLET, 'DAILY_DATE': DAILY_DATE}, f)
+    except: pass
+
+def assassin_fire(sym, side, nom_u, lev):
+    try:
+        logger.info(f"👉 发起进攻: {sym} | 方向: {side} | 拟投兵力: {nom_u:.2f}U")
+        try: exchange.set_leverage(lev, sym)
+        except: pass
+        p = exchange.fetch_ticker(sym).get('last')
+        
+        m = exchange.market(sym)
+        max_mkt_qty = None
+        for f in m['info']['filters']:
+            if f['filterType'] == 'MARKET_LOT_SIZE':
+                max_mkt_qty = float(f['maxQty'])
+                break
+        
+        if not max_mkt_qty: max_mkt_qty = m['limits']['amount']['max']
+        
+        target_qty = nom_u / p
+        if max_mkt_qty and target_qty > max_mkt_qty:
+            logger.warning(f"⚠️ {sym} 拟投量超过上限，强制降压。")
+            target_qty = max_mkt_qty * 0.98 
+            
+        amt = float(exchange.amount_to_precision(sym, target_qty))
+        exchange.create_market_order(sym, 'buy' if side=='buy' else 'sell', amt)
+        return True
+    except Exception as e:
+        logger.error(f"❌ 进攻受阻 ({sym}): {e}")
+        n = sym.split('/')[0]
+        COOLDOWN_LOG[n] = time.time() + 1800
+        return False
+
+def armor_close(sym, side, amt):
+    try:
+        logger.info(f"🛡️ 启动撤退: {sym} | 数量: {amt}")
+        exchange.create_market_order(sym, 'sell' if side == 'long' else 'buy', amt, params={'reduceOnly': True})
+        return True
+    except: return False
+
+# ==================== 5. 巡航中心 ====================
+def run_assassin_room():
+    global INITIAL_WALLET, DAILY_START_WALLET, DAILY_DATE, LAST_DISPLAY, SCAN_INDEX, CAN_TRADE_TODAY, LAST_REPORT_TIME, VALID_SYMBOLS
+    try:
+        update_funding_rates()
+        cur_t, cur_d = time.time(), datetime.now().strftime('%Y-%m-%d')
+        bal = exchange.fetch_balance(params={'type':'future'})
+        raw_pos = exchange.fetch_positions()
+        wallet = float(bal.get('total',{}).get('USDT') or 0); available = float(bal.get('free',{}).get('USDT') or 0)
+        cur_pos = {p['symbol'].split('/')[0].replace(':', ''): p for p in raw_pos if abs(float(p.get('contracts') or 0)) > 0}
+        equity = wallet + sum([float(p.get('unrealizedPnl', 0)) if 'unrealizedPnl' in p else float(p.get('info', {}).get('unRealizedProfit', 0)) for p in cur_pos.values()])
+
+        if INITIAL_WALLET is None: INITIAL_WALLET = equity
+        if DAILY_START_WALLET is None or DAILY_DATE != cur_d: 
+            DAILY_DATE, DAILY_START_WALLET, CAN_TRADE_TODAY = cur_d, equity, True
+        daily_pnl = (equity - DAILY_START_WALLET) / (DAILY_START_WALLET + 1e-9)
+
+        if daily_pnl <= -DAILY_MAX_LOSS:
+            if CAN_TRADE_TODAY: 
+                logger.error(f"🚨 触发日极寒熔断 ({daily_pnl:.2%})！强制撤军！") 
+                send_alert(f"🚨 触发日极寒熔断 ({daily_pnl:.2%})！强制撤军！")
+            CAN_TRADE_TODAY = False
+            for n, p in cur_pos.items(): armor_close(p['symbol'], p['side'].lower(), abs(float(p.get('contracts',0)))); clear_state(n)
+            save_state(); return
+
+        for n, p in cur_pos.items():
+            if n not in SYNCED_POSITIONS:
+                ep = float(p.get('entryPrice') or 0)
+                if ep <= 0: continue 
+                SYNCED_POSITIONS.add(n)
+                ENTRY_PRICE_LOG[n] = ep
+                if n not in TARGET_PRICE_LOG: TARGET_PRICE_LOG[n] = ep
+                POSITION_TIMERS[n] = cur_t
+                ACTUAL_LEVERAGE[n] = 20 if n in HIGH_LEV_COINS else 5
+                LEVEL_LOG[n] = 1
+                BASE_SIZE_LOG[n] = ep * abs(float(p.get('contracts', 0)))
+                df15_s = get_data_cached(f"{n}/USDT", '15m')
+                curr_atr = df15_s['atr'].iloc[-1] if df15_s is not None else (ep * 0.02)
+                ENTRY_ATR_LOG[n] = curr_atr
+                DYNAMIC_SL_LOG[n] = ep - ATR_SL_MULTIPLIER*curr_atr if p['side'].lower() == 'long' else ep + ATR_SL_MULTIPLIER*curr_atr
+                save_state()
+
+        if cur_t - LAST_DISPLAY >= 10:
+            if RICH_AVAILABLE:
+                console.clear()
+                pct, d_pct = (equity-INITIAL_WALLET)/(INITIAL_WALLET+1e-9), daily_pnl
+                grid = Table.grid(expand=True, padding=(0, 2))
+                grid.add_column(justify="right", ratio=1); grid.add_column(justify="center", width=3); grid.add_column(justify="left", ratio=1)
+                grid.add_row(f"💰 [bold cyan]初始本金:[/bold cyan] {INITIAL_WALLET:.2f} U", "│", f"📈 [bold cyan]当前资产:[/bold cyan] {equity:.2f} U")
+                grid.add_row(f"📊 [bold cyan]总盈亏率:[/bold cyan] [{'green' if pct>=0 else 'red'}]{pct:+.2%}[/]", "│", f"📅 [bold cyan]日内盈亏:[/bold cyan] [{'green' if d_pct>=0 else 'red'}]{d_pct:+.2%}[/]")
+                grid.add_row(f"⚔️ [bold magenta]并发火力:[/bold magenta] {len(cur_pos)}/{MAX_POSITIONS} (含VIP席)", "│", f"🔋 [bold blue]可用弹药:[/bold blue] {available/(wallet+1e-9):.1%}")
+
+                console.print(Panel(grid, title="[bold yellow]🌍 V20.6 守护地球 · 利润绝对防御版[/bold yellow]", border_style="yellow", box=box.HEAVY, expand=True))
+
+                if cur_pos:
+                    tbl = Table(box=box.ROUNDED, header_style="bold white", border_style="cyan", expand=True)
+                    cols = ["战区","目标(U)","成交均价(U)","杠杆","动用本金(U)","合计火力(U)","阵地状态 (晋级进度)","浮动盈亏(U)","强平红线"]
+                    for c in cols: tbl.add_column(c, justify="center")
+                    for n, p in cur_pos.items():
+                        mk, amt, side = float(p.get('markPrice', 0)), abs(float(p.get('contracts', 0))), p['side'].lower()
+                        ep = ENTRY_PRICE_LOG.get(n, mk)
+                        tp = TARGET_PRICE_LOG.get(n, ep)
+                        pm = (mk - ep) / (ep + 1e-9) if side == 'long' else (ep - mk) / (ep + 1e-9)
+                        lvl, lev = LEVEL_LOG.get(n, 1), ACTUAL_LEVERAGE.get(n, 5)
+                        if n in PARTIAL_CLOSED: status = "[bold yellow]半仓落袋[/]"
+                        elif lvl >= 3: status = "[bold magenta]L3 (MAX)[/]"
+                        else:
+                            diff = max(0.0, (0.02 * lvl - pm) * 100)
+                            status = f"L{lvl} [cyan](差 {diff:.2f}% 升L{lvl+1})[/]"
+                        
+                        pnl = float(p.get('unrealizedPnl', 0))
+                        n_str = f"[bold yellow]👑 {n}[/]" if n in VIP_COINS else n
+                        tbl.add_row(n_str, f"{tp:.4f}", f"{ep:.4f}", f"[bold magenta]{lev}X[/]", f"{(ep*amt)/lev:.2f}", f"[bold yellow]{ep*amt:.2f}[/]", status, f"[{'bold green' if pnl>=0 else 'bold red'}]{pnl:+.2f}[/]", f"{DYNAMIC_SL_LOG.get(n, 0):.4f}")
+                    console.print(tbl)
+                else: console.print(Panel("[bold green]📡 双轨雷达全域扫描中... 预留专属旗舰位，等待战机。[/bold green]", border_style="green", box=box.ROUNDED, expand=True))
+            LAST_DISPLAY = cur_t
+
+        for n, p in list(cur_pos.items()):
+            side, amt = p['side'].lower(), abs(float(p.get('contracts',0)))
+            mk, lvl = float(p.get('markPrice',0)), LEVEL_LOG.get(n,1)
+            ep = ENTRY_PRICE_LOG.get(n, mk)
+            pm = (mk-ep)/(ep+1e-9) if side=='long' else (ep-mk)/(ep+1e-9)
+            dur = cur_t - POSITION_TIMERS.get(n, cur_t)
+            
+            if dur >= 60:
+                should_close, reason = False, ""
+                if lvl == 3 and abs(pm) < 0.01: 
+                    should_close, reason = True, "L3保本撤离"
+                elif n in DYNAMIC_SL_LOG and ((side == 'long' and mk <= DYNAMIC_SL_LOG[n]) or (side == 'short' and mk >= DYNAMIC_SL_LOG[n])): 
+                    # 🌟 核心修复：精准区分是否是半仓保本触发
+                    reason = "触发半仓保本底线" if n in PARTIAL_CLOSED else "击穿3.5倍ATR防弹衣"
+                    should_close = True
+                
+                if should_close and armor_close(p['symbol'], side, amt):
+                    logger.warning(f"🏳️ 战区撤退: {n} | 原因: {reason} | 最终盈亏: {pm:.2%}") 
+                    send_alert(f"🛡️ 战区撤退: {n}\n原因: {reason}\n盈亏: {pm:.2%}")
+                    clear_state(n); save_state(); continue
+                    
+            if n not in PARTIAL_CLOSED and pm >= 0.025:
+                HIGH_WATER_MARK[n] = max(HIGH_WATER_MARK.get(n, mk), mk) if side=='long' else min(HIGH_WATER_MARK.get(n, mk), mk)
+                if abs(HIGH_WATER_MARK[n]-mk)/(HIGH_WATER_MARK[n]+1e-9) >= 0.012 and armor_close(p['symbol'], side, amt*0.5):
+                    logger.info(f"💰 利润锁定: {n} | 触发高水位回撤，平仓50%")
+                    send_alert(f"💰 利润锁定: {n}\n触发高水位回撤，已平仓50%！\n🛡️ 剩余半仓已焊死保本线！")
+                    PARTIAL_CLOSED[n], LEVEL_LOG[n] = True, 99
+                    # 🌟 核心防御修复：剩余 50% 的强平红线强制上移至开仓均价 (保本线)
+                    DYNAMIC_SL_LOG[n] = ep
+                    save_state()
+                    
+            if lvl < 3 and n not in PARTIAL_CLOSED and available/wallet > 0.1 and pm >= 0.02*lvl:
+                if assassin_fire(f"{n}/USDT", 'buy' if side=='long' else 'sell', BASE_SIZE_LOG.get(n, 0), ACTUAL_LEVERAGE.get(n,5)):
+                    LEVEL_LOG[n]+=1; save_state()
+
+        if CAN_TRADE_TODAY and len(cur_pos) < MAX_POSITIONS:
+            current_regular_count = sum(1 for coin in cur_pos.keys() if coin not in VIP_COINS)
+            active_sectors = [SECTOR_MAP.get(x, 'ALT') for x in cur_pos.keys()]
+            
+            st_t, sc_cnt = cur_t, 0
+            while sc_cnt < len(VALID_SYMBOLS):
+                sym = VALID_SYMBOLS[SCAN_INDEX]; SCAN_INDEX = (SCAN_INDEX + 1) % len(VALID_SYMBOLS); sc_cnt += 1
+                n = sym.split('/')[0]
+                
+                if n in cur_pos or n in LEVEL_LOG or (n in COOLDOWN_LOG and cur_t < COOLDOWN_LOG[n]): continue
+                
+                if n not in VIP_COINS:
+                    if current_regular_count >= MAX_REGULAR_POSITIONS: continue
+                    if active_sectors.count(SECTOR_MAP.get(n, 'ALT')) >= 2 and SECTOR_MAP.get(n, 'ALT') != 'ALT': continue
+                
+                df4, df15 = get_data_cached(sym, '4h'), get_data_cached(sym, '15m')
+                if df4 is None or df15 is None: continue
+                c15, ema14, ema21, ema60, ema576 = df15['c'].iloc[-1], df15['ema14'].iloc[-1], df15['ema21'].iloc[-1], df15['ema60'].iloc[-1], df4['ema576'].iloc[-1]
+                prev_l, prev_h, prev_v, prev_v_sma = df15['l'].iloc[-2], df15['h'].iloc[-2], df15['v'].iloc[-2], df15['vol_sma20'].iloc[-3]
+                side = None
+                if ema14>ema21>ema60 and c15>ema576 and prev_l<=ema14*1.002 and c15>ema14 and prev_v>prev_v_sma*1.2: side = 'buy'
+                elif ema14<ema21<ema60 and c15<ema576 and prev_h>=ema14*0.998 and c15<ema14 and prev_v>prev_v_sma*1.2: side = 'sell'
+                
+                if side:
+                    lev = 20 if n in HIGH_LEV_COINS else 5
+                    curr_atr = df15['atr'].iloc[-1]
+                    sz = min((wallet*RISK_PCT)/(curr_atr/c15 if curr_atr>0 else 0.01), (wallet*MAX_MARGIN_PER_TRADE)*lev)
+                    if assassin_fire(sym, side, sz, lev): 
+                        TARGET_PRICE_LOG[n] = c15; COOLDOWN_LOG[n] = time.time()+120; save_state()
+                        send_alert(f"🔫 猎杀开火: {n} ({side.upper()})\n杠杆: {lev}X\n类型: {'[👑 专属旗舰]' if n in VIP_COINS else '[常规先锋]'}"); break
+                if time.time() - st_t > 2.0: break
+    except Exception as e: logger.error(f"🚨 主循环异常: {traceback.format_exc()}")
+
+if __name__ == "__main__":
+    try:
+        exchange.load_markets(True)
+        for s in SYMBOL_LIST: 
+            if s in exchange.markets: VALID_SYMBOLS.append(s)
+    except Exception as e: exit(1)
+    update_funding_rates(); load_all(); LAST_REPORT_TIME = time.time()
+    send_alert("🚀 【守护地球·利润绝对防御版】V20.6 点火！半仓防线已焊死开仓价，执行零风险收割。")
+    while True: run_assassin_room(); time.sleep(5)

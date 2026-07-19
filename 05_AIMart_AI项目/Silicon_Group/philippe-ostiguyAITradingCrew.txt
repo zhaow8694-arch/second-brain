@@ -1,0 +1,207 @@
+# 硅基集团回测与仓位优化增强方案
+
+**版本**：V1.0  
+**日期**：2026-04-28  
+**目标**：引入 vectorbt（极致回测速度） + PyPortfolioOpt（专业仓位优化）
+
+---
+
+## 一、vectorbt 引入（backtester.py 升级）
+
+**项目**：vectorbt/vectorbt  
+**核心价值**：目前最快的向量化回测库，比传统循环回测快 **10-50 倍**  
+**整合策略**：保留你现有的信号逻辑（ma_cross 等），仅替换回测执行引擎
+
+### 1. 安装命令
+
+```bash
+pip install vectorbt
+2. 核心改动说明
+
+新增 run_backtest_vectorbt 函数（使用 vectorbt 引擎）
+保留原有 run_backtest 函数名（向后兼容）
+信号逻辑（ma_cross）保持不变
+大幅提升回测速度
+
+3. 更新后的 backtester.py 关键代码（直接替换）
+# core/backtester.py（新增/替换部分）
+
+import vectorbt as vbt
+import pandas as pd
+import numpy as np
+from typing import Dict, Any
+
+def run_backtest(symbol: str, strategy: str, history: list) -> Dict[str, Any]:
+    """
+    统一回测入口（已升级为 vectorbt 引擎）
+    保留原有信号逻辑，仅加速回测过程
+    """
+    if not history:
+        return {"error": "历史数据为空"}
+
+    df = pd.DataFrame(history)
+    df['date'] = pd.to_datetime(df['date'])
+    df.set_index('date', inplace=True)
+
+    if strategy == "ma_cross":
+        return run_ma_cross_vectorbt(symbol, df)
+    else:
+        return {"error": f"不支持的策略: {strategy}"}
+
+def run_ma_cross_vectorbt(symbol: str, df: pd.DataFrame) -> Dict[str, Any]:
+    """使用 vectorbt 实现的 MA 交叉策略回测"""
+    try:
+        close = df['close']
+        
+        # 生成信号（保留原有逻辑）
+        fast_ma = close.rolling(10).mean()
+        slow_ma = close.rolling(30).mean()
+        
+        entries = fast_ma > slow_ma
+        exits = fast_ma < slow_ma
+        
+        # 使用 vectorbt 进行极速回测
+        portfolio = vbt.Portfolio.from_signals(
+            close=close,
+            entries=entries,
+            exits=exits,
+            freq='1D',
+            init_cash=10000,
+            fees=0.001,           # 手续费
+            slippage=0.0005       # 滑点
+        )
+        
+        # 提取关键指标
+        stats = portfolio.stats()
+        
+        return {
+            "symbol": symbol,
+            "strategy": "ma_cross",
+            "total_return": round(stats['Total Return [%]'], 2),
+            "win_rate": round(stats['Win Rate [%]'], 2),
+            "total_trades": int(stats['Total Trades']),
+            "wins": int(stats['Win Trades']),
+            "losses": int(stats['Loss Trades']),
+            "max_drawdown": round(stats['Max Drawdown [%]'], 2),
+            "profit_factor": round(stats['Profit Factor'], 2),
+            "avg_win": round(stats['Avg Winning Trade [%]'], 2),
+            "avg_loss": round(stats['Avg Losing Trade [%]'], 2),
+            "passed": stats['Total Return [%]'] > 0 and stats['Win Rate [%]'] > 45,
+            "engine": "vectorbt"
+        }
+    except Exception as e:
+        return {"error": f"vectorbt 回测失败: {str(e)}"}
+
+4. 使用示例
+
+from core.backtester import run_backtest
+
+result = run_backtest("XAU/USD", "ma_cross", history_data)
+print(result)
+
+
+二、PyPortfolioOpt 引入（portfolio.py 升级）
+项目：pyportfolioopt/PyPortfolioOpt
+核心价值：专业级投资组合优化（最大夏普比率、风险平价、最小方差等）
+整合策略：在 portfolio.py 中新增“智能仓位分配”模块
+1. 安装命令
+pip install PyPortfolioOpt
+2. 核心改动说明
+
+新增 optimize_portfolio 函数
+支持多种优化目标（最大夏普、风险平价、最小波动率）
+可直接用于当前持仓的智能再平衡
+3. 更新后的 portfolio.py 新增代码（直接添加）
+# core/portfolio.py（新增部分）
+
+from pypfopt import EfficientFrontier, risk_models, expected_returns
+from pypfopt.discrete_allocation import DiscreteAllocation
+import pandas as pd
+from typing import Dict, List
+
+def optimize_portfolio(
+    prices_df: pd.DataFrame, 
+    method: str = "max_sharpe",
+    risk_free_rate: float = 0.02
+) -> Dict:
+    """
+    智能仓位优化（使用 PyPortfolioOpt）
+    
+    参数:
+        prices_df: 各资产历史价格 DataFrame（列为标的，行为日期）
+        method: 'max_sharpe' | 'min_volatility' | 'risk_parity'
+    """
+    try:
+        mu = expected_returns.mean_historical_return(prices_df)
+        S = risk_models.sample_cov(prices_df)
+        
+        ef = EfficientFrontier(mu, S, weight_bounds=(0, 1))
+        
+        if method == "max_sharpe":
+            weights = ef.max_sharpe(risk_free_rate=risk_free_rate)
+        elif method == "min_volatility":
+            weights = ef.min_volatility()
+        elif method == "risk_parity":
+            weights = ef.efficient_risk(target_volatility=0.15)
+        else:
+            weights = ef.max_sharpe()
+            
+        cleaned_weights = ef.clean_weights()
+        
+        # 转换为百分比
+        allocation = {k: round(v * 100, 2) for k, v in cleaned_weights.items()}
+        
+        return {
+            "method": method,
+            "weights": allocation,
+            "expected_return": round(ef.portfolio_performance()[0] * 100, 2),
+            "volatility": round(ef.portfolio_performance()[1] * 100, 2),
+            "sharpe_ratio": round(ef.portfolio_performance()[2], 2)
+        }
+    except Exception as e:
+        return {"error": f"组合优化失败: {str(e)}"}
+
+def get_optimal_allocation(
+    current_positions: List[Dict],
+    prices_df: pd.DataFrame,
+    method: str = "max_sharpe"
+) -> Dict:
+    """
+    根据当前持仓给出智能再平衡建议
+    """
+    symbols = [p['symbol'] for p in current_positions]
+    prices = prices_df[symbols]
+    
+    result = optimize_portfolio(prices, method)
+    
+    if "error" in result:
+        return result
+    
+    # 计算建议调整
+    suggestions = {}
+    for symbol in symbols:
+        current_pct = next((p['weight_pct'] for p in current_positions if p['symbol'] == symbol), 0)
+        target_pct = result['weights'].get(symbol, 0)
+        diff = round(target_pct - current_pct, 2)
+        
+        suggestions[symbol] = {
+            "current": current_pct,
+            "target": target_pct,
+            "adjust": diff,
+            "action": "买入" if diff > 0 else "卖出" if diff < 0 else "保持"
+        }
+    
+    return {
+        "optimization": result,
+        "rebalance_suggestions": suggestions
+    }
+4. 使用示例
+from core.portfolio import optimize_portfolio, get_optimal_allocation
+
+# 示例：优化当前持仓
+prices = pd.read_csv("your_prices.csv")  # 包含 XAU/USD, BTC/USDT, NVDA 等列
+result = optimize_portfolio(prices, method="max_sharpe")
+print(result)
+
+
+

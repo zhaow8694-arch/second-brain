@@ -1,0 +1,381 @@
+# -*- coding: utf-8 -*-
+"""
+👑 V10.5 刺客武装 (可视化 + ATR动态止损 + 每日亏损上限 + 杠杆强制同步 终极防爆版)
+"""
+import os
+import time
+import pandas as pd
+import ccxt
+from dotenv import load_dotenv
+from datetime import timedelta, datetime
+
+# ==================== 可视化模块 ====================
+try:
+    from rich.console import Console
+    from rich.table import Table
+    RICH_AVAILABLE = True
+    console = Console()
+except ImportError:
+    RICH_AVAILABLE = False
+    print("⚠️ rich 未安装，将使用普通文本大屏（推荐: pip install rich）")
+
+load_dotenv()
+
+# ==================== 战区配置（20个币种） ====================
+MAJORS_BASE = ['BTC', 'ETH', 'SOL', 'BNB', 'NEAR', 'AVAX', 'XRP', 'LINK', 'ADA', 'SUI']   # 第一战区 - 20倍重装主力
+ALTS_BASE   = ['DOGE', 'WLD', 'HYPE', 'LTC', 'BCH', 'ARB', 'ETC', 'UNI', 'FIL', 'APT']     # 第二战区 - 5倍高爆山寨
+SYMBOL_LIST = [f"{s}/USDT" for s in (MAJORS_BASE + ALTS_BASE)]
+
+# ==================== 参数配置 ====================
+RISK_PCT = 0.008
+ATR_SL_MULTIPLIER = 2.5
+MAX_DAILY_LOSS = -0.04
+EQUITY_PROTECT_LINE = 0.10
+EQUITY_PROTECT_ADD = 0.002
+MARGIN_SAFE_RATIO = 0.30
+MAX_TOTAL_MARGIN = 0.35
+MAX_POSITIONS = 7
+
+# 状态缓存
+LEVEL_LOG = {}
+BASE_SIZE_LOG = {}
+HIGH_WATER_MARK = {}
+POSITION_TIMERS = {}
+ACTUAL_LEVERAGE = {}
+SYNCED_POSITIONS = set()
+ENTRY_PRICE_LOG = {}
+DYNAMIC_SL_LOG = {}
+DAILY_PNL = 0.0
+DAILY_START_TIME = datetime.now().date()
+
+INITIAL_WALLET = None
+SYSTEM_START_TIME = time.time()
+LAST_DISPLAY_TIME = 0
+LAST_SCAN_TIME = 0
+
+# ==================== 交易所 ====================
+proxies = {'http': 'http://127.0.0.1:7897', 'https': 'http://127.0.0.1:7897'} \
+    if os.getenv('USE_PROXY', 'false').lower() == 'true' else None
+
+exchange = ccxt.binance({
+    'apiKey': os.getenv('BINANCE_API_KEY'),
+    'secret': os.getenv('BINANCE_SECRET'),
+    'options': {'defaultType': 'future'},
+    'enableRateLimit': True,
+    'adjustForTimeDifference': True,
+    'proxies': proxies
+})
+
+exchange.enable_demo_trading(True)
+print(f"🗡️ [SYSTEM] V10.5 刺客武装 终极防爆版 已上线！")
+
+try:
+    exchange.set_position_mode(hedged=False)
+except:
+    pass
+
+# ==================== 工具函数 ====================
+def check_is_major(symbol):
+    return symbol.split('/')[0].split(':')[0].upper() in MAJORS_BASE
+
+def normalize_symbol(s):
+    return s.replace('/', '').split(':')[0].replace('USDT', '')
+
+def get_real_leverage(pos):
+    # 增强解析，兼容 Binance 多种返回格式
+    for key in ['leverage', 'leverageBr', 'isolated', 'cross']:
+        if key in pos and pos[key] is not None:
+            try:
+                return int(pos[key])
+            except:
+                pass
+    info = pos.get('info', {})
+    for key in ['leverage', 'leverageBr', 'isolated', 'cross']:
+        if key in info and info[key] is not None:
+            try:
+                return int(info[key])
+            except:
+                pass
+    return 1
+
+def get_processed_data(symbol, timeframe):
+    try:
+        ohlcv = exchange.fetch_ohlcv(symbol, timeframe=timeframe, limit=180)
+        df = pd.DataFrame(ohlcv, columns=['t', 'o', 'h', 'l', 'c', 'v'])
+        if df.empty: return None
+
+        if timeframe == '4h':
+            df['ema144'] = df['c'].ewm(span=144, adjust=False).mean()
+            df['ema169'] = df['c'].ewm(span=169, adjust=False).mean()
+
+        if timeframe == '15m':
+            df['ema9'] = df['c'].ewm(span=9, adjust=False).mean()
+            df['ema21'] = df['c'].ewm(span=21, adjust=False).mean()
+            df['vol_sma20'] = df['v'].rolling(window=20).mean()
+            df['h10'] = df['h'].rolling(10).max().shift(1)
+            df['l10'] = df['l'].rolling(10).min().shift(1)
+
+            df['tr0'] = abs(df['h'] - df['l'])
+            df['tr1'] = abs(df['h'] - df['c'].shift(1))
+            df['tr2'] = abs(df['l'] - df['c'].shift(1))
+            df['tr'] = df[['tr0', 'tr1', 'tr2']].max(axis=1)
+            df['atr'] = df['tr'].ewm(alpha=1/14, adjust=False).mean()
+
+        return df
+    except Exception as e:
+        print(f"[DATA] {symbol} {timeframe} 数据异常: {e}")
+        return None
+
+def assassin_fire(symbol, side, nominal_size_u, leverage):
+    try:
+        ticker = exchange.fetch_ticker(symbol)
+        current_price = ticker.get('last')
+        if not current_price: return False
+
+        try:
+            exchange.set_leverage(leverage, symbol)
+            ACTUAL_LEVERAGE[normalize_symbol(symbol)] = leverage
+            print(f"✅ [LEVERAGE] {symbol} 已成功设置为 {leverage}x")
+        except Exception as e:
+            print(f"⚠️ [LEVERAGE] {symbol} 设置杠杆失败: {e}")
+
+        amount = float(exchange.amount_to_precision(symbol, nominal_size_u / current_price))
+        exchange.create_market_order(symbol, side, amount)
+        print(f"🔫 [ASSASSIN FIRE] 拔枪就射! {symbol} | {side.upper()} | {leverage}x | 名义价值: {nominal_size_u:.1f}U")
+        return True
+    except Exception as e:
+        print(f"❌ [FAILED] 刺客火力受阻 {symbol}: {e}")
+        return False
+
+def armor_close(symbol, side, amount, reason=""):
+    try:
+        exchange.create_market_order(symbol, side, amount, params={'reduceOnly': True})
+        print(f"🗡️ [ARMOR CLOSE] {symbol} {reason}！阵地已被夷平。")
+        return True
+    except Exception as e:
+        print(f"⚠️ [WARNING] 收网/止损遇阻 {symbol}: {e}")
+        return False
+
+# ==================== 主循环 ====================
+def run_assassin_room():
+    global INITIAL_WALLET, LAST_DISPLAY_TIME, LAST_SCAN_TIME, DAILY_PNL, DAILY_START_TIME
+
+    try:
+        current_time = time.time()
+        today = datetime.now().date()
+        if today != DAILY_START_TIME:
+            DAILY_PNL = 0.0
+            DAILY_START_TIME = today
+
+        bal = exchange.fetch_balance(params={'type': 'future'})
+        wallet = float(bal.get('total', {}).get('USDT') or 0)
+        available = float(bal.get('free', {}).get('USDT') or 0)
+        if wallet == 0: return
+        if INITIAL_WALLET is None: INITIAL_WALLET = wallet
+
+        available_ratio = available / wallet
+        margin_used_ratio = (wallet - available) / wallet if wallet > 0 else 0
+        CAN_ADD = (available_ratio > MARGIN_SAFE_RATIO and margin_used_ratio < MAX_TOTAL_MARGIN)
+
+        profit_ratio = (wallet - INITIAL_WALLET) / INITIAL_WALLET if INITIAL_WALLET > 0 else 0
+        protect_shift = EQUITY_PROTECT_ADD if profit_ratio >= EQUITY_PROTECT_LINE else 0
+
+        all_pos = exchange.fetch_positions()
+        current_positions = {normalize_symbol(p['symbol']): p for p in all_pos if abs(float(p.get('contracts') or 0)) > 0}
+
+        # 存量同步 + ATR动态止损计算 + 强制杠杆同步（关键修复）
+        for norm, pos in current_positions.items():
+            full_sym = pos['symbol']
+            if norm not in SYNCED_POSITIONS:
+                SYNCED_POSITIONS.add(norm)
+                POSITION_TIMERS[norm] = current_time
+                ENTRY_PRICE_LOG[norm] = float(pos.get('entryPrice') or 0)
+                # 强制设置杠杆
+                is_major = check_is_major(full_sym)
+                target_lev = 20 if is_major else 5
+                try:
+                    exchange.set_leverage(target_lev, full_sym)
+                    ACTUAL_LEVERAGE[norm] = target_lev
+                    print(f"✅ [LEVERAGE SYNC] {full_sym} 已强制同步为 {target_lev}x")
+                except Exception as e:
+                    print(f"⚠️ [LEVERAGE SYNC] {full_sym} 同步失败: {e}")
+
+                # 计算ATR动态止损
+                df15 = get_processed_data(full_sym, '15m')
+                if df15 is not None and not pd.isna(df15['atr'].iloc[-1]):
+                    atr = df15['atr'].iloc[-1]
+                    entry = ENTRY_PRICE_LOG[norm]
+                    side = pos.get('side', 'long').lower()
+                    sl_dist = atr * ATR_SL_MULTIPLIER
+                    DYNAMIC_SL_LOG[norm] = entry - sl_dist if side == 'long' else entry + sl_dist
+
+            # LEVEL_LOG 反推
+            entry_p = ENTRY_PRICE_LOG.get(norm, float(pos.get('entryPrice') or 0))
+            amt = abs(float(pos.get('contracts') or 0))
+            notional = entry_p * amt
+            if norm not in BASE_SIZE_LOG:
+                BASE_SIZE_LOG[norm] = notional
+            base = BASE_SIZE_LOG[norm]
+            if notional > base * 2.5: LEVEL_LOG[norm] = 3
+            elif notional > base * 1.5: LEVEL_LOG[norm] = 2
+            else: LEVEL_LOG[norm] = 1
+
+        # 可视化大屏
+        if current_time - LAST_DISPLAY_TIME >= 45:
+            if RICH_AVAILABLE:
+                table = Table(title="🗡️ V10.5 刺客武装 实时战报", header_style="bold magenta")
+                table.add_column("战区")
+                table.add_column("方向")
+                table.add_column("军衔")
+                table.add_column("杠杆")
+                table.add_column("名义价值(U)")
+                table.add_column("p_move")
+                table.add_column("动态SL距")
+                table.add_column("潜伏时长")
+                for norm, pos in current_positions.items():
+                    side_str = "多" if pos.get('side', 'long') == 'long' else "空"
+                    lev = ACTUAL_LEVERAGE.get(norm, get_real_leverage(pos))
+                    entry = ENTRY_PRICE_LOG.get(norm, 0)
+                    mark = float(pos.get('markPrice') or entry)
+                    notional = entry * abs(float(pos.get('contracts') or 0))
+                    p_move = (mark - entry)/entry if pos.get('side', 'long') == 'long' else (entry - mark)/entry
+                    dur = str(timedelta(seconds=int(current_time - POSITION_TIMERS.get(norm, current_time))))[:5]
+                    lvl = LEVEL_LOG.get(norm, 1)
+                    sl_dist = abs(mark - DYNAMIC_SL_LOG.get(norm, mark))
+                    table.add_row(norm, side_str, f"L{lvl}", f"{lev}x", f"{notional:.1f}", f"{p_move:+.2%}", f"{sl_dist:.1f}", dur)
+                console.print(table)
+            else:
+                print("\n" + "="*130)
+                print(f" 🗡️ [V10.5 刺客武装] | 猎杀并发:{len(current_positions)}/{MAX_POSITIONS} | 可用:{available_ratio:.1%}")
+                print("="*130)
+            LAST_DISPLAY_TIME = current_time
+
+        # 持仓管理（含ATR动态止损）
+        for norm, pos in list(current_positions.items()):
+            full_sym = pos['symbol']
+            side = pos.get('side', 'long').lower()
+            amt = abs(float(pos.get('contracts') or 0))
+            entry = ENTRY_PRICE_LOG.get(norm, 0)
+            mark = float(pos.get('markPrice') or entry)
+            p_move = (mark - entry)/entry if side == 'long' else (entry - mark)/entry
+            lvl = LEVEL_LOG.get(norm, 1)
+            close_side = 'sell' if side == 'long' else 'buy'
+
+            # ATR动态止损检查
+            if norm in DYNAMIC_SL_LOG:
+                dynamic_sl = DYNAMIC_SL_LOG[norm]
+                if (side == 'long' and mark <= dynamic_sl) or (side == 'short' and mark >= dynamic_sl):
+                    armor_close(full_sym, close_side, amt, f"ATR动态止损触发")
+                    for d in [LEVEL_LOG, BASE_SIZE_LOG, HIGH_WATER_MARK, POSITION_TIMERS, ENTRY_PRICE_LOG, DYNAMIC_SL_LOG, ACTUAL_LEVERAGE]:
+                        d.pop(norm, None)
+                    SYNCED_POSITIONS.discard(norm)
+                    continue
+
+            # 时间死神
+            time_elapsed = current_time - POSITION_TIMERS.get(norm, current_time)
+            if lvl == 1 and time_elapsed > 5400 and p_move < 0.010:
+                armor_close(full_sym, close_side, amt, "触发时间死神")
+                for d in [LEVEL_LOG, BASE_SIZE_LOG, HIGH_WATER_MARK, POSITION_TIMERS, ENTRY_PRICE_LOG, DYNAMIC_SL_LOG, ACTUAL_LEVERAGE]:
+                    d.pop(norm, None)
+                SYNCED_POSITIONS.discard(norm)
+                continue
+
+            # 单笔止损
+            max_loss_u = wallet * RISK_PCT
+            current_loss_u = (entry * amt) * abs(p_move) if p_move < 0 else 0
+            if lvl == 1 and current_loss_u >= max_loss_u:
+                armor_close(full_sym, close_side, amt, "触及刺客底线")
+                for d in [LEVEL_LOG, BASE_SIZE_LOG, HIGH_WATER_MARK, POSITION_TIMERS, ENTRY_PRICE_LOG, DYNAMIC_SL_LOG, ACTUAL_LEVERAGE]:
+                    d.pop(norm, None)
+                SYNCED_POSITIONS.discard(norm)
+                continue
+
+            # L2/L3 保本
+            if lvl >= 2 and p_move < (0.002 + protect_shift):
+                armor_close(full_sym, close_side, amt, "触发L2/L3软防线")
+                for d in [LEVEL_LOG, BASE_SIZE_LOG, HIGH_WATER_MARK, POSITION_TIMERS, ENTRY_PRICE_LOG, DYNAMIC_SL_LOG, ACTUAL_LEVERAGE]:
+                    d.pop(norm, None)
+                SYNCED_POSITIONS.discard(norm)
+                continue
+
+            # L3 Trailing
+            if lvl == 3:
+                if norm not in HIGH_WATER_MARK:
+                    HIGH_WATER_MARK[norm] = mark
+                HIGH_WATER_MARK[norm] = max(HIGH_WATER_MARK[norm], mark) if side == 'long' else min(HIGH_WATER_MARK[norm], mark)
+                drawdown = (HIGH_WATER_MARK[norm] - mark)/HIGH_WATER_MARK[norm] if side == 'long' else (mark - HIGH_WATER_MARK[norm])/HIGH_WATER_MARK[norm]
+                limit_base = 0.004 if check_is_major(full_sym) else 0.008
+                if drawdown >= limit_base:
+                    armor_close(full_sym, close_side, amt, f"触发天网回撤")
+                    for d in [LEVEL_LOG, BASE_SIZE_LOG, HIGH_WATER_MARK, POSITION_TIMERS, ENTRY_PRICE_LOG, DYNAMIC_SL_LOG, ACTUAL_LEVERAGE]:
+                        d.pop(norm, None)
+                    SYNCED_POSITIONS.discard(norm)
+
+        # 雷达扫描
+        if current_time - LAST_SCAN_TIME >= 60 and len(current_positions) < MAX_POSITIONS and CAN_ADD:
+            LAST_SCAN_TIME = current_time
+            active_count = len(current_positions)
+
+            for sym in SYMBOL_LIST:
+                norm = normalize_symbol(sym)
+                if norm in current_positions: continue
+                if active_count >= MAX_POSITIONS: break
+
+                df4h = get_processed_data(sym, '4h')
+                df15 = get_processed_data(sym, '15m')
+                if df4h is None or df15 is None: continue
+
+                c15 = df15['c'].iloc[-1]
+                v15 = df15['v'].iloc[-1]
+                v_sma_past = df15['vol_sma20'].iloc[-2]
+                if pd.isna(v_sma_past) or v15 < v_sma_past * 1.5: continue
+
+                h10 = df15['h10'].iloc[-1]
+                l10 = df15['l10'].iloc[-1]
+                e9 = df15['ema9'].iloc[-1]
+                e21 = df15['ema21'].iloc[-1]
+                atr15 = df15['atr'].iloc[-1]
+                if pd.isna(atr15) or atr15 <= 0: continue
+
+                vh = max(df4h['ema144'].iloc[-1], df4h['ema169'].iloc[-1])
+                vl = min(df4h['ema144'].iloc[-1], df4h['ema169'].iloc[-1])
+
+                is_major = check_is_major(sym)
+                lev = 20 if is_major else 5
+
+                risk_u_limit = wallet * RISK_PCT
+                stop_pct = atr15 / c15 if c15 > 0 else 0.01
+                theoretical_size_u = risk_u_limit / stop_pct
+                size_u = min(theoretical_size_u, INITIAL_WALLET * 2)
+
+                if c15 > vh and c15 > h10 and e9 > e21:
+                    if assassin_fire(sym, 'buy', size_u, lev):
+                        LEVEL_LOG[norm] = 1
+                        BASE_SIZE_LOG[norm] = size_u
+                        POSITION_TIMERS[norm] = current_time
+                        ENTRY_PRICE_LOG[norm] = c15
+                        SYNCED_POSITIONS.add(norm)
+                        active_count += 1
+
+                elif c15 < vl and c15 < l10 and e9 < e21:
+                    if assassin_fire(sym, 'sell', size_u, lev):
+                        LEVEL_LOG[norm] = 1
+                        BASE_SIZE_LOG[norm] = size_u
+                        POSITION_TIMERS[norm] = current_time
+                        ENTRY_PRICE_LOG[norm] = c15
+                        SYNCED_POSITIONS.add(norm)
+                        active_count += 1
+
+                time.sleep(0.3)
+
+    except Exception as e:
+        print(f"🚨 [CRITICAL] 引擎主循环异常: {e}")
+
+# ==================== 启动 ====================
+if __name__ == "__main__":
+    try:
+        while True:
+            run_assassin_room()
+            time.sleep(10)
+    except KeyboardInterrupt:
+        print("\n🛑 V10.5 刺客武装已安全入鞘！")
