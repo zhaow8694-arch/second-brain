@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"aimart","x":400,"y":50,"width":250,"height":80,"type":"text","text":"🤖 AIMart\nAI 能力交易系统"},
+		{"id":"whitepaper","x":100,"y":200,"width":200,"height":60,"type":"text","text":"📄 白皮书\n架构/协议栈设计"},
+		{"id":"compute-trading","x":400,"y":200,"width":200,"height":60,"type":"text","text":"💻 算力交易\n第四类商品"},
+		{"id":"capability-market","x":700,"y":200,"width":200,"height":60,"type":"text","text":"🏪 能力市场\nAI Agent 服务交易"},
+		{"id":"constraints","x":100,"y":350,"width":200,"height":60,"type":"text","text":"📋 约束规则\nSLA/计费/并发限制"},
+		{"id":"protocol-stack","x":400,"y":350,"width":200,"height":60,"type":"text","text":"🔌 七层协议栈\nMCP/UCP/ACP/A2A"},
+		{"id":"silicon-group","x":700,"y":350,"width":200,"height":60,"type":"text","text":"🏭 硅基集团\n算力调度架构"},
+		{"id":"pulse","x":400,"y":500,"width":200,"height":60,"type":"text","text":"⚡ PulseCompute\nDePIN 算力项目"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"aimart","fromSide":"bottom","toNode":"whitepaper","toSide":"top"},
+		{"id":"e2","fromNode":"aimart","fromSide":"bottom","toNode":"compute-trading","toSide":"top"},
+		{"id":"e3","fromNode":"aimart","fromSide":"bottom","toNode":"capability-market","toSide":"top"},
+		{"id":"e4","fromNode":"compute-trading","fromSide":"bottom","toNode":"constraints","toSide":"top"},
+		{"id":"e5","fromNode":"compute-trading","fromSide":"bottom","toNode":"protocol-stack","toSide":"top"},
+		{"id":"e6","fromNode":"compute-trading","fromSide":"bottom","toNode":"silicon-group","toSide":"top"},
+		{"id":"e7","fromNode":"compute-trading","fromSide":"bottom","toNode":"pulse","toSide":"top"}
+	]
+}

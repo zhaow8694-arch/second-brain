@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"ea-overview","x":400,"y":50,"width":250,"height":80,"type":"text","text":"🎯 SniperTrendEA\n趋势狙击 EA"},
+		{"id":"v8-5-stable","x":100,"y":200,"width":200,"height":60,"type":"text","text":"✅ v8.5 稳定版\n5层过滤"},
+		{"id":"v8-77-candidate","x":400,"y":200,"width":200,"height":60,"type":"text","text":"🔬 v8.77 candidate\n执行审计版"},
+		{"id":"backtest-results","x":700,"y":200,"width":200,"height":60,"type":"text","text":"📊 回测数据\n2,508条记录"},
+		{"id":"source-code","x":100,"y":350,"width":200,"height":60,"type":"text","text":"📁 源码\n01_交易系统/SniperTrendEA/"},
+		{"id":"strategy-versions","x":400,"y":350,"width":200,"height":60,"type":"text","text":"📋 版本史\nv8.2 → v8.77 全记录"},
+		{"id":"decision-log","x":700,"y":350,"width":200,"height":60,"type":"text","text":"📝 决策日志\n01_交易系统/决策日志/"},
+		{"id":"market-analysis","x":250,"y":500,"width":200,"height":60,"type":"text","text":"📈 MACD 分析\n02_市场分析/CODEXMACD/"},
+		{"id":"rules","x":550,"y":500,"width":200,"height":60,"type":"text","text":"📜 交易规则\nCLAUDE.md"},
+		{"id":"archive","x":400,"y":620,"width":200,"height":60,"type":"text","text":"🗄️ 回测归档\n02_市场分析/HCSJ/"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"ea-overview","fromSide":"bottom","toNode":"v8-5-stable","toSide":"top"},
+		{"id":"e2","fromNode":"ea-overview","fromSide":"bottom","toNode":"v8-77-candidate","toSide":"top"},
+		{"id":"e3","fromNode":"ea-overview","fromSide":"bottom","toNode":"backtest-results","toSide":"top"},
+		{"id":"e4","fromNode":"v8-5-stable","fromSide":"bottom","toNode":"source-code","toSide":"top"},
+		{"id":"e5","fromNode":"v8-77-candidate","fromSide":"bottom","toNode":"strategy-versions","toSide":"top"},
+		{"id":"e6","fromNode":"v8-77-candidate","fromSide":"bottom","toNode":"decision-log","toSide":"top"},
+		{"id":"e7","fromNode":"v8-5-stable","fromSide":"bottom","toNode":"market-analysis","toSide":"top"},
+		{"id":"e8","fromNode":"v8-77-candidate","fromSide":"bottom","toNode":"rules","toSide":"top"},
+		{"id":"e9","fromNode":"backtest-results","fromSide":"bottom","toNode":"archive","toSide":"top"}
+	]
+}
