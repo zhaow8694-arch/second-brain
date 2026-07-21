@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试报告 - {{ timestamp }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        .section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        .metric-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .metric-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .status-pass {
+            background-color: #2ecc71;
+            color: white;
+        }
+        .status-fail {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .chart-container {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .recommendation-list {
+            list-style: none;
+            padding: 0;
+        }
+        .recommendation-item {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            border-left: 4px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="text-center">测试报告</h1>
+            <p class="text-center text-muted">生成时间：{{ timestamp }}</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 摘要部分 -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fa fa-info-circle"></i> 测试摘要
+            </h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="metric-card">
+                        <div class="metric-value">
+                            {{ "%.2f"|format(summary.key_metrics.accuracy * 100) }}%
+                        </div>
+                        <div class="metric-label">准确率</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="metric-card">
+                        <div class="metric-value">
+                            {{ "%.2f"|format(summary.key_metrics.execution_time) }}ms
+                        </div>
+                        <div class="metric-label">平均执行时间</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="metric-card">
+                        <div class="metric-value">
+                            {{ "%.2f"|format(summary.key_metrics.error_rate * 100) }}%
+                        </div>
+                        <div class="metric-label">错误率</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <span class="status-badge {% if summary.overall_status == 'pass' %}status-pass{% else %}status-fail{% endif %}">
+                    {{ summary.overall_status|upper }}
+                </span>
+            </div>
+        </div>
+
+        <!-- 预测结果部分 -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fa fa-chart-line"></i> 预测结果
+            </h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <h5>评估指标</h5>
+                        <table class="table">
+                            <tr>
+                                <td>准确率</td>
+                                <td>{{ "%.2f"|format(predictions.accuracy * 100) }}%</td>
+                            </tr>
+                            <tr>
+                                <td>精确率</td>
+                                <td>{{ "%.2f"|format(predictions.precision * 100) }}%</td>
+                            </tr>
+                            <tr>
+                                <td>召回率</td>
+                                <td>{{ "%.2f"|format(predictions.recall * 100) }}%</td>
+                            </tr>
+                            <tr>
+                                <td>F1分数</td>
+                                <td>{{ "%.2f"|format(predictions.f1_score * 100) }}%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        {{ charts.predictions|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 性能分析部分 -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fa fa-tachometer"></i> 性能分析
+            </h2>
+            <div class="chart-container">
+                {{ charts.performance|safe }}
+            </div>
+            <div class="row mt-4">
+                {% for metric, stats in performance.items() %}
+                <div class="col-md-4">
+                    <div class="metric-card">
+                        <h5>{{ metric|replace('_', ' ')|title }}</h5>
+                        <table class="table">
+                            <tr>
+                                <td>平均值</td>
+                                <td>{{ "%.2f"|format(stats.mean) }}</td>
+                            </tr>
+                            <tr>
+                                <td>标准差</td>
+                                <td>{{ "%.2f"|format(stats.std) }}</td>
+                            </tr>
+                            <tr>
+                                <td>最小值</td>
+                                <td>{{ "%.2f"|format(stats.min) }}</td>
+                            </tr>
+                            <tr>
+                                <td>最大值</td>
+                                <td>{{ "%.2f"|format(stats.max) }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- 错误分析部分 -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fa fa-exclamation-triangle"></i> 错误分析
+            </h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="metric-card">
+                        <h5>错误统计</h5>
+                        <table class="table">
+                            <tr>
+                                <td>总错误数</td>
+                                <td>{{ errors.total_errors }}</td>
+                            </tr>
+                            <tr>
+                                <td>错误率</td>
+                                <td>{{ "%.2f"|format(errors.total_errors / predictions.total_samples * 100) }}%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        {{ charts.errors|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 趋势分析部分 -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fa fa-chart-area"></i> 趋势分析
+            </h2>
+            <div class="chart-container">
+                {{ charts.trends|safe }}
+            </div>
+        </div>
+
+        <!-- 建议部分 -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fa fa-lightbulb-o"></i> 改进建议
+            </h2>
+            <ul class="recommendation-list">
+                {% for recommendation in summary.recommendations %}
+                <li class="recommendation-item">
+                    <i class="fa fa-arrow-right"></i> {{ recommendation }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

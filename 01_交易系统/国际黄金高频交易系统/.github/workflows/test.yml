@@ -1,0 +1,57 @@
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-asyncio pytest-cov
+        
+    - name: Create test environment
+      run: |
+        python -m venv test_env
+        source test_env/bin/activate
+        pip install -r requirements.txt
+        
+    - name: Generate test data
+      run: |
+        python -m pytest src/tests/tools/test_data_generator.py -v
+        
+    - name: Run tests
+      run: |
+        python -m pytest src/tests/ -v --cov=src --cov-report=xml
+        
+    - name: Analyze test results
+      run: |
+        python -m pytest src/tests/tools/test_result_analyzer.py -v
+        
+    - name: Generate test report
+      run: |
+        python -m pytest src/tests/tools/test_report_generator.py -v
+        
+    - name: Upload coverage report
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
+        fail_ci_if_error: true
+        
+    - name: Clean up test environment
+      run: |
+        rm -rf test_env 

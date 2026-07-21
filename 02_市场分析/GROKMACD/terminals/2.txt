@@ -1,0 +1,218 @@
+---
+pid: 19448
+cwd: "E:\grokmacd"
+command: "powershell -ExecutionPolicy Bypass -File \"E:\\grokmacd\\overfit_check\\run_overfit_check.ps1\" 2>&1 | Tee-Object -FilePath \"E:\\grokmacd\\overfit_check\\run_log.txt\""
+started_at: 2026-06-17T21:06:37.633Z
+running_for_ms: 28995005 
+---
+=== Overfit Check: 21 backtests ===
+powershell : Get-Item : �Ҳ���·����D:\MT5测试\MetaTrader 5\MQL5\Experts\SniperTrendEA_v8.6.ex5������Ϊ��·�������ڡ�
+EA: grokmacd v8.61 (.LastWriteTime)
+[1/21] PASS1577 / 2015_2019 ...
+[2/21] PASS1577 / 2020_2025 ...
+[3/21] PASS1577 / 2025_2026 ...
+[4/21] PASS1632 / 2015_2019 ...
+[5/21] PASS1632 / 2020_2025 ...
+[6/21] PASS1632 / 2025_2026 ...
+[7/21] PASS1729 / 2015_2019 ...
+[8/21] PASS1729 / 2020_2025 ...
+[9/21] PASS1729 / 2025_2026 ...
+[10/21] PASS1581 / 2015_2019 ...
+[11/21] PASS1581 / 2020_2025 ...
+[12/21] PASS1581 / 2025_2026 ...
+[13/21] PASS1639 / 2015_2019 ...
+[14/21] PASS1639 / 2020_2025 ...
+[15/21] PASS1639 / 2025_2026 ...
+[16/21] BALANCED / 2015_2019 ...
+[17/21] BALANCED / 2020_2025 ...
+[18/21] BALANCED / 2025_2026 ...
+[19/21] CONSERVATIVE / 2015_2019 ...
+[20/21] CONSERVATIVE / 2020_2025 ...
+[21/21] CONSERVATIVE / 2025_2026 ...
+Run summary: E:\grokmacd\overfit_check\reports\run_summary.csv
+
+Group        Period    Status ExitCode Seconds Report                                                                  
+-----        ------    ------ -------- ------- ------                                                                  
+PASS1577     2015_2019 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1577     2020_2025 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1577     2025_2026 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+����λ�� ��:1 �ַ�: 1
++ powershell -ExecutionPolicy Bypass -File "E:\grokmacd\overfit_check\r ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Get-Item : �Ҳ���·....ex5������Ϊ��·�������ڡ�:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:68 �ַ�: 35
++ ... cd v8.61 ($(Get-Item (Join-Path $mt5 'MQL5\Experts\SniperTrendEA_v8.6 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\MT5测试\MetaT...rendEA_v8.6.ex5:String) [Get-Item], ItemNotFoundExc
+ep    tion
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetItemCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-ProcessPASS1632     2015_2019 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1632     2020_2025 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1632     2025_2026 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1729     2015_2019 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1729     2020_2025 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1729     2025_2026 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1581     2015_2019 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1581     2020_2025 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1581     2025_2026 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1639     2015_2019 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1639     2020_2025 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+PASS1639     2025_2026 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+BALANCED     2015_2019 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+BALANCED     2020_2025 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+BALANCED     2025_2026 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+CONSERVATIVE 2015_2019 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+CONSERVATIVE 2020_2025 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+CONSERVATIVE 2025_2026 FAIL                  0 D:\MT5测试\MetaTrader 5\SingleEAReports\overfit_check_grokmacd_v861...
+
+
+]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+Start-Process : ���ڳ������´����޷����д�����: ϵͳ�Ҳ���ָ�����ļ�����
+����λ�� E:\grokmacd\overfit_check\run_overfit_check.ps1:76 �ַ�: 10
++     $p = Start-Process -FilePath $terminal -ArgumentList "/portable", ...
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]��InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 

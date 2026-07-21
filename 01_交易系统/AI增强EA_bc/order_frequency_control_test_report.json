@@ -1,0 +1,144 @@
+{
+  "test_summary": {
+    "total": 22,
+    "passed": 22,
+    "failed": 0,
+    "errors": 0,
+    "success_rate": 100.0
+  },
+  "test_results": [
+    {
+      "test_name": "参数定义: MinOrderInterval = 900",
+      "status": "PASS",
+      "details": "参数定义正确",
+      "timestamp": "2025-07-31T16:29:03.030433"
+    },
+    {
+      "test_name": "参数定义: MaxNormalOrders = 12",
+      "status": "PASS",
+      "details": "参数定义正确",
+      "timestamp": "2025-07-31T16:29:03.030685"
+    },
+    {
+      "test_name": "参数定义: MaxLockOrders = 4",
+      "status": "PASS",
+      "details": "参数定义正确",
+      "timestamp": "2025-07-31T16:29:03.030815"
+    },
+    {
+      "test_name": "全局变量: g_last_normal_order_time = 0",
+      "status": "PASS",
+      "details": "变量定义正确",
+      "timestamp": "2025-07-31T16:29:03.031985"
+    },
+    {
+      "test_name": "全局变量: g_last_lock_order_time = 0",
+      "status": "PASS",
+      "details": "变量定义正确",
+      "timestamp": "2025-07-31T16:29:03.032100"
+    },
+    {
+      "test_name": "函数定义: CountNormalOrders()",
+      "status": "PASS",
+      "details": "函数定义存在",
+      "timestamp": "2025-07-31T16:29:03.033144"
+    },
+    {
+      "test_name": "函数定义: CountLockOrders()",
+      "status": "PASS",
+      "details": "函数定义存在",
+      "timestamp": "2025-07-31T16:29:03.033242"
+    },
+    {
+      "test_name": "函数定义: CanPlaceNormalOrder()",
+      "status": "PASS",
+      "details": "函数定义存在",
+      "timestamp": "2025-07-31T16:29:03.033312"
+    },
+    {
+      "test_name": "函数定义: CanPlaceLockOrder()",
+      "status": "PASS",
+      "details": "函数定义存在",
+      "timestamp": "2025-07-31T16:29:03.033366"
+    },
+    {
+      "test_name": "ExecuteOrder集成",
+      "status": "PASS",
+      "details": "普通仓建仓函数已集成频率检查",
+      "timestamp": "2025-07-31T16:29:03.034126"
+    },
+    {
+      "test_name": "ExecuteStrategyOrder集成",
+      "status": "PASS",
+      "details": "策略建仓函数已集成频率检查",
+      "timestamp": "2025-07-31T16:29:03.034265"
+    },
+    {
+      "test_name": "ExecuteLockOrder集成",
+      "status": "PASS",
+      "details": "锁仓建仓函数已集成频率检查",
+      "timestamp": "2025-07-31T16:29:03.034354"
+    },
+    {
+      "test_name": "时间更新: g_last_normal_order_time = TimeCurrent()",
+      "status": "PASS",
+      "details": "时间更新逻辑存在",
+      "timestamp": "2025-07-31T16:29:03.035251"
+    },
+    {
+      "test_name": "时间更新: g_last_lock_order_time = TimeCurrent()",
+      "status": "PASS",
+      "details": "时间更新逻辑存在",
+      "timestamp": "2025-07-31T16:29:03.035331"
+    },
+    {
+      "test_name": "初始化信息: 建仓频率控制: 15分钟间隔",
+      "status": "PASS",
+      "details": "初始化信息正确",
+      "timestamp": "2025-07-31T16:29:03.036182"
+    },
+    {
+      "test_name": "初始化信息: 普通仓限制: 最多12个持仓",
+      "status": "PASS",
+      "details": "初始化信息正确",
+      "timestamp": "2025-07-31T16:29:03.036263"
+    },
+    {
+      "test_name": "初始化信息: 锁仓单限制: 最多4个持仓",
+      "status": "PASS",
+      "details": "初始化信息正确",
+      "timestamp": "2025-07-31T16:29:03.036340"
+    },
+    {
+      "test_name": "初始化信息: 建仓间隔:",
+      "status": "PASS",
+      "details": "初始化信息正确",
+      "timestamp": "2025-07-31T16:29:03.036409"
+    },
+    {
+      "test_name": "初始化信息: 普通仓上限:",
+      "status": "PASS",
+      "details": "初始化信息正确",
+      "timestamp": "2025-07-31T16:29:03.036496"
+    },
+    {
+      "test_name": "初始化信息: 锁仓单上限:",
+      "status": "PASS",
+      "details": "初始化信息正确",
+      "timestamp": "2025-07-31T16:29:03.036581"
+    },
+    {
+      "test_name": "版本信息更新",
+      "status": "PASS",
+      "details": "版本信息已更新",
+      "timestamp": "2025-07-31T16:29:03.037317"
+    },
+    {
+      "test_name": "注释一致性",
+      "status": "PASS",
+      "details": "注释已更新为建仓频率限制",
+      "timestamp": "2025-07-31T16:29:03.038080"
+    }
+  ],
+  "timestamp": "2025-07-31T16:29:03.039033"
+}

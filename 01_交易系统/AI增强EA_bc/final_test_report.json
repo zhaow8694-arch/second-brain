@@ -1,0 +1,588 @@
+{
+  "test_summary": {
+    "timestamp": "2025-07-25T17:32:49.074939",
+    "total_tests": 34,
+    "passed_tests": 33,
+    "failed_tests": 1,
+    "overall_success_rate": 97.05882352941177
+  },
+  "system_tests": {
+    "total_tests": 24,
+    "passed_tests": 23,
+    "failed_tests": 1,
+    "success_rate": 95.83333333333334,
+    "results": {
+      "数据处理器加载": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "成功加载: <class 'trading_transformer_model.TradingDataProcessor'>",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.147631"
+      },
+      "AI模型加载": {
+        "status": "❌ FAIL",
+        "passed": false,
+        "details": "加载的是状态字典，需要模型架构信息",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.235181"
+      },
+      "测试数据生成": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "生成 59 行数据",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.239316"
+      },
+      "数据解析功能": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "解析 58 行数据",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.277830"
+      },
+      "特征工程": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "生成 36 个特征",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.291636"
+      },
+      "AI预测": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "预测: 1, 置信度: 0.8181",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.447367"
+      },
+      "预测值范围": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "预测值 1 在有效范围 [0,1,2]",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.447555"
+      },
+      "置信度范围": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "置信度 0.8181136250495911 在有效范围 [0,1]",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.447656"
+      },
+      "EA数据写入": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "写入 59 行数据",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.450493"
+      },
+      "AI数据读取": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "读取 59 行数据",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.483181"
+      },
+      "通讯流程": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "完整通讯成功",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.510396"
+      },
+      "输出文件生成": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "内容: 0,0.907795,1753435966",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.510742"
+      },
+      "输出格式验证": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "格式正确: 0,0.907795,1753435966",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.510900"
+      },
+      "MT4路径检测": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "找到路径: ['C:\\\\Program Files (x86)\\\\Hantec Markets V MT4 Terminal\\\\MQL4\\\\Files', 'C:\\\\Program Files\\\\MetaTrader 4\\\\MQL4\\\\Files']",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.511427"
+      },
+      "路径参数测试": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "测试路径: E:\\bc\\temp_test",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.513896"
+      },
+      "空文件处理": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "正确处理空文件",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.546143"
+      },
+      "无效数据处理": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "正确处理无效数据",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.548840"
+      },
+      "预测延迟": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "平均: 0.027s, 最大: 0.030s, 最小: 0.026s",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.860169"
+      },
+      "性能评级": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "优秀 (<1s)",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:46.860377"
+      },
+      "并发访问": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "成功率: 5/5",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:47.418414"
+      },
+      "内存使用": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "初始: 646.4MB, 加载后: 647.3MB, 最终: 647.4MB, 增长: 1.0MB",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:47.993456"
+      },
+      "内存效率": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "预测内存增长: 0.1MB",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:47.993658"
+      },
+      "文件不存在处理": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "正确处理文件不存在",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:48.026469"
+      },
+      "权限错误处理": {
+        "status": "✅ PASS",
+        "passed": true,
+        "details": "跳过权限测试（系统限制）",
+        "error": null,
+        "timestamp": "2025-07-25T17:32:48.026942"
+      }
+    }
+  },
+  "logic_tests": {
+    "total_tests": 10,
+    "passed_tests": 10,
+    "failed_tests": 0,
+    "success_rate": 100.0,
+    "results": [
+      {
+        "scenario": "正常上涨趋势",
+        "expected": "BUY",
+        "actual": "BUY",
+        "success": true,
+        "decision": {
+          "scenario": "正常上涨趋势",
+          "action": "BUY",
+          "reason": [
+            "AI看涨信号"
+          ],
+          "risk_checks": {
+            "account_protection": true,
+            "max_positions": true,
+            "spread_ok": true,
+            "trading_time": true
+          },
+          "technical_signals": {
+            "ma_cross": "BULLISH",
+            "rsi_signal": "NORMAL",
+            "atr_volatility": "True",
+            "adx_trend": true
+          },
+          "ai_signal": {
+            "prediction": 2,
+            "confidence": 0.85,
+            "valid": true
+          }
+        },
+        "indicators": {
+          "ma_5": 2098.386,
+          "ma_20": 2080.6215,
+          "ma_50": 2049.7366,
+          "rsi": 64.70325248686711,
+          "atr": 9.788571428571329,
+          "adx": 24.326627732736974,
+          "current_price": 2094.08
+        }
+      },
+      {
+        "scenario": "正常下跌趋势",
+        "expected": "SELL",
+        "actual": "SELL",
+        "success": true,
+        "decision": {
+          "scenario": "正常下跌趋势",
+          "action": "SELL",
+          "reason": [
+            "AI看跌信号"
+          ],
+          "risk_checks": {
+            "account_protection": true,
+            "max_positions": true,
+            "spread_ok": true,
+            "trading_time": true
+          },
+          "technical_signals": {
+            "ma_cross": "BEARISH",
+            "rsi_signal": "NORMAL",
+            "atr_volatility": "True",
+            "adx_trend": true
+          },
+          "ai_signal": {
+            "prediction": 0,
+            "confidence": 0.82,
+            "valid": true
+          }
+        },
+        "indicators": {
+          "ma_5": 1925.916,
+          "ma_20": 1934.6275,
+          "ma_50": 1959.1601999999998,
+          "rsi": 40.995628261175945,
+          "atr": 7.850000000000007,
+          "adx": 16.99108477589709,
+          "current_price": 1926.86
+        }
+      },
+      {
+        "scenario": "震荡市场",
+        "expected": "HOLD",
+        "actual": "HOLD",
+        "success": true,
+        "decision": {
+          "scenario": "震荡市场",
+          "action": "HOLD",
+          "reason": [
+            "等待更好的信号"
+          ],
+          "risk_checks": {
+            "account_protection": true,
+            "max_positions": true,
+            "spread_ok": true,
+            "trading_time": true
+          },
+          "technical_signals": {
+            "ma_cross": "BULLISH",
+            "rsi_signal": "NORMAL",
+            "atr_volatility": "True",
+            "adx_trend": true
+          },
+          "ai_signal": {
+            "prediction": 1,
+            "confidence": 0.75,
+            "valid": true
+          }
+        },
+        "indicators": {
+          "ma_5": 2001.896,
+          "ma_20": 2001.8445000000004,
+          "ma_50": 2001.4292,
+          "rsi": 50.0,
+          "atr": 14.798571428571417,
+          "adx": 21.98752765971722,
+          "current_price": 1998.29
+        }
+      },
+      {
+        "scenario": "低置信度预测",
+        "expected": "NO_TRADE",
+        "actual": "NO_TRADE",
+        "success": true,
+        "decision": {
+          "scenario": "低置信度预测",
+          "action": "NO_TRADE",
+          "reason": [
+            "AI置信度不足"
+          ],
+          "risk_checks": {
+            "account_protection": true,
+            "max_positions": true,
+            "spread_ok": true,
+            "trading_time": true
+          },
+          "technical_signals": {
+            "ma_cross": "BULLISH",
+            "rsi_signal": "NORMAL",
+            "atr_volatility": "True",
+            "adx_trend": true
+          },
+          "ai_signal": {
+            "prediction": 2,
+            "confidence": 0.45,
+            "valid": false
+          }
+        },
+        "indicators": {
+          "ma_5": 2093.63,
+          "ma_20": 2081.0025,
+          "ma_50": 2049.7780000000002,
+          "rsi": 68.23465507876168,
+          "atr": 9.927142857142794,
+          "adx": 17.633835807253078,
+          "current_price": 2101.15
+        }
+      },
+      {
+        "scenario": "扛单场景",
+        "expected": "HOLD_POSITION",
+        "actual": "HOLD_POSITION",
+        "success": true,
+        "decision": {
+          "scenario": "扛单场景",
+          "action": "HOLD_POSITION",
+          "reason": [
+            "扛单策略：继续持有"
+          ],
+          "risk_checks": {
+            "account_protection": true,
+            "max_positions": true,
+            "spread_ok": true,
+            "trading_time": true
+          },
+          "technical_signals": {
+            "ma_cross": "BULLISH",
+            "rsi_signal": "NORMAL",
+            "atr_volatility": "True",
+            "adx_trend": false
+          },
+          "ai_signal": {
+            "prediction": 0,
+            "confidence": 0.65,
+            "valid": true
+          }
+        },
+        "indicators": {
+          "ma_5": 2014.8879999999997,
+          "ma_20": 1990.6115000000002,
+          "ma_50": 1979.5968000000003,
+          "rsi": 75.5279034690801,
+          "atr": 8.876428571428603,
+          "adx": 8.836690773159088,
+          "current_price": 2021.22
+        }
+      },
+      {
+        "scenario": "锁仓触发",
+        "expected": "LOCK_POSITION",
+        "actual": "LOCK_POSITION",
+        "success": true,
+        "decision": {
+          "scenario": "锁仓触发",
+          "action": "LOCK_POSITION",
+          "reason": [
+            "AI信号反转，触发智能锁仓"
+          ],
+          "risk_checks": {
+            "account_protection": true,
+            "max_positions": true,
+            "spread_ok": true,
+            "trading_time": true
+          },
+          "technical_signals": {
+            "ma_cross": "BULLISH",
+            "rsi_signal": "NORMAL",
+            "atr_volatility": "True",
+            "adx_trend": true
+          },
+          "ai_signal": {
+            "prediction": 0,
+            "confidence": 0.85,
+            "valid": true
+          }
+        },
+        "indicators": {
+          "ma_5": 2015.676,
+          "ma_20": 1993.3365000000001,
+          "ma_50": 1979.6286000000002,
+          "rsi": 77.92758089368272,
+          "atr": 9.637857142857147,
+          "adx": 13.982086462963585,
+          "current_price": 2021.05
+        }
+      },
+      {
+        "scenario": "账户保护触发",
+        "expected": "EMERGENCY_CLOSE",
+        "actual": "EMERGENCY_CLOSE",
+        "success": true,
+        "decision": {
+          "scenario": "账户保护触发",
+          "action": "EMERGENCY_CLOSE",
+          "reason": [
+            "账户保护触发"
+          ],
+          "risk_checks": {
+            "account_protection": false,
+            "max_positions": true,
+            "spread_ok": true,
+            "trading_time": true
+          },
+          "technical_signals": {
+            "ma_cross": "BEARISH",
+            "rsi_signal": "NORMAL",
+            "atr_volatility": "True",
+            "adx_trend": true
+          },
+          "ai_signal": {
+            "prediction": -1,
+            "confidence": 0.0,
+            "valid": false
+          }
+        },
+        "indicators": {
+          "ma_5": 1809.8259999999998,
+          "ma_20": 1839.1950000000002,
+          "ma_50": 1899.0794,
+          "rsi": 37.512687324616316,
+          "atr": 15.647142857142853,
+          "adx": 23.782852722617243,
+          "current_price": 1796.8
+        }
+      },
+      {
+        "scenario": "虚拟移动止损",
+        "expected": "TRAILING_STOP",
+        "actual": "TRAILING_STOP",
+        "success": true,
+        "decision": {
+          "scenario": "虚拟移动止损",
+          "action": "TRAILING_STOP",
+          "reason": [
+            "虚拟移动止损触发"
+          ],
+          "risk_checks": {
+            "account_protection": true,
+            "max_positions": true,
+            "spread_ok": true,
+            "trading_time": true
+          },
+          "technical_signals": {
+            "ma_cross": "BEARISH",
+            "rsi_signal": "NORMAL",
+            "atr_volatility": "True",
+            "adx_trend": true
+          },
+          "ai_signal": {
+            "prediction": -1,
+            "confidence": 0.0,
+            "valid": false
+          }
+        },
+        "indicators": {
+          "ma_5": 2105.852,
+          "ma_20": 2121.092,
+          "ma_50": 2100.0322,
+          "rsi": 18.01824007887437,
+          "atr": 5.988571428571374,
+          "adx": 17.45203761246475,
+          "current_price": 2103.35
+        }
+      },
+      {
+        "scenario": "技术指标平仓",
+        "expected": "TECHNICAL_CLOSE",
+        "actual": "TECHNICAL_CLOSE",
+        "success": true,
+        "decision": {
+          "scenario": "技术指标平仓",
+          "action": "TECHNICAL_CLOSE",
+          "reason": [
+            "技术指标平仓信号"
+          ],
+          "risk_checks": {
+            "account_protection": true,
+            "max_positions": true,
+            "spread_ok": true,
+            "trading_time": true
+          },
+          "technical_signals": {
+            "ma_cross": "BULLISH",
+            "rsi_signal": "OVERBOUGHT",
+            "atr_volatility": "True",
+            "adx_trend": true
+          },
+          "ai_signal": {
+            "prediction": 1,
+            "confidence": 0.7,
+            "valid": true
+          }
+        },
+        "indicators": {
+          "ma_5": 2190.934,
+          "ma_20": 2160.968,
+          "ma_50": 2099.6142,
+          "rsi": 99.00990099009901,
+          "atr": 7.546428571428578,
+          "adx": 20.032566205954375,
+          "current_price": 2200.42
+        }
+      },
+      {
+        "scenario": "多持仓管理",
+        "expected": "ALLOW_NEW_POSITION",
+        "actual": "ALLOW_NEW_POSITION",
+        "success": true,
+        "decision": {
+          "scenario": "多持仓管理",
+          "action": "ALLOW_NEW_POSITION",
+          "reason": [
+            "允许新持仓：8/10"
+          ],
+          "risk_checks": {
+            "account_protection": true,
+            "max_positions": true,
+            "spread_ok": true,
+            "trading_time": true
+          },
+          "technical_signals": {
+            "ma_cross": "BULLISH",
+            "rsi_signal": "NORMAL",
+            "atr_volatility": "True",
+            "adx_trend": true
+          },
+          "ai_signal": {
+            "prediction": 2,
+            "confidence": 0.75,
+            "valid": true
+          }
+        },
+        "indicators": {
+          "ma_5": 2011.0420000000001,
+          "ma_20": 2009.0769999999998,
+          "ma_50": 2007.1763999999998,
+          "rsi": 62.66642677222043,
+          "atr": 6.661428571428571,
+          "adx": 20.785468817559558,
+          "current_price": 2014.7
+        }
+      }
+    ]
+  },
+  "recommendations": [
+    "建议修复系统测试中的失败项目",
+    "检查AI模型文件和PyTorch环境",
+    "建议在解决问题后重新运行测试"
+  ]
+}

@@ -1,0 +1,16 @@
+---
+pid: 20616
+cwd: "E:\grokmacd"
+command: "subst X: \"D:\\MT5测试\\MetaTrader 5\" 2>$null
+New-Item -ItemType Directory -Force -Path \"X:\\SingleEAReports\\optimize_pf_v861_2020_2025\" | Out-Null
+Write-Host \"=== Genetic optimization for Profit Factor (2020-2025) ===\"
+$sw = [System.Diagnostics.Stopwatch]::StartNew()
+$p = Start-Process -FilePath \"X:\\terminal64.exe\" -ArgumentList \"/portable\",\"/config:X:\\Tester\\SniperTrendEA_v8.61_PF_OPT_2020_2025.ini\" -Wait -PassThru
+$sw.Stop()
+Write-Host \"Exit: $($p.ExitCode) | Elapsed: $([math]::Round($sw.Elapsed.TotalSeconds,1))s\""
+started_at: 2026-06-17T16:58:19.341Z
+running_for_ms: 12729973 
+---
+�Ѿ���������ִ�� SUBST ����
+=== Genetic optimization for Profit Factor (2020-2025) ===
+Exit: 0 | Elapsed: 979.3s

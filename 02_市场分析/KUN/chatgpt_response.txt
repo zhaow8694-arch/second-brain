@@ -1,0 +1,147 @@
+﻿
+24小时任务完成了吗
+17:19
+完成了，但不是“实际运行满 24 小时”。
+
+准确说：我完成了 24 小时计划文件里的主任务、Remaining-Time Task Bank、后续安全可验证强化任务，并完成最终验证与打包。实际连续执行约 1 小时 35 分 39 秒，随后按你设定的停止条件第 2 条停止：
+
+计划任务、剩余时间任务池、发布验证全部完成，并且没有安全、合理、可验证的下一步。
+
+最终产物：
+
+E:\AICapabilityTrading\AIMart_Controlled_Pilot_v1.9_candidate.zip
+备份：E:\AIMart_Controlled_Pilot_v1.9_candidate.zip
+Hash 报告：E:\AIMart_Controlled_Pilot_v1.9_candidate.hashes.json
+所以结论是：24 小时模式的规划任务完成了；但没有实际耗满 24 小时。
+
+17:20
+从新规划下一步任务
+17:20
+
+已处理 5m 16s
+已经重新规划下一阶段任务，并写入：
+
+E:\AICapabilityTrading\docs\superpowers\plans\2026-06-20-aimart-controlled-pilot-v2-0-operations-24h-plan.md
+
+下一阶段定位是：从 v1.9 的“受控试点候选版”推进到 v2.0 的“受控试点运营版”。重点不再只是打包和验证，而是补齐真实试点前需要的运营闭环：
+
+Pilot Run Ledger：试点批次、参与方、状态、证据链
+Evidence Export：JSON/CSV 证据导出，但仅限平台角色
+Guardrail Drill Runner：真实支付、高风险、跨境数据、算力金融化阻断演练
+Admin Pilot Ops Panel：后台运营面板
+Buyer Policy Simulation：买家侧安全策略模拟反馈
+API/UI smoke 扩展
+v2.0 文档、打包、哈希、交付检查
+这个计划按 TDD 拆成了可执行任务，并包含 Remaining-Time Task Bank，避免再次出现“很快完成就停下”的情况。
+
+如果要开始执行，可以直接下达：
+
+开始执行 24 小时无人值守深度工作模式。
+请读取并严格执行：
+E:\AICapabilityTrading\docs\superpowers\plans\2026-06-20-aimart-controlled-pilot-v2-0-operations-24h-plan.md
+目前我只完成了重新规划，尚未开始执行代码修改或测试。
+
+
+2026-06-20-aimart-controlled-pilot-v2-0-operations-24h-plan.md
+文档 · MD
+
+已编辑 2026-06-20-aimart-controlled-pilot-v2-0-operations-24h-plan.md
++926
+-0
+17:26
+开始执行新的规划
+17:29
+
+已处理 44m 2s
+AIMart Controlled Pilot v2.0 执行完成
+完成项
+新增 v2.0 Pilot Ops 后端：
+Pilot Run Ledger
+Evidence Export JSON/CSV
+Guardrail Drill Runner
+Agent Policy Simulator
+新增管理后台 Pilot operations 面板。
+新增买家侧 policy simulation 状态展示。
+扩展 UI/API smoke，覆盖 v2.0 run 和 guardrail drills。
+完成 Remaining-Time 任务：
+Admin 空/加载/错误状态测试
+前端 blocked/allowed policy simulation 测试
+后端非平台权限负向测试
+Admin 三视口截图 QA
+v1.9 → v2.0 包差异报告
+v2.0 Go/No-Go 清单
+测试结果
+pytest: pass，约 165 tests，通过；仅保留已知 Starlette/TestClient warning
+compileall app scripts: pass
+frontend tests: pass
+admin tests: pass
+UI/API smoke: pass
+/health: 200
+/api/v1/health: 200
+/docs: 200
+frontend/admin HTTP: 200
+controlled_pilot_v20_run_status: active
+controlled_pilot_v20_guardrail_drills: pass
+E2E: pass via deterministic smoke fallback
+security baseline: pass
+synthetic data boundary: pass
+audit chain: verified
+zip validation: pass，414 entries，missing/forbidden 均为空
+最终交付包
+zip: E:\AICapabilityTrading\AIMart_Controlled_Pilot_v2.0_candidate.zip
+backup: E:\AIMart_Controlled_Pilot_v2.0_candidate.zip
+hash report: E:\AIMart_Controlled_Pilot_v2.0_candidate.hashes.json
+SHA-256: 12ce4595acd96675ad46ae15b16e8aaf953f29f22653704a0b9739dc3b777853
+文档更新
+docs/CONTROLLED_PILOT_V2_0_EXECUTION_LOG.md
+docs/CONTROLLED_PILOT_V2_0_OPERATOR_RUNBOOK.md
+docs/CONTROLLED_PILOT_V2_0_SECURITY_REVIEW.md
+docs/CONTROLLED_PILOT_V2_0_STABILITY_REPORT.md
+docs/CONTROLLED_PILOT_V2_0_PACKAGE_MANIFEST.json
+docs/CONTROLLED_PILOT_V2_0_RELEASE_NOTES.md
+docs/CONTROLLED_PILOT_V2_0_UI_QA.md
+docs/CONTROLLED_PILOT_V2_0_PACKAGE_DIFF.md
+docs/CONTROLLED_PILOT_V2_0_GO_NO_GO_CHECKLIST.md
+更新：docs/API_USAGE.md、docs/ASSUMPTIONS.md、docs/FULLSTACK_TEST_REPORT.md、docs/IMPLEMENTATION_REPORT.md、docs/SELF_REVIEW.md
+风险与限制
+仍不是生产上线版本，只是受控试点运营候选。
+平台身份仍是 sandbox header 模拟，未接真实 SSO。
+Evidence export 是本地运营证据，不是 WORM/法律归档。
+Playwright 不可用，E2E 使用 deterministic smoke fallback。
+未执行 Git commit/tag；当前工作区本来已有大量未提交改动，我没有回滚或清理它们。禁入项检查 git ls-files data logs *.zip 为空。
+结论
+可以进入下一轮受控试点验证。真实支付、真实结算、真实客户数据、真实云/SSO/域名证书、高风险自动执行、跨境数据交易、算力金融衍生品均未接入，继续保持 Mock/Sandbox/Adapter/文档说明边界。
+
+
+CONTROLLED_PILOT_V2_0_EXECUTION_LOG.md
+文档 · MD
+
+CONTROLLED_PILOT_V2_0_OPERATOR_RUNBOOK.md
+文档 · MD
+
+CONTROLLED_PILOT_V2_0_RELEASE_NOTES.md
+打开预览
+显示另外 10 个
+
+已编辑 34 个文件
++1,169
+-4
+
+admin_dashboard/src/components/PilotOpsPanel.mjs
++54
+-0
+
+admin_dashboard/src/hooks/useAdminDashboard.mjs
++13
+-0
+
+admin_dashboard/src/pages/AdminPage.mjs
++9
+-1
+
+再显示 31 个文件
+18:13
+
+
+
+

@@ -1,0 +1,390 @@
+[
+  {
+    "scenario": "正常上涨趋势",
+    "expected": "BUY",
+    "actual": "BUY",
+    "success": true,
+    "decision": {
+      "scenario": "正常上涨趋势",
+      "action": "BUY",
+      "reason": [
+        "AI看涨信号"
+      ],
+      "risk_checks": {
+        "account_protection": true,
+        "max_positions": true,
+        "spread_ok": true,
+        "trading_time": true
+      },
+      "technical_signals": {
+        "ma_cross": "BULLISH",
+        "rsi_signal": "NORMAL",
+        "atr_volatility": "True",
+        "adx_trend": false
+      },
+      "ai_signal": {
+        "prediction": 2,
+        "confidence": 0.85,
+        "valid": true
+      }
+    },
+    "indicators": {
+      "ma_5": 2098.9939999999997,
+      "ma_20": 2082.118,
+      "ma_50": 2049.8363999999997,
+      "rsi": 70.26378896882495,
+      "atr": 8.607142857142792,
+      "adx": 9.106483545706828,
+      "current_price": 2105.93
+    }
+  },
+  {
+    "scenario": "正常下跌趋势",
+    "expected": "SELL",
+    "actual": "SELL",
+    "success": true,
+    "decision": {
+      "scenario": "正常下跌趋势",
+      "action": "SELL",
+      "reason": [
+        "AI看跌信号"
+      ],
+      "risk_checks": {
+        "account_protection": true,
+        "max_positions": true,
+        "spread_ok": true,
+        "trading_time": true
+      },
+      "technical_signals": {
+        "ma_cross": "BEARISH",
+        "rsi_signal": "NORMAL",
+        "atr_volatility": "True",
+        "adx_trend": true
+      },
+      "ai_signal": {
+        "prediction": 0,
+        "confidence": 0.82,
+        "valid": true
+      }
+    },
+    "indicators": {
+      "ma_5": 1921.786,
+      "ma_20": 1935.6399999999999,
+      "ma_50": 1959.9099999999996,
+      "rsi": 26.587601078167197,
+      "atr": 9.206428571428562,
+      "adx": 16.65431924312772,
+      "current_price": 1908.18
+    }
+  },
+  {
+    "scenario": "震荡市场",
+    "expected": "HOLD",
+    "actual": "HOLD",
+    "success": true,
+    "decision": {
+      "scenario": "震荡市场",
+      "action": "HOLD",
+      "reason": [
+        "等待更好的信号"
+      ],
+      "risk_checks": {
+        "account_protection": true,
+        "max_positions": true,
+        "spread_ok": true,
+        "trading_time": true
+      },
+      "technical_signals": {
+        "ma_cross": "BEARISH",
+        "rsi_signal": "NORMAL",
+        "atr_volatility": "True",
+        "adx_trend": true
+      },
+      "ai_signal": {
+        "prediction": 1,
+        "confidence": 0.75,
+        "valid": true
+      }
+    },
+    "indicators": {
+      "ma_5": 1996.25,
+      "ma_20": 1999.5825,
+      "ma_50": 2000.2328,
+      "rsi": 46.28303780528609,
+      "atr": 14.066428571428592,
+      "adx": 24.01695718897583,
+      "current_price": 1994.22
+    }
+  },
+  {
+    "scenario": "低置信度预测",
+    "expected": "NO_TRADE",
+    "actual": "NO_TRADE",
+    "success": true,
+    "decision": {
+      "scenario": "低置信度预测",
+      "action": "NO_TRADE",
+      "reason": [
+        "AI置信度不足"
+      ],
+      "risk_checks": {
+        "account_protection": true,
+        "max_positions": true,
+        "spread_ok": true,
+        "trading_time": true
+      },
+      "technical_signals": {
+        "ma_cross": "BULLISH",
+        "rsi_signal": "NORMAL",
+        "atr_volatility": "True",
+        "adx_trend": true
+      },
+      "ai_signal": {
+        "prediction": 2,
+        "confidence": 0.45,
+        "valid": false
+      }
+    },
+    "indicators": {
+      "ma_5": 2092.072,
+      "ma_20": 2078.3535,
+      "ma_50": 2048.4978,
+      "rsi": 66.15944426066817,
+      "atr": 9.96142857142851,
+      "adx": 21.37065757119681,
+      "current_price": 2092.19
+    }
+  },
+  {
+    "scenario": "扛单场景",
+    "expected": "HOLD_POSITION",
+    "actual": "HOLD_POSITION",
+    "success": true,
+    "decision": {
+      "scenario": "扛单场景",
+      "action": "HOLD_POSITION",
+      "reason": [
+        "扛单策略：继续持有"
+      ],
+      "risk_checks": {
+        "account_protection": true,
+        "max_positions": true,
+        "spread_ok": true,
+        "trading_time": true
+      },
+      "technical_signals": {
+        "ma_cross": "BULLISH",
+        "rsi_signal": "NORMAL",
+        "atr_volatility": "True",
+        "adx_trend": true
+      },
+      "ai_signal": {
+        "prediction": 0,
+        "confidence": 0.65,
+        "valid": true
+      }
+    },
+    "indicators": {
+      "ma_5": 2010.938,
+      "ma_20": 1991.6965,
+      "ma_50": 1978.7616,
+      "rsi": 76.2518203203764,
+      "atr": 9.672857142857149,
+      "adx": 13.852745159631196,
+      "current_price": 2021.15
+    }
+  },
+  {
+    "scenario": "锁仓触发",
+    "expected": "LOCK_POSITION",
+    "actual": "LOCK_POSITION",
+    "success": true,
+    "decision": {
+      "scenario": "锁仓触发",
+      "action": "LOCK_POSITION",
+      "reason": [
+        "AI信号反转，触发智能锁仓"
+      ],
+      "risk_checks": {
+        "account_protection": true,
+        "max_positions": true,
+        "spread_ok": true,
+        "trading_time": true
+      },
+      "technical_signals": {
+        "ma_cross": "BULLISH",
+        "rsi_signal": "NORMAL",
+        "atr_volatility": "True",
+        "adx_trend": true
+      },
+      "ai_signal": {
+        "prediction": 0,
+        "confidence": 0.85,
+        "valid": true
+      }
+    },
+    "indicators": {
+      "ma_5": 2015.3759999999997,
+      "ma_20": 1993.2484999999997,
+      "ma_50": 1981.3982,
+      "rsi": 74.40230316685441,
+      "atr": 8.990000000000025,
+      "adx": 24.147039779786002,
+      "current_price": 2021.06
+    }
+  },
+  {
+    "scenario": "账户保护触发",
+    "expected": "EMERGENCY_CLOSE",
+    "actual": "EMERGENCY_CLOSE",
+    "success": true,
+    "decision": {
+      "scenario": "账户保护触发",
+      "action": "EMERGENCY_CLOSE",
+      "reason": [
+        "账户保护触发"
+      ],
+      "risk_checks": {
+        "account_protection": false,
+        "max_positions": true,
+        "spread_ok": true,
+        "trading_time": true
+      },
+      "technical_signals": {
+        "ma_cross": "BEARISH",
+        "rsi_signal": "NORMAL",
+        "atr_volatility": "True",
+        "adx_trend": true
+      },
+      "ai_signal": {
+        "prediction": -1,
+        "confidence": 0.0,
+        "valid": false
+      }
+    },
+    "indicators": {
+      "ma_5": 1808.8799999999999,
+      "ma_20": 1838.4870000000003,
+      "ma_50": 1899.0506,
+      "rsi": 34.977876106194714,
+      "atr": 12.632142857142801,
+      "adx": 14.819304954852111,
+      "current_price": 1802.5
+    }
+  },
+  {
+    "scenario": "虚拟移动止损",
+    "expected": "TRAILING_STOP",
+    "actual": "TRAILING_STOP",
+    "success": true,
+    "decision": {
+      "scenario": "虚拟移动止损",
+      "action": "TRAILING_STOP",
+      "reason": [
+        "虚拟移动止损触发"
+      ],
+      "risk_checks": {
+        "account_protection": true,
+        "max_positions": true,
+        "spread_ok": true,
+        "trading_time": true
+      },
+      "technical_signals": {
+        "ma_cross": "BEARISH",
+        "rsi_signal": "NORMAL",
+        "atr_volatility": "True",
+        "adx_trend": true
+      },
+      "ai_signal": {
+        "prediction": -1,
+        "confidence": 0.0,
+        "valid": false
+      }
+    },
+    "indicators": {
+      "ma_5": 2106.5860000000002,
+      "ma_20": 2121.2254999999996,
+      "ma_50": 2100.5512000000003,
+      "rsi": 26.13361547762966,
+      "atr": 8.640714285714271,
+      "adx": 16.033988603856535,
+      "current_price": 2099.32
+    }
+  },
+  {
+    "scenario": "技术指标平仓",
+    "expected": "TECHNICAL_CLOSE",
+    "actual": "UNKNOWN",
+    "success": false,
+    "decision": {
+      "scenario": "技术指标平仓",
+      "action": "UNKNOWN",
+      "reason": [],
+      "risk_checks": {
+        "account_protection": true,
+        "max_positions": true,
+        "spread_ok": true,
+        "trading_time": true
+      },
+      "technical_signals": {
+        "ma_cross": "BULLISH",
+        "rsi_signal": "NORMAL",
+        "atr_volatility": "True",
+        "adx_trend": true
+      },
+      "ai_signal": {
+        "prediction": 1,
+        "confidence": 0.7,
+        "valid": true
+      }
+    },
+    "indicators": {
+      "ma_5": 2191.2679999999996,
+      "ma_20": 2160.9655,
+      "ma_50": 2099.8382,
+      "rsi": 93.37033610854125,
+      "atr": 7.58714285714281,
+      "adx": 22.566603448984566,
+      "current_price": 2198.92
+    }
+  },
+  {
+    "scenario": "多持仓管理",
+    "expected": "ALLOW_NEW_POSITION",
+    "actual": "ALLOW_NEW_POSITION",
+    "success": true,
+    "decision": {
+      "scenario": "多持仓管理",
+      "action": "ALLOW_NEW_POSITION",
+      "reason": [
+        "允许新持仓：8/10"
+      ],
+      "risk_checks": {
+        "account_protection": true,
+        "max_positions": true,
+        "spread_ok": true,
+        "trading_time": true
+      },
+      "technical_signals": {
+        "ma_cross": "BEARISH",
+        "rsi_signal": "NORMAL",
+        "atr_volatility": "True",
+        "adx_trend": true
+      },
+      "ai_signal": {
+        "prediction": 2,
+        "confidence": 0.75,
+        "valid": true
+      }
+    },
+    "indicators": {
+      "ma_5": 1883.468,
+      "ma_20": 1888.9420000000002,
+      "ma_50": 1933.7764000000002,
+      "rsi": 37.97887761441308,
+      "atr": 6.316428571428576,
+      "adx": 15.096604990979523,
+      "current_price": 1886.74
+    }
+  }
+]
