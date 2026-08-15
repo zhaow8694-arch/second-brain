@@ -13,7 +13,7 @@ Write-Host "关键文件:"
 Write-Host "  - E:\知识库\hot.md (活跃上下文)"
 Write-Host "  - E:\知识库\CLAUDE.md (第二大脑宪法)"
 Write-Host "  - E:\知识库\📖 知识库索引总表.md (全局索引)"
-Write-Host "  - E:\知识库\.claude\memory\MEMORY.md (记忆索引)"
+Write-Host "  - E:\知识库\.claude\memory\MEMORY.md (记忆索引 — 下次对话自动加载)"
 Write-Host ""
 
 # 检查收件箱是否有待处理文件

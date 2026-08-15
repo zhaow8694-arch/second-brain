@@ -1,0 +1,66 @@
+# TASK-319 MT5 no-trade startup preflight gate
+
+- planning-only
+- startup-preflight-gate-only
+- mt5-no-trade-startup-preflight-gate
+- not MT5 run in TASK-319
+- not terminal64.exe execution in TASK-319
+- not terminal.exe execution in TASK-319
+- not Strategy Tester authorization
+- not backtest authorization
+- not simulation trading authorization
+- not real trading authorization
+- not trading authorization
+- not deployment readiness
+- not strategy readiness
+- no MT5 terminal run executed in TASK-319
+- no terminal64.exe executed in TASK-319
+- no terminal.exe executed in TASK-319
+- no Strategy Tester executed in TASK-319
+- no backtest executed in TASK-319
+- no trading executed in TASK-319
+- no manifest generated
+- no evidence generated
+- no report generated
+- no startup log generated in repository
+- no terminal data directory created in repository
+- no no-trade config file generated in repository
+- Inventory only; no MT5 run; no trading authorization.
+- current HEAD: 718c7cf TASK-317-318 implement MT5 no-trade startup config template and authorization boundaries
+- current tag: v0.5.113-task-317-318-mt5-no-trade-startup-config-auth-boundaries
+- TASK-314 discovered MT5 terminal candidate
+- TASK-315 defined startup quarantine preparation
+- TASK-316 defined dry-run config boundary
+- TASK-317 defined stdout-only no-trade config template
+- TASK-318 defined startup authorization plan
+- MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- future TASK-320 must be separately authorized by GPT before any MT5 terminal startup attempt
+- TASK-320 must not be entered directly
+
+## Future TASK-320 Minimum Entry Conditions
+
+- future GPT boundary explicitly authorizes MT5 terminal no-trade startup attempt
+- future startup must remain no-trade
+- future startup must use isolated startup quarantine outside repository
+- future startup must use no-trade config
+- future startup must prove InpEnableTrading=false before startup
+- future startup must prove trading keywords false before startup
+- future startup must prove MQ5 inventory remains 7 files before startup
+- future startup must prove repo_ex5_artifacts=false before startup
+- future startup must prove repo_compile_logs=false before startup
+- future startup must prove repo_mq5_modified=false before startup
+- future startup must prove no terminal data directory exists in repository before startup
+- future startup must prove no startup log exists in repository before startup
+- future startup must prove no generated no-trade config file exists in repository before startup
+- future startup must not run Strategy Tester
+- future startup must not run backtest
+- future startup must not run simulation trading
+- future startup must not run real trading
+- future startup must not place orders
+- future startup must capture startup result stdout-only unless separately authorized
+- future startup must clean up quarantine unless separately authorized
+- future startup must not imply deployment readiness
+- future startup must not imply strategy readiness
+- future startup must not imply backtest readiness
+- future startup must not imply trading authorization

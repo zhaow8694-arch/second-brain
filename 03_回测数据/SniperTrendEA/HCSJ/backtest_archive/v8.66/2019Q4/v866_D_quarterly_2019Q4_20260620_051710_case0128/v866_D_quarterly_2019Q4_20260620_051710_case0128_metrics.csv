@@ -1,0 +1,2 @@
+run_id,net_profit,profit_factor,max_balance_dd,max_balance_dd_pct,max_equity_dd,max_equity_dd_pct,relative_equity_dd,relative_equity_dd_pct,total_trades,win_rate,buy_trades,sell_trades,max_consecutive_winning_trades,max_consecutive_losing_trades,max_consecutive_winning_count,max_consecutive_losing_count,status
+"v866_D_quarterly_2019Q4_20260620_051710_case0128",-2287.42,0.15,2599.02,13.00,3866.37,18.38,3866.37,18.38,8,50.00,2,6,311.60,-1733.26,1,2,completed

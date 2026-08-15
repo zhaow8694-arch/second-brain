@@ -1,0 +1,9 @@
+Copied files/directories:
+  - E:\CODEXMACD\mt5_configs\sniper_v864_fix1_grok86_report_equiv_r8_H4_XAUUSD_2020_2025.ini
+  - D:\MT5≤‚ ‘\MetaTrader 5\MQL5\Profiles\Tester\SniperTrendEA_v8.64_fix1_grok86_report_equiv_r8.set
+  - D:\MT5≤‚ ‘\MetaTrader 5\MQL5\Experts\SniperTrendEA_v8.64_softmerge_fix1.ex5
+  - D:\MT5≤‚ ‘\MetaTrader 5\SingleEAReports\sniper_v864_fix1_grok86_report_equiv_r8_2020_2025-holding.png
+  - D:\MT5≤‚ ‘\MetaTrader 5\SingleEAReports\sniper_v864_fix1_grok86_report_equiv_r8_2020_2025-hst.png
+  - D:\MT5≤‚ ‘\MetaTrader 5\SingleEAReports\sniper_v864_fix1_grok86_report_equiv_r8_2020_2025-mfemae.png
+  - D:\MT5≤‚ ‘\MetaTrader 5\SingleEAReports\sniper_v864_fix1_grok86_report_equiv_r8_2020_2025.htm
+  - D:\MT5≤‚ ‘\MetaTrader 5\SingleEAReports\sniper_v864_fix1_grok86_report_equiv_r8_2020_2025.png

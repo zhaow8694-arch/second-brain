@@ -1,0 +1,2 @@
+run_id,net_profit,profit_factor,max_balance_dd,max_balance_dd_pct,max_equity_dd,max_equity_dd_pct,relative_equity_dd,relative_equity_dd_pct,total_trades,win_rate,buy_trades,sell_trades,max_consecutive_winning_trades,max_consecutive_losing_trades,max_consecutive_winning_count,max_consecutive_losing_count,status
+"v866_B_monthly_core_201706_20260620_051710_case0131",-2452.92,0.02,2507.53,12.50,4735.20,21.50,4735.20,21.50,4,25.00,2,2,54.61,-2507.53,1,3,completed

@@ -1,0 +1,66 @@
+﻿; Hybrid settings generated 2026.06.17
+; Base EA: SniperTrendEA_v8.7_RiskFix
+; Common input values copied from SniperTrendEA_v8.5.set; v8.7-only safety/risk inputs kept from SniperTrendEA_v8.7_RiskFix.set
+;
+; saved automatically on 2026.06.13 00:33:56
+; this file contains last used input parameters for testing/optimizing SniperTrendEA_v8.7_RiskFix expert advisor
+;
+; === MACD 参数 ===
+InpFastEMA=12||12||1||120||N
+InpSlowEMA=26||26||1||260||N
+InpSignalSMA=9||9||1||90||N
+; === MA200 趋势过滤（Buffer 使用 ATR 倍数）===
+InpMA200Period=200||200||1||2000||N
+InpUseMA200Filter=true||false||0||true||N
+InpMA200BufferATR=0.0||0.0||0.1||0.4||Y
+; === 入场质量过滤（Z-Wei 哲学）===
+InpBodyRatio=0.6||0.5||0.05||0.7||Y
+InpMaxCandleATR=3.75||2.5||0.5||4.0||Y
+InpMaxOppositeShadow=0.35||0.15||0.05||0.45||Y
+InpRequireFollowThrough=false||false||0||true||N
+InpFollowThroughBars=3||3||1||30||N
+InpConfirmBars=5||3||1||6||Y
+InpRequireMACDDir=false||false||0||true||N
+InpCancelPendingOnOppositeFlip=true||false||0||true||N
+; === ADX 趋势过滤 ===
+InpUseADX=false||false||0||true||N
+InpADXPeriod=14||14||1||140||N
+InpADXThreshold=25||25.0||2.500000||250.000000||N
+; === 时间过滤 ===
+InpUseTimeFilter=false||false||0||true||N
+InpStartHour=8||8||1||80||N
+InpEndHour=20||20||1||200||N
+; === 波动率过滤 ===
+InpUseATRFilter=false||false||0||true||N
+InpATRFilterPeriod=20||20||1||200||N
+InpATRFilterRatio=1||1.0||0.100000||10.000000||N
+; === 日线趋势确认 ===
+InpUseDailyFilter=false||false||0||true||N
+; === 风险管理 ===
+InpRiskPercent=0.5||1.0||0.100000||10.000000||N
+InpUseEquityRisk=true||false||0||true||N
+InpUseOrderCalcProfitRisk=true||false||0||true||N
+InpAllowTickValueFallback=false||false||0||true||N
+InpPrintRiskDetails=true||false||0||true||N
+InpATRMultiplier=1.5||1.25||0.25||2.0||Y
+InpATRPeriod=14||14||1||140||N
+InpAllowMinLotWhenRiskTooSmall=false||false||0||true||N
+InpMaxPositions=1||1||1||10||N
+; === 保本与移动止盈 ===
+InpUseBreakEven=true||false||0||true||N
+InpBreakEvenStart=2.0||2.0||0.200000||20.000000||N
+InpBreakEvenBuffer=0.1||0.1||0.010000||1.000000||N
+InpUseTrailingStop=true||false||0||true||N
+InpTrailingStart=5.0||3.0||0.5||6.0||Y
+InpTrailingStep=1.5||2.0||0.5||3.5||Y
+InpMinStopImproveATR=0.05||0.05||0.005000||0.500000||N
+InpMinStopImprovePoints=10||10||1||100||N
+; === 交易执行设置 ===
+InpMagicNumber=20260213||20260213||1||202602130||N
+InpComment=SniperEA_v87_with_v85set
+InpEnableBuy=true||false||0||true||N
+InpEnableSell=true||false||0||true||N
+InpDeviationPoints=20||20||1||200||N
+InpUseSpreadFilter=false||false||0||true||N
+InpMaxSpreadPoints=30||30||1||300||N
+InpDebugMode=false||false||0||true||N

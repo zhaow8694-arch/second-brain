@@ -1,0 +1,9 @@
+---
+pid: 22388
+cwd: "D:\TradingSystem_Starter"
+command: "cmd /c \"cd /d D:\\TradingSystem_Starter && py -3 tools\\test_validate_project_state_docs.py 2>&1 | findstr /i \\\"passed failed\\\"\""
+started_at: 2026-06-17T13:15:02.956Z
+running_for_ms: 1855010  
+---
+FINDSTR: �޷��� passed
+FINDSTR: �޷��� failed\

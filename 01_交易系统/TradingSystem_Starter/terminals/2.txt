@@ -1,0 +1,10 @@
+---
+pid: 34488
+cwd: "D:\TradingSystem_Starter"
+command: "cmd /c \"cd /d D:\\TradingSystem_Starter && py -3 tools\\run_release_validation_bundle.py --profile fast-no-trade-dev 2>&1 | findstr /i \\\"PASS FAIL result:\\\"\""
+started_at: 2026-06-17T13:20:25.773Z
+running_for_ms: 1350014  
+---
+FINDSTR: �޷��� PASS
+FINDSTR: �޷��� FAIL
+FINDSTR: �޷��� result:\

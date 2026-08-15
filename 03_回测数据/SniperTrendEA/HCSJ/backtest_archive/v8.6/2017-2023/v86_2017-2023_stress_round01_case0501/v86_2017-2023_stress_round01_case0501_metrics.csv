@@ -1,0 +1,2 @@
+run_id,net_profit,profit_factor,max_balance_dd,max_balance_dd_pct,max_equity_dd,max_equity_dd_pct,relative_equity_dd,relative_equity_dd_pct,total_trades,win_rate,status
+"v86_2017-2023_stress_round01_case0501",36888.87,1.16,40101.25,48.19,48071.97,53.80,48071.97,53.80,250,40.80,completed

@@ -17,7 +17,7 @@
 |:-------|:------:|
 | backtest_results.db | 6,307 |
 | strategy_versions.db | 51（23个策略） |
-| knowledge_index.db | 87 |
+| knowledge_index.db | 114 |
 | learning_notes.db | 6 |
 | parameter_optimization.db | 0（空）|
 

@@ -1,0 +1,2 @@
+run_id,net_profit,profit_factor,max_balance_dd,max_balance_dd_pct,max_equity_dd,max_equity_dd_pct,relative_equity_dd,relative_equity_dd_pct,total_trades,win_rate,buy_trades,sell_trades,max_consecutive_winning_trades,max_consecutive_losing_trades,max_consecutive_winning_count,max_consecutive_losing_count,status
+"v866_B_quarterly_2012Q1_20260620_051710_case0002",-2533.06,0.45,4473.67,22.37,5532.25,27.06,5532.25,27.06,10,40.00,5,5,1940.61,-1938.71,2,2,completed

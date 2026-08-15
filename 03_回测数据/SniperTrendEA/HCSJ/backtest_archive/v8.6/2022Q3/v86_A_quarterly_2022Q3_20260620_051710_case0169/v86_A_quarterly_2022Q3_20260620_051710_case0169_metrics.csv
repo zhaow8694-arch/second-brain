@@ -1,0 +1,2 @@
+run_id,net_profit,profit_factor,max_balance_dd,max_balance_dd_pct,max_equity_dd,max_equity_dd_pct,relative_equity_dd,relative_equity_dd_pct,total_trades,win_rate,buy_trades,sell_trades,max_consecutive_winning_trades,max_consecutive_losing_trades,max_consecutive_winning_count,max_consecutive_losing_count,status
+"v86_A_quarterly_2022Q3_20260620_051710_case0169",-484.54,0.87,3524.27,17.62,4485.75,22.23,4485.75,22.23,8,50.00,3,5,3039.73,-1771.94,2,2,completed

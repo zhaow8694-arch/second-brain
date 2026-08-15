@@ -1,0 +1,76 @@
+你继续从哪一项先开始; saved on 2026.05.06
+; SniperTrendEA v8.51 粗筛优化设定
+; 格式: 参数名=当前值||起始值||步长||结束值||是否优化(Y/N)
+; Y=优化(遍历)  N=固定(不优化)
+;
+; ========================================
+; 【MACD 参数】— 锁定，不优化
+; ========================================
+InpFastEMA=12||12||1||12||N
+InpSlowEMA=26||26||1||26||N
+InpSignalSMA=9||9||1||9||N
+;
+; ========================================
+; 【MA200 趋势过滤】— Buffer 优化
+; ========================================
+InpMA200Period=200||200||1||200||N
+InpUseMA200Filter=true||true||0||true||N
+InpMA200BufferATR=0.3||0.0||0.15||0.6||Y
+;
+; ========================================
+; 【入场质量过滤】— 核心优化区
+; ========================================
+InpBodyRatio=0.6||0.6||0.05||0.6||N
+InpMaxCandleATR=2.5||2.0||1.0||4.0||Y
+InpDangerSuddenRatio=2.0||1.5||0.5||3.0||Y
+InpMaxOppositeShadow=0.20||0.10||0.10||0.30||Y
+InpRequireFollowThrough=false||false||0||true||Y
+InpFollowThroughBars=3||3||2||5||Y
+InpConfirmBars=4||4||1||4||N
+InpRequireMACDDir=false||false||0||false||N
+InpRequireMomentumShift=false||false||0||true||Y
+;
+; ========================================
+; 【ADX 趋势过滤】— 锁定关闭
+; ========================================
+InpUseADX=false||false||0||false||N
+InpADXPeriod=14||14||1||14||N
+InpADXThreshold=25.0||25.0||1.0||25.0||N
+;
+; ========================================
+; 【时间过滤】— 锁定关闭
+; ========================================
+InpUseTimeFilter=false||false||0||false||N
+InpStartHour=8||8||1||8||N
+InpEndHour=20||20||1||20||N
+;
+; ========================================
+; 【波动率过滤】— 锁定关闭
+; ========================================
+InpUseATRFilter=false||false||0||false||N
+InpATRFilterPeriod=20||20||1||20||N
+InpATRFilterRatio=1.0||1.0||0.1||1.0||N
+;
+; ========================================
+; 【日线趋势确认】— 锁定关闭
+; ========================================
+InpUseDailyFilter=false||false||0||false||N
+;
+; ========================================
+; 【风险管理】— 全部锁定，来自稳定回测
+; ========================================
+InpRiskPercent=0.5||0.5||0.1||0.5||N
+InpATRMultiplier=1.5||1.5||0.1||1.5||N
+InpATRPeriod=14||14||1||14||N
+InpTrailingStart=5.0||5.0||0.5||5.0||N
+InpTrailingStep=2.5||2.5||0.5||2.5||N
+InpMaxPositions=1||1||1||1||N
+;
+; ========================================
+; 【交易设置】— 锁定
+; ========================================
+InpMagicNumber=20260506||20260506||1||20260506||N
+InpComment=SniperEA_v8.51
+InpEnableBuy=true||true||0||true||N
+InpEnableSell=true||true||0||true||N
+InpDebugMode=false||false||0||false||N

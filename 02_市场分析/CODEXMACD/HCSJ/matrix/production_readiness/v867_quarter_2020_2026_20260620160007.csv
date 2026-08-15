@@ -1,0 +1,3 @@
+﻿run_id,window,quarter,from,to,status,net_profit,pf,trade_count,max_dd_pct,report,set_file,config_file,notes
+
+"v867_quarter___01_0001",v8.67,2020-2026,"quarter",1,1,completed,"E:\CODEXMACD\SniperTrendEA_v8.67_grokbase_production_ready.mq5","D:\MT5测试\MetaTrader 5\MQL5\Experts\SniperTrendEA_v8.67_grokbase_production_ready_20260620_033547.ex5","E:\CODEXMACD\HCSJ\set\v8.67\2020-2026\v867_quarter___01_0001.set","E:\CODEXMACD\HCSJ\backtest_archive\v8.67\2020-2026\v867_quarter___01_0001\v867_quarter___01_0001.ini","E:\CODEXMACD\HCSJ\backtest_archive\v8.67\2020-2026\v867_quarter___01_0001\v867_quarter___01_0001.htm",2020.01.01,2020.03.31,XAUUSD,H4,1,"current",20000,100,15162.31,23.41,676.71,3.02,10203.55,33.82,10203.55,33.82,5,80.00,,"v8.67_quarter","run","quarter=01"

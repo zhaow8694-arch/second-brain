@@ -1,0 +1,7 @@
+﻿"file","role","source"
+"E:\CODEXMACD\HCSJ\set\final_candidates\20260619_070045_robust_parameter_search\v8.6_robust_main_case0502.set","v8.6 robust main / high-return stable side","E:\CODEXMACD\HCSJ\set\v8.6\2015-2019\v86_2015-2019_stress_round01_case0502.set"
+"E:\CODEXMACD\HCSJ\set\final_candidates\20260619_070045_robust_parameter_search\v8.6_aggressive_case0005.set","v8.6 aggressive high-return candidate","E:\CODEXMACD\HCSJ\set\v8.6\2015-2019\v86_2015-2019_commonsearch_round01_case0005.set"
+"E:\CODEXMACD\HCSJ\set\final_candidates\20260619_070045_robust_parameter_search\v8.6_conservative_case0002.set","v8.6 conservative low-risk candidate","E:\CODEXMACD\HCSJ\set\v8.6\2015-2019\v86_2015-2019_commonsearch_round01_case0002.set"
+"E:\CODEXMACD\HCSJ\set\final_candidates\20260619_070045_robust_parameter_search\v8.66_robust_main_case0010.set","v8.66 robust main structure-risk candidate","E:\CODEXMACD\HCSJ\set\v8.66\2015-2019\v866_2015-2019_structuresearch_round01_case0010.set"
+"E:\CODEXMACD\HCSJ\set\final_candidates\20260619_070045_robust_parameter_search\v8.66_aggressive_case0005.set","v8.66 aggressive high-profit candidate","E:\CODEXMACD\HCSJ\set\v8.66\2015-2019\v866_2015-2019_risksearch_round01_case0005.set"
+"E:\CODEXMACD\HCSJ\set\final_candidates\20260619_070045_robust_parameter_search\v8.66_conservative_case0401.set","v8.66 conservative low-drawdown candidate","E:\CODEXMACD\HCSJ\set\v8.66\2015-2019\v866_2015-2019_stress_round01_case0401.set"

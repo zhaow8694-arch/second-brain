@@ -1,0 +1,2 @@
+run_id,net_profit,profit_factor,max_balance_dd,max_balance_dd_pct,max_equity_dd,max_equity_dd_pct,relative_equity_dd,relative_equity_dd_pct,total_trades,win_rate,buy_trades,sell_trades,max_consecutive_winning_trades,max_consecutive_losing_trades,max_consecutive_winning_count,max_consecutive_losing_count,status
+"v866_B_quarterly_2018Q3_20260620_051710_case0106",7462.73,2.47,2816.09,9.62,7193.39,22.24,7193.39,22.24,10,50.00,1,9,6694.27,-1604.95,1,1,completed

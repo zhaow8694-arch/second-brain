@@ -1,0 +1,12097 @@
+﻿﻿﻿﻿﻿﻿# HANDOFF_PROMPT.md
+
+## 项目交接状态
+
+项目名：
+
+TradingSystem_Starter
+
+开发目录：
+
+E:\GPT\TradingSystem_Starter
+
+当前最新提交：
+
+9dfb42b TASK-321 implement parser pipeline integration completion
+
+当前最新工程任务：
+
+9dfb42b TASK-321 implement parser pipeline integration completion
+
+当前最新功能任务：
+
+951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+
+当前阶段：
+
+v0.5.0：official evidence archive policy and reproducibility boundary
+
+当前最新稳定标签：
+
+v0.5.114-task-319-mt5-no-trade-startup-preflight-gate
+
+稳定标签目标：
+
+5f0a697 TASK-319 implement MT5 no-trade startup preflight gate
+
+## TASK-321 Parser pipeline integration completion
+
+- current task is TASK-321 implement parser pipeline integration completion
+- TASK-321 implement parser pipeline integration completion
+- TASK-319 completed
+- TASK-319 completion commit is 5f0a697 TASK-319 implement MT5 no-trade startup preflight gate
+- TASK-319 completion tag is v0.5.114-task-319-mt5-no-trade-startup-preflight-gate
+- current HEAD is 9dfb42b TASK-321 implement parser pipeline integration completion
+- current tag is v0.5.114-task-319-mt5-no-trade-startup-preflight-gate
+- TASK-321 creates docs/V060_TASK_321_PARSER_PIPELINE_INTEGRATION.md
+- TASK-321 creates tools/parse_mql5_compile_log.py
+- TASK-321 creates tools/parse_backtest_set_params.py
+- TASK-321 creates tools/run_evidence_parser_pipeline.py
+- TASK-321 creates tools/validate_parser_manifest_integration.py
+- parser-manifest-integration check is added to release validation bundle
+- fast-no-trade-dev profile includes parser-manifest-integration check
+- fast-no-trade-dev profile includes backtest-set-params check
+- TASK-321 is parser-pipeline-integration-only
+- no MT5 run in TASK-321
+- no terminal64.exe execution in TASK-321
+- no Strategy Tester
+- no backtest
+- no trading authorization
+- no MetaEditor execution
+- no MQL5 compile
+- no .ex5 artifact
+- no compile log
+- no manifest generated in repository during TASK-321
+- no external evidence copied into repository
+- future_task_320_requires_gpt_boundary=true
+- future TASK-320 requires GPT boundary before any MT5 terminal startup attempt
+- TASK-320 must not be entered directly
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+- mt5-no-trade-startup-preflight-gate PASS
+- parser-manifest-integration PASS
+- backtest-set-params PASS
+- current engineering gap: none after TASK-321 parser pipeline integration
+
+## TASK-319 MT5 no-trade startup preflight gate
+
+- TASK-319 completed
+- TASK-318 completed
+- TASK-318 completion commit is 718c7cf TASK-317-318 implement MT5 no-trade startup config template and authorization boundaries
+- TASK-318 completion tag is v0.5.113-task-317-318-mt5-no-trade-startup-config-auth-boundaries
+- current HEAD is 718c7cf TASK-317-318 implement MT5 no-trade startup config template and authorization boundaries
+- current tag is v0.5.113-task-317-318-mt5-no-trade-startup-config-auth-boundaries
+- TASK-319 creates docs/V060_TASK_319_MT5_NO_TRADE_STARTUP_PREFLIGHT_GATE.md
+- TASK-319 creates tools/validate_mt5_no_trade_startup_preflight_gate.py
+- TASK-319 creates tools/test_validate_mt5_no_trade_startup_preflight_gate.py
+- mt5-no-trade-startup-preflight-gate check is added to release validation bundle
+- fast-no-trade-dev profile includes mt5-no-trade-startup-preflight-gate check
+- workflow-closure-audit includes mt5-no-trade-startup-preflight-gate check
+- TASK-319 is planning-only
+- TASK-319 is startup-preflight-gate-only
+- config_file_generated=false
+- no_trade_config_generated_in_repo=false
+- no MT5 run in TASK-319
+- no terminal64.exe execution in TASK-319
+- no terminal.exe execution in TASK-319
+- no Strategy Tester
+- no backtest
+- no trading authorization
+- no MetaEditor execution
+- no MQL5 compile
+- no .ex5 artifact
+- no compile log
+- no terminal data directory in repository
+- no startup log in repository
+- future_task_320_requires_gpt_boundary=true
+- future TASK-320 requires GPT boundary before any MT5 terminal startup attempt
+- TASK-320 must not be entered directly
+- no repo .ex5
+- no repo compile log
+- no manifest / evidence / report
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-318 MT5 no-trade startup authorization planning boundary
+
+- current task is TASK-318 implement MT5 no-trade startup authorization planning boundary
+- TASK-318 implement MT5 no-trade startup authorization planning boundary
+- TASK-317 completed
+- TASK-317 completion commit is a5aa4c3 TASK-317 implement MT5 no-trade startup config template preview
+- TASK-317 completion tag is v0.5.112-task-316-mt5-no-trade-startup-dryrun-config-boundary
+- current HEAD is a5aa4c3 TASK-317 implement MT5 no-trade startup config template preview
+- current tag is v0.5.112-task-316-mt5-no-trade-startup-dryrun-config-boundary
+- TASK-318 creates docs/V060_TASK_318_MT5_NO_TRADE_STARTUP_AUTHORIZATION_PLAN.md
+- TASK-318 creates tools/validate_mt5_no_trade_startup_authorization_plan.py
+- TASK-318 creates tools/test_validate_mt5_no_trade_startup_authorization_plan.py
+- mt5-no-trade-startup-authorization-plan check is added to release validation bundle
+- fast-no-trade-dev profile includes mt5-no-trade-startup-authorization-plan check
+- workflow-closure-audit includes mt5-no-trade-startup-authorization-plan check
+- TASK-318 is planning-only
+- TASK-318 is authorization-boundary-only
+- config_file_generated=false
+- no_trade_config_generated_in_repo=false
+- no MT5 run in TASK-318
+- no terminal64.exe execution in TASK-318
+- no terminal.exe execution in TASK-318
+- no Strategy Tester
+- no backtest
+- no trading authorization
+- no MetaEditor execution
+- no MQL5 compile
+- no .ex5 artifact
+- no compile log
+- no terminal data directory in repository
+- no startup log in repository
+- future_task_319_requires_gpt_boundary=true
+- future TASK-319 requires GPT boundary before any MT5 terminal startup execution
+- TASK-319 must not be entered directly
+- no repo .ex5
+- no repo compile log
+- no manifest / evidence / report
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-317 MT5 no-trade startup config template preview
+
+- current task is TASK-317 implement MT5 no-trade startup config template preview
+- TASK-317 implement MT5 no-trade startup config template preview
+- TASK-316 completed
+- TASK-316 completion commit is a5aa4c3 TASK-316 implement MT5 no-trade startup dry-run config boundary
+- TASK-316 completion tag is v0.5.112-task-316-mt5-no-trade-startup-dryrun-config-boundary
+- current HEAD is a5aa4c3 TASK-316 implement MT5 no-trade startup dry-run config boundary
+- current tag is v0.5.112-task-316-mt5-no-trade-startup-dryrun-config-boundary
+- TASK-317 creates docs/V060_TASK_317_MT5_NO_TRADE_STARTUP_CONFIG_TEMPLATE.md
+- TASK-317 creates tools/validate_mt5_no_trade_startup_config_template.py
+- TASK-317 creates tools/test_validate_mt5_no_trade_startup_config_template.py
+- mt5-no-trade-startup-config-template check is added to release validation bundle
+- fast-no-trade-dev profile includes mt5-no-trade-startup-config-template check
+- workflow-closure-audit includes mt5-no-trade-startup-config-template check
+- TASK-317 is stdout-only-config-template-preview
+- config_file_generated=false
+- no_trade_config_generated_in_repo=false
+- no config file generated
+- no MT5 terminal executed
+- no terminal64 execution
+- no terminal.exe execution
+- no Strategy Tester
+- no backtest
+- no trading authorization
+- no terminal data directory in repository
+- no startup log in repository
+- no no-trade config file generated in repository
+- future_task_318_requires_gpt_boundary=true
+- future TASK-318 requires GPT boundary before writing any startup config file or launching MT5
+- TASK-318 must not be entered directly
+- no repo .ex5
+- no repo compile log
+- no manifest / evidence / report
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-316 MT5 no-trade startup dry-run config boundary
+
+- current task is TASK-316 implement MT5 no-trade startup dry-run config boundary
+- TASK-316 implement MT5 no-trade startup dry-run config boundary
+- TASK-315 completed
+- TASK-315 completion commit is 5d07673 TASK-315 implement MT5 no-trade startup quarantine preparation boundary
+- TASK-315 completion tag is v0.5.111-task-315-mt5-no-trade-startup-quarantine-preparation
+- current HEAD is 5d07673 TASK-315 implement MT5 no-trade startup quarantine preparation boundary
+- current tag is v0.5.111-task-315-mt5-no-trade-startup-quarantine-preparation
+- TASK-316 creates docs/V060_TASK_316_MT5_NO_TRADE_STARTUP_DRYRUN_CONFIG_BOUNDARY.md
+- TASK-316 creates tools/validate_mt5_no_trade_startup_dryrun_config_boundary.py
+- TASK-316 creates tools/test_validate_mt5_no_trade_startup_dryrun_config_boundary.py
+- mt5-no-trade-startup-dryrun-config-boundary check is added to release validation bundle
+- fast-no-trade-dev profile includes mt5-no-trade-startup-dryrun-config-boundary check
+- workflow-closure-audit includes mt5-no-trade-startup-dryrun-config-boundary check
+- TASK-316 is planning-only
+- TASK-316 is startup-dryrun-config-boundary-only
+- no_trade_config_generated_in_repo=false
+- no no-trade config file generated in repository
+- repo_terminal_data_directory=false
+- repo_startup_logs=false
+- no MT5 run in TASK-316
+- no terminal64.exe execution in TASK-316
+- no terminal.exe execution in TASK-316
+- no Strategy Tester
+- no backtest
+- no trading authorization
+- compile-only success scope preserved
+- compile_success_scope=compile-only-diagnostic
+- trading_authorization=false
+- deployment_readiness=false
+- backtest_readiness=false
+- strategy_readiness=false
+- no terminal data directory in repository
+- no startup log in repository
+- no repo .ex5
+- no repo compile log
+- no manifest / evidence / report
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- future_task_317_requires_gpt_boundary=true
+- future TASK-317 requires GPT boundary before any MT5 terminal startup attempt
+- TASK-317 must not be entered directly
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-315 MT5 no-trade startup quarantine preparation boundary
+
+- current task is TASK-315 implement MT5 no-trade startup quarantine preparation boundary
+- TASK-315 implement MT5 no-trade startup quarantine preparation boundary
+- TASK-314 completed
+- TASK-314 completion commit is ba2076e TASK-314 implement MT5 no-trade startup command discovery boundary
+- TASK-314 completion tag is v0.5.110-task-314-mt5-no-trade-startup-command-discovery
+- current HEAD is ba2076e TASK-314 implement MT5 no-trade startup command discovery boundary
+- current tag is v0.5.110-task-314-mt5-no-trade-startup-command-discovery
+- TASK-315 creates docs/V060_TASK_315_MT5_NO_TRADE_STARTUP_QUARANTINE_PREPARATION.md
+- TASK-315 creates tools/validate_mt5_no_trade_startup_quarantine_preparation.py
+- TASK-315 creates tools/test_validate_mt5_no_trade_startup_quarantine_preparation.py
+- mt5-no-trade-startup-quarantine-preparation check is added to release validation bundle
+- fast-no-trade-dev profile includes mt5-no-trade-startup-quarantine-preparation check
+- workflow-closure-audit includes mt5-no-trade-startup-quarantine-preparation check
+- TASK-315 is planning-only
+- TASK-315 is startup-quarantine-preparation-only
+- startup_quarantine_outside_repo_required=true
+- repo_terminal_data_directory=false
+- repo_startup_logs=false
+- no MT5 run in TASK-315
+- no terminal64.exe execution in TASK-315
+- no terminal.exe execution in TASK-315
+- no Strategy Tester
+- no backtest
+- no trading authorization
+- compile-only success scope preserved
+- compile_success_scope=compile-only-diagnostic
+- trading_authorization=false
+- deployment_readiness=false
+- backtest_readiness=false
+- strategy_readiness=false
+- no terminal data directory in repository
+- no startup log in repository
+- no repo .ex5
+- no repo compile log
+- no manifest / evidence / report
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- future_task_316_requires_gpt_boundary=true
+- future TASK-316 requires GPT boundary before any MT5 terminal startup attempt
+- TASK-316 must not be entered directly
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-314 MT5 no-trade startup command discovery boundary
+
+- current task is TASK-314 implement MT5 no-trade startup command discovery boundary
+- TASK-314 implement MT5 no-trade startup command discovery boundary
+- TASK-313 completed
+- TASK-313 completion commit is 6d1c8c1 TASK-313 create MT5 no-trade startup boundary packet
+- TASK-313 completion tag is v0.5.109-task-313-mt5-no-trade-startup-boundary
+- current HEAD is 6d1c8c1 TASK-313 create MT5 no-trade startup boundary packet
+- current tag is v0.5.109-task-313-mt5-no-trade-startup-boundary
+- TASK-314 creates docs/V060_TASK_314_MT5_NO_TRADE_STARTUP_COMMAND_DISCOVERY.md
+- TASK-314 creates tools/validate_mt5_no_trade_startup_command_discovery.py
+- TASK-314 creates tools/test_validate_mt5_no_trade_startup_command_discovery.py
+- mt5-no-trade-startup-command-discovery check is added to release validation bundle
+- fast-no-trade-dev profile includes mt5-no-trade-startup-command-discovery check
+- workflow-closure-audit includes mt5-no-trade-startup-command-discovery check
+- TASK-314 is command-discovery-only
+- TASK-314 is mt5-startup-preparation-only
+- no MT5 run in TASK-314
+- no terminal64 execution
+- no terminal64.exe execution
+- no terminal.exe execution
+- no Strategy Tester
+- no backtest
+- no trading authorization
+- compile-only success scope preserved
+- compile_success_scope=compile-only-diagnostic
+- trading_authorization=false
+- deployment_readiness=false
+- backtest_readiness=false
+- strategy_readiness=false
+- no repo .ex5
+- no repo compile log
+- no manifest / evidence / report
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- future_task_315_requires_gpt_boundary=true
+- future TASK-315 requires GPT boundary before any MT5 terminal startup attempt
+- TASK-315 must not be entered directly
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-313 MT5 terminal no-trade startup boundary packet
+
+- current task is TASK-313 create MT5 terminal no-trade startup boundary packet
+- TASK-313 create MT5 terminal no-trade startup boundary packet
+- TASK-312 completed
+- TASK-312 completion commit is efb4a45 TASK-312 implement controlled MQL5 compile-only success reclassification decision
+- TASK-312 completion tag is v0.5.108-task-312-mql5-compile-success-reclassification-decision
+- current HEAD is efb4a45 TASK-312 implement controlled MQL5 compile-only success reclassification decision
+- current tag is v0.5.108-task-312-mql5-compile-success-reclassification-decision
+- TASK-313 creates docs/V060_TASK_313_MT5_NO_TRADE_STARTUP_BOUNDARY.md
+- TASK-313 creates tools/validate_mt5_no_trade_startup_boundary.py
+- TASK-313 creates tools/test_validate_mt5_no_trade_startup_boundary.py
+- mt5-no-trade-startup-boundary check is added to release validation bundle
+- fast-no-trade-dev profile includes mt5-no-trade-startup-boundary check
+- workflow-closure-audit includes mt5-no-trade-startup-boundary check
+- TASK-313 is planning-only
+- TASK-313 is mt5-startup-boundary-only
+- no MT5 run in TASK-313
+- no terminal64 execution
+- no Strategy Tester
+- no backtest
+- no trading authorization
+- compile-only success scope preserved
+- compile_success_scope=compile-only-diagnostic
+- trading_authorization=false
+- deployment_readiness=false
+- backtest_readiness=false
+- strategy_readiness=false
+- no repo .ex5
+- no repo compile log
+- no manifest / evidence / report
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- future_task_314_requires_gpt_boundary=true
+- future TASK-314 requires GPT boundary before MT5 terminal startup attempt
+- TASK-314 must not be entered directly
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-312 MQL5 compile-only success reclassification decision
+
+- current task is TASK-312 implement controlled MQL5 compile-only success reclassification decision
+- TASK-312 implement controlled MQL5 compile-only success reclassification decision
+- TASK-311 completed
+- TASK-311 completion commit is 9ce8ca5 TASK-311 create MQL5 compile success reclassification decision boundary
+- TASK-311 completion tag is v0.5.107-task-311-mql5-compile-success-reclassification-decision-boundary
+- current HEAD is 9ce8ca5 TASK-311 create MQL5 compile success reclassification decision boundary
+- current tag is v0.5.107-task-311-mql5-compile-success-reclassification-decision-boundary
+- TASK-312 creates docs/V060_TASK_312_MQL5_COMPILE_SUCCESS_RECLASSIFICATION_DECISION.md
+- TASK-312 creates tools/validate_mql5_compile_success_reclassification_decision.py
+- TASK-312 creates tools/test_validate_mql5_compile_success_reclassification_decision.py
+- mql5-compile-success-reclassification-decision check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-success-reclassification-decision check
+- workflow-closure-audit includes mql5-compile-success-reclassification-decision check
+- TASK-312 is controlled-success-reclassification-attempt
+- success_reclassification_decision=PASS
+- compile_only_reclassified_success=true
+- compile_success=true
+- compile_success_scope=compile-only-diagnostic
+- compile-only success does not imply trading authorization
+- compile-only success does not imply deployment readiness
+- compile-only success does not imply backtest readiness
+- compile-only success does not imply strategy readiness
+- artifact_hash_stdout_only=true
+- artifact_hash_saved_to_repo=false
+- do not include actual artifact hash value in this doc
+- no MT5 run
+- no MT5 terminal
+- no Strategy Tester
+- no trading
+- no trading authorization
+- repo_ex5_artifacts=false
+- repo_compile_logs=false
+- repo_mq5_modified=false
+- no .ex5 artifact
+- no compile log
+- no manifest / evidence / report
+- no manifest / fixture / report / directory
+- no external evidence
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- future_task_313_requires_gpt_boundary=true
+- future TASK-313 requires GPT boundary before MT5 run, Strategy Tester, backtest, deployment, or trading-related step
+- future TASK-313 must be separately authorized by GPT before any MT5 run, Strategy Tester, backtest, deployment, or trading-related step
+- TASK-313 must not be entered directly
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-311 MQL5 compile success reclassification decision boundary
+
+- current task is TASK-311 create MQL5 compile success reclassification decision boundary
+- TASK-311 create MQL5 compile success reclassification decision boundary
+- TASK-310 completed
+- TASK-310 completion commit is 8cc7593 TASK-310 implement quarantined MQL5 compile artifact hash capture diagnostic
+- TASK-310 completion tag is v0.5.106-task-310-mql5-compile-artifact-hash-capture
+- current HEAD is 8cc7593 TASK-310 implement quarantined MQL5 compile artifact hash capture diagnostic
+- current tag is v0.5.106-task-310-mql5-compile-artifact-hash-capture
+- TASK-311 creates docs/V060_TASK_311_MQL5_COMPILE_SUCCESS_RECLASSIFICATION_DECISION_BOUNDARY.md
+- TASK-311 creates tools/validate_mql5_compile_success_reclassification_decision_boundary.py
+- TASK-311 creates tools/test_validate_mql5_compile_success_reclassification_decision_boundary.py
+- mql5-compile-success-reclassification-decision-boundary check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-success-reclassification-decision-boundary check
+- workflow-closure-audit includes mql5-compile-success-reclassification-decision-boundary check
+- TASK-311 is planning-only
+- TASK-311 is success-reclassification-decision-boundary-only
+- no compile execution
+- no MetaEditor execution in TASK-311
+- no MQL5 compile in TASK-311
+- no success reclassification in TASK-311
+- TASK-310 observed artifact_hash_captured=true
+- TASK-310 observed quarantine_ex5_artifact_size_bytes=70178
+- TASK-310 observed compile_exit_code=1
+- TASK-310 observed compile_log_semantic_success=true
+- previous classification=artifact_hash_captured_with_metaeditor_exit_code_anomaly
+- artifact hash was stdout-only and must not be stored in repository
+- artifact_hash_stored_in_repo=false
+- compile_success=false
+- success_reclassification_done=false
+- task304_success_result_created=false
+- future_task_312_requires_gpt_boundary=true
+- future TASK-312 requires GPT boundary before success reclassification, MQ5 fix, or compile retry
+- TASK-312 must not be entered directly
+- no MT5 run
+- no MT5 terminal
+- no Strategy Tester
+- no backtest
+- no trading
+- no trading authorization
+- repo_ex5_artifacts=false
+- repo_compile_logs=false
+- repo_mq5_modified=false
+- no .ex5 artifact
+- no compile log
+- no manifest / evidence / report
+- no manifest / fixture / report / directory
+- no external evidence
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-310 MQL5 compile artifact hash capture diagnostic
+
+- current task is TASK-310 implement quarantined MQL5 compile artifact hash capture diagnostic
+- TASK-310 implement quarantined MQL5 compile artifact hash capture diagnostic
+- TASK-309 completed
+- TASK-309 completion commit is f31b85e TASK-309 create MQL5 compile-only success reclassification boundary
+- TASK-309 completion tag is v0.5.105-task-309-mql5-compile-success-reclassification-boundary
+- current HEAD is f31b85e TASK-309 create MQL5 compile-only success reclassification boundary
+- current tag is v0.5.105-task-309-mql5-compile-success-reclassification-boundary
+- TASK-310 creates docs/V060_TASK_310_MQL5_COMPILE_ARTIFACT_HASH_CAPTURE.md
+- TASK-310 creates tools/validate_mql5_compile_artifact_hash_capture_boundary.py
+- TASK-310 creates tools/test_validate_mql5_compile_artifact_hash_capture_boundary.py
+- mql5-compile-artifact-hash-capture-boundary check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-artifact-hash-capture-boundary check
+- workflow-closure-audit includes mql5-compile-artifact-hash-capture-boundary check
+- TASK-310 is artifact-hash-capture-diagnostic-only
+- artifact hash stdout-only
+- artifact hash not saved to repository
+- no MetaEditor execution recorded yet before authorized TASK-310 diagnostic command
+- no MQL5 compile recorded yet before authorized TASK-310 diagnostic command
+- compile_success=false
+- success_reclassification_done=false
+- task304_success_result_created=false
+- future_task_311_requires_gpt_boundary=true
+- future TASK-311 requires GPT boundary before success reclassification or MQ5 fix
+- TASK-311 must not be entered directly
+- no MT5 run
+- no MT5 terminal
+- no Strategy Tester
+- no backtest
+- no trading
+- no trading authorization
+- repo_ex5_artifacts=false
+- repo_compile_logs=false
+- repo_mq5_modified=false
+- no repo .ex5
+- no repo compile log
+- no manifest / evidence / report
+- no manifest / fixture / report / directory
+- no external evidence
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-309 MQL5 compile-only success reclassification boundary
+
+- current task is TASK-309 create MQL5 compile-only success reclassification boundary
+- TASK-309 create MQL5 compile-only success reclassification boundary
+- TASK-308 completed
+- TASK-308 completion commit is 915b19f TASK-308 create MQL5 compile diagnostic artifact proof boundary
+- TASK-308 completion tag is v0.5.104-task-308-mql5-compile-diagnostic-artifact-proof-boundary
+- current HEAD is 915b19f TASK-308 create MQL5 compile diagnostic artifact proof boundary
+- current tag is v0.5.104-task-308-mql5-compile-diagnostic-artifact-proof-boundary
+- TASK-309 creates docs/V060_TASK_309_MQL5_COMPILE_ONLY_SUCCESS_RECLASSIFICATION_BOUNDARY.md
+- TASK-309 creates tools/validate_mql5_compile_success_reclassification_boundary.py
+- TASK-309 creates tools/test_validate_mql5_compile_success_reclassification_boundary.py
+- mql5-compile-success-reclassification-boundary check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-success-reclassification-boundary check
+- workflow-closure-audit includes mql5-compile-success-reclassification-boundary check
+- TASK-309 is planning-only
+- TASK-309 is success-reclassification-boundary-only
+- TASK-309 is no compile execution
+- TASK-309 has no MetaEditor execution
+- no MetaEditor execution
+- no MQL5 compile
+- no .ex5 artifact
+- no compile log
+- no success reclassification in TASK-309
+- success_reclassification_done=false
+- TASK-307 observed quarantine_ex5_artifact_detected=true
+- TASK-307 observed quarantine_ex5_artifact_count=1
+- TASK-307 observed compile_log_semantic_success=true
+- TASK-307 observed compile_exit_code=1
+- previous classification=compiled_artifact_with_metaeditor_exit_code_anomaly
+- compiled_artifact_with_metaeditor_exit_code_anomaly
+- compile_success=false
+- task304_success_result_created=false
+- future_task_310_requires_gpt_boundary=true
+- future TASK-310 requires GPT boundary before any compile retry, artifact hash capture, success reclassification, or MQ5 fix
+- TASK-310 must not be entered directly
+- no MT5 run
+- no MT5 terminal
+- no Strategy Tester
+- no backtest
+- no trading
+- no trading authorization
+- repo_ex5_artifacts=false
+- repo_compile_logs=false
+- repo_mq5_modified=false
+- no repo .ex5
+- no repo compile log
+- no manifest / evidence / report
+- no manifest / fixture / report / directory
+- no external evidence
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-308 MQL5 compile diagnostic artifact proof and success reclassification boundary
+
+- current task is TASK-308 create MQL5 compile diagnostic artifact proof and success reclassification boundary
+- TASK-308 create MQL5 compile diagnostic artifact proof and success reclassification boundary
+- TASK-307 completed
+- TASK-307 completion commit is 499bebe TASK-307 implement MQL5 compile diagnostic artifact classification
+- TASK-307 completion tag is v0.5.103-task-307-mql5-compile-diagnostic-artifact-classification
+- current HEAD is 499bebe TASK-307 implement MQL5 compile diagnostic artifact classification
+- current tag is v0.5.103-task-307-mql5-compile-diagnostic-artifact-classification
+- TASK-308 creates docs/V060_TASK_308_MQL5_COMPILE_DIAGNOSTIC_ARTIFACT_PROOF_BOUNDARY.md
+- TASK-308 creates tools/validate_mql5_compile_diagnostic_artifact_proof_boundary.py
+- TASK-308 creates tools/test_validate_mql5_compile_diagnostic_artifact_proof_boundary.py
+- mql5-compile-diagnostic-artifact-proof-boundary check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-diagnostic-artifact-proof-boundary check
+- workflow-closure-audit includes mql5-compile-diagnostic-artifact-proof-boundary check
+- TASK-308 is planning-only
+- TASK-308 is diagnostic-proof-boundary-only
+- TASK-308 is no compile execution
+- TASK-308 has no MetaEditor execution
+- no MetaEditor execution
+- no MQL5 compile
+- no .ex5 artifact
+- no compile log
+- no success reclassification in TASK-308
+- success_reclassification_done=false
+- TASK-307 observed quarantine_ex5_artifact_detected=true
+- TASK-307 observed compile_log_semantic_success=true
+- TASK-307 observed compile_exit_code=1
+- previous classification=compiled_artifact_with_metaeditor_exit_code_anomaly
+- compiled_artifact_with_metaeditor_exit_code_anomaly
+- compile_success=false
+- task304_success_result_created=false
+- future_task_309_requires_gpt_boundary=true
+- future TASK-309 requires GPT boundary before any compile retry, MQ5 fix, artifact hash capture, or success reclassification
+- TASK-309 must not be entered directly
+- no MT5 run
+- no MT5 terminal
+- no Strategy Tester
+- no backtest
+- no trading
+- no trading authorization
+- repo_ex5_artifacts=false
+- repo_compile_logs=false
+- repo_mq5_modified=false
+- no repo .ex5
+- no repo compile log
+- no manifest / evidence / report
+- no manifest / fixture / report / directory
+- no external evidence
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+
+## TASK-307 MQL5 compile diagnostic artifact classification
+
+- current task is TASK-307 implement MQL5 compile diagnostic artifact classification
+- TASK-307 implement MQL5 compile diagnostic artifact classification
+- TASK-306 completed
+- TASK-306 completion commit is 560079c TASK-306 implement MQL5 compile-only diagnostic result classification
+- TASK-306 completion tag is v0.5.102-task-306-mql5-compile-diagnostic-classification
+- current HEAD is 560079c TASK-306 implement MQL5 compile-only diagnostic result classification
+- current tag is v0.5.102-task-306-mql5-compile-diagnostic-classification
+- TASK-307 creates docs/V060_TASK_307_MQL5_COMPILE_DIAGNOSTIC_ARTIFACT_CLASSIFICATION.md
+- TASK-307 creates tools/validate_mql5_compile_diagnostic_artifact_classification.py
+- TASK-307 creates tools/test_validate_mql5_compile_diagnostic_artifact_classification.py
+- tools/run_mql5_compile_only_quarantined.py supports quarantine artifact inspection before cleanup
+- tools/run_mql5_compile_only_quarantined.py reports quarantine_ex5_artifact_detected
+- tools/run_mql5_compile_only_quarantined.py reports quarantine_ex5_artifact_count
+- tools/run_mql5_compile_only_quarantined.py reports quarantine_compile_log_detected
+- mql5-compile-diagnostic-artifact-classification check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-diagnostic-artifact-classification check
+- workflow-closure-audit includes mql5-compile-diagnostic-artifact-classification check
+- TASK-307 is diagnostic-artifact-classification-only
+- TASK-307 is not TASK-304 success result
+- TASK-307 may re-run MetaEditor compile-only only against quarantine copy
+- quarantine artifact inspection before cleanup
+- quarantine .ex5 must not be copied to repository
+- compile log must remain stdout-only
+- repo_ex5_artifacts=false
+- repo_compile_logs=false
+- repo_mq5_modified=false
+- task304_success_result_created=false
+- compile_success=false unless a future GPT boundary explicitly reclassifies success
+- no MT5 run
+- no Strategy Tester
+- no backtest
+- no trading
+- no manifest / evidence / report
+- no manifest / fixture / report / directory
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+- TASK-308 requires GPT boundary before any compile retry or MQ5 fix
+- TASK-308 must not be entered directly
+
+## TASK-306 MQL5 compile-only diagnostic result classification
+
+- current task is TASK-306 implement MQL5 compile-only diagnostic result classification
+- TASK-306 implement MQL5 compile-only diagnostic result classification
+- TASK-305 completed
+- TASK-305 completion commit is c82e4d6 TASK-305 implement MQL5 compile-only failure diagnostic capture
+- TASK-305 completion tag is v0.5.101-task-305-mql5-compile-only-failure-diagnostic
+- current HEAD is c82e4d6 TASK-305 implement MQL5 compile-only failure diagnostic capture
+- current tag is v0.5.101-task-305-mql5-compile-only-failure-diagnostic
+- TASK-306 creates docs/V060_TASK_306_MQL5_COMPILE_DIAGNOSTIC_RESULT_CLASSIFICATION.md
+- TASK-306 creates tools/validate_mql5_compile_diagnostic_result_classification.py
+- TASK-306 creates tools/test_validate_mql5_compile_diagnostic_result_classification.py
+- tools/run_mql5_compile_only_quarantined.py supports classify_compile_diagnostic_result
+- mql5-compile-diagnostic-result-classification check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-diagnostic-result-classification check
+- workflow-closure-audit includes mql5-compile-diagnostic-result-classification check
+- TASK-306 is diagnostic-classification-only
+- TASK-306 is not compile execution
+- TASK-306 has no new MetaEditor execution in TASK-306
+- not MetaEditor execution in TASK-306
+- TASK-306 does not run MT5 terminal
+- TASK-306 does not run Strategy Tester
+- TASK-306 does not run backtest
+- TASK-306 does not trade
+- compile_exit_code=1 observed in TASK-305
+- compile log semantic result indicates Result: 0 errors, 0 warnings
+- compile_result_classification=metaeditor_exit_code_anomaly
+- compile_log_semantic_success=true
+- compile_success=false
+- task304_success_result_created=false
+- followup_required=true
+- repo_ex5_artifacts=false
+- repo_compile_logs=false
+- no repo .ex5
+- no repo compile log
+- no manifest / evidence / report
+- no manifest / fixture / report / directory
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+- TASK-307 requires GPT boundary before any compile retry or MQ5 fix
+- TASK-307 must not be entered directly
+
+## TASK-305 MQL5 compile-only failure diagnostic capture
+
+- current task is TASK-305 implement MQL5 compile-only failure diagnostic capture
+- TASK-305 implement MQL5 compile-only failure diagnostic capture
+- TASK-304 failed, no success result doc created
+- TASK-304 is not compile success
+- TASK-304 compile_exit_code=1 was observed
+- current HEAD is 4cbf091 TASK-303 create v0.6.0 compile-only execution authorization planning packet
+- current tag is v0.5.100-task-303-v060-compile-only-execution-authorization
+- TASK-305 creates docs/V060_TASK_305_MQL5_COMPILE_ONLY_FAILURE_DIAGNOSTIC.md
+- TASK-305 creates tools/validate_mql5_compile_only_failure_diagnostic.py
+- TASK-305 creates tools/test_validate_mql5_compile_only_failure_diagnostic.py
+- tools/run_mql5_compile_only_quarantined.py supports --diagnostic-capture
+- mql5-compile-only-failure-diagnostic check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-only-failure-diagnostic check
+- workflow-closure-audit includes mql5-compile-only-failure-diagnostic check
+- TASK-305 may re-run MetaEditor compile-only only against quarantine copy
+- TASK-305 diagnostic output is stdout-only
+- compile log must be stdout-only
+- compile log must not be saved to repository
+- no repo .ex5
+- no repo compile log
+- no MT5 terminal
+- no Strategy Tester
+- no trading
+- no manifest / evidence / report
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+- TASK-306 requires GPT boundary
+- TASK-306 must not be entered directly
+
+## TASK-303 v0.6.0 compile-only execution authorization planning packet
+
+- current task is TASK-303 create v0.6.0 compile-only execution authorization planning packet
+- TASK-303 create v0.6.0 compile-only execution authorization planning packet
+- TASK-302 completed
+- TASK-302 completion commit is 15c675e TASK-302 implement MQL5 compile-only execution preflight gate
+- TASK-302 completion tag is v0.5.99-task-302-mql5-compile-only-preflight-gate
+- current HEAD is 15c675e TASK-302 implement MQL5 compile-only execution preflight gate
+- current tag is v0.5.99-task-302-mql5-compile-only-preflight-gate
+- TASK-303 creates docs/V060_TASK_303_COMPILE_ONLY_EXECUTION_AUTHORIZATION_PLAN.md
+- TASK-303 creates tools/validate_mql5_compile_only_execution_authorization_plan.py
+- TASK-303 creates tools/test_validate_mql5_compile_only_execution_authorization_plan.py
+- mql5-compile-only-execution-authorization-plan check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-only-execution-authorization-plan check
+- workflow-closure-audit includes mql5-compile-only-execution-authorization-plan check
+- mql5-compile-only-execution-authorization-plan PASS
+- TASK-303 is planning-only
+- TASK-303 is authorization-boundary-only
+- TASK-303 is future compile-only execution candidate
+- TASK-303 does not modify MQ5 / MQH
+- TASK-303 does not run MT5
+- TASK-303 does not execute MetaEditor
+- TASK-303 does not execute MQL5 compile
+- TASK-303 does not execute /compile command
+- TASK-303 does not authorize Strategy Tester
+- TASK-303 does not authorize backtest
+- TASK-303 does not authorize simulation trading
+- TASK-303 does not authorize real trading
+- TASK-303 does not create .ex5 artifact
+- TASK-303 does not create compile log
+- TASK-303 does not create manifest / fixture / report / directory
+- TASK-303 does not copy external evidence
+- TASK-303 confirms compile execution remains unauthorized
+- TASK-303 confirms MetaEditor was not executed
+- TASK-303 confirms MQL5 compile was not executed
+- TASK-303 confirms future TASK-304 requires GPT boundary
+- compile_execution_authorized=false
+- future_task_304_requires_gpt_boundary=true
+- metaeditor_executed=false
+- mql5_compile_executed=false
+- all previous MQ5 static / no-trade / compile-readiness checks PASS
+- all previous MQL5 compile-only boundary / discovery / quarantine / dry-run / preflight checks PASS
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MQL5 compile
+- no MetaEditor execution
+- no .ex5 artifact
+- no compile log
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+- TASK-304 must not be entered directly
+- future TASK-304 must be separately authorized by GPT before any compile execution
+
+## TASK-302 MQL5 compile-only execution preflight gate
+
+- current task is TASK-302 implement MQL5 compile-only execution preflight gate
+- TASK-302 implement MQL5 compile-only execution preflight gate
+- TASK-301 completed
+- TASK-301 completion commit is 2f0498b TASK-301 create v060 compile-readiness planning packet
+- TASK-301 completion tag is v0.5.98-task-301-v060-compile-readiness-planning
+- current HEAD is 2f0498b TASK-301 create v060 compile-readiness planning packet
+- current tag is v0.5.98-task-301-v060-compile-readiness-planning
+- TASK-302 creates docs/V060_TASK_302_MQL5_COMPILE_ONLY_PREFLIGHT_GATE.md
+- TASK-302 creates tools/validate_mql5_compile_only_preflight_gate.py
+- TASK-302 creates tools/test_validate_mql5_compile_only_preflight_gate.py
+- mql5-compile-only-preflight-gate check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-only-preflight-gate check
+- workflow-closure-audit includes mql5-compile-only-preflight-gate check
+- mql5-compile-only-preflight-gate PASS
+- TASK-302 is preflight-gate-only
+- TASK-302 does not modify MQ5 / MQH
+- TASK-302 does not run MT5
+- TASK-302 does not execute MetaEditor
+- TASK-302 does not execute MQL5 compile
+- TASK-302 does not execute /compile command
+- TASK-302 does not authorize Strategy Tester
+- TASK-302 does not authorize backtest
+- TASK-302 does not authorize trading
+- TASK-302 does not create .ex5 artifact
+- TASK-302 does not create compile log
+- TASK-302 does not create manifest / fixture / report / directory
+- TASK-302 does not copy external evidence
+- TASK-302 preflight gate confirms repository has no ex5 artifacts
+- TASK-302 preflight gate confirms repository has no compile logs
+- TASK-302 preflight gate confirms MetaEditor was not executed
+- TASK-302 preflight gate confirms MQL5 compile was not executed
+- TASK-302 preflight gate confirms MT5 was not run
+- TASK-302 preflight gate confirms trading remains unauthorized
+- TASK-302 preflight gate confirms compile execution remains unauthorized
+- TASK-302 preflight gate confirms future TASK-303 requires GPT boundary
+- all previous compile-only boundary checks must pass before future compile execution
+- artifact quarantine must pass before future compile execution
+- future compile-only command must remain stdout-only unless GPT separately authorizes artifact handling
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Inventory only; no MT5 run; no trading authorization.
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+- TASK-303 must not be entered directly
+- future TASK-303 must be separately authorized by GPT before any compile execution
+
+## TASK-301 v0.6.0 compile-readiness planning packet
+
+- current task is TASK-301 create v0.6.0 compile-readiness planning packet
+- TASK-301 create v0.6.0 compile-readiness planning packet
+- TASK-299-300 reconciliation completed
+- TASK-299-300 completion commit is fd10dac TASK-299-300 reconcile MQL5 compile-only boundary tracking and dry-run simulation
+- TASK-299-300 completion tag is v0.5.97-task-299-300-mql5-compile-only-boundary-dryrun-reconciliation
+- current HEAD is fd10dac TASK-299-300 reconcile MQL5 compile-only boundary tracking and dry-run simulation
+- current tag is v0.5.97-task-299-300-mql5-compile-only-boundary-dryrun-reconciliation
+- TASK-301 creates docs/V060_TASK_301_V060_COMPILE_READINESS_PLANNING.md
+- v060-compile-readiness-planning check is added to release validation bundle
+- fast-no-trade-dev profile includes v060-compile-readiness-planning check
+- workflow-closure-audit includes v060-compile-readiness-planning check
+- v060-compile-readiness-planning PASS
+- TASK-301 is planning-only
+- TASK-301 is future compile-readiness candidate
+- TASK-301 is not implementation authorization
+- TASK-301 does not modify MQ5 / MQH
+- TASK-301 does not run MT5
+- TASK-301 does not run Strategy Tester
+- TASK-301 does not authorize backtest
+- TASK-301 does not authorize simulation / real trading
+- TASK-301 does not execute MetaEditor
+- TASK-301 does not execute MQL5 compile
+- TASK-301 does not create .ex5 artifact
+- TASK-301 does not create compile log
+- TASK-301 does not create evidence / manifest / report
+- TASK-301 does not create manifest / fixture / report / directory
+- TASK-301 does not copy external evidence
+- TASK-301 confirms MQ5 inventory 7 files
+- TASK-301 confirms MQ5 inventory remains 7 files
+- TASK-301 confirms Buy / Sell / OrderSend / PositionOpen / CTrade false
+- TASK-301 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- MQ5 inventory 7 files
+- MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade false
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MQL5 compile
+- no MetaEditor execution
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- high-efficiency mode remains: GPT defines boundary, Codex modifies allowed files without commit, Trae reviews, validates, commits, tags, and audits
+- TASK-302 must not be entered directly without GPT authorization
+- the next task boundary must be defined by GPT before TASK-302
+
+## TASK-282 read-only compile-readiness boundary
+
+- current task is TASK-282 implement read-only compile-readiness boundary
+- TASK-282 implement read-only compile-readiness boundary
+- TASK-282 is a read-only boundary verification task
+- TASK-282 objective is to build MQ5 EA compile-readiness boundary
+- compile-readiness boundary verifies no-trade / read-only observability scaffold safety
+- compile-readiness boundary verifies MQ5 static interface consistency
+- TASK-282 keeps the fast no-trade workflow tooling baseline
+- TASK-282 baseline commit is 304b4aa TASK-280 implement no-trade development workflow closure audit
+- TASK-282 baseline tag is v0.5.80-task-280-no-trade-workflow-closure-audit
+- run_release_validation_bundle.py includes read-only compile-readiness boundary check
+- fast-no-trade-dev profile includes read-only compile-readiness boundary check
+- compile-readiness check is read-only and stdout-only
+- compile-readiness check does not run MT5
+- compile-readiness check does not modify MQ5 / MQH
+- compile-readiness check does not create manifest / fixture / report / directory
+- compile-readiness check does not copy external evidence
+- compile-readiness check confirms MQ5 inventory remains 7 files
+- compile-readiness check confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-282 does not modify MQ5 / MQH
+- TASK-282 does not run MT5
+- TASK-282 does not execute backtest
+- TASK-282 does not enter simulated trading
+- TASK-282 does not enter real trading
+- TASK-282 does not create manifest / fixture / report / directory
+- TASK-282 does not copy external evidence
+- next candidate should remain read-only MQ5 static interface consistency unless ChatGPT defines a new boundary
+- default Codex validation remains py tools/run_release_validation_bundle.py --compressed-summary --workflow-closure-audit --profile fast-no-trade-dev
+- default Trae review mode uses generated Trae handoff block, continuous commit/tag, and validates tag points to HEAD
+- do not directly enter TASK-283
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-283 MQ5 static interface consistency audit
+
+- current task is TASK-283 implement MQ5 static interface consistency audit
+- TASK-283 implement MQ5 static interface consistency audit
+- TASK-283 is a read-only / no-trade MQ5 interface audit
+- TASK-283 objective is static consistency check for MQ5 core module interfaces
+- MQ5 static interface consistency audit verifies TradingSystem.mq5 routes OnInit / OnTick / OnDeinit through EaController
+- MQ5 static interface consistency audit verifies EaController includes InputConfig / Logger / SignalEngine / RiskManager / ExecutionManager
+- MQ5 static interface consistency audit verifies Logger helper availability for no-trade observability scaffold
+- MQ5 static interface consistency audit verifies SignalEngine / RiskManager / ExecutionManager Init(Logger &log) interfaces
+- MQ5 static interface consistency audit verifies read-only status snapshot interfaces remain aligned
+- TASK-283 baseline commit is 304b4aa TASK-280 implement no-trade development workflow closure audit
+- TASK-283 baseline tag is v0.5.80-task-280-no-trade-workflow-closure-audit
+- run_release_validation_bundle.py includes mq5-static-interface-consistency check
+- fast-no-trade-dev profile includes mq5-static-interface-consistency check
+- mq5-static-interface-consistency check is read-only and stdout-only
+- mq5-static-interface-consistency check does not run MT5
+- mq5-static-interface-consistency check does not modify MQ5 / MQH
+- mq5-static-interface-consistency check does not create manifest / fixture / report / directory
+- mq5-static-interface-consistency check does not copy external evidence
+- mq5-static-interface-consistency check confirms MQ5 inventory remains 7 files
+- mq5-static-interface-consistency check confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-283 does not modify MQ5 / MQH
+- TASK-283 does not run MT5
+- TASK-283 does not execute backtest
+- TASK-283 does not enter simulated trading
+- TASK-283 does not enter real trading
+- TASK-283 does not create manifest / fixture / report / directory
+- TASK-283 does not copy external evidence
+- next candidate must be defined by ChatGPT before TASK-284
+- default Codex validation remains py tools/run_release_validation_bundle.py --compressed-summary --workflow-closure-audit --profile fast-no-trade-dev
+- default Trae review mode uses generated Trae handoff block, continuous commit/tag, and validates tag points to HEAD
+- do not directly enter TASK-284
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+历史稳定标签引用：
+v0.3.1-observation-mode-no-trade-smoke
+
+v0.5.28-v060-transition-boundary-definition-tag-completion
+
+v0.5.27-v060-transition-boundary-definition
+
+v0.5.26-v060-transition-boundary-definition-readiness-tag-completion
+
+v0.5.25-v060-transition-boundary-definition-readiness
+
+v0.5.24-v060-transition-boundary-planning-readiness-tag-completion
+
+v0.5.23-v060-transition-boundary-planning-readiness
+
+v0.5.22-v050-final-closure-documentation-transition-boundary-completion
+
+v0.5.21-v050-final-closure-documentation-transition-boundary
+
+v0.5.20-v050-final-closure-documentation-transition-boundary-readiness
+
+v0.5.19-v050-official-evidence-archive-final-phase-closure
+
+v0.5.18-v050-official-evidence-archive-phase-closure-readiness
+
+v0.5.17-v050-official-evidence-archive-closure-readiness
+
+v0.5.16-official-evidence-archive-closure-readiness-audit
+
+v0.5.15-first-official-evidence-manifest
+
+v0.5.14-first-official-manifest-creation-authorization-coverage-audit
+
+v0.5.13-first-official-manifest-creation-authorization-boundary
+
+v0.5.12-first-official-manifest-promotion-readiness-audit
+
+v0.5.11-first-official-manifest-dry-run-summary-closure
+
+v0.5.10-official-manifest-creation-preflight-audit
+
+v0.5.9-official-manifest-path-policy-validator-coverage-audit
+
+v0.5.8-official-manifest-path-policy-validator-doc-sync
+
+v0.5.7-official-manifest-path-policy-validator
+
+v0.5.6-deterministic-task-acceptance-reporter-coverage-audit
+
+v0.5.5-deterministic-task-acceptance-reporter
+
+v0.5.4-official-manifest-naming-consistency-audit
+
+v0.5.3-official-manifest-storage-naming-coverage-audit
+
+v0.5.2-official-manifest-storage-naming-policy
+
+v0.5.1-evidence-archive-policy-entry-audit
+
+v0.5.0-evidence-archive-policy-boundary
+
+v0.4.11-v040-phase-closure-audit
+
+v0.4.10-v040-evidence-toolchain-closure-readiness
+
+v0.4.9-external-evidence-readonly-manifest-validation
+
+v0.4.8-evidence-manifest-generator
+
+v0.4.7-mt5-log-no-trade-parser
+
+v0.4.6-parser-manifest-integration-readiness-audit
+
+v0.4.5-strategy-tester-html-parser-encoding
+
+v0.4.4-strategy-tester-html-parser
+
+v0.4.3-strategy-tester-html-parser-requirements-audit
+
+v0.4.2-evidence-manifest-validator-coverage-audit
+
+v0.4.1-evidence-manifest-schema-validator
+
+v0.4.0-evidence-archive-parser-entry-audit
+
+v0.3.7-v030-phase-closure-audit
+
+v0.3.6-backtest-sets-no-trade-smoke-audit
+
+v0.3.5-backtest-sets-no-trade-smoke-coverage
+
+v0.3.4-core-signal-logs-off-no-trade-smoke
+
+v0.3.3-core-signal-log-throttle-no-trade-smoke
+
+v0.3.2-risk-reject-log-off-no-trade-smoke
+
+v0.3.1-observation-mode-no-trade-smoke
+
+v0.3.0-no-trade-strategy-tester-smoke
+
+v0.2.2-execution-manager-no-trade-guard
+
+v0.2.1-mq5-safety-guardrails
+
+v0.2.0-runtime-parser-input-samples
+
+v0.1.9-runtime-report-quality
+
+v0.1.8-engineering-toolchain-stable
+
+v0.1.7-core-signal-log-throttle
+
+## 稳定标签说明
+
+- v0.4.0-evidence-archive-parser-entry-audit is lightweight tag / commit type, with tag style consistent with previous stable tags
+- v0.4.0-evidence-archive-parser-entry-audit points to 4478e3d TASK-DOC-109 update state after TASK-098
+- v0.4.0-evidence-archive-parser-entry-audit marks v0.4.0 evidence archive / parser quality entry audit closed loop
+- v0.4.0-evidence-archive-parser-entry-audit includes TASK-098 read-only entry audit
+- v0.4.0-evidence-archive-parser-entry-audit includes TASK-DOC-109 state sync
+- v0.4.0-evidence-archive-parser-entry-audit confirms current v0.4.0 stage entry points were audited
+- v0.4.0-evidence-archive-parser-entry-audit confirms Strategy Tester HTML parser gap was identified
+- v0.4.0-evidence-archive-parser-entry-audit confirms evidence manifest schema gap was identified
+- v0.4.0-evidence-archive-parser-entry-audit confirms external evidence archive convention gap was identified
+- v0.4.0-evidence-archive-parser-entry-audit confirms metadata normalization gap was identified
+- v0.4.0-evidence-archive-parser-entry-audit confirms no-trade reproducibility checklist gap was identified
+- v0.4.0-evidence-archive-parser-entry-audit confirms TesterBacktest.html exists as an external real Strategy Tester HTML sample
+- v0.4.0-evidence-archive-parser-entry-audit does not implement parser
+- v0.4.0-evidence-archive-parser-entry-audit does not implement manifest
+- v0.4.0-evidence-archive-parser-entry-audit does not copy external evidence into repository
+- v0.4.0-evidence-archive-parser-entry-audit does not run MT5
+- v0.4.0-evidence-archive-parser-entry-audit does not represent live trading readiness
+- v0.4.0-evidence-archive-parser-entry-audit does not represent real trading availability
+- v0.4.0-evidence-archive-parser-entry-audit does not represent profitable strategy completion
+- v0.4.0-evidence-archive-parser-entry-audit does not allow real trading
+- v0.4.0-evidence-archive-parser-entry-audit does not allow moving the tag
+- v0.3.7-v030-phase-closure-audit still points to 1056f74 TASK-DOC-106 update state after TASK-096
+- v0.3.7-v030-phase-closure-audit 为 lightweight tag / commit 类型，标签风格与 previous stable tags 一致
+- v0.3.7-v030-phase-closure-audit 指向 1056f74 TASK-DOC-106 update state after TASK-096
+- v0.3.7-v030-phase-closure-audit marks v0.3.0 phase closure audit closed loop
+- v0.3.7-v030-phase-closure-audit includes TASK-096 phase closure audit evidence
+- v0.3.7-v030-phase-closure-audit includes TASK-DOC-106 state sync
+- v0.3.7-v030-phase-closure-audit confirms v0.3.0 no-trade backtest validation loop completed
+- v0.3.7-v030-phase-closure-audit confirms all 6 backtest/sets completed no-trade Strategy Tester smoke coverage
+- v0.3.7-v030-phase-closure-audit confirms zero trades / zero deals / zero orders / zero positions
+- v0.3.7-v030-phase-closure-audit confirms no OrderSend / Buy / Sell evidence
+- v0.3.7-v030-phase-closure-audit confirms no real trading
+- v0.3.7-v030-phase-closure-audit confirms no profit optimization
+- v0.3.7-v030-phase-closure-audit confirms project is suitable for ChatGPT to define next boundary
+- v0.3.7-v030-phase-closure-audit does not represent live trading readiness
+- v0.3.7-v030-phase-closure-audit does not represent real trading availability
+- v0.3.7-v030-phase-closure-audit does not represent profitable strategy completion
+- v0.3.7-v030-phase-closure-audit does not define v0.4.0
+- v0.3.7-v030-phase-closure-audit does not open the next stage
+- v0.3.7-v030-phase-closure-audit does not allow real trading
+- v0.3.7-v030-phase-closure-audit does not allow moving the tag
+- v0.3.6-backtest-sets-no-trade-smoke-audit still points to 0442ae1 TASK-DOC-104 update state after TASK-095
+
+- v0.3.6-backtest-sets-no-trade-smoke-audit 为 lightweight tag / commit 类型，标签风格与 previous stable tags 一致
+- v0.3.6-backtest-sets-no-trade-smoke-audit 指向 0442ae1 TASK-DOC-104 update state after TASK-095
+- v0.3.6-backtest-sets-no-trade-smoke-audit marks v0.3.0 full backtest/sets no-trade Strategy Tester smoke coverage audit closed loop
+- v0.3.6-backtest-sets-no-trade-smoke-audit includes TASK-095 audit evidence
+- v0.3.6-backtest-sets-no-trade-smoke-audit includes TASK-DOC-104 state sync
+- v0.3.6-backtest-sets-no-trade-smoke-audit confirms all 6 backtest/sets completed no-trade Strategy Tester smoke coverage
+- v0.3.6-backtest-sets-no-trade-smoke-audit confirms audit closure after v0.3.5-backtest-sets-no-trade-smoke-coverage
+- v0.3.6-backtest-sets-no-trade-smoke-audit confirms zero trades / zero deals / zero buy trades / zero sell trades across covered sets
+- v0.3.6-backtest-sets-no-trade-smoke-audit confirms no OrderSend / Buy / Sell evidence
+- v0.3.6-backtest-sets-no-trade-smoke-audit confirms no real trading
+- v0.3.6-backtest-sets-no-trade-smoke-audit confirms no profit optimization
+- v0.3.6-backtest-sets-no-trade-smoke-audit does not represent live trading readiness
+- v0.3.6-backtest-sets-no-trade-smoke-audit does not represent real trading availability
+- v0.3.6-backtest-sets-no-trade-smoke-audit does not represent profitable strategy completion
+- v0.3.6-backtest-sets-no-trade-smoke-audit does not allow real trading
+- v0.3.6-backtest-sets-no-trade-smoke-audit does not allow moving the tag
+- v0.3.5-backtest-sets-no-trade-smoke-coverage still points to b58ddbf TASK-DOC-102 update state after TASK-094
+
+- v0.3.5-backtest-sets-no-trade-smoke-coverage 为 lightweight tag / commit 类型，标签风格与 previous stable tags 一致
+- v0.3.5-backtest-sets-no-trade-smoke-coverage 指向 b58ddbf TASK-DOC-102 update state after TASK-094
+- v0.3.5-backtest-sets-no-trade-smoke-coverage marks full backtest/sets no-trade Strategy Tester smoke coverage closed loop
+- v0.3.5-backtest-sets-no-trade-smoke-coverage includes TASK-089-RERUN through TASK-094 evidence
+- v0.3.5-backtest-sets-no-trade-smoke-coverage includes TASK-DOC-102 state sync
+- v0.3.5-backtest-sets-no-trade-smoke-coverage confirms all 6 backtest/sets completed no-trade Strategy Tester smoke coverage
+- v0.3.5-backtest-sets-no-trade-smoke-coverage confirms all covered sets produced zero trades / zero deals / zero buy trades / zero sell trades
+- v0.3.5-backtest-sets-no-trade-smoke-coverage confirms no OrderSend / Buy / Sell evidence
+- v0.3.5-backtest-sets-no-trade-smoke-coverage confirms no real trading
+- v0.3.5-backtest-sets-no-trade-smoke-coverage confirms no profit optimization
+- v0.3.5-backtest-sets-no-trade-smoke-coverage does not represent live trading readiness
+- v0.3.5-backtest-sets-no-trade-smoke-coverage does not represent real trading availability
+- v0.3.5-backtest-sets-no-trade-smoke-coverage does not represent profitable strategy completion
+- v0.3.5-backtest-sets-no-trade-smoke-coverage does not allow real trading
+- v0.3.5-backtest-sets-no-trade-smoke-coverage does not allow moving the tag
+- v0.3.4-core-signal-logs-off-no-trade-smoke still points to d408c8c TASK-DOC-100 update state after TASK-093
+
+- v0.3.4-core-signal-logs-off-no-trade-smoke 为 lightweight tag / commit 类型，标签风格与 previous stable tags 一致
+- v0.3.4-core-signal-logs-off-no-trade-smoke 指向 d408c8c TASK-DOC-100 update state after TASK-093
+- v0.3.4-core-signal-logs-off-no-trade-smoke marks core-signal-logs-off no-trade Strategy Tester smoke test closed loop
+- v0.3.4-core-signal-logs-off-no-trade-smoke includes TASK-093 evidence and TASK-DOC-100 state sync
+- v0.3.4-core-signal-logs-off-no-trade-smoke confirms InpEnableTrading=false blocked trading through RiskManager
+- v0.3.4-core-signal-logs-off-no-trade-smoke confirms disabling core / signal per-event logs did not weaken no-trade safety
+- v0.3.4-core-signal-logs-off-no-trade-smoke confirms riskRejected=6047
+- v0.3.4-core-signal-logs-off-no-trade-smoke confirms riskApproved=0
+- v0.3.4-core-signal-logs-off-no-trade-smoke confirms executionAttempts=0
+- v0.3.4-core-signal-logs-off-no-trade-smoke confirms riskRejectTradingDisabled=6047
+- v0.3.4-core-signal-logs-off-no-trade-smoke confirms printedNewBarLogs=0
+- v0.3.4-core-signal-logs-off-no-trade-smoke confirms suppressedNewBarLogs=6047
+- v0.3.4-core-signal-logs-off-no-trade-smoke confirms printedSignalLogs=0
+- v0.3.4-core-signal-logs-off-no-trade-smoke confirms suppressedSignalLogs=6047
+- v0.3.4-core-signal-logs-off-no-trade-smoke confirms total trades=0 / total deals=0 / buy trades=0 / sell trades=0
+- v0.3.4-core-signal-logs-off-no-trade-smoke does not represent live trading readiness
+- v0.3.4-core-signal-logs-off-no-trade-smoke does not represent real trading availability
+- v0.3.4-core-signal-logs-off-no-trade-smoke does not represent profitable strategy completion
+- v0.3.4-core-signal-logs-off-no-trade-smoke does not allow real trading
+- v0.3.4-core-signal-logs-off-no-trade-smoke does not allow moving the tag
+- v0.3.3-core-signal-log-throttle-no-trade-smoke still points to 5f228e2 TASK-DOC-098 update state after TASK-092
+
+- v0.3.3-core-signal-log-throttle-no-trade-smoke 为 lightweight tag / commit 类型，标签风格与 previous stable tags 一致
+- v0.3.3-core-signal-log-throttle-no-trade-smoke 指向 5f228e2 TASK-DOC-098 update state after TASK-092
+- v0.3.3-core-signal-log-throttle-no-trade-smoke marks default core-signal-log-throttle no-trade Strategy Tester smoke test closed loop
+- v0.3.3-core-signal-log-throttle-no-trade-smoke includes TASK-092 evidence and TASK-DOC-098 state sync
+- v0.3.3-core-signal-log-throttle-no-trade-smoke confirms InpEnableTrading=false blocked trading through RiskManager
+- v0.3.3-core-signal-log-throttle-no-trade-smoke confirms core / signal log throttle summaries were produced
+- v0.3.3-core-signal-log-throttle-no-trade-smoke confirms riskRejected=6047
+- v0.3.3-core-signal-log-throttle-no-trade-smoke confirms riskApproved=0
+- v0.3.3-core-signal-log-throttle-no-trade-smoke confirms executionAttempts=0
+- v0.3.3-core-signal-log-throttle-no-trade-smoke confirms riskRejectTradingDisabled=6047
+- v0.3.3-core-signal-log-throttle-no-trade-smoke confirms printedNewBarLogs=7
+- v0.3.3-core-signal-log-throttle-no-trade-smoke confirms suppressedNewBarLogs=6040
+- v0.3.3-core-signal-log-throttle-no-trade-smoke confirms printedSignalLogs=124
+- v0.3.3-core-signal-log-throttle-no-trade-smoke confirms suppressedSignalLogs=5923
+- v0.3.3-core-signal-log-throttle-no-trade-smoke confirms total trades=0 / total deals=0 / buy trades=0 / sell trades=0
+- v0.3.3-core-signal-log-throttle-no-trade-smoke does not represent live trading readiness
+- v0.3.3-core-signal-log-throttle-no-trade-smoke does not represent real trading availability
+- v0.3.3-core-signal-log-throttle-no-trade-smoke does not represent profitable strategy completion
+- v0.3.3-core-signal-log-throttle-no-trade-smoke does not allow real trading
+- v0.3.3-core-signal-log-throttle-no-trade-smoke does not allow moving the tag
+- v0.3.2-risk-reject-log-off-no-trade-smoke still points to 1c65991 TASK-DOC-096 update state after TASK-091
+
+- v0.3.2-risk-reject-log-off-no-trade-smoke 为 lightweight tag / commit 类型，标签风格与 previous stable tags 一致
+- v0.3.2-risk-reject-log-off-no-trade-smoke 指向 1c65991 TASK-DOC-096 update state after TASK-091
+- v0.3.2-risk-reject-log-off-no-trade-smoke marks risk-reject-log-off no-trade Strategy Tester smoke test closed loop
+- v0.3.2-risk-reject-log-off-no-trade-smoke includes TASK-091 evidence and TASK-DOC-096 state sync
+- v0.3.2-risk-reject-log-off-no-trade-smoke confirms InpPrintRiskRejectLog=false only suppresses per-reject logs
+- v0.3.2-risk-reject-log-off-no-trade-smoke confirms RiskManager observation mode fallback still blocks execution
+- v0.3.2-risk-reject-log-off-no-trade-smoke confirms InpEnableTrading=true did not enable real trading
+- v0.3.2-risk-reject-log-off-no-trade-smoke confirms riskRejected=94013
+- v0.3.2-risk-reject-log-off-no-trade-smoke confirms riskApproved=0
+- v0.3.2-risk-reject-log-off-no-trade-smoke confirms executionAttempts=0
+- v0.3.2-risk-reject-log-off-no-trade-smoke confirms printedRiskRejectLogs=0
+- v0.3.2-risk-reject-log-off-no-trade-smoke confirms suppressedRiskRejectLogs=94013
+- v0.3.2-risk-reject-log-off-no-trade-smoke confirms total trades=0 / total deals=0 / buy trades=0 / sell trades=0
+- v0.3.2-risk-reject-log-off-no-trade-smoke does not represent live trading readiness
+- v0.3.2-risk-reject-log-off-no-trade-smoke does not represent real trading availability
+- v0.3.2-risk-reject-log-off-no-trade-smoke does not represent profitable strategy completion
+- v0.3.2-risk-reject-log-off-no-trade-smoke does not allow real trading
+- v0.3.2-risk-reject-log-off-no-trade-smoke does not allow moving the tag
+- v0.3.1-observation-mode-no-trade-smoke still points to 53efaf2 TASK-DOC-094 update state after TASK-090
+
+- v0.3.0-no-trade-strategy-tester-smoke 为 lightweight tag / commit 类型，标签风格与 previous stable tags 一致
+- v0.3.0-no-trade-strategy-tester-smoke 指向 7168651 TASK-DOC-092 update state after TASK-089-RERUN
+- v0.3.1-observation-mode-no-trade-smoke marks observation-mode no-trade Strategy Tester smoke test closed loop
+- v0.3.1-observation-mode-no-trade-smoke includes TASK-090 evidence and TASK-DOC-094 state sync
+- v0.3.1-observation-mode-no-trade-smoke confirms InpEnableTrading=true did not enable real trading under observation mode
+- v0.3.1-observation-mode-no-trade-smoke confirms RISK_REJECT_OBSERVATION_MODE path
+- v0.3.1-observation-mode-no-trade-smoke confirms riskRejected=94013
+- v0.3.1-observation-mode-no-trade-smoke confirms riskApproved=0
+- v0.3.1-observation-mode-no-trade-smoke confirms executionAttempts=0
+- v0.3.1-observation-mode-no-trade-smoke confirms total trades=0 / total deals=0 / buy trades=0 / sell trades=0
+- v0.3.1-observation-mode-no-trade-smoke does not represent live trading readiness
+- v0.3.1-observation-mode-no-trade-smoke does not represent real trading availability
+- v0.3.1-observation-mode-no-trade-smoke does not represent profitable strategy completion
+- v0.3.1-observation-mode-no-trade-smoke does not allow real trading
+- v0.3.1-observation-mode-no-trade-smoke does not allow moving the tag
+- v0.3.0-no-trade-strategy-tester-smoke still points to 7168651 TASK-DOC-092 update state after TASK-089-RERUN
+- v0.3.0-no-trade-strategy-tester-smoke marks first no-trade Strategy Tester smoke test closed loop
+- v0.3.0-no-trade-strategy-tester-smoke includes TASK-089-RERUN evidence and TASK-DOC-092 state sync
+- v0.3.0-no-trade-strategy-tester-smoke does not represent live trading readiness
+- v0.3.0-no-trade-strategy-tester-smoke does not represent real trading availability
+- v0.3.0-no-trade-strategy-tester-smoke does not represent profitable strategy completion
+- v0.3.0-no-trade-strategy-tester-smoke does not allow real trading
+- v0.3.0-no-trade-strategy-tester-smoke does not allow moving the tag
+- v0.2.2-execution-manager-no-trade-guard 保留为上一稳定标签，仍指向 1c93d1b TASK-DOC-087 update state after TASK-086
+- v0.2.2-execution-manager-no-trade-guard 为 lightweight tag / commit 类型，与 v0.2.1-mq5-safety-guardrails 和 v0.2.0-runtime-parser-input-samples 一致
+- v0.2.2-execution-manager-no-trade-guard 指向 1c93d1b TASK-DOC-087 update state after TASK-086
+- v0.2.2-execution-manager-no-trade-guard 标记 ExecutionManager explicit no-trade guard / TASK-085 + TASK-086 + TASK-DOC-087 的完整安全硬化闭环
+- v0.2.2-execution-manager-no-trade-guard 不代表真实交易可用
+- v0.2.2-execution-manager-no-trade-guard 不代表盈利策略完成
+- v0.2.2-execution-manager-no-trade-guard 不代表允许实盘
+- v0.2.2 标签不要移动
+- v0.2.1-mq5-safety-guardrails 保留为上一稳定标签，仍指向 a808d8e TASK-DOC-084 update state after TASK-084
+- v0.2.1-mq5-safety-guardrails 为 lightweight tag / commit 类型，与 v0.2.0-runtime-parser-input-samples 一致
+- v0.2.1-mq5-safety-guardrails 指向 a808d8e TASK-DOC-084 update state after TASK-084
+- v0.2.1-mq5-safety-guardrails 是 MQ5 safety guardrails 工程安全护栏闭环稳定标签
+- TASK-085 是 v0.2.1-mq5-safety-guardrails 之后的安全硬化提交
+- v0.2.1 标签不要移动
+- v0.2.1-mq5-safety-guardrails 不代表真实交易可用
+- v0.2.1-mq5-safety-guardrails 不代表盈利策略完成
+- v0.2.1-mq5-safety-guardrails 不代表允许实盘
+- v0.2.0-runtime-parser-input-samples 保留为上一稳定标签，仍指向 e35a13b TASK-DOC-073 update state after TASK-072
+
+## 已完成任务记录
+
+- TASK-074 completed：29fa503 TASK-074 enforce TASK-DOC role boundary validation
+- TASK-075 completed：e805ad7 TASK-075 restore project state docs boundary validation
+- TASK-076 completed：audit project state docs UTF-8 readability and validator encoding assumptions
+- TASK-077 completed：cd2cb18 TASK-077 enforce project state docs mojibake guard
+- TASK-078 completed：audit v0.3.0 entry readiness and next-phase boundary candidates
+- TASK-079 completed：caf8d8e TASK-079 fix project state docs prohibited keyword false positive
+- TASK-080 completed：audit next phase decision inputs after TASK-079
+- TASK-081 completed：audit MQ5 backtest engine surface and safety entry points
+- TASK-082 completed：audit ExecutionManager no-trade implementation and call-chain safety
+- TASK-083 completed：dfdf083 TASK-083 enforce ExecutionManager no-trade guardrails
+- TASK-084 completed：audit MQ5 safety guardrails coverage after ExecutionManager enforcement
+- TASK-TAG-004 completed：v0.2.1-mq5-safety-guardrails stable tag created
+- TASK-085 completed：80e162b TASK-085 add ExecutionManager explicit no-trade guard
+- TASK-086 completed：audit ExecutionManager explicit no-trade guard after TASK-085
+- TASK-TAG-005 completed：v0.2.2-execution-manager-no-trade-guard stable tag created
+- TASK-087 completed：62b70d8 TASK-087 define v0.3.0 MQ5 backtest validation boundary
+- TASK-088 completed：audit v0.3.0 no-trade backtest validation entry plan
+- TASK-089 stopped / environment blocked：first no-trade Strategy Tester smoke run using TASK-009_A_default_trading_off.set
+- TASK-089-RERUN completed：first no-trade Strategy Tester smoke test completed in external MT5 Windows environment
+- TASK-TAG-006 completed：TASK-TAG-006 create v0.3.0-no-trade-strategy-tester-smoke stable tag
+- TASK-090 completed：TASK-090 run observation-mode no-trade Strategy Tester smoke test
+- TASK-TAG-007 completed：TASK-TAG-007 create v0.3.1-observation-mode-no-trade-smoke stable tag
+- TASK-091 completed：TASK-091 run risk-reject-log-off no-trade Strategy Tester smoke test
+- TASK-TAG-008 completed：TASK-TAG-008 create v0.3.2-risk-reject-log-off-no-trade-smoke stable tag
+- TASK-092 completed：TASK-092 run default core-signal-log-throttle no-trade Strategy Tester smoke test
+- TASK-TAG-009 completed：TASK-TAG-009 create v0.3.3-core-signal-log-throttle-no-trade-smoke stable tag
+- TASK-093 completed：TASK-093 run core-signal-logs-off no-trade Strategy Tester smoke test
+- TASK-TAG-010 completed：TASK-TAG-010 create v0.3.4-core-signal-logs-off-no-trade-smoke stable tag
+- TASK-094 completed：TASK-094 run verbose core-signal-logs no-trade Strategy Tester smoke test
+- TASK-TAG-011 completed：TASK-TAG-011 create v0.3.5-backtest-sets-no-trade-smoke-coverage stable tag
+- TASK-095 completed：TASK-095 audit v0.3.0 full backtest set no-trade smoke coverage closure
+- TASK-TAG-012 completed：TASK-TAG-012 create v0.3.6-backtest-sets-no-trade-smoke-audit stable tag
+- TASK-096 completed：TASK-096 audit v0.3.0 phase closure and next-stage boundary candidates
+- TASK-TAG-013 completed：TASK-TAG-013 create v0.3.7-v030-phase-closure-audit stable tag
+- TASK-097 completed：TASK-097 define v0.4.0 backtest evidence boundary
+- TASK-098 completed：TASK-098 audit v0.4.0 evidence archive and parser quality entry points
+- TASK-TAG-014 completed：TASK-TAG-014 create v0.4.0-evidence-archive-parser-entry-audit stable tag
+- TASK-TAG-015 completed：TASK-TAG-015 create v0.4.1-evidence-manifest-schema-validator stable tag
+- TASK-101 completed：TASK-101 audit evidence manifest schema validator coverage and v0.4.1 closure readiness
+- TASK-TAG-016 completed：TASK-TAG-016 create v0.4.2-evidence-manifest-validator-coverage-audit stable tag
+- TASK-102 completed：TASK-102 audit Strategy Tester HTML parser requirements and real fixture boundary
+- TASK-TAG-017 completed：TASK-TAG-017 create v0.4.3-strategy-tester-html-parser-requirements-audit stable tag
+- TASK-103 completed：e312d7c TASK-103 add Strategy Tester HTML parser
+- TASK-TAG-018 completed：TASK-TAG-018 create v0.4.4-strategy-tester-html-parser stable tag
+- TASK-104 completed：TASK-104 validate Strategy Tester HTML parser against external sample read-only
+- TASK-105 completed：TASK-105 fix Strategy Tester HTML parser encoding
+- TASK-TAG-019 completed：TASK-TAG-019 create v0.4.5-strategy-tester-html-parser-encoding stable tag
+- TASK-106 completed：TASK-106 audit parser-to-manifest integration readiness
+- TASK-TAG-020 completed：TASK-TAG-020 create v0.4.6-parser-manifest-integration-readiness-audit stable tag
+- TASK-107 completed：TASK-107 add MT5 log no-trade parser
+- TASK-TAG-021 completed：TASK-TAG-021 create v0.4.7-mt5-log-no-trade-parser stable tag
+- TASK-108 completed：TASK-108 add evidence manifest generator
+- TASK-TAG-022 completed：TASK-TAG-022 create v0.4.8-evidence-manifest-generator stable tag
+- TASK-109 completed：TASK-109 validate evidence manifest generator against external evidence read-only
+- TASK-TAG-023 completed：TASK-TAG-023 create v0.4.9-external-evidence-readonly-manifest-validation stable tag
+- TASK-110 completed：TASK-110 audit v0.4.0 evidence toolchain closure readiness
+- TASK-TAG-024 completed：TASK-TAG-024 create v0.4.10-v040-evidence-toolchain-closure-readiness stable tag
+- TASK-111 completed：TASK-111 audit v0.4.0 phase closure and next-stage boundary candidates
+- TASK-TAG-025 completed：TASK-TAG-025 create v0.4.11-v040-phase-closure-audit stable tag
+- TASK-112 completed：TASK-112 define v0.5.0 evidence archive policy boundary
+- TASK-TAG-026 completed：TASK-TAG-026 create v0.5.0-evidence-archive-policy-boundary stable tag
+- TASK-113 completed：TASK-113 audit v0.5.0 official evidence archive policy entry points
+
+## TASK-077 结果
+
+- 新增 project state docs mojibake / garbled Chinese guard
+- validator 继续使用 UTF-8 读取 docs
+- docs 中出现疑似 mojibake / garbled Chinese 片段时 validator 会失败
+- self-test 增加正向和负向覆盖
+- Select-String 对 tools 的可见疑似乱码检查无异常命中
+- Project state docs validation passed
+- Project state docs self-test passed
+- Engineering toolchain checks passed
+- 工作区 clean
+- 未修改 docs
+- 未修改 MQ5
+- 未修改 backtest/sets
+- 未移动标签
+- 未 push
+- 未开启 v0.3.0
+
+## TASK-078 结果
+
+- workspace clean
+- validation passed
+- Engineering toolchain checks passed，13/13 PASS
+- tools 清单只读审计为 18 个工具
+- MQ5 no changes
+- backtest/sets no changes
+- no docs or tools modified by TASK-078
+- no commit created by TASK-078
+- no tag moved
+- no push
+- v0.3.0 not opened
+- TASK-078 read-only candidate directions recorded as candidates only, not v0.3.0 boundary:
+  - 进入 MQ5 回测引擎验证阶段
+  - 扩展真实回测样本集合
+  - 保持当前阶段再执行 1–2 个工程强化任务
+
+## TASK-079 结果
+
+- 修复 project state docs validator 的 prohibited keyword false positive
+- 允许合法记录：c22b31f TASK-DOC-077 update state after TASK-077
+- 从 PROHIBITED_KEYWORDS 中移除过宽的 TASK-DOC-076 / TASK-DOC-077 update state 拦截项
+- 新增正向 self-test，确认 TASK-DOC-077 update state 合法提交不会被误拦截
+- Project state docs validation passed
+- Project state docs self-test passed
+- Engineering toolchain checks passed
+- 未修改 docs
+- 未修改 MQ5
+- 未修改 backtest/sets
+- 未移动标签
+- 未 push
+- 未开启 v0.3.0
+
+## TASK-080 结果
+
+- workspace clean
+- validation passed
+- Engineering toolchain checks passed，13/13 PASS
+- tools 清单只读审计为 18 个工具
+- MQ5 no changes
+- backtest/sets no changes
+- Select-String mojibake check zero hits
+- no docs or tools modified by TASK-080
+- no commit created by TASK-080
+- no tag moved
+- no push
+- v0.3.0 not opened
+- TASK-080 read-only candidate directions recorded as candidates only, not v0.3.0 boundary:
+  - 进入 MQ5 回测引擎验证阶段
+  - 扩展真实回测样本集合
+  - 保持当前阶段再执行 1–2 个工程强化任务
+
+## TASK-081 结果
+
+- workspace clean
+- Project state docs validation passed
+- Project state docs self-test passed
+- Engineering toolchain checks passed，13/13 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- MQ5 files audited: 16
+- backtest/sets files audited: 6
+- MQ5 safety guardrails scanned 7 .mq5 / .mqh files
+- forbidden trading API findings: 0
+- InpEnableTrading default: false
+- dangerous enabled parameters: 0
+- no MQ5 changes
+- no backtest/sets changes
+- no docs or tools modified by TASK-081
+- no commit created by TASK-081
+- no tag moved
+- no push
+- v0.3.0 not opened
+- TASK-081 observations are audit observations only, not v0.3.0 boundary
+- ExecutionManager is the highest-risk follow-up surface if future MQ5 backtest engine validation is explicitly authorized by ChatGPT
+
+## TASK-082 结果
+
+- workspace clean
+- Project state docs validation passed
+- Project state docs self-test passed
+- Engineering toolchain checks passed
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- ExecutionManager no-trade implementation audited
+- ExecutionManager.ExecuteSignal() currently only prints warning and returns false
+- EaController → SignalEngine → RiskManager → ExecutionManager call chain audited
+- RiskManager InpEnableTrading=false blocking audited
+- RiskManager observation mode fallback rejection audited
+- SignalEngine observation-only behavior audited
+- forbidden trading API findings: 0
+- dangerous strategy keyword findings: 0
+- no MQ5 changes
+- no backtest/sets changes
+- no docs or tools modified by TASK-082
+- no commit created by TASK-082
+- no tag moved
+- no push
+- v0.3.0 not opened
+- TASK-082 observations are audit observations only, not v0.3.0 boundary
+- Future ExecutionManager double-check of InpEnableTrading is only a candidate if explicitly authorized by ChatGPT
+
+## TASK-083 结果
+
+- ExecutionManager no-trade guard added to validator
+- EaController Signal -> Risk -> Execution call-chain guard added
+- RiskManager InpEnableTrading and observation mode guard added
+- SignalEngine no-trade guard added
+- dangerous strategy keyword findings tracked
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Engineering toolchain checks passed
+- Project state docs validation passed
+- Project state docs self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- forbidden trading API findings: 0
+- dangerous strategy keyword findings: 0
+- ExecutionManager no-trade guard: passed
+- EaController Signal -> Risk -> Execution call-chain guard: passed
+- RiskManager InpEnableTrading and observation mode guard: passed
+- SignalEngine no-trade guard: passed
+- no docs modified by TASK-083
+- no MQ5 changes
+- no backtest/sets changes
+- no tag moved
+- no push
+- v0.3.0 not opened
+
+## TASK-084 结果
+
+- workspace clean
+- Project state docs validation passed
+- Project state docs self-test passed
+- Engineering toolchain checks passed，13/13 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- Select-String mojibake check zero hits
+- git diff -- MQ5 backtest/sets empty
+- ExecutionManager no-trade validator coverage confirmed
+- EaController Signal -> Risk -> Execution call-chain validator coverage confirmed
+- RiskManager InpEnableTrading / observation mode guard validator coverage confirmed
+- SignalEngine no-trade validator coverage confirmed
+- forbidden trading API findings: 0
+- dangerous strategy keyword findings: 0
+- no docs modified by TASK-084
+- no tools modified by TASK-084
+- no MQ5 changes
+- no backtest/sets changes
+- no commit created by TASK-084
+- no tag moved
+- no push
+- v0.3.0 not opened
+- MQ5 safety guardrails cover ExecutionManager no-trade implementation
+- MQ5 safety guardrails cover EaController Signal -> Risk -> Execution call-chain
+- MQ5 safety guardrails cover RiskManager InpEnableTrading=false blocking and observation mode fallback
+- MQ5 safety guardrails cover SignalEngine no-trade guard
+- MQ5 safety guardrails cover forbidden trading API and dangerous strategy keyword scans
+- TASK-082 audit, TASK-083 implementation, and TASK-084 coverage audit form an MQ5 safety guardrails closed loop
+- Next-stage direction and safety boundary must still be decided by ChatGPT
+- This docs sync does not define a v0.3.0 boundary
+
+## TASK-TAG-004 结果
+
+- stable tag created: v0.2.1-mq5-safety-guardrails
+- tag target: a808d8e TASK-DOC-084 update state after TASK-084
+- tag type: lightweight tag / commit
+- tag style consistent with v0.2.0-runtime-parser-input-samples
+- previous stable tag v0.2.0-runtime-parser-input-samples still points to e35a13b
+- no old tag moved
+- no files modified by TASK-TAG-004
+- no commit created by TASK-TAG-004
+- no push
+- v0.3.0 not opened
+
+## TASK-TAG-005 结果
+
+- stable tag created: v0.2.2-execution-manager-no-trade-guard
+- tag target: 1c93d1b TASK-DOC-087 update state after TASK-086
+- tag type: lightweight tag / commit
+- tag style consistent with v0.2.1-mq5-safety-guardrails and v0.2.0-runtime-parser-input-samples
+- previous stable tag v0.2.1-mq5-safety-guardrails still points to a808d8e
+- previous stable tag v0.2.0-runtime-parser-input-samples still points to e35a13b
+- no old tag moved
+- no files modified by TASK-TAG-005
+- no commit created by TASK-TAG-005
+- no push
+- v0.3.0 not opened
+
+## TASK-087 结果
+
+- v0.3.0 boundary defined as MQ5 backtest validation and no-trade execution-chain validation stage
+- Project state docs validator updated to allow v0.3.0 as legal current phase
+- current next boundary validator updated for TASK-088 / no direct MQ5 / no direct backtest/sets / no real trading
+- Project state docs validation passed
+- Project state docs self-test passed
+- Engineering toolchain checks passed
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- no MQ5 changes
+- no backtest/sets changes
+- no tag moved
+- no push
+- no real trading enabled
+- v0.3.0 allowed scope is MQ5 backtest entry audit
+- v0.3.0 allowed scope is Strategy Tester / backtest run evidence recording
+- v0.3.0 allowed scope is no-trade execution-chain validation
+- v0.3.0 allowed scope is InpEnableTrading=false behavior validation
+- v0.3.0 allowed scope is RiskManager / ExecutionManager rejection-path validation
+- v0.3.0 allowed scope is backtest logs, reports, and sample-quality enhancement
+- v0.3.0 does not represent live trading
+- v0.3.0 does not represent real trading readiness
+- v0.3.0 does not represent a completed profitable strategy
+- v0.3.0 only allows no-trade backtest validation and evidence collection
+- v0.3.0 still forbids real trading
+- v0.3.0 still forbids CTrade / OrderSend / PositionOpen / Buy / Sell / OrderModify / PositionClose / OrderClose
+- v0.3.0 still forbids ATR / position sizing / stop loss / take profit
+- v0.3.0 still forbids AI / multi-symbol / multi-account
+- v0.3.0 still forbids Martingale / grid / averaging-down
+- v0.3.0 still forbids profit optimization
+
+## TASK-088 结果
+
+- workspace clean
+- Project state docs / MQ5 safety / Backtest set safety / Engineering toolchain all passed
+- MQ5 files audited: 16
+- backtest/sets files audited: 6
+- .set files audited: 6
+- all .set files remain in safe observation mode
+- Signal -> Risk -> Execution no-trade chain confirmed
+- ExecutionManager explicit !InpEnableTrading guard confirmed
+- RiskManager InpEnableTrading=false blocking confirmed
+- RiskManager observation mode fallback confirmed
+- ExecutionManager all paths return false
+- no real trading API findings
+- no dangerous strategy keyword findings
+- no docs/tools/MQ5/backtest/sets changes
+- no commit created by TASK-088
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- TASK-088 read-only candidate directions:
+  - Candidate A: first Strategy Tester no-trade run using TASK-009_A_default_trading_off.set
+  - Candidate B: RiskManager / ExecutionManager rejection path validation using observation-mode set files
+  - Candidate C: backtest log / report parsing validation
+- These are TASK-088 read-only candidate directions only.
+- TASK-DOC-090 does not start a backtest.
+- TASK-DOC-090 does not run MT5.
+- TASK-DOC-090 does not modify MQ5.
+- TASK-DOC-090 does not modify .set files.
+
+## TASK-089 结果
+
+- TASK-089 stopped / environment blocked
+- first no-trade Strategy Tester smoke run using TASK-009_A_default_trading_off.set was attempted
+- prerequisite validation passed
+- workspace clean
+- stable tags were not moved
+- Project state docs validation passed
+- Project state docs self-test passed
+- Engineering toolchain checks passed，13/13 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- git diff -- docs tools MQ5 backtest/sets was empty before the run attempt
+- MT5 Strategy Tester was not run
+- current environment does not support MetaTrader 5 Strategy Tester execution
+- missing MT5 desktop terminal / graphical environment / MQL5 execution environment
+- backtest/sets/TASK-009_A_default_trading_off.set was not loaded
+- no Journal / Experts / Tester backtest evidence was produced
+- RISK_REJECT_TRADING_DISABLED runtime log was not verified
+- orders / deals / positions were not verified because the backtest did not run
+- no files modified by TASK-089
+- no commit created by TASK-089
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- first no-trade smoke run must be executed manually in a Windows environment with MetaTrader 5 installed
+- candidate execution should use backtest/sets/TASK-009_A_default_trading_off.set
+- candidate execution must confirm InpEnableTrading=false and InpEnableRiskObservation=true
+- TASK-089 is not completed
+- Strategy Tester smoke run did not pass because it did not run
+- RiskManager blocking logs were not produced or verified
+- ExecutionManager path was not verified in MT5
+
+## TASK-089-RERUN 结果
+
+- TASK-089 original attempt was environment blocked because the initial Trae sandbox could not run MT5 Strategy Tester
+- TASK-089-RERUN completed the smoke test in the user-provided MT5 Windows environment
+- MT5 path: D:\MT5测试\MetaTrader 5\terminal64.exe
+- EA: TradingSystem
+- Symbol: EURUSD
+- Timeframe: M5
+- Date: 2024.01.01 - 2024.01.31
+- Intended set file: backtest/sets/TASK-009_A_default_trading_off.set
+- confirmed input InpEnableTrading=false
+- confirmed input InpEnableRiskObservation=true
+- core log evidence: RiskManager initialized
+- core log evidence: Risk observation mode blocks all real trading
+- core log evidence: RISK_REJECT_TRADING_DISABLED
+- core log evidence: InpEnableTrading is false
+- core log evidence: Trading is disabled by input
+- Test passed
+- ticks: 5308422
+- bars: 6047
+- riskRejected=6047
+- riskApproved=0
+- executionAttempts=0
+- riskRejectTradingDisabled=6047
+- total trades=0
+- total deals=0
+- buy trades=0
+- sell trades=0
+- no orders opened
+- no positions opened
+- no OrderSend / Buy / Sell evidence
+- no real trading
+- no profit optimization
+- no MQ5 changes
+- no backtest/sets changes
+- no docs/tools changes by the test itself
+- no commit created by TASK-089-RERUN
+- no tag moved
+- no push
+
+## TASK-TAG-006 结果
+
+- stable tag created: v0.3.0-no-trade-strategy-tester-smoke
+- tag target: 7168651 TASK-DOC-092 update state after TASK-089-RERUN
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.2.2-execution-manager-no-trade-guard still points to 1c93d1b
+- v0.2.1-mq5-safety-guardrails still points to a808d8e
+- v0.2.0-runtime-parser-input-samples still points to e35a13b
+- no old tag moved
+- no files modified by TASK-TAG-006
+- no commit created by TASK-TAG-006
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-090 结果
+
+- TASK-090 completed：TASK-090 run observation-mode no-trade Strategy Tester smoke test
+- MT5 path: D:\MT5测试\MetaTrader 5\terminal64.exe
+- Set file: backtest/sets/TASK-009_B_trading_true_observation_block.set
+- Symbol: XAUUSD
+- Tester period: H1
+- Date: 2024.01.01 - 2025.04.30
+- EA internal signal timeframe: PERIOD_M5
+- InpEnableTrading=true
+- InpEnableRiskObservation=true
+- RiskManager initialized
+- Risk observation mode blocks all real trading
+- RISK_REJECT_OBSERVATION_MODE
+- reason=Trading disabled in risk observation mode
+- observation-mode no-trade smoke test passed
+- InpEnableTrading=true did not enable real trading
+- RiskManager observation mode fallback blocked execution
+- ExecutionManager did not execute real trading
+- riskRejected=94013
+- riskApproved=0
+- executionAttempts=0
+- total trades=0
+- total deals=0
+- buy trades=0
+- sell trades=0
+- no orders opened
+- no positions opened
+- no OrderSend / Buy / Sell evidence
+- no real trading
+- no profit optimization
+- no MQ5 changes
+- no backtest/sets changes
+- no docs/tools/MQ5/backtest/sets uncommitted changes after post-run check
+- no commit created by TASK-090
+- no tag moved
+- no push
+
+## TASK-TAG-007 结果
+
+- stable tag created: v0.3.1-observation-mode-no-trade-smoke
+- tag target: 53efaf2 TASK-DOC-094 update state after TASK-090
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.3.0-no-trade-strategy-tester-smoke still points to 7168651
+- v0.2.2-execution-manager-no-trade-guard still points to 1c93d1b
+- v0.2.1-mq5-safety-guardrails still points to a808d8e
+- v0.2.0-runtime-parser-input-samples still points to e35a13b
+- no old tag moved
+- no files modified by TASK-TAG-007
+- no commit created by TASK-TAG-007
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-091 结果
+
+- TASK-091 completed：TASK-091 run risk-reject-log-off no-trade Strategy Tester smoke test
+- MT5 path: D:\MT5测试\MetaTrader 5\terminal64.exe
+- Set file: backtest/sets/TASK-009_C_risk_reject_log_off.set
+- Symbol: XAUUSD
+- Tester period: H1
+- Date: 2024.01.01 - 2025.04.30
+- EA internal signal timeframe: PERIOD_M5
+- InpEnableTrading=true
+- InpEnableRiskObservation=true
+- InpPrintRiskRejectLog=false
+- InpRiskRejectLogEveryN=1000
+- InpPrintRiskLogStatsInSummary=true
+- RiskManager initialized
+- Risk observation mode blocks all real trading
+- RISK_REJECT_OBSERVATION_MODE
+- reason=Trading disabled in risk observation mode
+- printedRiskRejectLogs=0
+- suppressedRiskRejectLogs=94013
+- risk-reject-log-off no-trade smoke test passed
+- InpPrintRiskRejectLog=false only suppresses per-reject logs
+- RiskManager observation mode fallback still blocks execution
+- InpEnableTrading=true did not enable real trading
+- ExecutionManager did not execute real trading
+- riskRejected=94013
+- riskApproved=0
+- executionAttempts=0
+- riskRejectObservationMode=94013
+- total trades=0
+- total deals=0
+- buy trades=0
+- sell trades=0
+- no orders opened
+- no positions opened
+- no OrderSend / Buy / Sell evidence
+- no real trading
+- no profit optimization
+- no MQ5 changes
+- no backtest/sets changes
+- no docs/tools/MQ5/backtest/sets uncommitted changes after post-run check
+- no commit created by TASK-091
+- no tag moved
+- no push
+
+## TASK-TAG-008 结果
+
+- stable tag created: v0.3.2-risk-reject-log-off-no-trade-smoke
+- tag target: 1c65991 TASK-DOC-096 update state after TASK-091
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.3.1-observation-mode-no-trade-smoke still points to 53efaf2
+- v0.3.0-no-trade-strategy-tester-smoke still points to 7168651
+- v0.2.2-execution-manager-no-trade-guard still points to 1c93d1b
+- v0.2.1-mq5-safety-guardrails still points to a808d8e
+- v0.2.0-runtime-parser-input-samples still points to e35a13b
+- no old tag moved
+- no files modified by TASK-TAG-008
+- no commit created by TASK-TAG-008
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-092 结果
+
+- TASK-092 completed：TASK-092 run default core-signal-log-throttle no-trade Strategy Tester smoke test
+- MT5 path: D:\MT5测试\MetaTrader 5\terminal64.exe
+- Set file: backtest/sets/TASK-010_A_default_core_signal_throttle.set
+- Symbol: EURUSD
+- Tester period: M5
+- Date: 2024.01.01 - 2024.01.31
+- InpEnableTrading=false
+- InpEnableRiskObservation=true
+- InpPrintRuntimeSummary=true
+- InpPrintNewBarLog=true
+- InpNewBarLogEveryN=1000
+- InpPrintCoreLogStatsInSummary=true
+- InpPrintSignalLog=true
+- InpPrintSignalLogOnlyOnDirectionChange=true
+- InpSignalLogEveryN=1000
+- InpPrintSignalLogStatsInSummary=true
+- RiskManager initialized
+- Risk observation mode blocks all real trading
+- RISK_REJECT_TRADING_DISABLED
+- riskRejectTradingDisabled=6047
+- runtime summary present
+- core log stats summary present
+- signal log stats summary present
+- default core-signal-log-throttle no-trade smoke test passed
+- InpEnableTrading=false blocked trading through RiskManager
+- core / signal log throttle summaries were produced
+- ExecutionManager did not execute real trading
+- riskRejected=6047
+- riskApproved=0
+- executionAttempts=0
+- total trades=0
+- total deals=0
+- buy trades=0
+- sell trades=0
+- printedNewBarLogs=7
+- suppressedNewBarLogs=6040
+- printedSignalLogs=124
+- suppressedSignalLogs=5923
+- no orders opened
+- no positions opened
+- no OrderSend / Buy / Sell evidence
+- no real trading
+- no profit optimization
+- no MQ5 changes
+- no backtest/sets changes
+- no docs/tools/MQ5/backtest/sets uncommitted changes after post-run check
+- no commit created by TASK-092
+- no tag moved
+- no push
+
+## TASK-TAG-009 结果
+
+- stable tag created: v0.3.3-core-signal-log-throttle-no-trade-smoke
+- tag target: 5f228e2 TASK-DOC-098 update state after TASK-092
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.3.2-risk-reject-log-off-no-trade-smoke still points to 1c65991
+- v0.3.1-observation-mode-no-trade-smoke still points to 53efaf2
+- v0.3.0-no-trade-strategy-tester-smoke still points to 7168651
+- v0.2.2-execution-manager-no-trade-guard still points to 1c93d1b
+- v0.2.1-mq5-safety-guardrails still points to a808d8e
+- v0.2.0-runtime-parser-input-samples still points to e35a13b
+- no old tag moved
+- no files modified by TASK-TAG-009
+- no commit created by TASK-TAG-009
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-093 结果
+
+- TASK-093 completed：TASK-093 run core-signal-logs-off no-trade Strategy Tester smoke test
+- MT5 path: D:\MT5测试\MetaTrader 5\terminal64.exe
+- Set file: backtest/sets/TASK-010_B_core_signal_logs_off.set
+- Symbol: EURUSD
+- Tester period: M5
+- Date: 2024.01.01 - 2024.01.31
+- InpEnableTrading=false
+- InpEnableRiskObservation=true
+- InpPrintRuntimeSummary=true
+- InpEnableNewBarLog=false
+- InpPrintNewBarLog=false
+- InpNewBarLogEveryN=0
+- InpPrintCoreLogStatsInSummary=true
+- InpPrintSignalLog=false
+- InpSignalLogEveryN=0
+- InpPrintSignalLogStatsInSummary=true
+- RiskManager initialized
+- Risk observation mode blocks all real trading
+- RISK_REJECT_TRADING_DISABLED
+- riskRejectTradingDisabled=6047
+- runtime summary present
+- core / signal log-off behavior confirmed
+- core-signal-logs-off no-trade smoke test passed
+- InpEnableTrading=false blocked trading through RiskManager
+- disabling core / signal per-event logs did not weaken no-trade safety
+- ExecutionManager did not execute real trading
+- riskRejected=6047
+- riskApproved=0
+- executionAttempts=0
+- total trades=0
+- total deals=0
+- buy trades=0
+- sell trades=0
+- printedNewBarLogs=0
+- suppressedNewBarLogs=6047
+- printedSignalLogs=0
+- suppressedSignalLogs=6047
+- no orders opened
+- no positions opened
+- no OrderSend / Buy / Sell evidence
+- no real trading
+- no profit optimization
+- no MQ5 changes
+- no backtest/sets changes
+- no docs/tools/MQ5/backtest/sets uncommitted changes after post-run check
+- no commit created by TASK-093
+- no tag moved
+- no push
+
+## TASK-TAG-010 结果
+
+- stable tag created: v0.3.4-core-signal-logs-off-no-trade-smoke
+- tag target: d408c8c TASK-DOC-100 update state after TASK-093
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.3.3-core-signal-log-throttle-no-trade-smoke still points to 5f228e2
+- v0.3.2-risk-reject-log-off-no-trade-smoke still points to 1c65991
+- v0.3.1-observation-mode-no-trade-smoke still points to 53efaf2
+- v0.3.0-no-trade-strategy-tester-smoke still points to 7168651
+- v0.2.2-execution-manager-no-trade-guard still points to 1c93d1b
+- v0.2.1-mq5-safety-guardrails still points to a808d8e
+- v0.2.0-runtime-parser-input-samples still points to e35a13b
+- no old tag moved
+- no files modified by TASK-TAG-010
+- no commit created by TASK-TAG-010
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-094 results
+
+- TASK-094 completed: TASK-094 run verbose core-signal-logs no-trade Strategy Tester smoke test
+- MT5 path: D:\MT5测试\MetaTrader 5\terminal64.exe
+- Set file: backtest/sets/TASK-010_C_verbose_core_signal_logs.set
+- Symbol: EURUSD
+- Tester period: M5
+- Date: 2024.01.01 - 2024.01.31
+- InpEnableTrading=false
+- InpEnableRiskObservation=true
+- InpPrintRuntimeSummary=true
+- InpPrintNewBarLog=true
+- InpNewBarLogEveryN=1
+- InpPrintCoreLogStatsInSummary=true
+- InpPrintSignalLog=true
+- InpPrintSignalLogOnlyOnDirectionChange=false
+- InpSignalLogEveryN=1
+- InpPrintSignalLogStatsInSummary=true
+- RiskManager initialized
+- Risk observation mode blocks all real trading
+- RISK_REJECT_TRADING_DISABLED
+- riskRejectTradingDisabled=6047
+- runtime summary present
+- verbose core / signal logs confirmed
+- verbose core-signal-logs no-trade smoke test passed
+- InpEnableTrading=false blocked trading through RiskManager
+- verbose core / signal per-event logs did not weaken no-trade safety
+- ExecutionManager did not execute real trading
+- riskRejected=6047
+- riskApproved=0
+- executionAttempts=0
+- total trades=0
+- total deals=0
+- buy trades=0
+- sell trades=0
+- printedRiskRejectLogs=6047
+- suppressedRiskRejectLogs=0
+- printedNewBarLogs=6047
+- suppressedNewBarLogs=0
+- printedSignalLogs=6047
+- suppressedSignalLogs=0
+- no orders opened
+- no positions opened
+- no OrderSend / Buy / Sell evidence
+- no real trading
+- no profit optimization
+- no MQ5 changes
+- no backtest/sets changes
+- no docs/tools/MQ5/backtest/sets uncommitted changes after post-run check
+- no commit created by TASK-094
+- no tag moved
+- no push
+
+## v0.3.0 no-trade backtest set coverage
+
+- all 6 backtest/sets completed no-trade Strategy Tester smoke coverage
+- Completed set coverage: TASK-009_A_default_trading_off.set
+- Completed set coverage: TASK-009_B_trading_true_observation_block.set
+- Completed set coverage: TASK-009_C_risk_reject_log_off.set
+- Completed set coverage: TASK-010_A_default_core_signal_throttle.set
+- Completed set coverage: TASK-010_B_core_signal_logs_off.set
+- Completed set coverage: TASK-010_C_verbose_core_signal_logs.set
+- all completed coverage kept no real trading
+- all completed coverage kept no profit optimization
+- all completed coverage kept zero trades
+- all completed coverage kept zero deals
+- all completed coverage kept zero buy trades
+- all completed coverage kept zero sell trades
+- all completed coverage kept no OrderSend / Buy / Sell evidence
+
+## TASK-TAG-011 results
+
+- stable tag created: v0.3.5-backtest-sets-no-trade-smoke-coverage
+- tag target: b58ddbf TASK-DOC-102 update state after TASK-094
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.3.4-core-signal-logs-off-no-trade-smoke still points to d408c8c
+- v0.3.3-core-signal-log-throttle-no-trade-smoke still points to 5f228e2
+- v0.3.2-risk-reject-log-off-no-trade-smoke still points to 1c65991
+- v0.3.1-observation-mode-no-trade-smoke still points to 53efaf2
+- v0.3.0-no-trade-strategy-tester-smoke still points to 7168651
+- v0.2.2-execution-manager-no-trade-guard still points to 1c93d1b
+- v0.2.1-mq5-safety-guardrails still points to a808d8e
+- v0.2.0-runtime-parser-input-samples still points to e35a13b
+- no old tag moved
+- no files modified by TASK-TAG-011
+- no commit created by TASK-TAG-011
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-095 results
+
+- TASK-095 completed: TASK-095 audit v0.3.0 full backtest set no-trade smoke coverage closure
+- HEAD = e3c87a5 TASK-DOC-103 update state after TASK-TAG-011
+- workspace clean
+- git diff -- docs tools MQ5 backtest/sets empty
+- v0.3.5-backtest-sets-no-trade-smoke-coverage still points to b58ddbf
+- v0.3.4-core-signal-logs-off-no-trade-smoke still points to d408c8c
+- v0.3.3-core-signal-log-throttle-no-trade-smoke still points to 5f228e2
+- v0.3.2-risk-reject-log-off-no-trade-smoke still points to 1c65991
+- v0.3.1-observation-mode-no-trade-smoke still points to 53efaf2
+- v0.3.0-no-trade-strategy-tester-smoke still points to 7168651
+- v0.2.2-execution-manager-no-trade-guard still points to 1c93d1b
+- v0.2.1-mq5-safety-guardrails still points to a808d8e
+- v0.2.0-runtime-parser-input-samples still points to e35a13b
+- all stable tags remain lightweight tag / commit type
+- Project state docs validation passed
+- Project state docs self-test passed
+- Engineering toolchain checks passed, 13/13 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- TASK-009_A_default_trading_off.set completed no-trade smoke coverage
+- TASK-009_B_trading_true_observation_block.set completed no-trade smoke coverage
+- TASK-009_C_risk_reject_log_off.set completed no-trade smoke coverage
+- TASK-010_A_default_core_signal_throttle.set completed no-trade smoke coverage
+- TASK-010_B_core_signal_logs_off.set completed no-trade smoke coverage
+- TASK-010_C_verbose_core_signal_logs.set completed no-trade smoke coverage
+- all 6 backtest/sets completed no-trade Strategy Tester smoke coverage
+- all covered sets produced zero trades
+- all covered sets produced zero deals
+- all covered sets produced zero buy trades
+- all covered sets produced zero sell trades
+- no OrderSend / Buy / Sell evidence
+- no real trading
+- no profit optimization
+- MQ5 unchanged
+- backtest/sets unchanged
+- docs/tools/MQ5/backtest/sets unchanged after audit
+- no commit created by TASK-095
+- no tag moved
+- no push
+
+## TASK-085 结果
+
+- ExecutionManager explicit InpEnableTrading=false no-trade guard added
+- ExecutionManager keeps no-trade stub even when InpEnableTrading=true
+- ExecuteSignal() returns false on all paths
+- ExecuteSignal() has no return true
+- ExecutionManager has no real trading API
+- RiskManager and ExecutionManager now provide double no-trade protection
+- MQ5 safety validator now checks ExecutionManager InpEnableTrading disabled guard
+- MQ5 safety self-test includes positive / negative coverage for the explicit guard
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Engineering toolchain checks passed
+- Project state docs validation passed
+- Project state docs self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- forbidden trading API findings: 0
+- dangerous strategy keyword findings: 0
+- no docs modified by TASK-085
+- no backtest/sets changes
+- no tag moved
+- no push
+- v0.3.0 not opened
+
+## TASK-086 结果
+
+- workspace clean
+- all validations passed
+- ExecutionManager includes InputConfig.mqh
+- ExecutionManager.ExecuteSignal() has explicit !InpEnableTrading guard
+- !InpEnableTrading path returns false
+- InpEnableTrading=true path remains no-trade stub
+- all ExecuteSignal() paths return false
+- ExecutionManager has no return true
+- ExecutionManager has no real trading API
+- RiskManager first-layer InpEnableTrading=false blocking remains
+- RiskManager observation mode fallback remains
+- EaController call chain remains Signal -> Risk -> Execution
+- validator and self-test cover explicit no-trade guard
+- global MQ5 trading API scan has zero findings
+- dangerous strategy keyword scan has zero findings
+- no docs/tools/MQ5/backtest/sets changes by TASK-086
+- no commit created by TASK-086
+- no tag moved
+- no push
+- v0.3.0 not opened
+
+## TASK-TAG-012 results
+
+- stable tag created: v0.3.6-backtest-sets-no-trade-smoke-audit
+- tag target: 0442ae1 TASK-DOC-104 update state after TASK-095
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.3.5-backtest-sets-no-trade-smoke-coverage still points to b58ddbf
+- v0.3.4-core-signal-logs-off-no-trade-smoke still points to d408c8c
+- v0.3.3-core-signal-log-throttle-no-trade-smoke still points to 5f228e2
+- v0.3.2-risk-reject-log-off-no-trade-smoke still points to 1c65991
+- v0.3.1-observation-mode-no-trade-smoke still points to 53efaf2
+- v0.3.0-no-trade-strategy-tester-smoke still points to 7168651
+- v0.2.2-execution-manager-no-trade-guard still points to 1c93d1b
+- v0.2.1-mq5-safety-guardrails still points to a808d8e
+- v0.2.0-runtime-parser-input-samples still points to e35a13b
+- no old tag moved
+- no files modified by TASK-TAG-012
+- no commit created by TASK-TAG-012
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-096 results
+
+- TASK-096 completed: TASK-096 audit v0.3.0 phase closure and next-stage boundary candidates
+- HEAD = 2ed85dc TASK-DOC-105 update state after TASK-TAG-012
+- workspace clean
+- git diff -- docs tools MQ5 backtest/sets empty
+- v0.3.6-backtest-sets-no-trade-smoke-audit still points to 0442ae1
+- v0.3.5-backtest-sets-no-trade-smoke-coverage still points to b58ddbf
+- v0.3.4-core-signal-logs-off-no-trade-smoke still points to d408c8c
+- v0.3.3-core-signal-log-throttle-no-trade-smoke still points to 5f228e2
+- v0.3.2-risk-reject-log-off-no-trade-smoke still points to 1c65991
+- v0.3.1-observation-mode-no-trade-smoke still points to 53efaf2
+- v0.3.0-no-trade-strategy-tester-smoke still points to 7168651
+- v0.2.2-execution-manager-no-trade-guard still points to 1c93d1b
+- v0.2.1-mq5-safety-guardrails still points to a808d8e
+- v0.2.0-runtime-parser-input-samples still points to e35a13b
+- all stable tags remain lightweight tag / commit type
+- Project state docs validation passed
+- Project state docs self-test passed
+- Engineering toolchain checks passed, 13/13 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- v0.3.0 no-trade backtest validation loop completed
+- all 6 backtest/sets completed no-trade Strategy Tester smoke coverage
+- zero trades
+- zero deals
+- zero orders
+- zero positions
+- zero buy trades
+- zero sell trades
+- no OrderSend / Buy / Sell evidence
+- no real trading evidence
+- no profit optimization
+- MQ5 unchanged
+- backtest/sets unchanged
+- docs/tools/MQ5/backtest/sets unchanged after audit
+- no commit created by TASK-096
+- no tag moved
+- no push
+- completed set coverage:
+- TASK-009_A_default_trading_off.set
+- TASK-009_B_trading_true_observation_block.set
+- TASK-009_C_risk_reject_log_off.set
+- TASK-010_A_default_core_signal_throttle.set
+- TASK-010_B_core_signal_logs_off.set
+- TASK-010_C_verbose_core_signal_logs.set
+- project is suitable for ChatGPT to define the next task boundary
+- next-stage boundary is not defined by TASK-096
+- TASK-DOC-106 must not open v0.4.0
+- TASK-DOC-106 must not define a new functional scope
+- next boundary must still be defined by ChatGPT after documentation sync
+
+## TASK-TAG-013 results
+
+- stable tag created: v0.3.7-v030-phase-closure-audit
+- tag target: 1056f74 TASK-DOC-106 update state after TASK-096
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.3.6-backtest-sets-no-trade-smoke-audit still points to 0442ae1
+- v0.3.5-backtest-sets-no-trade-smoke-coverage still points to b58ddbf
+- v0.3.4-core-signal-logs-off-no-trade-smoke still points to d408c8c
+- v0.3.3-core-signal-log-throttle-no-trade-smoke still points to 5f228e2
+- v0.3.2-risk-reject-log-off-no-trade-smoke still points to 1c65991
+- v0.3.1-observation-mode-no-trade-smoke still points to 53efaf2
+- v0.3.0-no-trade-strategy-tester-smoke still points to 7168651
+- v0.2.2-execution-manager-no-trade-guard still points to 1c93d1b
+- v0.2.1-mq5-safety-guardrails still points to a808d8e
+- v0.2.0-runtime-parser-input-samples still points to e35a13b
+- no old tag moved
+- no files modified by TASK-TAG-013
+- no commit created by TASK-TAG-013
+- no push
+- no real trading
+- no profit optimization
+- no v0.4.0 defined
+- no next stage opened
+
+## TASK-097 results
+
+- TASK-097 completed: TASK-097 define v0.4.0 backtest evidence boundary
+- v0.4.0 boundary defined
+- define v0.4.0 backtest evidence archive and report parser quality boundary
+- current latest commit updated to 0fd5299 TASK-097 define v0.4.0 backtest evidence boundary
+- current stable tag remains v0.3.7-v030-phase-closure-audit
+- current stable tag target remains 1056f74 TASK-DOC-106 update state after TASK-096
+- current phase updated to v0.4.0：回测证据归档、报告解析与可复现性增强阶段
+- v0.3.0 phase closure audit completed
+- v0.3.0 phase closure completed before opening v0.4.0
+- Project state docs validation passed
+- Project state docs self-test passed
+- Engineering toolchain checks passed, 13/13 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- git diff -- MQ5 backtest/sets empty
+- workspace clean
+- no tag moved
+- no push
+- 6 backtest/sets completed no-trade Strategy Tester smoke coverage
+- zero trades / zero deals / zero orders / zero positions
+- no OrderSend / Buy / Sell evidence
+- no real trading
+- no profit optimization
+- v0.3.7-v030-phase-closure-audit is the stable tag for v0.3.0 closure audit
+- v0.4.0 allowed scope: backtest evidence archive planning
+- v0.4.0 allowed scope: Strategy Tester report / log evidence metadata normalization
+- v0.4.0 allowed scope: report parser quality improvement
+- v0.4.0 allowed scope: no-trade evidence reproducibility checks
+- v0.4.0 allowed scope: evidence manifest / report consistency validation
+- v0.4.0 allowed scope: parsing already generated MT5 reports or logs when explicitly provided
+- v0.4.0 allowed scope: tool / docs improvements for evidence quality only
+- v0.4.0 forbids real trading
+- v0.4.0 forbids live trading readiness claim
+- v0.4.0 forbids profit optimization
+- v0.4.0 forbids parameter optimization for profit
+- v0.4.0 forbids CTrade / OrderSend / PositionOpen / Buy / Sell / OrderModify
+- v0.4.0 forbids ATR / position sizing / stop loss / take profit
+- v0.4.0 forbids AI / multi-symbol / multi-account
+- v0.4.0 forbids Martingale / grid / averaging-down
+- v0.4.0 forbids direct MQ5 modification unless a future ChatGPT task explicitly allows it
+- v0.4.0 forbids direct backtest/sets modification unless a future ChatGPT task explicitly allows it
+- v0.4.0 forbids MT5 run unless a future ChatGPT task explicitly allows it
+- TASK-097 only defined the v0.4.0 boundary
+- TASK-097 did not implement parser features
+- TASK-097 does not add parser implementation
+- TASK-097 does not create evidence files
+- TASK-097 does not run MT5
+- TASK-097 does not modify MQ5
+- TASK-097 does not modify backtest/sets
+- TASK-097 does not create tag
+- current latest engineering task updated to 0fd5299 TASK-097 define v0.4.0 backtest evidence boundary
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+
+## TASK-098 results
+
+- TASK-098 completed: TASK-098 audit v0.4.0 evidence archive and parser quality entry points
+- HEAD = 23b8903 TASK-DOC-108 update state after TASK-097
+- current phase = v0.4.0：回测证据归档、报告解析与可复现性增强阶段
+- current engineering task = 0fd5299 TASK-097 define v0.4.0 backtest evidence boundary
+- workspace clean
+- git diff -- docs tools MQ5 backtest/sets empty
+- v0.3.7-v030-phase-closure-audit still points to 1056f74
+- v0.3.6-backtest-sets-no-trade-smoke-audit still points to 0442ae1
+- v0.3.5-backtest-sets-no-trade-smoke-coverage still points to b58ddbf
+- Project state docs validation passed
+- Project state docs self-test passed
+- Engineering toolchain checks passed, 13/13 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- tools total count: 18
+- parser entry: parse_backtest_runtime_summary.py
+- report validation entry: validate_backtest_runtime_report.py
+- project state validator: validate_project_state_docs.py
+- MQ5 safety validator: validate_mq5_safety_guardrails.py
+- backtest set safety validator: validate_backtest_set_safety.py
+- runtime parser input samples validator: validate_runtime_parser_input_samples.py
+- Python tool safety validator: validate_python_tool_safety.py
+- audit generator exists: generate_runtime_report_quality_audit.py
+- audit generator exists: generate_runtime_parser_input_samples_audit.py
+- audit generator exists: generate_engineering_toolchain_audit.py
+- orchestrator exists: run_engineering_toolchain_checks.py
+- test_*.py self-tests exist for validators
+- validate_backtest_runtime_report.py already covers runtime summary section extraction
+- validate_backtest_runtime_report.py already covers section order validation
+- validate_backtest_runtime_report.py already covers prohibited content detection
+- validate_backtest_runtime_report.py already covers missing field detection
+- validate_backtest_runtime_report.py already covers signal observation field coverage
+- validate_backtest_runtime_report.py already covers risk rejection field coverage
+- validate_backtest_runtime_report.py already covers log throttle field coverage
+- validate_backtest_runtime_report.py already covers log ratio computation
+- validate_backtest_runtime_report.py already covers section distribution analysis
+- v0.4.0 gap: no Strategy Tester HTML report parser
+- v0.4.0 gap: no evidence manifest schema
+- v0.4.0 gap: no external MT5 evidence archive convention
+- v0.4.0 gap: no report/log metadata normalization
+- v0.4.0 gap: no no-trade reproducibility checklist
+- v0.4.0 gap: no real MT5 HTML/log fixture expansion in parser self-tests
+- existing report: backtest/reports/TASK-010_v0.1.7_core_signal_log_throttle.rpt
+- existing sample: backtest/reports/samples/TASK-012_runtime_summary.txt
+- backtest/reports/generated/ contains generated reports for TASK-012, TASK-050, TASK-066, TASK-069
+- existing docs: backtest/reports/README.md
+- existing docs: backtest/reports/REPORT_TEMPLATE.md
+- backtest/sets contains 6 set files
+- external evidence path: E:\GPT\MT5测试\Journal Experts Tester
+- external evidence directory exists
+- external evidence total files observed: 8
+- external evidence includes TesterBacktest.html
+- TesterBacktest.html size: 31,674 bytes
+- TesterBacktest.html can serve as a real HTML sample for future explicitly authorized parser-quality tasks
+- external evidence includes 日志.txt
+- 日志.txt size: 44,135 bytes
+- external evidence includes Inputs.png
+- external evidence includes eurusd_2.png
+- external evidence includes TesterBacktest.png
+- external evidence includes TesterBacktest-holding.png
+- external evidence includes TesterBacktest-hst.png
+- external evidence includes TesterBacktest-mfemae.png
+- external evidence was only listed
+- no evidence file copied into repository
+- no evidence file moved
+- no archive created
+- recommended next candidate: evidence manifest schema definition
+- recommended next candidate: Strategy Tester HTML report parser quality audit
+- recommended next candidate: external evidence archive convention
+- recommended next candidate: report/log metadata normalization
+- recommended next candidate: no-trade reproducibility checklist
+- recommended next candidate: report parser fixture expansion for real HTML/log formats
+- TASK-098 was read-only
+- no docs/tools/MQ5/backtest/sets modifications by TASK-098
+- no parser implementation
+- no validator implementation
+- no evidence archive created
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-TAG-014 results
+
+- TASK-TAG-014 completed: TASK-TAG-014 create v0.4.0-evidence-archive-parser-entry-audit stable tag
+- stable tag created: v0.4.0-evidence-archive-parser-entry-audit
+- tag target: 4478e3d TASK-DOC-109 update state after TASK-098
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.3.7-v030-phase-closure-audit still points to 1056f74
+- v0.3.6-backtest-sets-no-trade-smoke-audit still points to 0442ae1
+- v0.3.5-backtest-sets-no-trade-smoke-coverage still points to b58ddbf
+- no old tag moved
+- no files modified by TASK-TAG-014
+- no commit created by TASK-TAG-014
+- no push
+- no MT5 run
+- no external evidence copied
+- no parser implemented
+- no manifest implemented
+- no real trading
+- no profit optimization
+- v0.4.0-evidence-archive-parser-entry-audit marks v0.4.0 evidence archive / parser quality entry audit closed loop
+- v0.4.0-evidence-archive-parser-entry-audit includes TASK-098 read-only entry audit
+- v0.4.0-evidence-archive-parser-entry-audit includes TASK-DOC-109 state sync
+- v0.4.0-evidence-archive-parser-entry-audit confirms current v0.4.0 stage entry points were audited
+- v0.4.0-evidence-archive-parser-entry-audit confirms Strategy Tester HTML parser gap was identified
+- v0.4.0-evidence-archive-parser-entry-audit confirms evidence manifest schema gap was identified
+- v0.4.0-evidence-archive-parser-entry-audit confirms external evidence archive convention gap was identified
+- v0.4.0-evidence-archive-parser-entry-audit confirms metadata normalization gap was identified
+- v0.4.0-evidence-archive-parser-entry-audit confirms no-trade reproducibility checklist gap was identified
+- v0.4.0-evidence-archive-parser-entry-audit confirms TesterBacktest.html exists as an external real Strategy Tester HTML sample
+- v0.4.0-evidence-archive-parser-entry-audit does not implement parser
+- v0.4.0-evidence-archive-parser-entry-audit does not implement manifest
+- v0.4.0-evidence-archive-parser-entry-audit does not copy external evidence into repository
+- v0.4.0-evidence-archive-parser-entry-audit does not run MT5
+- v0.4.0-evidence-archive-parser-entry-audit does not represent live trading readiness
+- v0.4.0-evidence-archive-parser-entry-audit does not represent real trading availability
+- v0.4.0-evidence-archive-parser-entry-audit does not represent profitable strategy completion
+- v0.4.0-evidence-archive-parser-entry-audit does not allow real trading
+- v0.4.0-evidence-archive-parser-entry-audit does not allow moving the tag
+## TASK-TAG-015 results
+
+- TASK-TAG-015 completed: TASK-TAG-015 create v0.4.1-evidence-manifest-schema-validator stable tag
+- stable tag created: v0.4.1-evidence-manifest-schema-validator
+- tag target: 900a6fd TASK-DOC-112 update state after TASK-100
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- v0.3.7-v030-phase-closure-audit still points to 1056f74
+- v0.3.6-backtest-sets-no-trade-smoke-audit still points to 0442ae1
+- v0.3.5-backtest-sets-no-trade-smoke-coverage still points to b58ddbf
+- no old tag moved
+- no files modified by TASK-TAG-015
+- no commit created by TASK-TAG-015
+- no push
+- no MT5 run
+- no external evidence copied
+- no real manifest created
+- no HTML parser implemented
+- no real trading
+- no profit optimization
+- v0.4.1-evidence-manifest-schema-validator marks evidence manifest schema validator closed loop
+- v0.4.1-evidence-manifest-schema-validator includes TASK-100 validator implementation
+- v0.4.1-evidence-manifest-schema-validator includes TASK-DOC-112 state sync
+- v0.4.1-evidence-manifest-schema-validator confirms tools/validate_evidence_manifest_schema.py exists
+- v0.4.1-evidence-manifest-schema-validator confirms tools/test_validate_evidence_manifest_schema.py exists
+- v0.4.1-evidence-manifest-schema-validator confirms engineering toolchain includes evidence manifest schema self-test
+- v0.4.1-evidence-manifest-schema-validator confirms engineering toolchain checks passed 14/14
+- v0.4.1-evidence-manifest-schema-validator confirms Python tool safety validation passed with 20 tools scanned
+- v0.4.1-evidence-manifest-schema-validator does not create real manifest files
+- v0.4.1-evidence-manifest-schema-validator does not copy external evidence into repository
+- v0.4.1-evidence-manifest-schema-validator does not implement Strategy Tester HTML parser
+- v0.4.1-evidence-manifest-schema-validator does not run MT5
+- v0.4.1-evidence-manifest-schema-validator does not represent live trading readiness
+- v0.4.1-evidence-manifest-schema-validator does not represent real trading availability
+- v0.4.1-evidence-manifest-schema-validator does not represent profitable strategy completion
+- v0.4.1-evidence-manifest-schema-validator does not allow real trading
+- v0.4.1-evidence-manifest-schema-validator does not allow moving the tag
+## TASK-099 results
+
+- TASK-099 completed: TASK-099 define evidence manifest schema
+- new file added by TASK-099: docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md
+- evidence manifest schema defined
+- external evidence archive convention defined
+- parser quality expectations defined
+- no-trade assertions defined
+- repositoryState fields defined
+- forbidden interpretations defined
+- example manifest skeleton included as example only
+- manifest schema fields covered: schemaVersion
+- manifest schema fields covered: taskId
+- manifest schema fields covered: evidenceSetId
+- manifest schema fields covered: source
+- manifest schema fields covered: externalEvidenceRoot
+- manifest schema fields covered: files[]
+- manifest schema fields covered: mt5
+- manifest schema fields covered: strategyTester
+- manifest schema fields covered: expert
+- manifest schema fields covered: inputs
+- manifest schema fields covered: noTradeAssertions
+- manifest schema fields covered: parserExpectations
+- manifest schema fields covered: safetyAssertions
+- manifest schema fields covered: repositoryState
+- manifest schema fields covered: tags
+- manifest schema fields covered: notes
+- external archive convention: external evidence may remain outside repository
+- external archive convention: repository docs may reference external path and file names
+- external archive convention: no external evidence should be copied into repository unless future ChatGPT task explicitly allows it
+- external archive convention: external evidence path must be recorded as metadata only
+- external archive convention: screenshots and HTML reports are evidence files, not source code
+- external archive convention: checksums are optional future enhancement, not required by TASK-099
+- parser quality expectation: Strategy Tester HTML parser should extract expert, symbol, period, date range, inputs, trades/deals stats
+- parser quality expectation: log parser should extract runtime summary, riskApproved, executionAttempts, risk rejection summary
+- parser quality expectation: parser should distinguish TradingSystem evidence from unrelated EA evidence
+- parser quality expectation: parser should not infer live trading readiness
+- parser quality expectation: parser should not infer profitability
+- forbidden interpretation: evidence manifest does not mean live trading readiness
+- forbidden interpretation: evidence manifest does not mean real trading is allowed
+- forbidden interpretation: evidence manifest does not mean profitable strategy completion
+- forbidden interpretation: evidence archive does not authorize MT5 reruns
+- forbidden interpretation: evidence archive does not authorize MQ5 changes
+- forbidden interpretation: evidence archive does not authorize backtest/sets changes
+- no parser implemented
+- no validator implemented
+- no external evidence copied into repository
+- no MT5 run
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no project state docs changed by TASK-099 itself
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-100 results
+
+- TASK-100 completed: TASK-100 add evidence manifest schema validator
+- new files added by TASK-100:
+  - tools/validate_evidence_manifest_schema.py
+  - tools/test_validate_evidence_manifest_schema.py
+- files modified by TASK-100:
+  - tools/run_engineering_toolchain_checks.py
+  - tools/test_run_engineering_toolchain_checks.py
+- evidence manifest schema validator added
+- evidence manifest schema self-test added
+- validator supports JSON manifest only
+- validator reads only the provided manifest JSON file
+- validator does not scan repository manifests
+- validator does not create manifests
+- validator does not copy evidence
+- validator does not read external evidence files
+- validator uses Python standard library only
+- validator does not use network access
+- validator does not use subprocess / shell command
+- validator supports command: py tools/validate_evidence_manifest_schema.py <manifest.json>
+- success output: Evidence manifest schema validation passed
+- failure exits non-zero with clear error messages
+- schema validation top-level required fields: schemaVersion, taskId, evidenceSetId, source, externalEvidenceRoot, files, mt5, strategyTester, expert, inputs, noTradeAssertions, parserExpectations, safetyAssertions, repositoryState, tags, notes
+- files[] validation requires: fileName, relativePath, evidenceType, required, expectedParser, expectedFields, notes
+- evidenceType allowed values: strategy_tester_html, experts_log, journal_log, inputs_screenshot, tester_screenshot, runtime_summary_text, other
+- no-trade assertions coverage: totalTrades == 0, totalDeals == 0, buyTrades == 0, sellTrades == 0, ordersOpened == 0, positionsOpened == 0, executionAttempts == 0, riskApproved == 0
+- no-trade evidence flags coverage: orderSendEvidence == false, buySellEvidence == false
+- safetyAssertions required true: noRealTrading, noProfitOptimization, noLiveTradingReadinessClaim, noRealTradingAllowedClaim, noProfitabilityClaim
+- repositoryState required false: mq5Changed, backtestSetsChanged, backtestReportsChanged, externalEvidenceCopiedIntoRepo, mt5RunDuringTask
+- forbidden interpretation recursive string scan rejects: live trading ready, real trading allowed, real trading enabled, profitable strategy, profit optimized, production trading ready
+- allowed wording remains valid: no live trading readiness, no real trading, no profit optimization, not a profitability claim
+- self-test coverage: positive valid minimal manifest
+- self-test coverage: negative missing top-level required field
+- self-test coverage: negative files item missing field
+- self-test coverage: negative invalid evidenceType
+- self-test coverage: negative totalTrades non-zero
+- self-test coverage: negative executionAttempts non-zero
+- self-test coverage: negative orderSendEvidence true
+- self-test coverage: negative safetyAssertions false
+- self-test coverage: negative repositoryState mq5Changed true
+- self-test coverage: negative repositoryState externalEvidenceCopiedIntoRepo true
+- self-test coverage: negative forbidden interpretation string
+- self-test coverage: positive allowed no live trading readiness wording
+- engineering toolchain integration: evidence manifest schema self-test integrated into tools/run_engineering_toolchain_checks.py
+- Engineering toolchain checks now pass 14/14
+- tools/test_run_engineering_toolchain_checks.py updated for new check count / tool list
+- Python tool safety validation passed with 20 tools scanned
+- no real manifest file created
+- no external evidence copied
+- no Strategy Tester HTML parser implemented
+- no log parser implemented
+- no MT5 run
+- no project state docs modified by TASK-100 itself
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-101 results
+
+- TASK-101 completed: TASK-101 audit evidence manifest schema validator coverage and v0.4.1 closure readiness
+- HEAD = 6b999d8 TASK-DOC-113 update state after TASK-TAG-015
+- current phase = v0.4.0: backtest evidence archive, report parsing, and reproducibility enhancement stage
+- workspace clean
+- git diff -- docs tools MQ5 backtest/sets backtest/reports empty
+- v0.4.1-evidence-manifest-schema-validator still points to 900a6fd
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- v0.3.7-v030-phase-closure-audit still points to 1056f74
+- Project state docs validation passed
+- Project state docs self-test passed
+- Evidence manifest schema self-test passed
+- Engineering toolchain checks passed, 14/14 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- Python tool safety validation passed, 20 tools scanned
+- Python tool safety self-test passed
+- tools/validate_evidence_manifest_schema.py exists
+- tools/test_validate_evidence_manifest_schema.py exists
+- validator uses Python standard library only
+- no network access detected
+- no subprocess / shell command detected
+- validator does not read external evidence
+- validator does not create manifest
+- validator does not scan repository manifests
+- validator validates only the provided JSON manifest
+- top-level fields covered: schemaVersion, taskId, evidenceSetId, source, externalEvidenceRoot, files, mt5, strategyTester, expert, inputs, noTradeAssertions, parserExpectations, safetyAssertions, repositoryState, tags, notes
+- files[] fields covered: fileName, relativePath, evidenceType, required, expectedParser, expectedFields, notes
+- noTradeAssertions covered: totalTrades == 0, totalDeals == 0, buyTrades == 0, sellTrades == 0, ordersOpened == 0, positionsOpened == 0, executionAttempts == 0, riskApproved == 0, orderSendEvidence == false, buySellEvidence == false
+- safetyAssertions covered: noRealTrading, noProfitOptimization, noLiveTradingReadinessClaim, noRealTradingAllowedClaim, noProfitabilityClaim
+- repositoryState covered: mq5Changed == false, backtestSetsChanged == false, backtestReportsChanged == false, externalEvidenceCopiedIntoRepo == false, mt5RunDuringTask == false
+- forbidden interpretation scan rejects: live trading ready, real trading allowed, profitable strategy, profit optimized, production trading ready
+- allowed wording passes: no live trading readiness, no real trading, no profit optimization
+- self-test coverage: positive valid minimal manifest
+- self-test coverage: negative missing top-level required field
+- self-test coverage: negative files item missing field
+- self-test coverage: negative invalid evidenceType
+- self-test coverage: negative totalTrades non-zero
+- self-test coverage: negative executionAttempts non-zero
+- self-test coverage: negative orderSendEvidence true
+- self-test coverage: negative safetyAssertions false
+- self-test coverage: negative repositoryState mq5Changed true
+- self-test coverage: negative repositoryState externalEvidenceCopiedIntoRepo true
+- self-test coverage: negative forbidden interpretation string
+- self-test coverage: positive allowed no live trading readiness wording
+- all self-tests use tempfile.TemporaryDirectory
+- no real manifest file created
+- run_engineering_toolchain_checks.py includes evidence manifest schema self-test
+- REQUIRED_PATHS includes validator and self-test
+- CHECKS includes validate evidence manifest schema self-test
+- test_run_engineering_toolchain_checks.py updated for 14 checks
+- Engineering toolchain checks passed, 14/14 PASS
+- TASK-101 was read-only
+- no docs modifications by TASK-101
+- no tools modifications by TASK-101
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no real manifest created
+- no external evidence copied
+- no HTML parser implemented
+- no log parser implemented
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- v0.4.1 tool closure is complete
+- validator fully covers TASK-099 manifest schema definition
+- self-test coverage is sufficient for current v0.4.1 closure
+- no unauthorized parser / evidence / manifest file was found
+- suitable to proceed to TASK-DOC-114 documentation sync first
+- future next-step candidates may include Strategy Tester HTML parser or real fixture direction, but TASK-DOC-114 must not open them
+## TASK-TAG-016 results
+
+- TASK-TAG-016 completed: TASK-TAG-016 create v0.4.2-evidence-manifest-validator-coverage-audit stable tag
+- stable tag created: v0.4.2-evidence-manifest-validator-coverage-audit
+- tag target: 05d476d TASK-DOC-114 update state after TASK-101
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.1-evidence-manifest-schema-validator still points to 900a6fd
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- v0.3.7-v030-phase-closure-audit still points to 1056f74
+- v0.3.6-backtest-sets-no-trade-smoke-audit still points to 0442ae1
+- v0.3.5-backtest-sets-no-trade-smoke-coverage still points to b58ddbf
+- no old tag moved
+- no files modified by TASK-TAG-016
+- no commit created by TASK-TAG-016
+- no push
+- no MT5 run
+- no real manifest created
+- no external evidence copied
+- no HTML parser implemented
+- no real trading
+- no profit optimization
+- v0.4.2-evidence-manifest-validator-coverage-audit marks evidence manifest schema validator coverage audit closed loop
+- v0.4.2-evidence-manifest-validator-coverage-audit includes TASK-101 coverage audit
+- v0.4.2-evidence-manifest-validator-coverage-audit includes TASK-DOC-114 state sync
+- v0.4.2-evidence-manifest-validator-coverage-audit confirms validator covers TASK-099 manifest schema definition
+- v0.4.2-evidence-manifest-validator-coverage-audit confirms no-trade assertions coverage
+- v0.4.2-evidence-manifest-validator-coverage-audit confirms safetyAssertions coverage
+- v0.4.2-evidence-manifest-validator-coverage-audit confirms repositoryState coverage
+- v0.4.2-evidence-manifest-validator-coverage-audit confirms forbidden interpretation scan coverage
+- v0.4.2-evidence-manifest-validator-coverage-audit confirms self-test coverage with 12 positive / negative cases
+- v0.4.2-evidence-manifest-validator-coverage-audit confirms engineering toolchain checks passed 14/14
+- v0.4.2-evidence-manifest-validator-coverage-audit confirms Python tool safety validation passed with 20 tools scanned
+- v0.4.2-evidence-manifest-validator-coverage-audit does not create real manifest files
+- v0.4.2-evidence-manifest-validator-coverage-audit does not copy external evidence into repository
+- v0.4.2-evidence-manifest-validator-coverage-audit does not implement Strategy Tester HTML parser
+- v0.4.2-evidence-manifest-validator-coverage-audit does not run MT5
+- v0.4.2-evidence-manifest-validator-coverage-audit does not represent live trading readiness
+- v0.4.2-evidence-manifest-validator-coverage-audit does not represent real trading availability
+- v0.4.2-evidence-manifest-validator-coverage-audit does not represent profitable strategy completion
+- v0.4.2-evidence-manifest-validator-coverage-audit does not allow real trading
+- v0.4.2-evidence-manifest-validator-coverage-audit does not allow moving the tag
+- TASK-101 audit evidence manifest schema validator coverage and v0.4.1 closure readiness completed
+- validator required fields coverage audited
+- no-trade assertions coverage audited
+- safetyAssertions coverage audited
+- repositoryState coverage audited
+- forbidden interpretation scan coverage audited
+- self-test 12-case coverage audited
+- toolchain integration audited
+- Engineering toolchain checks passed, 14/14 PASS
+- Python tool safety validation passed, 20 tools scanned
+- no unauthorized parser / evidence / manifest files found
+- no real manifest created
+- no external evidence copied
+- no HTML parser implemented
+- no MT5 run
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/tools changes by TASK-101
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+## TASK-102 results
+
+- TASK-102 completed: TASK-102 audit Strategy Tester HTML parser requirements and real fixture boundary
+- workspace clean
+- git diff -- docs tools MQ5 backtest/sets backtest/reports empty
+- v0.4.2-evidence-manifest-validator-coverage-audit still points to 05d476d
+- v0.4.1-evidence-manifest-schema-validator still points to 900a6fd
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- all validations passed
+- no MT5 run
+- no file modifications by TASK-102
+- no commit created by TASK-102
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- external evidence path: E:\GPT\MT5测试\Journal Experts Tester
+- external evidence observed: TesterBacktest.html, 31,674 B
+- external evidence observed: 日志.txt, 44,135 B
+- external evidence observed: Inputs.png
+- external evidence observed: eurusd_2.png
+- external evidence observed: TesterBacktest.png
+- external evidence observed: TesterBacktest-holding.png
+- external evidence observed: TesterBacktest-hst.png
+- external evidence observed: TesterBacktest-mfemae.png
+- TesterBacktest.html key field: MetaQuotes-Demo Build 5836
+- TesterBacktest.html key field: expertName=TradingSystem
+- TesterBacktest.html key field: symbol=EURUSD
+- TesterBacktest.html key field: period=M5
+- TesterBacktest.html key field: date range=2024.01.01 - 2024.01.31
+- TesterBacktest.html key field: initialDeposit=10000.00
+- TesterBacktest.html key field: leverage=1:100
+- TesterBacktest.html key field: InpEaName=TradingSystem_v0.1.7_core_signal_log_throttle
+- TesterBacktest.html key field: InpEnableTrading=false
+- TesterBacktest.html key field: InpEnableRiskObservation=true
+- TesterBacktest.html key field: totalTrades=0
+- TesterBacktest.html key field: totalDeals=0
+- TesterBacktest.html key field: buyTrades=0
+- TesterBacktest.html key field: sellTrades=0
+- TesterBacktest.html key field: no position data / no open positions
+- log no-trade field: InpEnableTrading=false
+- log no-trade field: InpEnableRiskObservation=true
+- log no-trade field: RiskManager initialized
+- log no-trade field: Risk observation mode blocks all real trading
+- log no-trade field: RISK_REJECT_TRADING_DISABLED
+- log no-trade field: riskRejectTradingDisabled=6047
+- log no-trade field: riskApproved=0
+- log no-trade field: executionAttempts=0
+- log no-trade field: riskRejected=6047
+- log no-trade field: no OrderSend / Buy / Sell evidence
+- HTML parser recommended field: expertName
+- HTML parser recommended field: symbol
+- HTML parser recommended field: period
+- HTML parser recommended field: dateFrom
+- HTML parser recommended field: dateTo
+- HTML parser recommended field: build
+- HTML parser recommended field: model
+- HTML parser recommended field: initialDeposit
+- HTML parser recommended field: leverage
+- HTML parser recommended field: inputs
+- HTML parser recommended field: totalTrades
+- HTML parser recommended field: totalDeals
+- HTML parser recommended field: buyTrades
+- HTML parser recommended field: sellTrades
+- HTML parser recommended field: orders
+- HTML parser recommended field: positions
+- parser design constraint: use Python standard library only
+- parser design constraint: support Chinese labels such as 专家, 交易品种, 期间, 输入, 交易总计, 总成交, 买入交易, 卖出交易
+- parser design constraint: distinguish TradingSystem from unrelated EA
+- parser design constraint: fail safely if required no-trade fields are missing
+- parser design constraint: must not infer live trading readiness
+- parser design constraint: must not infer real trading allowed
+- parser design constraint: must not infer profitability
+- fixture boundary: TASK-102 did not copy real HTML fixture
+- fixture boundary: TASK-102 did not create synthetic fixture
+- fixture boundary: future task may use tempfile synthetic HTML fixture first
+- fixture boundary: future task may copy or sanitize real HTML fixture only if ChatGPT explicitly authorizes it
+- fixture boundary: external evidence should remain outside repo unless explicitly authorized
+- parser risk: Chinese localized labels
+- parser risk: MT5 Build 5836 / localization differences
+- parser risk: HTML table structure changes
+- parser risk: unrelated EA / unrelated symbol evidence may be mixed into the same external directory
+- parser risk: number format normalization, such as 10 000.00
+- parser risk: log truncation risk
+- no HTML parser implemented
+- no log parser implemented
+- no fixture created
+- no external evidence copied
+- no manifest created
+- no MT5 run
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no real trading
+- no profit optimization
+## TASK-TAG-017 results
+
+- TASK-TAG-017 completed: TASK-TAG-017 create v0.4.3-strategy-tester-html-parser-requirements-audit stable tag
+- stable tag created: v0.4.3-strategy-tester-html-parser-requirements-audit
+- tag target: 6643a75 TASK-DOC-116 update state after TASK-102
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.2-evidence-manifest-validator-coverage-audit still points to 05d476d
+- v0.4.1-evidence-manifest-schema-validator still points to 900a6fd
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- v0.3.7-v030-phase-closure-audit still points to 1056f74
+- v0.3.6-backtest-sets-no-trade-smoke-audit still points to 0442ae1
+- v0.3.5-backtest-sets-no-trade-smoke-coverage still points to b58ddbf
+- no old tag moved
+- no files modified by TASK-TAG-017
+- no commit created by TASK-TAG-017
+- no push
+- no MT5 run
+- no real manifest created
+- no fixture created
+- no external evidence copied
+- no HTML parser implemented
+- no log parser implemented
+- no real trading
+- no profit optimization
+- v0.4.3-strategy-tester-html-parser-requirements-audit marks Strategy Tester HTML parser requirements and real fixture boundary audit closed loop
+- v0.4.3-strategy-tester-html-parser-requirements-audit includes TASK-102 read-only audit
+- v0.4.3-strategy-tester-html-parser-requirements-audit includes TASK-DOC-116 state sync
+- v0.4.3-strategy-tester-html-parser-requirements-audit confirms TesterBacktest.html / 日志.txt were inspected read-only
+- v0.4.3-strategy-tester-html-parser-requirements-audit confirms HTML parser field requirements were identified
+- v0.4.3-strategy-tester-html-parser-requirements-audit confirms fixture boundary was defined
+- v0.4.3-strategy-tester-html-parser-requirements-audit confirms localization / table structure / unrelated EA risks were documented
+- v0.4.3-strategy-tester-html-parser-requirements-audit does not create real manifest files
+- v0.4.3-strategy-tester-html-parser-requirements-audit does not create fixtures
+- v0.4.3-strategy-tester-html-parser-requirements-audit does not copy external evidence into repository
+- v0.4.3-strategy-tester-html-parser-requirements-audit does not implement Strategy Tester HTML parser
+- v0.4.3-strategy-tester-html-parser-requirements-audit does not implement log parser
+- v0.4.3-strategy-tester-html-parser-requirements-audit does not run MT5
+- v0.4.3-strategy-tester-html-parser-requirements-audit does not represent live trading readiness
+- v0.4.3-strategy-tester-html-parser-requirements-audit does not represent real trading availability
+- v0.4.3-strategy-tester-html-parser-requirements-audit does not represent profitable strategy completion
+- v0.4.3-strategy-tester-html-parser-requirements-audit does not allow real trading
+- v0.4.3-strategy-tester-html-parser-requirements-audit does not allow moving the tag
+- TASK-102 audit Strategy Tester HTML parser requirements and real fixture boundary completed
+- external evidence directory was inspected read-only
+- TesterBacktest.html was inspected read-only
+- 日志.txt was inspected read-only
+- TesterBacktest.html contained TradingSystem / EURUSD / M5 / 2024.01.01 - 2024.01.31
+- TesterBacktest.html contained InpEnableTrading=false
+- TesterBacktest.html contained InpEnableRiskObservation=true
+- TesterBacktest.html contained totalTrades=0 / totalDeals=0 / buyTrades=0 / sellTrades=0
+- 日志.txt confirmed RiskManager initialized
+- 日志.txt confirmed RISK_REJECT_TRADING_DISABLED
+- 日志.txt confirmed riskApproved=0
+- 日志.txt confirmed executionAttempts=0
+- no OrderSend / Buy / Sell evidence
+- HTML parser field requirements recorded
+- fixture boundary recorded
+- parser risks recorded
+- no docs/tools/MQ5/backtest/sets/backtest/reports changes by TASK-102
+- no real manifest created
+- no fixture created
+- no external evidence copied
+- no HTML parser implemented
+- no log parser implemented
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+## TASK-103 results
+
+- TASK-103 completed: TASK-103 add Strategy Tester HTML parser
+- added file: tools/parse_strategy_tester_html_report.py
+- added file: tools/test_parse_strategy_tester_html_report.py
+- modified file: tools/run_engineering_toolchain_checks.py
+- modified file: tools/test_run_engineering_toolchain_checks.py
+- Strategy Tester HTML parser added
+- parser uses Python standard library html.parser
+- parser supports synthetic HTML fixture self-test
+- parser supports Chinese MT5 labels
+- parser extracts expertName, symbol, period, dateFrom, dateTo, build, initialDeposit, leverage, inputs, totalTrades, totalDeals, buyTrades, sellTrades, ordersOpened, positionsOpened, noTradeAssertions, warnings
+- parser normalizes initialDeposit 10 000.00
+- parser normalizes buy/sell values such as 0 (0.00%)
+- parser fails safely on missing required fields
+- parser fails safely on unrelated expert unless --allow-expert is supplied
+- parser rejects InpEnableTrading=true and nonzero trades/deals in tests
+- parser output includes safety notes / warnings that evidence is metadata only and does not imply live trading readiness, real trading permission, or profitability
+- self-test coverage: positive Chinese MT5 report fixture
+- self-test coverage: positive --allow-expert with custom expert
+- self-test coverage: negative missing expert
+- self-test coverage: negative unrelated expert without --allow-expert
+- self-test coverage: negative missing InpEnableTrading
+- self-test coverage: negative InpEnableTrading=true
+- self-test coverage: negative nonzero totalTrades
+- self-test coverage: negative nonzero totalDeals
+- self-test coverage: negative missing trade stats
+- self-test coverage: positive number normalization 10 000.00
+- self-test coverage: positive buy/sell 0 (0.00%) normalization
+- self-test coverage: output includes safety notes forbidding live trading / profitability inference
+- Strategy Tester HTML parser self-test integrated into run_engineering_toolchain_checks.py
+- tools/test_run_engineering_toolchain_checks.py updated
+- Engineering toolchain checks passed, 15/15 PASS
+- Python tool safety validation passed, 22 tools scanned
+- Project state docs validation passed
+- Project state docs self-test passed
+- Evidence manifest schema self-test passed
+- Strategy Tester HTML parser self-test passed
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- Python tool safety self-test passed
+- no project state docs modified by TASK-103 itself
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no external evidence copied
+- no real manifest created
+- no real fixture file created
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+## TASK-TAG-018 results
+
+- TASK-TAG-018 completed：TASK-TAG-018 create v0.4.4-strategy-tester-html-parser stable tag
+- stable tag created: v0.4.4-strategy-tester-html-parser
+- tag target: a545495 TASK-DOC-118 update state after TASK-103
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.3-strategy-tester-html-parser-requirements-audit still points to 6643a75
+- v0.4.2-evidence-manifest-validator-coverage-audit still points to 05d476d
+- v0.4.1-evidence-manifest-schema-validator still points to 900a6fd
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- v0.3.7-v030-phase-closure-audit still points to 1056f74
+- no old tag moved
+- no files modified by TASK-TAG-018
+- no commit created by TASK-TAG-018
+- no push
+- no MT5 run
+- no real manifest created
+- no real fixture created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.4.4-strategy-tester-html-parser marks Strategy Tester HTML parser tool closed loop
+- v0.4.4-strategy-tester-html-parser includes TASK-103 parser implementation
+- v0.4.4-strategy-tester-html-parser includes TASK-DOC-118 state sync
+- v0.4.4-strategy-tester-html-parser confirms tools/parse_strategy_tester_html_report.py exists
+- v0.4.4-strategy-tester-html-parser confirms tools/test_parse_strategy_tester_html_report.py exists
+- v0.4.4-strategy-tester-html-parser confirms parser uses synthetic fixture self-tests
+- v0.4.4-strategy-tester-html-parser confirms no external TesterBacktest.html copied into repository
+- v0.4.4-strategy-tester-html-parser confirms no real fixture file created
+- v0.4.4-strategy-tester-html-parser confirms no MT5 run
+- v0.4.4-strategy-tester-html-parser confirms Engineering toolchain checks passed, 15/15 PASS
+- v0.4.4-strategy-tester-html-parser confirms Python tool safety validation passed with 22 tools scanned
+- v0.4.4-strategy-tester-html-parser does not represent live trading readiness
+- v0.4.4-strategy-tester-html-parser does not represent real trading availability
+- v0.4.4-strategy-tester-html-parser does not represent profitable strategy completion
+- v0.4.4-strategy-tester-html-parser does not allow real trading
+- v0.4.4-strategy-tester-html-parser does not allow moving the tag
+- TASK-103 add Strategy Tester HTML parser completed
+- tools/parse_strategy_tester_html_report.py added
+- tools/test_parse_strategy_tester_html_report.py added
+- tools/run_engineering_toolchain_checks.py updated
+- tools/test_run_engineering_toolchain_checks.py updated
+- Strategy Tester HTML parser self-test passed
+- Engineering toolchain checks passed, 15/15 PASS
+- parser supports Chinese MT5 Strategy Tester labels
+- parser extracts expertName / symbol / period / date range / inputs / trade stats
+- parser includes no-trade assertions
+- parser fails safely on unrelated expert / missing fields / nonzero trades
+- parser uses synthetic fixture only
+- no external evidence copied
+- no real fixture file created
+- no real manifest created
+- no MT5 run
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no project state docs modified by TASK-103 itself
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+## TASK-104 results
+
+- TASK-104 completed: TASK-104 validate Strategy Tester HTML parser against external sample read-only
+- HEAD = dc46bac TASK-DOC-119 update state after TASK-TAG-018
+- current phase = v0.4.0: backtest evidence archive, report parsing, and reproducibility enhancement stage
+- current stable tag = v0.4.4-strategy-tester-html-parser -> a545495
+- current latest engineering task remains e312d7c TASK-103 add Strategy Tester HTML parser
+- workspace clean
+- git diff -- docs tools MQ5 backtest/sets backtest/reports empty
+- v0.4.4-strategy-tester-html-parser tag not moved
+- v0.4.3-strategy-tester-html-parser-requirements-audit tag not moved
+- v0.4.2-evidence-manifest-validator-coverage-audit tag not moved
+- all validations passed
+- Project state docs validation passed
+- Project state docs self-test passed
+- Evidence manifest schema self-test passed
+- Strategy Tester HTML parser self-test passed
+- Engineering toolchain checks passed, 15/15 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- Python tool safety validation passed, 22 tools scanned
+- Python tool safety self-test passed
+- no file modifications by TASK-104
+- no commit created by TASK-104
+- no tag moved
+- no push
+- no MT5 run
+- no real trading
+- no profit optimization
+- external TesterBacktest.html exists
+- external TesterBacktest.html size = 31,674 bytes
+- external 日志.txt exists
+- external 日志.txt size = 44,135 bytes
+- external evidence was not copied into repository
+- no fixture was created
+- no manifest was created
+- parser self-test passed with synthetic UTF-8 fixture
+- parser attempted to parse external TesterBacktest.html read-only
+- external TesterBacktest.html uses UTF-16-LE BOM encoding
+- current parser reads HTML as UTF-8
+- parser failed on real external sample because of encoding mismatch
+- this is a parser quality gap, not a TASK-099 / TASK-103 architecture issue
+- UTF-16 manual field validation: expertName=TradingSystem
+- UTF-16 manual field validation: symbol=EURUSD
+- UTF-16 manual field validation: period=M5
+- UTF-16 manual field validation: dateFrom=2024.01.01
+- UTF-16 manual field validation: dateTo=2024.01.31
+- UTF-16 manual field validation: build=5836
+- UTF-16 manual field validation: leverage=1:100
+- UTF-16 manual field validation: InpEnableTrading=false
+- UTF-16 manual field validation: InpEnableRiskObservation=true
+- UTF-16 manual field validation: totalTrades=0
+- UTF-16 manual field validation: totalDeals=0
+- UTF-16 manual field validation: buyTrades=0
+- UTF-16 manual field validation: sellTrades=0
+- no-trade assertion: totalTrades == 0
+- no-trade assertion: totalDeals == 0
+- no-trade assertion: buyTrades == 0
+- no-trade assertion: sellTrades == 0
+- no-trade assertion: InpEnableTrading == false
+- no-trade assertion: InpEnableRiskObservation == true
+- no OrderSend / Buy / Sell evidence
+- future candidate: parser encoding compatibility fix
+- future candidate: add UTF-16-LE / UTF-16 BOM detection
+- future candidate: keep synthetic fixtures first
+- future candidate: optionally add a synthetic UTF-16 HTML fixture in a future task
+- future candidate: do not copy real external evidence unless future ChatGPT task explicitly authorizes it
+- TASK-104 did not fix parser
+- TASK-104 did not modify TASK-103 parser files
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+
+## TASK-105 results
+
+- TASK-105 completed: TASK-105 fix Strategy Tester HTML parser encoding
+- modified file: tools/parse_strategy_tester_html_report.py
+- modified file: tools/test_parse_strategy_tester_html_report.py
+- added read_with_bom()
+- added UTF-16 / UTF-16-LE BOM decoding support
+- kept UTF-8 compatibility
+- kept parser CLI behavior
+- improved buy/sell label compatibility with compact.startswith(label)
+- supports 买入交易 (赢得 %) / 卖出交易 (赢得 %) style labels
+- external TesterBacktest.html parsed successfully
+- no external evidence copied into repository
+- no real fixture file created
+- no real manifest created
+- no MT5 run
+- real external sample parsed field: expertName=TradingSystem
+- real external sample parsed field: symbol=EURUSD
+- real external sample parsed field: period=M5
+- real external sample parsed field: dateFrom=2024.01.01
+- real external sample parsed field: dateTo=2024.01.31
+- real external sample parsed field: InpEnableTrading=false
+- real external sample parsed field: InpEnableRiskObservation=true
+- real external sample parsed field: totalTrades=0
+- real external sample parsed field: totalDeals=0
+- real external sample parsed field: buyTrades=0
+- real external sample parsed field: sellTrades=0
+- real external sample parsed field: noTradeAssertions.passed=true
+- real external sample parsed field: safetyNotes contains 4 safety statements
+- Project state docs validation passed
+- Project state docs self-test passed
+- Evidence manifest schema self-test passed
+- Strategy Tester HTML parser self-test passed
+- Engineering toolchain checks passed, 15/15 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- Python tool safety validation passed, 22 tools scanned
+- Python tool safety self-test passed
+- external sample parse read-only passed
+- no project state docs modified by TASK-105 itself
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no external evidence copied
+- no real fixture created
+- no real manifest created
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+## TASK-TAG-019 results
+
+- TASK-TAG-019 completed: TASK-TAG-019 create v0.4.5-strategy-tester-html-parser-encoding stable tag
+- stable tag created: v0.4.5-strategy-tester-html-parser-encoding
+- tag target: 6e2573a TASK-DOC-121 update state after TASK-105
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.4-strategy-tester-html-parser still points to a545495
+- v0.4.3-strategy-tester-html-parser-requirements-audit still points to 6643a75
+- v0.4.2-evidence-manifest-validator-coverage-audit still points to 05d476d
+- v0.4.1-evidence-manifest-schema-validator still points to 900a6fd
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- no old tag moved
+- no files modified by TASK-TAG-019
+- no commit created by TASK-TAG-019
+- no push
+- no MT5 run
+- no real manifest created
+- no real fixture created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.4.5-strategy-tester-html-parser-encoding marks Strategy Tester HTML parser encoding compatibility closed loop
+- v0.4.5-strategy-tester-html-parser-encoding includes TASK-105 UTF-16 / UTF-16-LE BOM parser fix
+- v0.4.5-strategy-tester-html-parser-encoding includes TASK-DOC-121 state sync
+- v0.4.5-strategy-tester-html-parser-encoding confirms real external TesterBacktest.html read-only parse succeeded
+- v0.4.5-strategy-tester-html-parser-encoding confirms noTradeAssertions.passed=true
+- v0.4.5-strategy-tester-html-parser-encoding confirms no external evidence copied into repository
+- v0.4.5-strategy-tester-html-parser-encoding confirms no real fixture or manifest created
+- v0.4.5-strategy-tester-html-parser-encoding confirms no MT5 run
+- v0.4.5-strategy-tester-html-parser-encoding does not represent live trading readiness
+- v0.4.5-strategy-tester-html-parser-encoding does not represent real trading availability
+- v0.4.5-strategy-tester-html-parser-encoding does not represent profitable strategy completion
+- v0.4.5-strategy-tester-html-parser-encoding does not allow real trading
+- v0.4.5-strategy-tester-html-parser-encoding does not allow moving the tag
+- TASK-105 fix Strategy Tester HTML parser encoding completed
+- UTF-16 / UTF-16-LE BOM decoding support added
+- UTF-8 compatibility retained
+- external TesterBacktest.html read-only parse succeeded
+- expertName=TradingSystem
+- symbol=EURUSD
+- period=M5
+- dateFrom=2024.01.01
+- dateTo=2024.01.31
+- InpEnableTrading=false
+- InpEnableRiskObservation=true
+- totalTrades=0
+- totalDeals=0
+- buyTrades=0
+- sellTrades=0
+- noTradeAssertions.passed=true
+- safetyNotes contains safety statements
+- no external evidence copied
+- no real fixture created
+- no real manifest created
+- no MT5 run
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+## TASK-106 results
+
+- TASK-106 completed: TASK-106 audit parser-to-manifest integration readiness
+- HEAD = 649a83a TASK-DOC-122 update state after TASK-TAG-019
+- current phase = v0.4.0: backtest evidence archive, report parsing, and reproducibility enhancement stage
+- workspace clean
+- git diff -- docs tools MQ5 backtest/sets backtest/reports empty
+- v0.4.5-strategy-tester-html-parser-encoding still points to 6e2573a
+- v0.4.4-strategy-tester-html-parser still points to a545495
+- v0.4.3-strategy-tester-html-parser-requirements-audit still points to 6643a75
+- no file modifications by TASK-106
+- no commit created by TASK-106
+- no tag moved
+- no push
+- no MT5 run
+- no real trading
+- no profit optimization
+- Project state docs validation passed
+- Project state docs self-test passed
+- Evidence manifest schema self-test passed
+- Strategy Tester HTML parser self-test passed
+- Engineering toolchain checks passed, 15/15 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- Python tool safety validation passed, 22 tools scanned
+- Python tool safety self-test passed
+- external TesterBacktest.html parse read-only passed
+- noTradeAssertions.passed=true
+- parser-to-manifest mapping complete: strategyTester.expertName <- expertName=TradingSystem
+- parser-to-manifest mapping complete: strategyTester.symbol <- symbol=EURUSD
+- parser-to-manifest mapping complete: strategyTester.period <- period=M5
+- parser-to-manifest mapping complete: strategyTester.dateFrom <- dateFrom=2024.01.01
+- parser-to-manifest mapping complete: strategyTester.dateTo <- dateTo=2024.01.31
+- parser-to-manifest mapping complete: strategyTester.build <- build=5836
+- parser-to-manifest mapping complete: strategyTester.deposit <- initialDeposit=10000.00
+- parser-to-manifest mapping complete: strategyTester.leverage <- leverage=1:100
+- parser-to-manifest mapping complete: inputs <- parser outputs 34 inputs
+- parser-to-manifest mapping complete: noTradeAssertions.totalTrades <- 0
+- parser-to-manifest mapping complete: noTradeAssertions.totalDeals <- 0
+- parser-to-manifest mapping complete: noTradeAssertions.buyTrades <- 0
+- parser-to-manifest mapping complete: noTradeAssertions.sellTrades <- 0
+- current gap: strategyTester.model not extracted by parser
+- current gap: ordersOpened remains unknown
+- current gap: positionsOpened remains unknown
+- current gap: executionAttempts not available in HTML parser output
+- current gap: riskApproved not available in HTML parser output
+- current gap: executionAttempts / riskApproved require log parser from 日志.txt
+- current gap: parserExpectations need structured mapping
+- current gap: safetyAssertions need structured mapping from safety notes
+- current gap: repositoryState requires task execution metadata
+- current gap: tags require project state metadata
+- current gap: files[] requires external evidence directory listing
+- current gap: no manifest generation flow exists yet
+- recommended next candidate: manifest generation tool to assemble parser output + file list + repositoryState + tags
+- recommended next candidate: parser improvement for ordersOpened / positionsOpened inference
+- recommended next candidate: log parser implementation for riskApproved / executionAttempts
+- recommended next candidate: model field extraction from inputs or HTML
+- recommended next candidate: no external evidence copying unless future ChatGPT task explicitly authorizes it
+- TASK-106 was read-only
+- no docs changes by TASK-106
+- no tools changes by TASK-106
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+## TASK-TAG-020 results
+
+- TASK-TAG-020 completed: TASK-TAG-020 create v0.4.6-parser-manifest-integration-readiness-audit stable tag
+- stable tag created: v0.4.6-parser-manifest-integration-readiness-audit
+- tag target: 79a4188 TASK-DOC-123 update state after TASK-106
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.5-strategy-tester-html-parser-encoding still points to 6e2573a
+- v0.4.4-strategy-tester-html-parser still points to a545495
+- v0.4.3-strategy-tester-html-parser-requirements-audit still points to 6643a75
+- v0.4.2-evidence-manifest-validator-coverage-audit still points to 05d476d
+- v0.4.1-evidence-manifest-schema-validator still points to 900a6fd
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- no old tag moved
+- no files modified by TASK-TAG-020
+- no commit created by TASK-TAG-020
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.4.6-parser-manifest-integration-readiness-audit marks parser-to-manifest integration readiness audit closed loop
+- v0.4.6-parser-manifest-integration-readiness-audit includes TASK-106 read-only audit
+- v0.4.6-parser-manifest-integration-readiness-audit includes TASK-DOC-123 state sync
+- v0.4.6-parser-manifest-integration-readiness-audit confirms parser output maps to main manifest fields
+- v0.4.6-parser-manifest-integration-readiness-audit confirms strategyTester / inputs / noTradeAssertions mapping readiness
+- v0.4.6-parser-manifest-integration-readiness-audit confirms gaps remain for model, ordersOpened, positionsOpened, executionAttempts, riskApproved, repositoryState, files[], and manifest generation flow
+- v0.4.6-parser-manifest-integration-readiness-audit confirms no manifest generator was implemented
+- v0.4.6-parser-manifest-integration-readiness-audit confirms no log parser was implemented
+- v0.4.6-parser-manifest-integration-readiness-audit confirms no external evidence was copied
+- v0.4.6-parser-manifest-integration-readiness-audit confirms no manifest or fixture was created
+- v0.4.6-parser-manifest-integration-readiness-audit confirms no MT5 run
+- v0.4.6-parser-manifest-integration-readiness-audit does not represent live trading readiness
+- v0.4.6-parser-manifest-integration-readiness-audit does not represent real trading availability
+- v0.4.6-parser-manifest-integration-readiness-audit does not represent profitable strategy completion
+- v0.4.6-parser-manifest-integration-readiness-audit does not allow real trading
+- v0.4.6-parser-manifest-integration-readiness-audit does not allow moving the tag
+- TASK-106 audit parser-to-manifest integration readiness completed
+- external TesterBacktest.html parse read-only passed
+- noTradeAssertions.passed=true
+- parser output fully maps: strategyTester.expertName
+- parser output fully maps: strategyTester.symbol
+- parser output fully maps: strategyTester.period
+- parser output fully maps: strategyTester.dateFrom
+- parser output fully maps: strategyTester.dateTo
+- parser output fully maps: strategyTester.build
+- parser output fully maps: strategyTester.deposit
+- parser output fully maps: strategyTester.leverage
+- parser output fully maps: inputs
+- parser output fully maps: noTradeAssertions.totalTrades
+- parser output fully maps: noTradeAssertions.totalDeals
+- parser output fully maps: noTradeAssertions.buyTrades
+- parser output fully maps: noTradeAssertions.sellTrades
+- gap recorded: strategyTester.model not extracted
+- gap recorded: ordersOpened remains unknown
+- gap recorded: positionsOpened remains unknown
+- gap recorded: executionAttempts not available in HTML parser output
+- gap recorded: riskApproved not available in HTML parser output
+- gap recorded: executionAttempts / riskApproved require log parser from 日志.txt
+- gap recorded: parserExpectations need structured mapping
+- gap recorded: safetyAssertions need structured mapping from safety notes
+- gap recorded: repositoryState requires task execution metadata
+- gap recorded: tags require project state metadata
+- gap recorded: files[] requires external evidence directory listing
+- gap recorded: no manifest generation flow exists yet
+- recommended next candidate: manifest generation tool
+- recommended next candidate: parser improvement for ordersOpened / positionsOpened inference
+- recommended next candidate: log parser for riskApproved / executionAttempts
+- recommended next candidate: model field extraction
+- no docs/tools/MQ5/backtest/sets/backtest/reports changes by TASK-106
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+## TASK-107 results
+
+- TASK-107 completed: TASK-107 add MT5 log no-trade parser
+- tools/parse_mt5_log_no_trade_summary.py added
+- tools/test_parse_mt5_log_no_trade_summary.py added
+- tools/run_engineering_toolchain_checks.py updated
+- tools/test_run_engineering_toolchain_checks.py updated
+- MT5 Journal / Experts log no-trade parser added
+- parser uses Python standard library only
+- parser uses line-by-line grep / regex style parsing
+- parser uses synthetic log fixture self-tests
+- parser does not read external evidence by default
+- parser does not copy evidence
+- parser does not create manifest
+- parser does not create fixture files in repository
+- parser detects riskApproved
+- parser detects executionAttempts
+- parser detects riskRejected
+- parser detects riskRejectTradingDisabled
+- parser detects riskRejectObservationMode
+- parser detects orderSendEvidence
+- parser detects buySellEvidence
+- parser detects no-trade assertions
+- parser fails safely on unrelated expert / missing fields / nonzero riskApproved / nonzero executionAttempts
+- parser detects OrderSend / Buy( / Sell( real trading evidence
+- parser avoids false positives for direction=BUY / direction=SELL
+- parser allows negative wording such as no OrderSend / Buy / Sell evidence
+- parser output includes safety notes forbidding live trading / profitability inference
+- external log parsed successfully read-only
+- external 日志.txt parsed successfully read-only
+- no external evidence copied into repository
+- no real fixture file created
+- no real manifest created
+- no MT5 run
+- external log field: expertName=TradingSystem
+- external log field: symbol=EURUSD
+- external log field: period=M5
+- external log field: dateFrom=2024.01.01
+- external log field: dateTo=2024.01.31
+- external log field: InpEnableTrading=false
+- external log field: riskApproved=0
+- external log field: executionAttempts=0
+- external log field: riskRejected=6047
+- external log field: riskRejectTradingDisabled=6047
+- external log field: orderSendEvidence=false
+- external log field: buySellEvidence=false
+- external log field: noTradeAssertions.passed=true
+- external log field: safetyNotes contains 4 safety statements
+- Project state docs validation passed
+- Project state docs self-test passed
+- Evidence manifest schema self-test passed
+- Strategy Tester HTML parser self-test passed
+- MT5 log no-trade parser self-test passed
+- Engineering toolchain checks passed, 16/16 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- Python tool safety validation passed, 24 tools scanned
+- Python tool safety self-test passed
+- external log parse read-only passed
+- no project state docs modified by TASK-107 itself
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no Strategy Tester HTML parser changes
+- no manifest validator changes
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no external evidence copied
+- no real fixture created
+- no real manifest created
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- TASK-106 gap closed: executionAttempts now covered by MT5 log parser
+- TASK-106 gap closed: riskApproved now covered by MT5 log parser
+- remaining gap: strategyTester.model
+- remaining gap: ordersOpened
+- remaining gap: positionsOpened
+- remaining gap: repositoryState
+- remaining gap: files[]
+- remaining gap: manifest generation flow
+
+## TASK-TAG-021 results
+
+- TASK-TAG-021 completed: TASK-TAG-021 create v0.4.7-mt5-log-no-trade-parser stable tag
+- stable tag created: v0.4.7-mt5-log-no-trade-parser
+- tag target: 14e2702 TASK-DOC-125 update state after TASK-107
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.6-parser-manifest-integration-readiness-audit still points to 79a4188
+- v0.4.5-strategy-tester-html-parser-encoding still points to 6e2573a
+- v0.4.4-strategy-tester-html-parser still points to a545495
+- v0.4.3-strategy-tester-html-parser-requirements-audit still points to 6643a75
+- v0.4.2-evidence-manifest-validator-coverage-audit still points to 05d476d
+- v0.4.1-evidence-manifest-schema-validator still points to 900a6fd
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- no old tag moved
+- no files modified by TASK-TAG-021
+- no commit created by TASK-TAG-021
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.4.7-mt5-log-no-trade-parser marks MT5 log no-trade parser tool closed loop
+- v0.4.7-mt5-log-no-trade-parser includes TASK-107 parser implementation
+- v0.4.7-mt5-log-no-trade-parser includes TASK-DOC-125 state sync
+- v0.4.7-mt5-log-no-trade-parser confirms tools/parse_mt5_log_no_trade_summary.py exists
+- v0.4.7-mt5-log-no-trade-parser confirms tools/test_parse_mt5_log_no_trade_summary.py exists
+- v0.4.7-mt5-log-no-trade-parser confirms MT5 log no-trade parser self-test passed
+- v0.4.7-mt5-log-no-trade-parser confirms Engineering toolchain checks passed, 16/16 PASS
+- v0.4.7-mt5-log-no-trade-parser confirms Python tool safety validation passed with 24 tools scanned
+- v0.4.7-mt5-log-no-trade-parser confirms external 日志.txt read-only parse succeeded
+- v0.4.7-mt5-log-no-trade-parser confirms riskApproved=0
+- v0.4.7-mt5-log-no-trade-parser confirms executionAttempts=0
+- v0.4.7-mt5-log-no-trade-parser confirms noTradeAssertions.passed=true
+- v0.4.7-mt5-log-no-trade-parser confirms no external evidence copied into repository
+- v0.4.7-mt5-log-no-trade-parser confirms no real fixture or manifest created
+- v0.4.7-mt5-log-no-trade-parser confirms no MT5 run
+- v0.4.7-mt5-log-no-trade-parser does not represent live trading readiness
+- v0.4.7-mt5-log-no-trade-parser does not represent real trading availability
+- v0.4.7-mt5-log-no-trade-parser does not represent profitable strategy completion
+- v0.4.7-mt5-log-no-trade-parser does not allow real trading
+- v0.4.7-mt5-log-no-trade-parser does not allow moving the tag
+- TASK-107 add MT5 log no-trade parser completed
+- tools/parse_mt5_log_no_trade_summary.py added
+- tools/test_parse_mt5_log_no_trade_summary.py added
+- tools/run_engineering_toolchain_checks.py updated
+- tools/test_run_engineering_toolchain_checks.py updated
+- MT5 log no-trade parser self-test passed
+- Engineering toolchain checks passed, 16/16 PASS
+- Python tool safety validation passed, 24 tools scanned
+- external 日志.txt parsed successfully read-only
+- expertName=TradingSystem
+- symbol=EURUSD
+- period=M5
+- dateFrom=2024.01.01
+- dateTo=2024.01.31
+- InpEnableTrading=false
+- riskApproved=0
+- executionAttempts=0
+- riskRejected=6047
+- riskRejectTradingDisabled=6047
+- orderSendEvidence=false
+- buySellEvidence=false
+- noTradeAssertions.passed=true
+- safetyNotes contains 4 safety statements
+- executionAttempts gap now covered by MT5 log parser
+- riskApproved gap now covered by MT5 log parser
+- no external evidence copied
+- no real fixture created
+- no real manifest created
+- no MT5 run
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-108 results
+
+- TASK-108 completed: TASK-108 add evidence manifest generator
+- tools/generate_evidence_manifest.py added
+- tools/test_generate_evidence_manifest.py added
+- tools/run_engineering_toolchain_checks.py updated
+- tools/test_run_engineering_toolchain_checks.py updated
+- evidence manifest generator added
+- generator assembles HTML parser output + log parser output + files[] + repositoryState + tags
+- generator outputs manifest JSON to stdout
+- generator does not automatically write manifest file
+- generator uses Python standard library only
+- generator uses synthetic JSON fixtures in self-test
+- generator does not read external evidence by default
+- generator does not copy evidence
+- generator does not create evidence archive
+- generator does not run MT5
+- generator produces manifest compatible with validate_evidence_manifest_schema.py
+- generated manifest includes schemaVersion
+- generated manifest includes taskId
+- generated manifest includes evidenceSetId
+- generated manifest includes source
+- generated manifest includes externalEvidenceRoot
+- generated manifest includes files
+- generated manifest includes mt5
+- generated manifest includes strategyTester
+- generated manifest includes expert
+- generated manifest includes inputs
+- generated manifest includes noTradeAssertions
+- generated manifest includes parserExpectations
+- generated manifest includes safetyAssertions
+- generated manifest includes repositoryState
+- generated manifest includes tags
+- generated manifest includes notes
+- strategyTester fields assembled from HTML parser output
+- inputs assembled from HTML parser output and optionally log parser output
+- totalTrades / totalDeals / buyTrades / sellTrades preferentially from HTML parser output
+- executionAttempts / riskApproved preferentially from log parser output
+- orderSendEvidence / buySellEvidence merged conservatively
+- model may be unknown and is recorded as a gap
+- ordersOpened / positionsOpened may be conservatively inferred only when totalTrades=0, totalDeals=0, and no trade evidence is present
+- safetyAssertions.noRealTrading=true
+- safetyAssertions.noProfitOptimization=true
+- safetyAssertions.noLiveTradingReadinessClaim=true
+- safetyAssertions.noRealTradingAllowedClaim=true
+- safetyAssertions.noProfitabilityClaim=true
+- repositoryState read from repo JSON
+- tags read from tags JSON
+- files[] read from files JSON
+- notes include evidence manifest is metadata only
+- notes include not live trading readiness
+- notes include not real trading permission
+- notes include not profitability claim
+- notes include no external evidence copied
+- notes include no MT5 run during generation
+- self-test covers positive valid manifest generation from synthetic html/log/files/repo/tags JSON
+- self-test covers generated manifest passes evidence manifest schema validator
+- self-test covers negative missing html parser output required field
+- self-test covers negative missing log parser riskApproved / executionAttempts
+- self-test covers negative repo_state mq5Changed=true
+- self-test covers negative externalEvidenceCopiedIntoRepo=true
+- self-test covers negative files[] invalid evidenceType
+- self-test covers negative orderSendEvidence=true
+- self-test covers negative buySellEvidence=true
+- self-test covers positive model missing -> model unknown + notes record gap
+- self-test covers positive ordersOpened / positionsOpened inference when totalTrades=0 and totalDeals=0 and no trade evidence
+- self-test covers output notes contain no live trading readiness / no profitability claim
+- Project state docs validation passed
+- Project state docs self-test passed
+- Evidence manifest schema self-test passed
+- Strategy Tester HTML parser self-test passed
+- MT5 log no-trade parser self-test passed
+- Evidence manifest generator self-test passed
+- Engineering toolchain checks passed, 17/17 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- Python tool safety validation passed, 26 tools scanned
+- Python tool safety self-test passed
+- no project state docs modified by TASK-108 itself
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no HTML parser changes
+- no log parser changes
+- no manifest validator changes
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no external evidence copied
+- no real fixture created
+- no real manifest created
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- TASK-106 gap closed: manifest generation flow now covered by TASK-108
+- TASK-106 gap closed: files[] now supported via files JSON
+- TASK-106 gap closed: repositoryState now supported via repo JSON
+- TASK-106 gap closed: tags now supported via tags JSON
+- TASK-107 gap closed: riskApproved / executionAttempts already covered by TASK-107 log parser
+- remaining candidate: strategyTester.model extraction improvement
+- remaining candidate: ordersOpened / positionsOpened stronger parser inference
+- remaining candidate: optional real external evidence manifest generation as future explicitly authorized task
+
+## TASK-TAG-022 results
+
+- TASK-TAG-022 completed: TASK-TAG-022 create v0.4.8-evidence-manifest-generator stable tag
+- stable tag created: v0.4.8-evidence-manifest-generator
+- tag target: c1fd38e TASK-DOC-127 update state after TASK-108
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.7-mt5-log-no-trade-parser still points to 14e2702
+- v0.4.6-parser-manifest-integration-readiness-audit still points to 79a4188
+- v0.4.5-strategy-tester-html-parser-encoding still points to 6e2573a
+- v0.4.4-strategy-tester-html-parser still points to a545495
+- v0.4.3-strategy-tester-html-parser-requirements-audit still points to 6643a75
+- v0.4.2-evidence-manifest-validator-coverage-audit still points to 05d476d
+- v0.4.1-evidence-manifest-schema-validator still points to 900a6fd
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- no old tag moved
+- no files modified by TASK-TAG-022
+- no commit created by TASK-TAG-022
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.4.8-evidence-manifest-generator marks evidence manifest generator tool closed loop
+- v0.4.8-evidence-manifest-generator includes TASK-108 generator implementation
+- v0.4.8-evidence-manifest-generator includes TASK-DOC-127 state sync
+- v0.4.8-evidence-manifest-generator confirms tools/generate_evidence_manifest.py exists
+- v0.4.8-evidence-manifest-generator confirms tools/test_generate_evidence_manifest.py exists
+- v0.4.8-evidence-manifest-generator confirms Evidence manifest generator self-test passed
+- v0.4.8-evidence-manifest-generator confirms Engineering toolchain checks passed, 17/17 PASS
+- v0.4.8-evidence-manifest-generator confirms Python tool safety validation passed with 26 tools scanned
+- v0.4.8-evidence-manifest-generator confirms generator assembles HTML parser output + log parser output + files[] + repositoryState + tags
+- v0.4.8-evidence-manifest-generator confirms generated manifest can pass schema validator in synthetic self-test
+- v0.4.8-evidence-manifest-generator confirms no external evidence copied into repository
+- v0.4.8-evidence-manifest-generator confirms no real fixture or manifest created
+- v0.4.8-evidence-manifest-generator confirms no MT5 run
+- v0.4.8-evidence-manifest-generator does not represent live trading readiness
+- v0.4.8-evidence-manifest-generator does not represent real trading availability
+- v0.4.8-evidence-manifest-generator does not represent profitable strategy completion
+- v0.4.8-evidence-manifest-generator does not allow real trading
+- v0.4.8-evidence-manifest-generator does not allow moving the tag
+- TASK-108 add evidence manifest generator completed
+- tools/generate_evidence_manifest.py added
+- tools/test_generate_evidence_manifest.py added
+- tools/run_engineering_toolchain_checks.py updated
+- tools/test_run_engineering_toolchain_checks.py updated
+- Evidence manifest generator self-test passed
+- Engineering toolchain checks passed, 17/17 PASS
+- Python tool safety validation passed, 26 tools scanned
+- generator outputs manifest JSON to stdout
+- generator uses synthetic JSON fixtures
+- generator combines HTML parser output and log parser output
+- generator supports files[] / repositoryState / tags / safetyAssertions
+- generated manifest passes schema validator in self-test
+- no external evidence copied
+- no real fixture created
+- no real manifest created
+- no MT5 run
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-109 results
+
+- TASK-109 completed: TASK-109 validate evidence manifest generator against external evidence read-only
+- repository state clean before and after task
+- HEAD = 57d9081 TASK-DOC-128 update state after TASK-TAG-022
+- all validations passed
+- run_engineering_toolchain_checks.py passed, 17/17 PASS
+- external TesterBacktest.html parsed successfully into temporary html.json
+- external 日志.txt parsed successfully into temporary log.json
+- temporary files.json / repo.json / tags.json prepared
+- generate_evidence_manifest.py ran successfully
+- temporary generated_manifest.json created successfully
+- validate_evidence_manifest_schema.py validated temporary manifest successfully
+- temporary directory deleted after validation
+- git diff -- docs tools MQ5 backtest/sets backtest/reports empty
+- no repository file changes
+- temporary manifest expertName=TradingSystem
+- temporary manifest symbol=EURUSD
+- temporary manifest period=M5
+- temporary manifest dateFrom=2024.01.01
+- temporary manifest dateTo=2024.01.31
+- temporary manifest InpEnableTrading=false
+- temporary manifest totalTrades=0
+- temporary manifest totalDeals=0
+- temporary manifest buyTrades=0
+- temporary manifest sellTrades=0
+- temporary manifest riskApproved=0
+- temporary manifest executionAttempts=0
+- temporary manifest safetyAssertions 5 items all true
+- temporary manifest repositoryState 7 items recorded
+- temporary manifest files[] count=2
+- temporary manifest files[] includes TesterBacktest.html and 日志.txt references only
+- temporary manifest tags.stableTag=v0.4.8-evidence-manifest-generator
+- real external evidence can be parsed read-only
+- HTML parser + log parser + evidence manifest generator + schema validator end-to-end chain passed
+- temporary manifest passed schema validator
+- noTradeAssertions passed
+- safetyAssertions passed
+- repositoryState confirmed externalEvidenceCopiedIntoRepo=false
+- repositoryState confirmed mt5RunDuringTask=false
+- no evidence copied into repository
+- no repository manifest created
+- no repository fixture created
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- v0.4.0 evidence toolchain now has real external evidence read-only end-to-end validation
+- HTML parser, MT5 log parser, manifest generator, and manifest schema validator are validated together
+- this does not create an official archived manifest yet
+- this does not copy evidence into repository
+- this does not represent live trading readiness
+- this does not represent real trading permission
+- this does not represent profitable strategy completion
+- TASK-DOC-129 documentation sync first
+- possible next audit: v0.4.0 evidence toolchain closure audit
+- possible next tag after closure: stable tag for external evidence read-only manifest validation
+- possible future task only if explicitly authorized: official evidence manifest archival policy / repository manifest creation boundary
+- possible future task only if explicitly authorized: real evidence copy / sanitization policy
+- do not jump to real trading
+
+## TASK-TAG-023 results
+
+- TASK-TAG-023 completed: TASK-TAG-023 create v0.4.9-external-evidence-readonly-manifest-validation stable tag
+- stable tag created: v0.4.9-external-evidence-readonly-manifest-validation
+- tag target: 93b36c6 TASK-DOC-129 update state after TASK-109
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.8-evidence-manifest-generator still points to c1fd38e
+- v0.4.7-mt5-log-no-trade-parser still points to 14e2702
+- v0.4.6-parser-manifest-integration-readiness-audit still points to 79a4188
+- v0.4.5-strategy-tester-html-parser-encoding still points to 6e2573a
+- v0.4.4-strategy-tester-html-parser still points to a545495
+- v0.4.3-strategy-tester-html-parser-requirements-audit still points to 6643a75
+- v0.4.2-evidence-manifest-validator-coverage-audit still points to 05d476d
+- v0.4.1-evidence-manifest-schema-validator still points to 900a6fd
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- no old tag moved
+- no files modified by TASK-TAG-023
+- no commit created by TASK-TAG-023
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.4.9-external-evidence-readonly-manifest-validation marks external evidence read-only manifest validation closed loop
+- v0.4.9-external-evidence-readonly-manifest-validation includes TASK-109 read-only external evidence validation
+- v0.4.9-external-evidence-readonly-manifest-validation includes TASK-DOC-129 state sync
+- v0.4.9-external-evidence-readonly-manifest-validation confirms real external TesterBacktest.html was parsed read-only
+- v0.4.9-external-evidence-readonly-manifest-validation confirms real external 日志.txt was parsed read-only
+- v0.4.9-external-evidence-readonly-manifest-validation confirms temporary manifest generation succeeded
+- v0.4.9-external-evidence-readonly-manifest-validation confirms temporary manifest passed evidence manifest schema validator
+- v0.4.9-external-evidence-readonly-manifest-validation confirms noTradeAssertions passed
+- v0.4.9-external-evidence-readonly-manifest-validation confirms safetyAssertions passed
+- v0.4.9-external-evidence-readonly-manifest-validation confirms repositoryState recorded externalEvidenceCopiedIntoRepo=false
+- v0.4.9-external-evidence-readonly-manifest-validation confirms repositoryState recorded mt5RunDuringTask=false
+- v0.4.9-external-evidence-readonly-manifest-validation confirms no external evidence copied into repository
+- v0.4.9-external-evidence-readonly-manifest-validation confirms no repository fixture created
+- v0.4.9-external-evidence-readonly-manifest-validation confirms no repository manifest created
+- v0.4.9-external-evidence-readonly-manifest-validation confirms temporary directory was deleted
+- v0.4.9-external-evidence-readonly-manifest-validation confirms no MT5 run
+- v0.4.9-external-evidence-readonly-manifest-validation does not represent live trading readiness
+- v0.4.9-external-evidence-readonly-manifest-validation does not represent real trading availability
+- v0.4.9-external-evidence-readonly-manifest-validation does not represent profitable strategy completion
+- v0.4.9-external-evidence-readonly-manifest-validation does not allow real trading
+- v0.4.9-external-evidence-readonly-manifest-validation does not allow moving the tag
+- TASK-109 validate evidence manifest generator against external evidence read-only completed
+- external TesterBacktest.html parsed successfully into temporary html.json
+- external 日志.txt parsed successfully into temporary log.json
+- temporary files.json / repo.json / tags.json prepared
+- generate_evidence_manifest.py ran successfully
+- temporary generated_manifest.json created successfully
+- validate_evidence_manifest_schema.py validated temporary manifest successfully
+- temporary directory deleted after validation
+- manifest key field expertName=TradingSystem
+- manifest key field symbol=EURUSD
+- manifest key field period=M5
+- manifest key field dateFrom=2024.01.01
+- manifest key field dateTo=2024.01.31
+- manifest key field InpEnableTrading=false
+- manifest key field totalTrades=0
+- manifest key field totalDeals=0
+- manifest key field buyTrades=0
+- manifest key field sellTrades=0
+- manifest key field riskApproved=0
+- manifest key field executionAttempts=0
+- manifest key field safetyAssertions 5 items all true
+- manifest key field repositoryState recorded
+- manifest key field files[] count=2
+- manifest key field files[] includes TesterBacktest.html and 日志.txt references only
+- manifest key field tags.stableTag=v0.4.8-evidence-manifest-generator
+- no evidence copied into repository
+- no repository manifest created
+- no repository fixture created
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-110 results
+
+- TASK-110 completed: TASK-110 audit v0.4.0 evidence toolchain closure readiness
+- HEAD = 22e6c43 TASK-DOC-130 update state after TASK-TAG-023
+- current phase = v0.4.0：回测证据归档、报告解析与可复现性增强阶段
+- workspace clean
+- git diff -- docs tools MQ5 backtest/sets backtest/reports empty
+- v0.4.9-external-evidence-readonly-manifest-validation still points to 93b36c6
+- v0.4.8-evidence-manifest-generator still points to c1fd38e
+- v0.4.7-mt5-log-no-trade-parser still points to 14e2702
+- all v0.4.0 through v0.4.9 tags remain lightweight / commit and unmoved
+- Project state docs validation passed
+- Project state docs self-test passed
+- Evidence manifest schema self-test passed
+- Strategy Tester HTML parser self-test passed
+- MT5 log no-trade parser self-test passed
+- Evidence manifest generator self-test passed
+- Engineering toolchain checks passed, 17/17 PASS
+- MQ5 safety guardrails validation passed
+- MQ5 safety guardrails self-test passed
+- Backtest set safety validation passed
+- Backtest set safety self-test passed
+- Python tool safety validation passed, 26 tools scanned
+- Python tool safety self-test passed
+- v0.4.0 evidence toolchain four components are complete
+- Strategy Tester HTML Parser: tools/parse_strategy_tester_html_report.py
+- Strategy Tester HTML Parser closed by TASK-103 -> v0.4.4
+- MT5 Log No-Trade Parser: tools/parse_mt5_log_no_trade_summary.py
+- MT5 Log No-Trade Parser closed by TASK-107 -> v0.4.7
+- Evidence Manifest Schema Validator: tools/validate_evidence_manifest_schema.py
+- Evidence Manifest Schema Validator closed by TASK-100 -> v0.4.1
+- Evidence Manifest Generator: tools/generate_evidence_manifest.py
+- Evidence Manifest Generator closed by TASK-108 -> v0.4.8
+- TesterBacktest.html parsed successfully read-only
+- parsed TradingSystem / EURUSD / M5 / 2024.01.01-2024.01.31 / InpEnableTrading=false / totalTrades=0
+- log file parsed successfully read-only
+- 日志.txt parsed successfully read-only
+- parsed TradingSystem / riskApproved=0 / executionAttempts=0 / noTradeAssertions.passed=true
+- no external evidence copied into repository
+- no repository fixture created
+- no repository manifest created
+- TASK-109 end-to-end closed: HTML parser output + log parser output generated in temporary directory
+- TASK-109 end-to-end closed: generate_evidence_manifest.py produced temporary manifest
+- TASK-109 end-to-end closed: validate_evidence_manifest_schema.py validated temporary manifest successfully
+- TASK-109 end-to-end closed: temporary directory deleted
+- TASK-109 end-to-end closed: repository remained clean
+- current gap: no repository evidence archive created
+- current gap: no repository manifest created
+- current gap: no fixture copied into repository
+- current gap: no v0.4.0 phase closure tag yet
+- current gap: next-stage boundary not defined yet
+- v0.4.0 evidence toolchain four components are complete
+- real external TesterBacktest.html and log file read-only parsing passed
+- real external TesterBacktest.html and 日志.txt read-only parsing passed
+- parser -> manifest generator -> schema validator end-to-end chain passed
+- v0.4.0 evidence toolchain is suitable for phase closure audit / stable tag planning
+- still no live trading readiness
+- still no real trading permission
+- still no profitability claim
+- no official repository manifest has been created yet
+- no docs changes by TASK-110 itself
+- no tools changes by TASK-110
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-TAG-024 results
+
+- TASK-TAG-024 completed: TASK-TAG-024 create v0.4.10-v040-evidence-toolchain-closure-readiness stable tag
+- stable tag created: v0.4.10-v040-evidence-toolchain-closure-readiness
+- tag target: c0b3633 TASK-DOC-131 update state after TASK-110
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.9-external-evidence-readonly-manifest-validation still points to 93b36c6
+- v0.4.8-evidence-manifest-generator still points to c1fd38e
+- v0.4.7-mt5-log-no-trade-parser still points to 14e2702
+- v0.4.6-parser-manifest-integration-readiness-audit still points to 79a4188
+- v0.4.5-strategy-tester-html-parser-encoding still points to 6e2573a
+- v0.4.4-strategy-tester-html-parser still points to a545495
+- v0.4.3-strategy-tester-html-parser-requirements-audit still points to 6643a75
+- v0.4.2-evidence-manifest-validator-coverage-audit still points to 05d476d
+- v0.4.1-evidence-manifest-schema-validator still points to 900a6fd
+- v0.4.0-evidence-archive-parser-entry-audit still points to 4478e3d
+- no old tag moved
+- no files modified by TASK-TAG-024
+- no commit created by TASK-TAG-024
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.4.10-v040-evidence-toolchain-closure-readiness marks v0.4.0 evidence toolchain closure readiness audit closed loop
+- v0.4.10-v040-evidence-toolchain-closure-readiness includes TASK-110 read-only closure readiness audit
+- v0.4.10-v040-evidence-toolchain-closure-readiness includes TASK-DOC-131 state sync
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms v0.4.0 evidence toolchain four components are complete
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms Strategy Tester HTML parser is complete
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms MT5 log no-trade parser is complete
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms Evidence manifest schema validator is complete
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms Evidence manifest generator is complete
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms real external TesterBacktest.html parsed read-only
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms real external 日志.txt parsed read-only
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms TASK-109 external evidence read-only end-to-end manifest validation completed
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms parser output -> temporary manifest -> schema validator passed
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms no external evidence copied into repository
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms no repository fixture created
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms no repository manifest created
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms no MT5 run
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms no real trading
+- v0.4.10-v040-evidence-toolchain-closure-readiness confirms no profit optimization
+- v0.4.10-v040-evidence-toolchain-closure-readiness does not represent live trading readiness
+- v0.4.10-v040-evidence-toolchain-closure-readiness does not represent real trading availability
+- v0.4.10-v040-evidence-toolchain-closure-readiness does not represent profitable strategy completion
+- v0.4.10-v040-evidence-toolchain-closure-readiness does not allow real trading
+- v0.4.10-v040-evidence-toolchain-closure-readiness does not allow moving the tag
+- TASK-110 audit v0.4.0 evidence toolchain closure readiness completed
+- workspace clean
+- all validations passed
+- Engineering toolchain checks passed, 17/17 PASS
+- v0.4.0 evidence toolchain four components complete
+- external HTML parser validation passed
+- external log parser validation passed
+- TASK-109 external evidence to temporary manifest end-to-end validation closed
+- no docs/tools/MQ5/backtest/sets/backtest/reports changes by TASK-110
+- no repository manifest created
+- no fixture created
+- no external evidence copied
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+
+## TASK-111 results
+
+- TASK-111 completed: TASK-111 audit v0.4.0 phase closure and next-stage boundary candidates
+- HEAD = 5a4e779 TASK-DOC-132 update state after TASK-TAG-024
+- workspace clean
+- git diff -- docs tools MQ5 backtest/sets backtest/reports empty
+- v0.4.10-v040-evidence-toolchain-closure-readiness points to c0b3633
+- v0.4.9 through v0.4.0 tags remain lightweight / commit and unmoved
+- validate_project_state_docs.py passed
+- test_validate_project_state_docs.py passed
+- test_validate_evidence_manifest_schema.py passed
+- test_parse_strategy_tester_html_report.py passed
+- test_parse_mt5_log_no_trade_summary.py passed
+- test_generate_evidence_manifest.py passed
+- run_engineering_toolchain_checks.py passed, 17/17 PASS
+- validate_mq5_safety_guardrails.py passed
+- test_validate_mq5_safety_guardrails.py passed
+- validate_backtest_set_safety.py passed
+- test_validate_backtest_set_safety.py passed
+- validate_python_tool_safety.py passed, 26 tools
+- test_validate_python_tool_safety.py passed
+- v0.4.0 stable tag chain: v0.4.0-evidence-archive-parser-entry-audit -> 4478e3d
+- v0.4.0 stable tag chain: v0.4.1-evidence-manifest-schema-validator -> 900a6fd
+- v0.4.0 stable tag chain: v0.4.2-evidence-manifest-validator-coverage-audit -> 05d476d
+- v0.4.0 stable tag chain: v0.4.3-strategy-tester-html-parser-requirements-audit -> 6643a75
+- v0.4.0 stable tag chain: v0.4.4-strategy-tester-html-parser -> a545495
+- v0.4.0 stable tag chain: v0.4.5-strategy-tester-html-parser-encoding -> 6e2573a
+- v0.4.0 stable tag chain: v0.4.6-parser-manifest-integration-readiness-audit -> 79a4188
+- v0.4.0 stable tag chain: v0.4.7-mt5-log-no-trade-parser -> 14e2702
+- v0.4.0 stable tag chain: v0.4.8-evidence-manifest-generator -> c1fd38e
+- v0.4.0 stable tag chain: v0.4.9-external-evidence-readonly-manifest-validation -> 93b36c6
+- v0.4.0 stable tag chain: v0.4.10-v040-evidence-toolchain-closure-readiness -> c0b3633
+- v0.4.0 evidence toolchain four components are complete
+- evidence toolchain component: tools/parse_strategy_tester_html_report.py
+- evidence toolchain component: tools/parse_mt5_log_no_trade_summary.py
+- evidence toolchain component: tools/validate_evidence_manifest_schema.py
+- evidence toolchain component: tools/generate_evidence_manifest.py
+- TesterBacktest.html exists and parsed successfully
+- TesterBacktest.html parsed expertName=TradingSystem and totalTrades=0
+- 日志.txt exists and parsed successfully
+- 日志.txt parsed riskApproved=0 and executionAttempts=0
+- TASK-109 end-to-end chain closed: external TesterBacktest.html + 日志.txt
+- TASK-109 end-to-end chain closed: HTML/log parser outputs
+- TASK-109 end-to-end chain closed: temporary manifest
+- TASK-109 end-to-end chain closed: schema validator passed
+- TASK-109 end-to-end chain closed: temporary directory deleted
+- TASK-109 end-to-end chain closed: repository remained clean
+- v0.4.0 still has no external evidence copied
+- v0.4.0 still has no repository manifest created
+- v0.4.0 still has no repository fixture created
+- v0.4.0 still has no MT5 run
+- v0.4.0 still has no MQ5 changes
+- v0.4.0 still has no backtest/sets changes
+- v0.4.0 still has no real trading
+- v0.4.0 still has no profit optimization
+- v0.5.0 not defined
+- next stage not entered
+- v0.4.0 evidence toolchain is suitable for phase closure
+- suitable for TASK-DOC-133 documentation sync
+- suitable for a future v0.4.0 phase closure stable tag after documentation sync
+- next-stage boundary candidates were identified but not executed
+- this does not represent live trading readiness
+- this does not represent real trading permission
+- this does not represent profitable strategy completion
+- next-stage candidate only: v0.5.0 evidence archive policy / official manifest archival boundary
+- next-stage candidate only: MQ5 safety-enhancement-only phase
+- next-stage candidate only: backtest evidence automation phase
+- next-stage candidate only: parser / manifest hardening phase
+- next-stage candidate only: documentation and reproducibility hardening phase
+- no docs changes by TASK-111 itself
+- no tools changes by TASK-111
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- v0.5.0 not defined
+
+## TASK-TAG-025 results
+
+- TASK-TAG-025 completed: TASK-TAG-025 create v0.4.11-v040-phase-closure-audit stable tag
+- stable tag created: v0.4.11-v040-phase-closure-audit
+- tag target: 39f643f TASK-DOC-133 update state after TASK-111
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.10-v040-evidence-toolchain-closure-readiness still points to c0b3633
+- v0.4.9-external-evidence-readonly-manifest-validation still points to 93b36c6
+- v0.4.8-evidence-manifest-generator still points to c1fd38e
+- no old tag moved
+- no files modified by TASK-TAG-025
+- no commit created by TASK-TAG-025
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.4.11-v040-phase-closure-audit marks v0.4.0 phase closure audit closed loop
+- v0.4.11-v040-phase-closure-audit includes TASK-111 phase closure audit
+- v0.4.11-v040-phase-closure-audit includes TASK-DOC-133 state sync
+- v0.4.11-v040-phase-closure-audit confirms v0.4.0 evidence toolchain four components are complete
+- v0.4.11-v040-phase-closure-audit confirms TASK-109 real external evidence read-only end-to-end manifest validation closed
+- v0.4.11-v040-phase-closure-audit confirms v0.4.0 is suitable for future phase-closure planning
+- v0.4.11-v040-phase-closure-audit confirms no external evidence copied into repository
+- v0.4.11-v040-phase-closure-audit confirms no repository fixture created
+- v0.4.11-v040-phase-closure-audit confirms no repository manifest created
+- v0.4.11-v040-phase-closure-audit confirms no MT5 run
+- v0.4.11-v040-phase-closure-audit does not represent live trading readiness
+- v0.4.11-v040-phase-closure-audit does not represent real trading availability
+- v0.4.11-v040-phase-closure-audit does not represent profitable strategy completion
+- v0.4.11-v040-phase-closure-audit does not allow real trading
+- v0.4.11-v040-phase-closure-audit does not define v0.5.0
+- v0.4.11-v040-phase-closure-audit does not enter the next stage
+- TASK-111 audit v0.4.0 phase closure and next-stage boundary candidates completed
+- v0.4.0 stable tag chain confirmed
+- evidence toolchain four components complete
+- external TesterBacktest.html parsed read-only
+- external 日志.txt parsed read-only
+- TASK-109 end-to-end read-only manifest validation closed
+- next-stage candidates recorded only
+- v0.5.0 not defined
+- next stage not entered
+- no docs/tools/MQ5/backtest/sets/backtest/reports changes by TASK-111
+- no repository manifest created
+- no fixture created
+- no external evidence copied
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+## TASK-112 results
+
+- TASK-112 completed: TASK-112 define v0.5.0 evidence archive policy boundary
+- current latest commit updated to e6f6510 TASK-DOC-137 update state after TASK-113
+- current phase updated to v0.5.0：official evidence archive policy and reproducibility boundary
+- v0.4.0 phase closure completed
+- current stable tag remains v0.5.1-evidence-archive-policy-entry-audit
+- current stable tag target remains e6f6510 TASK-DOC-137 update state after TASK-113
+- v0.5.1-evidence-archive-policy-entry-audit is the current stable tag
+- v0.4.0 evidence toolchain four components are complete
+- evidence toolchain component: Strategy Tester HTML parser
+- evidence toolchain component: MT5 log no-trade parser
+- evidence toolchain component: Evidence manifest schema validator
+- evidence toolchain component: Evidence manifest generator
+- TASK-109 completed: real external TesterBacktest.html + 日志.txt -> parser outputs -> temporary manifest -> schema validator -> passed
+- v0.5.0 boundary defined as official evidence archive policy and reproducibility boundary
+- v0.5.0 allowed scope: evidence archive policy definition
+- v0.5.0 allowed scope: official repository manifest boundary definition
+- v0.5.0 allowed scope: metadata-only evidence references
+- v0.5.0 allowed scope: evidence sanitization policy
+- v0.5.0 allowed scope: reproducibility checklist
+- v0.5.0 allowed scope: official manifest naming/location convention
+- v0.5.0 allowed scope: external evidence retention policy
+- v0.5.0 allowed scope: parser/generator hardening only when explicitly authorized
+- v0.5.0 allowed scope: documentation / validation tooling updates
+- v0.5.0 forbidden scope: no real trading
+- v0.5.0 forbidden scope: no live trading readiness claim
+- v0.5.0 forbidden scope: no real trading allowed claim
+- v0.5.0 forbidden scope: no profitability claim
+- v0.5.0 forbidden scope: no profit optimization
+- v0.5.0 forbidden scope: no MT5 run unless future task explicitly authorizes
+- v0.5.0 forbidden scope: no copying external evidence unless future task explicitly authorizes
+- v0.5.0 forbidden scope: no repository manifest creation unless future task explicitly authorizes
+- v0.5.0 forbidden scope: no MQ5 modification unless future task explicitly authorizes
+- v0.5.0 forbidden scope: no backtest/sets modification unless future task explicitly authorizes
+- v0.5.0 forbidden scope: no OrderSend / Buy / Sell / CTrade / PositionOpen / PositionClose / OrderModify / OrderClose
+- v0.5.0 does not mean live trading readiness
+- v0.5.0 does not mean real trading availability
+- v0.5.0 does not mean profitable strategy completion
+- v0.5.0 does not mean permission to run MT5
+- v0.5.0 does not mean permission to copy evidence
+- v0.5.0 does not mean permission to create official manifest yet
+- current latest engineering task remains 38f1ce2 TASK-112 define v0.5.0 evidence archive policy boundary
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- TASK-112 does not implement features
+- TASK-112 does not modify MQ5
+- TASK-112 does not modify backtest/sets
+- TASK-112 does not modify backtest/reports
+- TASK-112 does not modify parser
+- TASK-112 does not modify generator
+- TASK-112 does not modify manifest validator
+- TASK-112 does not copy external evidence
+- TASK-112 does not create repository manifest
+- TASK-112 does not create fixture
+- TASK-112 does not run MT5
+- TASK-112 does not create tag
+- TASK-112 does not push
+- TASK-112 does not enter real trading
+- TASK-112 does not optimize profit
+## TASK-DOC-135 results
+
+- TASK-DOC-135 updated project state after TASK-112
+- current latest commit updated to e6f6510 TASK-DOC-137 update state after TASK-113
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.1-evidence-archive-policy-entry-audit
+- current stable tag target remains e6f6510 TASK-DOC-137 update state after TASK-113
+- current latest engineering / boundary task updated to 38f1ce2 TASK-112 define v0.5.0 evidence archive policy boundary
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- TASK-112 completed: TASK-112 define v0.5.0 evidence archive policy boundary
+- v0.4.0 phase closure completed
+- v0.5.1-evidence-archive-policy-entry-audit remains stable tag
+- v0.4.0 evidence toolchain four components complete
+- v0.4.0 evidence toolchain component: Strategy Tester HTML parser
+- v0.4.0 evidence toolchain component: MT5 log no-trade parser
+- v0.4.0 evidence toolchain component: Evidence manifest schema validator
+- v0.4.0 evidence toolchain component: Evidence manifest generator
+- TASK-109 real external evidence read-only end-to-end manifest validation passed
+- TASK-109 chain: real external TesterBacktest.html + 日志.txt -> parser outputs -> temporary manifest -> schema validator -> passed
+- no repository manifest created after TASK-112
+- no fixture created after TASK-112
+- no external evidence copied after TASK-112
+- no MT5 run after TASK-112
+- v0.5.0 allowed scope: official evidence archive policy definition
+- v0.5.0 allowed scope: official repository manifest boundary definition
+- v0.5.0 allowed scope: metadata-only evidence references
+- v0.5.0 allowed scope: evidence sanitization policy
+- v0.5.0 allowed scope: reproducibility checklist
+- v0.5.0 allowed scope: official manifest naming/location convention
+- v0.5.0 allowed scope: external evidence retention policy
+- v0.5.0 allowed scope: parser / generator hardening only when future task explicitly authorizes
+- v0.5.0 allowed scope: documentation / validation tooling updates
+- v0.5.0 forbidden scope: no real trading
+- v0.5.0 forbidden scope: no live trading readiness claim
+- v0.5.0 forbidden scope: no real trading allowed claim
+- v0.5.0 forbidden scope: no profitability claim
+- v0.5.0 forbidden scope: no profit optimization
+- v0.5.0 forbidden scope: no MT5 run unless future task explicitly authorizes
+- v0.5.0 forbidden scope: no copying external evidence unless future task explicitly authorizes
+- v0.5.0 forbidden scope: no repository manifest creation unless future task explicitly authorizes
+- v0.5.0 forbidden scope: no MQ5 modification unless future task explicitly authorizes
+- v0.5.0 forbidden scope: no backtest/sets modification unless future task explicitly authorizes
+- v0.5.0 forbidden scope: no OrderSend / Buy / Sell / CTrade / PositionOpen / PositionClose / OrderModify / OrderClose
+- v0.5.0 does not mean live trading readiness
+- v0.5.0 does not mean real trading availability
+- v0.5.0 does not mean profitable strategy completion
+- v0.5.0 does not mean permission to run MT5
+- v0.5.0 does not mean permission to copy evidence
+- v0.5.0 does not mean permission to create official manifest yet
+- validate_project_state_docs.py passed after TASK-112
+- test_validate_project_state_docs.py passed after TASK-112
+- test_validate_evidence_manifest_schema.py passed after TASK-112
+- test_parse_strategy_tester_html_report.py passed after TASK-112
+- test_parse_mt5_log_no_trade_summary.py passed after TASK-112
+- test_generate_evidence_manifest.py passed after TASK-112
+- run_engineering_toolchain_checks.py passed, 17/17 PASS after TASK-112
+- validate_mq5_safety_guardrails.py passed after TASK-112
+- test_validate_mq5_safety_guardrails.py passed after TASK-112
+- validate_backtest_set_safety.py passed after TASK-112
+- test_validate_backtest_set_safety.py passed after TASK-112
+- validate_python_tool_safety.py passed, 26 tools after TASK-112
+- test_validate_python_tool_safety.py passed after TASK-112
+- no parser / generator / manifest validator changes by TASK-112 state sync
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-112 state sync
+- no MQ5 changes by TASK-112 state sync
+- no backtest/sets changes by TASK-112 state sync
+- no backtest/reports changes by TASK-112 state sync
+- no repository manifest created by TASK-112 state sync
+- no fixture created by TASK-112 state sync
+- no external evidence copied by TASK-112 state sync
+- no MT5 run by TASK-112 state sync
+- no tag moved by TASK-112 state sync
+- no push by TASK-112 state sync
+- no real trading by TASK-112 state sync
+- no profit optimization by TASK-112 state sync
+- current next boundary remains TASK-113
+- do not directly enter TASK-113
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+## TASK-TAG-026 results
+
+- TASK-TAG-026 completed: TASK-TAG-026 create v0.5.0-evidence-archive-policy-boundary stable tag
+- stable tag created: v0.5.0-evidence-archive-policy-boundary
+- tag target: e6f6510 TASK-DOC-137 update state after TASK-113
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.4.11-v040-phase-closure-audit still points to 39f643f
+- v0.4.10-v040-evidence-toolchain-closure-readiness still points to c0b3633
+- v0.4.9-external-evidence-readonly-manifest-validation still points to 93b36c6
+- no old tag moved
+- no files modified by TASK-TAG-026
+- no commit created by TASK-TAG-026
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.5.0-evidence-archive-policy-boundary marks v0.5.0 evidence archive policy boundary closed loop
+- v0.5.0-evidence-archive-policy-boundary includes TASK-112 v0.5.0 boundary definition
+- v0.5.0-evidence-archive-policy-boundary includes TASK-DOC-135 state sync
+- v0.5.0-evidence-archive-policy-boundary confirms v0.4.0 phase closure completed before v0.5.0 boundary definition
+- v0.5.0-evidence-archive-policy-boundary confirms v0.5.0 is policy / reproducibility boundary only
+- v0.5.0-evidence-archive-policy-boundary confirms no official repository manifest has been created yet
+- v0.5.0-evidence-archive-policy-boundary confirms no external evidence copied into repository
+- v0.5.0-evidence-archive-policy-boundary confirms no repository fixture created
+- v0.5.0-evidence-archive-policy-boundary confirms no MT5 run
+- v0.5.0-evidence-archive-policy-boundary does not represent live trading readiness
+- v0.5.0-evidence-archive-policy-boundary does not represent real trading availability
+- v0.5.0-evidence-archive-policy-boundary does not represent profitable strategy completion
+- v0.5.0-evidence-archive-policy-boundary does not allow real trading
+- v0.5.0-evidence-archive-policy-boundary does not allow evidence copying unless future task explicitly authorizes
+- v0.5.0-evidence-archive-policy-boundary does not allow repository manifest creation unless future task explicitly authorizes
+- TASK-112 define v0.5.0 evidence archive policy boundary completed
+- v0.5.0 allowed scope recorded
+- v0.5.0 forbidden scope recorded
+- v0.5.0 does not mean live trading readiness
+- v0.5.0 does not mean real trading availability
+- v0.5.0 does not mean profitable strategy completion
+- no parser / generator / manifest validator changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no repository manifest created
+- no fixture created
+- no external evidence copied
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- current latest engineering / boundary task remains 38f1ce2 TASK-112 define v0.5.0 evidence archive policy boundary
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- current next boundary remains TASK-113
+- do not directly enter TASK-113
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+## TASK-113 results
+
+- TASK-113 completed: TASK-113 audit v0.5.0 official evidence archive policy entry points
+- current latest commit updated to e6f6510 TASK-DOC-137 update state after TASK-113
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.1-evidence-archive-policy-entry-audit -> 3c9d78b
+- current latest engineering / boundary task remains 38f1ce2 TASK-112 define v0.5.0 evidence archive policy boundary
+- HEAD = e6f6510 TASK-DOC-137 update state after TASK-113
+- workspace clean during TASK-113
+- git diff empty during TASK-113
+- v0.5.1-evidence-archive-policy-entry-audit still points to 3c9d78b
+- v0.4.11-v040-phase-closure-audit still points to 39f643f
+- v0.4.10-v040-evidence-toolchain-closure-readiness still points to c0b3633
+- all 13 validations passed
+- run_engineering_toolchain_checks.py passed, 17/17 PASS
+- validate_python_tool_safety.py passed, 26 tools
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: schemaVersion already defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: strategyTester already defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: inputs already defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: noTradeAssertions already defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: files[] already defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: repositoryState already defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: tags already defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: notes already defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: safetyAssertions already defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: noRealTrading / noProfitOptimization already defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: externalEvidenceCopiedIntoRepo / mt5RunDuringTask already defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md audit: JSON example manifest already included
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md gap: official manifest storage policy not defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md gap: official manifest naming convention not defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md gap: official manifest directory convention not defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md gap: manifest version upgrade policy not defined
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md gap: evidence sanitization workflow not defined
+- generator audit: generate_evidence_manifest.py can generate full manifest with safetyAssertions, repositoryState, files[], tags
+- schema validator audit: validate_evidence_manifest_schema.py can validate schemaVersion, no-trade assertions, safety assertions, repositoryState, and files[]
+- safetyAssertions already support noRealTrading
+- safetyAssertions already support noProfitOptimization
+- safetyAssertions already support noLiveTradingReadinessClaim
+- safetyAssertions already support noRealTradingAllowedClaim
+- backtest/reports/generated/ exists and is a candidate location for official manifest
+- backtest/reports/samples/ exists and is a candidate location for sample manifest
+- backtest/reports root already contains reports and has room for convention
+- backtest/reports gap: official manifest subdirectory / naming convention not defined
+- external evidence status: TesterBacktest.html exists
+- external evidence status: 日志.txt exists
+- external evidence status: neither file was copied
+- external evidence remains metadata-reference-only unless future task explicitly authorizes copying
+- current gaps: official manifest storage policy
+- current gaps: official manifest naming convention
+- current gaps: official manifest directory convention
+- current gaps: manifest version upgrade policy
+- current gaps: evidence sanitization workflow
+- current gaps: reproducibility automation for manifest generation + archival
+- recommended next candidate: TASK-DOC-137 documentation sync first
+- recommended next candidate: official manifest naming / storage policy definition
+- recommended next candidate: manifest version strategy definition
+- recommended next candidate: evidence sanitization and metadata-only reference policy
+- recommended next candidate: repository manifest dry-run boundary
+- recommended next candidate: parser / generator hardening for official archive readiness
+- TASK-113 was read-only
+- no docs changes by TASK-113 itself
+- no tools changes by TASK-113
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- current next boundary updated to TASK-114
+- current next boundary remains TASK-114
+- do not directly enter TASK-114
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+## TASK-TAG-027 results
+
+- TASK-TAG-027 completed: TASK-TAG-027 create v0.5.1-evidence-archive-policy-entry-audit stable tag
+- stable tag created: v0.5.1-evidence-archive-policy-entry-audit
+- tag target: e6f6510 TASK-DOC-137 update state after TASK-113
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.5.0-evidence-archive-policy-boundary still points to 3c9d78b
+- v0.4.11-v040-phase-closure-audit still points to 39f643f
+- v0.4.10-v040-evidence-toolchain-closure-readiness still points to c0b3633
+- no old tag moved
+- no files modified by TASK-TAG-027
+- no commit created by TASK-TAG-027
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.5.1-evidence-archive-policy-entry-audit marks v0.5.0 official evidence archive policy entry audit closed loop
+- v0.5.1-evidence-archive-policy-entry-audit includes TASK-113 read-only entry point audit
+- v0.5.1-evidence-archive-policy-entry-audit includes TASK-DOC-137 state sync
+- v0.5.1-evidence-archive-policy-entry-audit confirms docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md was audited read-only
+- v0.5.1-evidence-archive-policy-entry-audit confirms generator / schema validator were audited read-only
+- v0.5.1-evidence-archive-policy-entry-audit confirms backtest/reports structure was audited read-only
+- v0.5.1-evidence-archive-policy-entry-audit confirms current gaps remain: official manifest storage policy not defined
+- v0.5.1-evidence-archive-policy-entry-audit confirms current gaps remain: official manifest naming convention not defined
+- v0.5.1-evidence-archive-policy-entry-audit confirms current gaps remain: official manifest directory convention not defined
+- v0.5.1-evidence-archive-policy-entry-audit confirms current gaps remain: manifest version upgrade strategy not defined
+- v0.5.1-evidence-archive-policy-entry-audit confirms current gaps remain: evidence sanitization workflow not defined
+- v0.5.1-evidence-archive-policy-entry-audit confirms current gaps remain: manifest generation + archival reproducibility automation not defined
+- v0.5.1-evidence-archive-policy-entry-audit confirms no official repository manifest has been created yet
+- v0.5.1-evidence-archive-policy-entry-audit confirms no external evidence copied into repository
+- v0.5.1-evidence-archive-policy-entry-audit confirms no repository fixture created
+- v0.5.1-evidence-archive-policy-entry-audit confirms no MT5 run
+- v0.5.1-evidence-archive-policy-entry-audit does not represent live trading readiness
+- v0.5.1-evidence-archive-policy-entry-audit does not represent real trading availability
+- v0.5.1-evidence-archive-policy-entry-audit does not represent profitable strategy completion
+- v0.5.1-evidence-archive-policy-entry-audit does not allow real trading
+- v0.5.1-evidence-archive-policy-entry-audit does not allow evidence copying unless future task explicitly authorizes
+- v0.5.1-evidence-archive-policy-entry-audit does not allow repository manifest creation unless future task explicitly authorizes
+- TASK-113 audit v0.5.0 official evidence archive policy entry points completed
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md schema definition audited
+- generator / schema validator audited
+- backtest/reports structure audited
+- external TesterBacktest.html exists and was not copied
+- external 日志.txt exists and was not copied
+- no docs/tools/MQ5/backtest/sets/backtest/reports changes by TASK-113
+- no repository manifest created
+- no fixture created
+- no external evidence copied
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- current latest engineering / boundary task remains 38f1ce2 TASK-112 define v0.5.0 evidence archive policy boundary
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- current next boundary remains TASK-114
+- do not directly enter TASK-114
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+## TASK-114 results
+
+- TASK-114 completed: TASK-114 define official manifest storage naming policy
+- current latest commit updated to d432a37 TASK-114 define official manifest storage naming policy
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.1-evidence-archive-policy-entry-audit -> e6f6510
+- current latest engineering / policy task updated to d432a37 TASK-114 define official manifest storage naming policy
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- TASK-114 changed only docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md
+- project state docs were not modified by TASK-114
+- tools were not modified by TASK-114
+- MQ5 was not modified by TASK-114
+- backtest/sets was not modified by TASK-114
+- backtest/reports was not modified by TASK-114
+- official manifest storage path defined: backtest/reports/manifests/
+- backtest/reports/manifests/ was defined only and was not created
+- backtest/reports/generated/ remains for generated reports or temporary generated reports
+- backtest/reports/samples/ remains for examples or sample reports
+- backtest/reports/manifests/ is reserved for future official repository manifests when explicitly authorized
+- official manifest naming convention recorded: {taskId}_{evidenceSetId}_manifest.json
+- taskId must match TASK-\d+
+- evidenceSetId must use ASCII-safe characters
+- allowed evidenceSetId characters: a-z A-Z 0-9 hyphen underscore dot
+- manifest filename must not contain spaces
+- manifest filename must not contain Chinese path or name fragments
+- manifest filename must not be an absolute path
+- existing manifests must not be overwritten
+- duplicate manifests for the same evidenceSetId are forbidden unless a future task explicitly marks revision
+- schemaVersion represents manifest schema version
+- manifestRevision is a future optional revision concept if a future schema supports it
+- current schema identifies official manifest by schemaVersion + taskId + evidenceSetId
+- schemaVersion upgrade requires independent authorization
+- schemaVersion upgrade must update validator / self-test / generator
+- silently changing schema meaning is forbidden
+- metadata-only external evidence reference policy recorded
+- external evidence is not copied by default
+- manifest files[] records fileName / relativePath / evidenceType / expectedParser / expectedFields / notes
+- externalEvidenceRoot records external root path string only
+- externalEvidenceRoot is not a repository file
+- externalEvidenceCopiedIntoRepo must remain false unless future task explicitly authorizes copying
+- copying evidence requires separate sanitization / retention / privacy policy
+- evidence sanitization placeholder recorded
+- TASK-114 does not execute sanitization
+- TASK-114 does not copy real evidence
+- future evidence copying requires allowed file types policy
+- future evidence copying requires account / broker / terminal path / local username removal policy
+- future evidence copying requires log truncation policy
+- future evidence copying requires hash / checksum policy
+- future evidence copying requires original encoding preservation policy
+- future evidence copying requires sanitization method recording
+- evidence must not be copied before sanitization policy exists
+- official manifest creation boundary recorded
+- TASK-114 did not create manifest
+- official manifest creation requires future ChatGPT explicit authorization
+- future official manifest creation must confirm repositoryState.externalEvidenceCopiedIntoRepo=false unless copy is explicitly authorized
+- future official manifest creation must confirm repositoryState.mt5RunDuringTask=false unless MT5 run is explicitly authorized
+- future official manifest creation must confirm noRealTrading=true
+- future official manifest creation must confirm noProfitOptimization=true
+- future official manifest creation must confirm noLiveTradingReadinessClaim=true
+- future official manifest creation must confirm noRealTradingAllowedClaim=true
+- future official manifest creation must confirm noProfitabilityClaim=true
+- reproducibility checklist placeholder recorded
+- future official manifest should record HEAD
+- future official manifest should record stableTag
+- future official manifest should record taskId
+- future official manifest should record evidenceSetId
+- future official manifest should record externalEvidenceRoot
+- future official manifest should record files[]
+- future official manifest should record parser tools used
+- future official manifest should record parser outputs summary
+- future official manifest should record noTradeAssertions
+- future official manifest should record safetyAssertions
+- future official manifest should record repositoryState
+- future official manifest should record tags
+- future official manifest should record notes
+- safety statement recorded: v0.5.0 does not represent live trading readiness
+- safety statement recorded: v0.5.0 does not represent real trading availability
+- safety statement recorded: v0.5.0 does not represent profitable strategy completion
+- safety statement recorded: official manifest does not prove profitability
+- safety statement recorded: official manifest does not authorize real trading
+- safety statement recorded: evidence archive policy does not authorize MT5 run
+- safety statement recorded: no OrderSend / Buy / Sell / CTrade / PositionOpen / PositionClose / OrderModify / OrderClose
+- validate_project_state_docs.py passed after TASK-114
+- test_validate_project_state_docs.py passed after TASK-114
+- test_validate_evidence_manifest_schema.py passed after TASK-114
+- test_parse_strategy_tester_html_report.py passed after TASK-114
+- test_parse_mt5_log_no_trade_summary.py passed after TASK-114
+- test_generate_evidence_manifest.py passed after TASK-114
+- run_engineering_toolchain_checks.py passed, 17/17 PASS after TASK-114
+- validate_mq5_safety_guardrails.py passed after TASK-114
+- test_validate_mq5_safety_guardrails.py passed after TASK-114
+- validate_backtest_set_safety.py passed after TASK-114
+- test_validate_backtest_set_safety.py passed after TASK-114
+- validate_python_tool_safety.py passed, 26 tools after TASK-114
+- test_validate_python_tool_safety.py passed after TASK-114
+- no project state docs changes by TASK-114
+- no tools changes by TASK-114
+- no MQ5 changes by TASK-114
+- no backtest/sets changes by TASK-114
+- no backtest/reports changes by TASK-114
+- no manifest created by TASK-114
+- no fixture created by TASK-114
+- no directory created by TASK-114
+- no external evidence copied by TASK-114
+- no MT5 run by TASK-114
+- no tag moved by TASK-114
+- no push by TASK-114
+- no real trading by TASK-114
+- no profit optimization by TASK-114
+- current next boundary updated to TASK-115
+- current next boundary remains TASK-115
+- do not directly enter TASK-115
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+## TASK-TAG-028 results
+
+- TASK-TAG-028 completed: TASK-TAG-028 create v0.5.2-official-manifest-storage-naming-policy stable tag
+- current latest commit updated to b3b30a7 TASK-DOC-139 update state after TASK-114
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.2-official-manifest-storage-naming-policy
+- current stable tag target updated to b3b30a7 TASK-DOC-139 update state after TASK-114
+- previous stable tag retained: v0.5.1-evidence-archive-policy-entry-audit -> e6f6510
+- stable tag created: v0.5.2-official-manifest-storage-naming-policy
+- tag target: b3b30a7 TASK-DOC-139 update state after TASK-114
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.5.1-evidence-archive-policy-entry-audit still points to e6f6510
+- v0.5.0-evidence-archive-policy-boundary still points to 3c9d78b
+- v0.4.11-v040-phase-closure-audit still points to 39f643f
+- no old tag moved
+- no files modified by TASK-TAG-028
+- no commit created by TASK-TAG-028
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.5.2-official-manifest-storage-naming-policy marks official manifest storage / naming policy closed loop
+- v0.5.2-official-manifest-storage-naming-policy includes TASK-114 official manifest storage naming policy
+- v0.5.2-official-manifest-storage-naming-policy includes TASK-DOC-139 state sync
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md defines official manifest storage path: backtest/reports/manifests/
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md defines naming convention: {taskId}_{evidenceSetId}_manifest.json
+- schemaVersion / revision policy was defined
+- metadata-only external evidence reference policy was defined
+- evidence sanitization placeholder was defined
+- official manifest creation boundary was defined
+- reproducibility checklist placeholder was defined
+- no official repository manifest has been created yet
+- no manifest directory has been created yet
+- no external evidence copied into repository
+- no repository fixture created
+- no MT5 run
+- v0.5.2-official-manifest-storage-naming-policy does not represent live trading readiness
+- v0.5.2-official-manifest-storage-naming-policy does not represent real trading availability
+- v0.5.2-official-manifest-storage-naming-policy does not represent profitable strategy completion
+- v0.5.2-official-manifest-storage-naming-policy does not allow real trading
+- v0.5.2-official-manifest-storage-naming-policy does not allow evidence copying unless future task explicitly authorizes
+- v0.5.2-official-manifest-storage-naming-policy does not allow repository manifest creation unless future task explicitly authorizes
+- TASK-114 define official manifest storage naming policy completed
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md updated by TASK-114
+- official manifest storage path defined: backtest/reports/manifests/
+- official manifest naming convention defined: {taskId}_{evidenceSetId}_manifest.json
+- schemaVersion / revision policy defined
+- metadata-only external evidence reference policy defined
+- sanitization placeholder defined
+- official manifest creation boundary defined
+- reproducibility checklist placeholder defined
+- no project state docs changes by TASK-114
+- no tools changes by TASK-114
+- no MQ5 changes by TASK-114
+- no backtest/sets changes by TASK-114
+- no backtest/reports changes by TASK-114
+- no manifest created by TASK-114
+- no fixture created by TASK-114
+- no directory created by TASK-114
+- no external evidence copied by TASK-114
+- no MT5 run by TASK-114
+- no tag moved by TASK-114
+- no push by TASK-114
+- no real trading by TASK-114
+- no profit optimization by TASK-114
+- current latest engineering / policy task remains d432a37 TASK-114 define official manifest storage naming policy
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- current next boundary remains TASK-115
+- do not directly enter TASK-115
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+## TASK-115 results
+
+- TASK-115 completed: TASK-115 audit official manifest storage naming policy coverage
+- current latest commit updated to f87ac9c TASK-DOC-140 update state after TASK-TAG-028
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.2-official-manifest-storage-naming-policy -> b3b30a7
+- current latest engineering / policy task remains d432a37 TASK-114 define official manifest storage naming policy
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- TASK-115 status: HEAD = f87ac9c TASK-DOC-140 update state after TASK-TAG-028
+- TASK-115 status: current phase = v0.5.0 official evidence archive policy and reproducibility boundary
+- TASK-115 status: workspace clean
+- TASK-115 status: git diff empty
+- v0.5.2-official-manifest-storage-naming-policy still points to b3b30a7
+- v0.5.1-evidence-archive-policy-entry-audit still points to e6f6510
+- v0.5.0-evidence-archive-policy-boundary still points to 3c9d78b
+- all 13 validations passed after TASK-115
+- run_engineering_toolchain_checks.py passed, 17/17 PASS after TASK-115
+- validate_python_tool_safety.py passed, 26 tools after TASK-115
+- official manifest storage / naming policy coverage audited
+- storage path backtest/reports/manifests/ is recorded
+- backtest/reports/manifests/ is defined only and not created
+- generated/ remains for generated reports or temporary generated reports
+- samples/ remains for examples or sample reports
+- manifests/ is reserved for future official repository manifests
+- naming convention is recorded: {taskId}_{evidenceSetId}_manifest.json
+- taskId must match TASK-\d+
+- evidenceSetId must use ASCII-safe characters
+- allowed characters are a-z A-Z 0-9 hyphen underscore dot
+- spaces, Chinese path/name fragments, and absolute paths are disallowed
+- overwriting existing manifest is disallowed
+- duplicate evidenceSetId is disallowed unless a future task explicitly marks revision
+- schemaVersion / revision policy is recorded
+- metadata-only external evidence reference policy is recorded
+- evidence sanitization placeholder is recorded
+- official manifest creation boundary is recorded
+- reproducibility checklist placeholder is recorded
+- no real trading / no profitability / no live readiness statements are recorded
+- generate_evidence_manifest.py can generate schemaVersion, taskId, evidenceSetId, externalEvidenceRoot, files[], repositoryState, tags, notes, and safetyAssertions
+- generate_evidence_manifest.py can set noRealTrading, noProfitOptimization, externalEvidenceCopiedIntoRepo, and mt5RunDuringTask
+- validate_evidence_manifest_schema.py can validate all required fields
+- current tools are enough to support a future official manifest
+- backtest/reports/manifests/ does not exist
+- backtest/reports/manifests/ absence is expected and policy-compliant
+- backtest/reports/generated/ exists
+- backtest/reports/samples/ exists
+- no official manifest was created
+- no fixture was created
+- no directory was created
+- current gap: manifestRevision field is documented as a placeholder but generator does not implement it
+- current gap: OrderSend / CTrade / PositionOpen / PositionClose are described in policy safety statements but generator does not output dedicated fields for them
+- current gap: backtest/reports/manifests/ is not created
+- current gap: no official manifest exists yet
+- current gap: no reproducibility automation pipeline exists yet
+- recommended next candidate: TASK-DOC-141 documentation sync first
+- recommended next candidate: official manifest creation task, if explicitly authorized
+- recommended next candidate: manifestRevision field implementation
+- recommended next candidate: official manifest filename/path validator
+- recommended next candidate: repository manifest dry-run boundary
+- recommended next candidate: reproducibility automation pipeline
+- recommended next candidate: evidence sanitization policy expansion
+- no files modified by TASK-115
+- no commit created by TASK-115
+- no tag moved by TASK-115
+- no push by TASK-115
+- no MT5 run by TASK-115
+- no manifest created by TASK-115
+- no fixture created by TASK-115
+- no directory created by TASK-115
+- no external evidence copied by TASK-115
+- no real trading by TASK-115
+- no profit optimization by TASK-115
+- current next boundary updated to TASK-116
+- current next boundary remains TASK-116
+- do not directly enter TASK-116
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+## TASK-TAG-029 results
+
+- TASK-TAG-029 completed: TASK-TAG-029 create v0.5.3-official-manifest-storage-naming-coverage-audit stable tag
+- current latest commit updated to e6b579f TASK-DOC-141 update state after TASK-115
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.3-official-manifest-storage-naming-coverage-audit
+- current stable tag target updated to e6b579f TASK-DOC-141 update state after TASK-115
+- previous stable tag retained: v0.5.2-official-manifest-storage-naming-policy -> b3b30a7
+- stable tag created: v0.5.3-official-manifest-storage-naming-coverage-audit
+- tag target: e6b579f TASK-DOC-141 update state after TASK-115
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.5.2-official-manifest-storage-naming-policy still points to b3b30a7
+- v0.5.1-evidence-archive-policy-entry-audit still points to e6f6510
+- v0.5.0-evidence-archive-policy-boundary still points to 3c9d78b
+- no old tag moved
+- no files modified by TASK-TAG-029
+- no commit created by TASK-TAG-029
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.5.3-official-manifest-storage-naming-coverage-audit marks official manifest storage / naming policy coverage audit closed loop
+- v0.5.3-official-manifest-storage-naming-coverage-audit includes TASK-115 official manifest storage naming policy coverage audit
+- v0.5.3-official-manifest-storage-naming-coverage-audit includes TASK-DOC-141 state sync
+- official manifest storage / naming policy coverage was audited
+- generator / schema validator were audited as sufficient for future official manifest
+- backtest/reports/manifests/ still does not exist
+- no official repository manifest has been created yet
+- no repository fixture created
+- no manifest directory created
+- no external evidence copied into repository
+- no MT5 run
+- v0.5.3-official-manifest-storage-naming-coverage-audit does not represent live trading readiness
+- v0.5.3-official-manifest-storage-naming-coverage-audit does not represent real trading availability
+- v0.5.3-official-manifest-storage-naming-coverage-audit does not represent profitable strategy completion
+- v0.5.3-official-manifest-storage-naming-coverage-audit does not allow real trading
+- v0.5.3-official-manifest-storage-naming-coverage-audit does not allow evidence copying unless future task explicitly authorizes
+- v0.5.3-official-manifest-storage-naming-coverage-audit does not allow repository manifest creation unless future task explicitly authorizes
+- TASK-115 audit official manifest storage naming policy coverage completed
+- official manifest storage path coverage audited
+- official manifest naming convention coverage audited
+- generator / schema validator support audited
+- backtest/reports/manifests/ confirmed not created
+- TASK-115 current gaps recorded: manifestRevision field is documented as placeholder but generator does not implement it
+- TASK-115 current gaps recorded: OrderSend / CTrade / PositionOpen / PositionClose are described in policy safety statements but generator does not output dedicated fields for them
+- TASK-115 current gaps recorded: backtest/reports/manifests/ is not created
+- TASK-115 current gaps recorded: no official manifest exists yet
+- TASK-115 current gaps recorded: no reproducibility automation pipeline exists yet
+- no files modified by TASK-115
+- no commit created by TASK-115
+- no tag moved by TASK-115
+- no push by TASK-115
+- no MT5 run by TASK-115
+- no manifest created by TASK-115
+- no fixture created by TASK-115
+- no directory created by TASK-115
+- no external evidence copied by TASK-115
+- no real trading by TASK-115
+- no profit optimization by TASK-115
+- current latest engineering / policy task remains d432a37 TASK-114 define official manifest storage naming policy
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- current next boundary remains TASK-116
+- do not directly enter TASK-116
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+## TASK-116 results
+
+- TASK-116 completed: TASK-116 audit official manifest naming convention consistency
+- current latest commit updated to 229997d TASK-DOC-142 update state after TASK-TAG-029
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.3-official-manifest-storage-naming-coverage-audit -> e6b579f
+- current latest engineering / policy task remains d432a37 TASK-114 define official manifest storage naming policy
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- TASK-116 status: HEAD = 229997d TASK-DOC-142 update state after TASK-TAG-029
+- TASK-116 status: current phase = v0.5.0 official evidence archive policy and reproducibility boundary
+- TASK-116 status: workspace clean
+- v0.5.3-official-manifest-storage-naming-coverage-audit still points to e6b579f
+- v0.5.2-official-manifest-storage-naming-policy still points to b3b30a7
+- v0.5.1-evidence-archive-policy-entry-audit still points to e6f6510
+- v0.5.0-evidence-archive-policy-boundary still points to 3c9d78b
+- Project state docs validation passed after TASK-116
+- Project state docs self-test passed after TASK-116
+- Evidence manifest schema self-test passed after TASK-116
+- Strategy Tester HTML parser self-test passed after TASK-116
+- MT5 log parser self-test passed after TASK-116
+- Manifest generator self-test passed after TASK-116
+- MQ5 safety guardrails passed after TASK-116
+- MQ5 safety guardrails self-test passed after TASK-116
+- Backtest set safety passed after TASK-116
+- Backtest set safety self-test passed after TASK-116
+- Python tool safety passed, 26 tools after TASK-116
+- Python tool safety self-test passed after TASK-116
+- Engineering toolchain checks passed, 17/17 PASS after TASK-116
+- final official manifest naming convention is {taskId}_{evidenceSetId}_manifest.json
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md records {taskId}_{evidenceSetId}_manifest.json
+- docs/CURRENT_TASK.md records {taskId}_{evidenceSetId}_manifest.json
+- docs/HANDOFF_PROMPT.md records {taskId}_{evidenceSetId}_manifest.json
+- docs/PROJECT_STATE.md records {taskId}_{evidenceSetId}_manifest.json
+- no conflicting format found: {evidenceSetId}_{taskId}_manifest.json
+- docs are fully consistent on the official manifest naming convention
+- generate_evidence_manifest.py does not hard-code filename rule
+- validate_evidence_manifest_schema.py does not hard-code filename rule
+- validate_project_state_docs.py does not implement filename rule
+- test_validate_project_state_docs.py does not implement filename rule
+- test_generate_evidence_manifest.py does not implement filename rule
+- test_validate_evidence_manifest_schema.py does not implement filename rule
+- no tool currently enforces {taskId}_{evidenceSetId}_manifest.json
+- backtest/reports/manifests/ does not exist
+- no official manifest was created
+- no fixture was created
+- no directory was created
+- no external evidence was copied
+- current gap: no official manifest filename/path validator exists
+- current gap: naming convention is documented only
+- current gap: no tool enforces {taskId}_{evidenceSetId}_manifest.json yet
+- current gap: no official manifest creation task has been authorized
+- current gap: manifestRevision remains a placeholder and generator does not implement it
+- current gap: backtest/reports/manifests/ remains uncreated
+- current gap: no reproducibility automation pipeline exists
+- recommended next candidate: TASK-DOC-143 documentation sync first
+- recommended next candidate: official manifest filename/path validator, if explicitly authorized
+- recommended next candidate: repository manifest dry-run boundary
+- recommended next candidate: official manifest creation preflight checklist
+- recommended next candidate: manifestRevision implementation, if explicitly authorized
+- no files modified by TASK-116
+- no commit created by TASK-116
+- no tag moved by TASK-116
+- no push by TASK-116
+- no MT5 run by TASK-116
+- no manifest created by TASK-116
+- no fixture created by TASK-116
+- no directory created by TASK-116
+- no external evidence copied by TASK-116
+- no real trading by TASK-116
+- no profit optimization by TASK-116
+- current next boundary updated to TASK-117
+- current next boundary remains TASK-117
+- do not directly enter TASK-117
+## TASK-117 results
+
+- TASK-117 completed: TASK-117 update local agent execution reporting protocol
+- current latest commit updated to fc7361c TASK-117 update local agent execution reporting protocol
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.4-official-manifest-naming-consistency-audit -> fd4cf62
+- current latest engineering / protocol task updated to fc7361c TASK-117 update local agent execution reporting protocol
+- AGENTS.md updated: local agent execution and reporting protocol defined
+- no files modified by TASK-117 outside AGENTS.md
+- no commit created by TASK-117 outside AGENTS.md
+- no tag moved by TASK-117
+- no push by TASK-117
+- no MT5 run by TASK-117
+- no manifest created by TASK-117
+- no fixture created by TASK-117
+- no directory created by TASK-117
+- no external evidence copied by TASK-117
+- no real trading by TASK-117
+- no profit optimization by TASK-117
+- current next boundary updated to TASK-118
+- current next boundary remains TASK-118
+- do not directly enter TASK-118
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+## TASK-118 results
+
+- TASK-118 completed: TASK-118 add deterministic local task acceptance reporter
+- current latest commit updated to 9f27267 TASK-118 add deterministic local task acceptance reporter
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.4-official-manifest-naming-consistency-audit -> fd4cf62
+- new tool added: tools/task_acceptance_report.ps1
+- task_acceptance_report.ps1 tested PASS, 8/8 checks passed at creation
+- no files modified by TASK-118 outside tools/task_acceptance_report.ps1
+- no tag moved by TASK-118
+- no push by TASK-118
+- no MT5 run by TASK-118
+- no manifest created by TASK-118
+- no fixture created by TASK-118
+- no directory created by TASK-118
+- no external evidence copied by TASK-118
+- no real trading by TASK-118
+- no profit optimization by TASK-118
+- current next boundary updated to TASK-119
+- current next boundary remains TASK-119
+- do not directly enter TASK-119
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-031 results
+
+- TASK-TAG-031 completed: TASK-TAG-031 create v0.5.5-deterministic-task-acceptance-reporter stable tag
+- current latest commit remains e62521b TASK-DOC-146 update state after TASK-118
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.5-deterministic-task-acceptance-reporter
+- current stable tag target updated to e62521b TASK-DOC-146 update state after TASK-118
+- previous stable tag retained: v0.5.4-official-manifest-naming-consistency-audit -> fd4cf62
+- stable tag created: v0.5.5-deterministic-task-acceptance-reporter
+- tag target: e62521b TASK-DOC-146 update state after TASK-118
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.5.4-official-manifest-naming-consistency-audit still points to fd4cf62
+- no old tag moved
+- no files modified by TASK-TAG-031
+- no commit created by TASK-TAG-031
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- current next boundary remains TASK-119
+- do not directly enter TASK-119
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-119 results
+
+- TASK-119 completed: TASK-119 audit deterministic task acceptance reporter coverage
+- current latest commit updated to de16dcd TASK-DOC-147 update state after TASK-TAG-031
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.5-deterministic-task-acceptance-reporter -> e62521b
+- tools/task_acceptance_report.ps1 coverage audited: PASS, 8/8 checks
+- no files modified by TASK-119
+- no tag moved by TASK-119
+- no push by TASK-119
+- no MT5 run by TASK-119
+- no manifest created by TASK-119
+- no fixture created by TASK-119
+- no directory created by TASK-119
+- no external evidence copied by TASK-119
+- no real trading by TASK-119
+- no profit optimization by TASK-119
+- current next boundary updated to TASK-120
+- current next boundary remains TASK-120
+- do not directly enter TASK-120
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-032 results
+
+- TASK-TAG-032 completed: TASK-TAG-032 create v0.5.6-deterministic-task-acceptance-reporter-coverage-audit stable tag
+- current latest commit remains 1ffb452 TASK-DOC-148 update state after TASK-119
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.6-deterministic-task-acceptance-reporter-coverage-audit
+- current stable tag target updated to 1ffb452 TASK-DOC-148 update state after TASK-119
+- previous stable tag retained: v0.5.5-deterministic-task-acceptance-reporter -> e62521b
+- stable tag created: v0.5.6-deterministic-task-acceptance-reporter-coverage-audit
+- tag target: 1ffb452 TASK-DOC-148 update state after TASK-119
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.5.5-deterministic-task-acceptance-reporter still points to e62521b
+- no old tag moved
+- no files modified by TASK-TAG-032
+- no commit created by TASK-TAG-032
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- current next boundary remains TASK-120
+- do not directly enter TASK-120
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-120 results
+
+- TASK-120 completed: TASK-120 add official manifest filename path validator
+- current latest commit updated to 10f248f TASK-120 add official manifest filename path validator
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.6-deterministic-task-acceptance-reporter-coverage-audit -> 1ffb452
+- new tool added: tools/validate_official_manifest_path_policy.py
+- new tool added: tools/test_validate_official_manifest_path_policy.py
+- integrated into run_engineering_toolchain_checks.py
+- engineering toolchain 19/19 PASS after TASK-120
+- no files modified by TASK-120 outside tools/
+- no tag moved by TASK-120
+- no push by TASK-120
+- no MT5 run by TASK-120
+- no manifest created by TASK-120
+- no fixture created by TASK-120
+- no directory created by TASK-120
+- no external evidence copied by TASK-120
+- no real trading by TASK-120
+- no profit optimization by TASK-120
+- current next boundary updated to TASK-121
+- current next boundary remains TASK-121
+- do not directly enter TASK-121
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+## TASK-TAG-030 results
+
+- TASK-TAG-030 completed: TASK-TAG-030 create v0.5.4-official-manifest-naming-consistency-audit stable tag
+- current latest commit updated to fd4cf62 TASK-DOC-143 update state after TASK-116
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.4-official-manifest-naming-consistency-audit
+- current stable tag target updated to fd4cf62 TASK-DOC-143 update state after TASK-116
+- previous stable tag retained: v0.5.3-official-manifest-storage-naming-coverage-audit -> e6b579f
+- stable tag created: v0.5.4-official-manifest-naming-consistency-audit
+- tag target: fd4cf62 TASK-DOC-143 update state after TASK-116
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.5.3-official-manifest-storage-naming-coverage-audit still points to e6b579f
+- v0.5.2-official-manifest-storage-naming-policy still points to b3b30a7
+- v0.5.1-evidence-archive-policy-entry-audit still points to e6f6510
+- v0.5.0-evidence-archive-policy-boundary still points to 3c9d78b
+- no old tag moved
+- no files modified by TASK-TAG-030
+- no commit created by TASK-TAG-030
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- v0.5.4-official-manifest-naming-consistency-audit marks official manifest naming convention consistency audit closed loop
+- v0.5.4-official-manifest-naming-consistency-audit includes TASK-116 official manifest naming convention consistency audit
+- v0.5.4-official-manifest-naming-consistency-audit includes TASK-DOC-143 state sync
+- final official manifest naming convention confirmed: {taskId}_{evidenceSetId}_manifest.json
+- no conflicting format found: {evidenceSetId}_{taskId}_manifest.json
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md and project state docs are consistent
+- tools do not yet hard-code the naming rule
+- no official filename/path validator exists yet
+- backtest/reports/manifests/ still does not exist
+- no official repository manifest has been created yet
+- no repository fixture created
+- no manifest directory created
+- no external evidence copied into repository
+- no MT5 run
+- v0.5.4-official-manifest-naming-consistency-audit does not represent live trading readiness
+- v0.5.4-official-manifest-naming-consistency-audit does not represent real trading availability
+- v0.5.4-official-manifest-naming-consistency-audit does not represent profitable strategy completion
+- v0.5.4-official-manifest-naming-consistency-audit does not allow real trading
+- v0.5.4-official-manifest-naming-consistency-audit does not allow evidence copying unless future task explicitly authorizes
+- v0.5.4-official-manifest-naming-consistency-audit does not allow repository manifest creation unless future task explicitly authorizes
+- TASK-116 audit official manifest naming convention consistency completed
+- final naming convention confirmed: {taskId}_{evidenceSetId}_manifest.json
+- conflicting format not found: {evidenceSetId}_{taskId}_manifest.json
+- docs consistency confirmed
+- tools do not hard-code naming rule
+- no official manifest filename/path validator exists yet
+- backtest/reports/manifests/ not created
+- no official manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- no tag moved
+- no push
+- no real trading
+- no profit optimization
+- current latest engineering / policy task remains d432a37 TASK-114 define official manifest storage naming policy
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- current next boundary remains TASK-117
+- do not directly enter TASK-117
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-033 results
+
+- TASK-TAG-033 completed: TASK-TAG-033 create v0.5.7-official-manifest-path-policy-validator stable tag
+- current latest commit remains 69a8cba TASK-DOC-150 update state after TASK-120
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.7-official-manifest-path-policy-validator
+- current stable tag target updated to 69a8cba TASK-DOC-150 update state after TASK-120
+- previous stable tag retained: v0.5.6-deterministic-task-acceptance-reporter-coverage-audit -> 1ffb452
+- stable tag created: v0.5.7-official-manifest-path-policy-validator
+- tag target: 69a8cba TASK-DOC-150 update state after TASK-120
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.5.6-deterministic-task-acceptance-reporter-coverage-audit still points to 1ffb452
+- v0.5.5-deterministic-task-acceptance-reporter still points to e62521b
+- v0.5.4-official-manifest-naming-consistency-audit still points to fd4cf62
+- v0.5.3-official-manifest-storage-naming-coverage-audit still points to e6b579f
+- v0.5.2-official-manifest-storage-naming-policy still points to b3b30a7
+- v0.5.1-evidence-archive-policy-entry-audit still points to e6f6510
+- v0.5.0-evidence-archive-policy-boundary still points to 3c9d78b
+- no old tag moved
+- no files modified by TASK-TAG-033
+- no commit created by TASK-TAG-033
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- TASK-120 add official manifest filename path validator completed
+- TASK-DOC-150 update state after TASK-120 completed
+- TASK-TAG-033 stable tag creation completed
+- TASK-120 / TASK-DOC-150 / TASK-TAG-033 closed loop completed
+- official manifest filename/path policy validator completed
+- official manifest filename/path policy validator self-test and toolchain integration remain recorded in TASK-120 / TASK-DOC-150 state
+- v0.5.7-official-manifest-path-policy-validator marks official manifest filename/path policy validator closed loop
+- v0.5.7-official-manifest-path-policy-validator does not represent live trading readiness
+- v0.5.7-official-manifest-path-policy-validator does not represent real trading availability
+- v0.5.7-official-manifest-path-policy-validator does not represent profitable strategy completion
+- v0.5.7-official-manifest-path-policy-validator does not allow real trading
+- v0.5.7-official-manifest-path-policy-validator does not allow evidence copying unless future task explicitly authorizes
+- v0.5.7-official-manifest-path-policy-validator does not allow repository manifest creation unless future task explicitly authorizes
+- current latest engineering / validator task remains 10f248f TASK-120 add official manifest filename path validator
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- current next boundary remains TASK-121
+- do not directly enter TASK-121
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-034 results
+
+- TASK-TAG-034 completed: TASK-TAG-034 create v0.5.8-official-manifest-path-policy-validator-doc-sync stable tag
+- current latest commit remains 93a6e2e TASK-DOC-151 update state after TASK-TAG-033
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.8-official-manifest-path-policy-validator-doc-sync
+- current stable tag target updated to 93a6e2e TASK-DOC-151 update state after TASK-TAG-033
+- previous stable tag retained: v0.5.7-official-manifest-path-policy-validator -> 69a8cba
+- stable tag created: v0.5.8-official-manifest-path-policy-validator-doc-sync
+- tag target: 93a6e2e TASK-DOC-151 update state after TASK-TAG-033
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.5.7-official-manifest-path-policy-validator still points to 69a8cba
+- v0.5.6-deterministic-task-acceptance-reporter-coverage-audit still points to 1ffb452
+- v0.5.5-deterministic-task-acceptance-reporter still points to e62521b
+- v0.5.4-official-manifest-naming-consistency-audit still points to fd4cf62
+- v0.5.3-official-manifest-storage-naming-coverage-audit still points to e6b579f
+- v0.5.2-official-manifest-storage-naming-policy still points to b3b30a7
+- v0.5.1-evidence-archive-policy-entry-audit still points to e6f6510
+- v0.5.0-evidence-archive-policy-boundary still points to 3c9d78b
+- no old tag moved
+- no files modified by TASK-TAG-034
+- no commit created by TASK-TAG-034
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- TASK-120 add official manifest filename path validator completed
+- TASK-DOC-150 update state after TASK-120 completed
+- TASK-TAG-033 stable tag creation completed
+- TASK-DOC-151 update state after TASK-TAG-033 completed
+- TASK-TAG-034 stable tag creation completed
+- TASK-120 / TASK-DOC-150 / TASK-TAG-033 / TASK-DOC-151 / TASK-TAG-034 closed loop completed
+- official manifest filename/path policy validator completed and docs sync completed
+- v0.5.8-official-manifest-path-policy-validator-doc-sync marks official manifest filename/path policy validator docs sync closed loop
+- v0.5.8-official-manifest-path-policy-validator-doc-sync does not represent live trading readiness
+- v0.5.8-official-manifest-path-policy-validator-doc-sync does not represent real trading availability
+- v0.5.8-official-manifest-path-policy-validator-doc-sync does not represent profitable strategy completion
+- v0.5.8-official-manifest-path-policy-validator-doc-sync does not allow real trading
+- v0.5.8-official-manifest-path-policy-validator-doc-sync does not allow evidence copying unless future task explicitly authorizes
+- v0.5.8-official-manifest-path-policy-validator-doc-sync does not allow repository manifest creation unless future task explicitly authorizes
+- current latest engineering / validator task remains 10f248f TASK-120 add official manifest filename path validator
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- current next boundary remains TASK-121
+- do not directly enter TASK-121
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-121 results
+
+- TASK-121 completed: TASK-121 audit official manifest path policy validator coverage
+- current latest commit updated to 635163c TASK-DOC-152 update state after TASK-TAG-034
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.8-official-manifest-path-policy-validator-doc-sync -> 93a6e2e
+- current latest engineering / validator task remains 10f248f TASK-120 add official manifest filename path validator
+- official manifest path policy validator coverage audit passed
+- validator covers backtest/reports/manifests/ directory rule
+- validator covers {taskId}_{evidenceSetId}_manifest.json filename format
+- validator covers TASK-\d+ taskId format
+- validator covers ASCII-safe evidenceSetId
+- validator rejects spaces in manifest filename
+- validator rejects Chinese characters in manifest filename
+- validator rejects absolute paths
+- validator rejects path traversal
+- validator rejects non-manifests directory
+- validator rejects already existing target file
+- no real manifest created by TASK-121
+- backtest/reports/manifests/ directory was not created by TASK-121
+- validator self-test passed, 9/9 PASS
+- engineering toolchain passed, 18/18 PASS
+- task_acceptance_report.ps1 PASS after TASK-121
+- current gap: none
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-121
+- no official manifest path policy validator code changes by TASK-121
+- no tools changes by TASK-121
+- no MQ5 changes by TASK-121
+- no backtest/sets changes by TASK-121
+- no backtest/reports changes by TASK-121
+- no manifest created by TASK-121
+- no fixture created by TASK-121
+- no directory created by TASK-121
+- no external evidence copied by TASK-121
+- no MT5 run by TASK-121
+- no push by TASK-121
+- no real trading by TASK-121
+- no profit optimization by TASK-121
+- current next boundary updated to TASK-122
+- current next boundary remains TASK-122
+- do not directly enter TASK-122
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-035 results
+
+- TASK-TAG-035 completed: TASK-TAG-035 create v0.5.9-official-manifest-path-policy-validator-coverage-audit stable tag
+- current latest commit remains d4963e8 TASK-DOC-153 update state after TASK-121
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.9-official-manifest-path-policy-validator-coverage-audit
+- current stable tag target updated to d4963e8 TASK-DOC-153 update state after TASK-121
+- previous stable tag retained: v0.5.8-official-manifest-path-policy-validator-doc-sync -> 93a6e2e
+- stable tag created: v0.5.9-official-manifest-path-policy-validator-coverage-audit
+- tag target: d4963e8 TASK-DOC-153 update state after TASK-121
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.5.8-official-manifest-path-policy-validator-doc-sync still points to 93a6e2e
+- v0.5.7-official-manifest-path-policy-validator still points to 69a8cba
+- v0.5.6-deterministic-task-acceptance-reporter-coverage-audit still points to 1ffb452
+- v0.5.5-deterministic-task-acceptance-reporter still points to e62521b
+- v0.5.4-official-manifest-naming-consistency-audit still points to fd4cf62
+- v0.5.3-official-manifest-storage-naming-coverage-audit still points to e6b579f
+- v0.5.2-official-manifest-storage-naming-policy still points to b3b30a7
+- v0.5.1-evidence-archive-policy-entry-audit still points to e6f6510
+- v0.5.0-evidence-archive-policy-boundary still points to 3c9d78b
+- no old tag moved
+- no files modified by TASK-TAG-035
+- no commit created by TASK-TAG-035
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- TASK-121 audit official manifest path policy validator coverage completed
+- TASK-DOC-153 update state after TASK-121 completed
+- TASK-TAG-035 stable tag creation completed
+- TASK-121 / TASK-DOC-153 / TASK-TAG-035 closed loop completed
+- official manifest path policy validator coverage audit completed
+- v0.5.9-official-manifest-path-policy-validator-coverage-audit marks official manifest path policy validator coverage audit closed loop
+- v0.5.9-official-manifest-path-policy-validator-coverage-audit does not represent live trading readiness
+- v0.5.9-official-manifest-path-policy-validator-coverage-audit does not represent real trading availability
+- v0.5.9-official-manifest-path-policy-validator-coverage-audit does not represent profitable strategy completion
+- v0.5.9-official-manifest-path-policy-validator-coverage-audit does not allow real trading
+- v0.5.9-official-manifest-path-policy-validator-coverage-audit does not allow evidence copying unless future task explicitly authorizes
+- v0.5.9-official-manifest-path-policy-validator-coverage-audit does not allow repository manifest creation unless future task explicitly authorizes
+- current latest engineering / validator task remains 10f248f TASK-120 add official manifest filename path validator
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- current next boundary remains TASK-122
+- do not directly enter TASK-122
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-122 results
+
+- TASK-122 completed: TASK-122 audit official manifest creation preflight boundary
+- current latest commit updated to ffd731d TASK-DOC-154 update state after TASK-TAG-035
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.9-official-manifest-path-policy-validator-coverage-audit -> d4963e8
+- official manifest creation preflight boundary audit passed
+- official manifest storage policy is defined: backtest/reports/manifests/
+- official manifest naming policy is defined: {taskId}_{evidenceSetId}_manifest.json
+- official manifest filename/path validator completed
+- evidence manifest generator completed
+- evidence manifest schema validator completed
+- Strategy Tester HTML parser completed
+- MT5 log no-trade parser completed
+- task_acceptance_report.ps1 available
+- backtest/reports/manifests/ still not created
+- no official manifest exists yet
+- external evidence has not been copied
+- MT5 has not been run
+- current gap: none
+- suitable for future first official manifest dry-run task definition
+- no repository manifest created by TASK-122
+- no fixture created by TASK-122
+- no directory created by TASK-122
+- no external evidence copied by TASK-122
+- no MT5 run by TASK-122
+- no MQ5 changes by TASK-122
+- no backtest/sets changes by TASK-122
+- no backtest/reports changes by TASK-122
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-122
+- no parser / generator / manifest validator changes by TASK-122
+- no tag moved by TASK-122
+- no push by TASK-122
+- no real trading by TASK-122
+- no profit optimization by TASK-122
+- current latest engineering / validator task remains 10f248f TASK-120 add official manifest filename path validator
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- current next boundary updated to TASK-123
+- current next boundary remains TASK-123
+- do not directly enter TASK-123
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-036 results
+
+- TASK-TAG-036 completed: TASK-TAG-036 create v0.5.10-official-manifest-creation-preflight-audit stable tag
+- current latest commit remains 890dfa5 TASK-DOC-155 update state after TASK-122
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.10-official-manifest-creation-preflight-audit
+- current stable tag target updated to 890dfa5 TASK-DOC-155 update state after TASK-122
+- previous stable tag retained: v0.5.9-official-manifest-path-policy-validator-coverage-audit -> d4963e8
+- stable tag created: v0.5.10-official-manifest-creation-preflight-audit
+- tag target: 890dfa5 TASK-DOC-155 update state after TASK-122
+- tag type: lightweight tag / commit
+- tag style consistent with previous stable tags
+- v0.5.9-official-manifest-path-policy-validator-coverage-audit still points to d4963e8
+- v0.5.8-official-manifest-path-policy-validator-doc-sync still points to 93a6e2e
+- v0.5.7-official-manifest-path-policy-validator still points to 69a8cba
+- v0.5.6-deterministic-task-acceptance-reporter-coverage-audit still points to 1ffb452
+- v0.5.5-deterministic-task-acceptance-reporter still points to e62521b
+- v0.5.4-official-manifest-naming-consistency-audit still points to fd4cf62
+- v0.5.3-official-manifest-storage-naming-coverage-audit still points to e6b579f
+- v0.5.2-official-manifest-storage-naming-policy still points to b3b30a7
+- v0.5.1-evidence-archive-policy-entry-audit still points to e6f6510
+- v0.5.0-evidence-archive-policy-boundary still points to 3c9d78b
+- no old tag moved
+- no files modified by TASK-TAG-036
+- no commit created by TASK-TAG-036
+- no push
+- no MT5 run
+- no manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no real trading
+- no profit optimization
+- TASK-122 audit official manifest creation preflight boundary completed
+- TASK-DOC-155 update state after TASK-122 completed
+- TASK-TAG-036 stable tag creation completed
+- TASK-122 / TASK-DOC-155 / TASK-TAG-036 closed loop completed
+- official manifest creation preflight audit completed and fixed as a stable tag
+- v0.5.10-official-manifest-creation-preflight-audit marks official manifest creation preflight audit closed loop
+- v0.5.10-official-manifest-creation-preflight-audit does not represent live trading readiness
+- v0.5.10-official-manifest-creation-preflight-audit does not represent real trading availability
+- v0.5.10-official-manifest-creation-preflight-audit does not represent profitable strategy completion
+- v0.5.10-official-manifest-creation-preflight-audit does not allow real trading
+- v0.5.10-official-manifest-creation-preflight-audit does not allow evidence copying unless future task explicitly authorizes
+- v0.5.10-official-manifest-creation-preflight-audit does not allow repository manifest creation unless future task explicitly authorizes
+- current latest engineering / validator task remains 10f248f TASK-120 add official manifest filename path validator
+- current latest functional task remains 951bfe2 TASK-072 verify v0.2.0 Python tool safety coverage
+- current next boundary remains TASK-123
+- do not directly enter TASK-123
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-123 results
+
+- TASK-123 completed: TASK-123 define first official manifest dry-run boundary
+- commit recorded: b93ecb5 TASK-123 define first official manifest dry-run boundary
+- current latest commit updated to b93ecb5 TASK-123 define first official manifest dry-run boundary
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- TASK-122 / TASK-DOC-155 / TASK-TAG-036 / TASK-DOC-156 / TASK-123 closed loop completed
+- first official manifest dry-run boundary defined
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- dry-run may generate manifest only in a temporary directory
+- dry-run must use existing external evidence metadata reference only
+- dry-run must use generate_evidence_manifest.py
+- dry-run must use validate_evidence_manifest_schema.py
+- dry-run must use validate_official_manifest_path_policy.py
+- dry-run must use task_acceptance_report.ps1
+- dry-run artifacts must be cleaned before task end
+- dry-run does not represent official archive creation
+- dry-run does not represent live trading readiness
+- dry-run does not represent real trading availability
+- dry-run does not represent profitability
+- dry-run does not authorize real trading
+- dry-run does not authorize copying evidence
+- no official manifest created by TASK-123
+- no backtest/reports/manifests/ directory created by TASK-123
+- no fixture created by TASK-123
+- no external evidence copied by TASK-123
+- no MT5 run by TASK-123
+- no MQ5 changes by TASK-123
+- no backtest/sets changes by TASK-123
+- no backtest/reports changes by TASK-123
+- no tools changes by TASK-123
+- no project state docs changes by TASK-123
+- no push by TASK-123
+- no real trading by TASK-123
+- no profit optimization by TASK-123
+- current next boundary updated to TASK-124
+- current next boundary remains TASK-124
+- do not directly enter TASK-124
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-124 results
+
+- TASK-124 completed
+- current latest commit updated to 00ac071 TASK-DOC-157 update state after TASK-123
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- TASK-122 / TASK-DOC-155 / TASK-TAG-036 / TASK-DOC-156 / TASK-123 / TASK-DOC-157 closed loop completed
+- first official manifest dry-run boundary defined
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-124
+- no fixture created by TASK-124
+- no directory created by TASK-124
+- no external evidence copied by TASK-124
+- no MT5 run by TASK-124
+- no MQ5 changes by TASK-124
+- no backtest/sets changes by TASK-124
+- no backtest/reports changes by TASK-124
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-124
+- no parser / generator / manifest validator changes by TASK-124
+- no push by TASK-124
+- no real trading by TASK-124
+- no profit optimization by TASK-124
+- current next boundary updated to TASK-125
+- current next boundary remains TASK-125
+- do not directly enter TASK-125
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-125 results
+
+- TASK-125 completed
+- current latest commit updated to a0e6ce7 TASK-DOC-158 update state after TASK-124
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- first official manifest dry-run boundary defined
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-125
+- no fixture created by TASK-125
+- no directory created by TASK-125
+- no external evidence copied by TASK-125
+- no MT5 run by TASK-125
+- no MQ5 changes by TASK-125
+- no backtest/sets changes by TASK-125
+- no backtest/reports changes by TASK-125
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-125
+- no parser / generator / manifest validator changes by TASK-125
+- no push by TASK-125
+- no real trading by TASK-125
+- no profit optimization by TASK-125
+- current next boundary updated to TASK-126
+- current next boundary remains TASK-126
+- do not directly enter TASK-126
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-126 results
+
+- TASK-126 completed
+- current latest commit remains a0e6ce7 TASK-DOC-158 update state after TASK-124
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- first official manifest dry-run boundary remains effective
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-126
+- no fixture created by TASK-126
+- no directory created by TASK-126
+- no external evidence copied by TASK-126
+- no MT5 run by TASK-126
+- no MQ5 changes by TASK-126
+- no backtest/sets changes by TASK-126
+- no backtest/reports changes by TASK-126
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-126
+- no parser / generator / manifest validator changes by TASK-126
+- no push by TASK-126
+- no real trading by TASK-126
+- no profit optimization by TASK-126
+- current next boundary updated to TASK-127
+- current next boundary remains TASK-127
+- do not directly enter TASK-127
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-127 results
+
+- TASK-127 completed
+- current latest commit updated to d09e87e TASK-DOC-160 update state after TASK-126
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- first official manifest dry-run completed
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-127
+- no fixture created by TASK-127
+- no directory created by TASK-127
+- no external evidence copied by TASK-127
+- no MT5 run by TASK-127
+- no MQ5 changes by TASK-127
+- no backtest/sets changes by TASK-127
+- no backtest/reports changes by TASK-127
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-127
+- no parser / generator / manifest validator changes by TASK-127
+- no push by TASK-127
+- no real trading by TASK-127
+- no profit optimization by TASK-127
+- current next boundary updated to TASK-128
+- current next boundary remains TASK-128
+- do not directly enter TASK-128
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-128 results
+
+- TASK-128 completed
+- current latest commit updated to 5f8a272 TASK-DOC-161 update state after TASK-127
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- first official manifest dry-run boundary remains effective
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-128
+- no fixture created by TASK-128
+- no directory created by TASK-128
+- no external evidence copied by TASK-128
+- no MT5 run by TASK-128
+- no MQ5 changes by TASK-128
+- no backtest/sets changes by TASK-128
+- no backtest/reports changes by TASK-128
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-128
+- no parser / generator / manifest validator changes by TASK-128
+- no push by TASK-128
+- no real trading by TASK-128
+- no profit optimization by TASK-128
+- current next boundary updated to TASK-129
+- current next boundary remains TASK-129
+- do not directly enter TASK-129
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-129 results
+
+- TASK-129 completed
+- current latest commit updated to e3cfb79 TASK-DOC-162 update state after TASK-128
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- first official manifest dry-run completed
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-129
+- no fixture created by TASK-129
+- no directory created by TASK-129
+- no external evidence copied by TASK-129
+- no MT5 run by TASK-129
+- no MQ5 changes by TASK-129
+- no backtest/sets changes by TASK-129
+- no backtest/reports changes by TASK-129
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-129
+- no parser / generator / manifest validator changes by TASK-129
+- no push by TASK-129
+- no real trading by TASK-129
+- no profit optimization by TASK-129
+- current next boundary updated to TASK-130
+- current next boundary remains TASK-130
+- do not directly enter TASK-130
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-130 results
+
+- TASK-130 completed
+- current latest commit updated to f07f3ee TASK-DOC-163 update state after TASK-129
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- first official manifest dry-run completed
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-130
+- no fixture created by TASK-130
+- no directory created by TASK-130
+- no external evidence copied by TASK-130
+- no MT5 run by TASK-130
+- no MQ5 changes by TASK-130
+- no backtest/sets changes by TASK-130
+- no backtest/reports changes by TASK-130
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-130
+- no parser / generator / manifest validator changes by TASK-130
+- no push by TASK-130
+- no real trading by TASK-130
+- no profit optimization by TASK-130
+- current next boundary updated to TASK-131
+- current next boundary remains TASK-131
+- do not directly enter TASK-131
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-131 results
+
+- TASK-131 completed
+- current latest commit updated to a1ffd7b TASK-DOC-164 update state after TASK-130
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- first official manifest dry-run completed
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-131
+- no fixture created by TASK-131
+- no directory created by TASK-131
+- no external evidence copied by TASK-131
+- no MT5 run by TASK-131
+- no MQ5 changes by TASK-131
+- no backtest/sets changes by TASK-131
+- no backtest/reports changes by TASK-131
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-131
+- no parser / generator / manifest validator changes by TASK-131
+- no push by TASK-131
+- no real trading by TASK-131
+- no profit optimization by TASK-131
+- current next boundary updated to TASK-132
+- current next boundary remains TASK-132
+- do not directly enter TASK-132
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-132 results
+
+- TASK-132 completed
+- current latest commit updated to ea786a2 TASK-DOC-165 update state after TASK-131
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- first official manifest dry-run completed
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-132
+- no fixture created by TASK-132
+- no directory created by TASK-132
+- no external evidence copied by TASK-132
+- no MT5 run by TASK-132
+- no MQ5 changes by TASK-132
+- no backtest/sets changes by TASK-132
+- no backtest/reports changes by TASK-132
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-132
+- no parser / generator / manifest validator changes by TASK-132
+- no push by TASK-132
+- no real trading by TASK-132
+- no profit optimization by TASK-132
+- current next boundary updated to TASK-133
+- current next boundary remains TASK-133
+- do not directly enter TASK-133
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-133 results
+
+- TASK-133 completed
+- current latest commit updated to abfbcef TASK-DOC-166 update state after TASK-132
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- first official manifest dry-run completed
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-133
+- no fixture created by TASK-133
+- no directory created by TASK-133
+- no external evidence copied by TASK-133
+- no MT5 run by TASK-133
+- no MQ5 changes by TASK-133
+- no backtest/sets changes by TASK-133
+- no backtest/reports changes by TASK-133
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-133
+- no parser / generator / manifest validator changes by TASK-133
+- no push by TASK-133
+- no real trading by TASK-133
+- no profit optimization by TASK-133
+- current next boundary updated to TASK-134
+- current next boundary remains TASK-134
+- do not directly enter TASK-134
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-134 results
+
+- TASK-134 completed
+- current latest commit updated to fdf8643 TASK-DOC-167 update state after TASK-133
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- first official manifest dry-run completed
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-134
+- no fixture created by TASK-134
+- no directory created by TASK-134
+- no external evidence copied by TASK-134
+- no MT5 run by TASK-134
+- no MQ5 changes by TASK-134
+- no backtest/sets changes by TASK-134
+- no backtest/reports changes by TASK-134
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-134
+- no parser / generator / manifest validator changes by TASK-134
+- no push by TASK-134
+- no real trading by TASK-134
+- no profit optimization by TASK-134
+- current next boundary updated to TASK-135
+- current next boundary remains TASK-135
+- do not directly enter TASK-135
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-135 results
+
+- TASK-135 completed
+- current latest commit updated to e21ca46 TASK-DOC-168 update state after TASK-134
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.10-official-manifest-creation-preflight-audit -> 890dfa5
+- first official manifest dry-run completed
+- future dry-run must not create official manifest
+- future dry-run must not create fixture
+- future dry-run must not create directory
+- future dry-run must not copy external evidence
+- future dry-run must not run MT5
+- no official manifest created by TASK-135
+- no fixture created by TASK-135
+- no directory created by TASK-135
+- no external evidence copied by TASK-135
+- no MT5 run by TASK-135
+- no MQ5 changes by TASK-135
+- no backtest/sets changes by TASK-135
+- no backtest/reports changes by TASK-135
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes by TASK-135
+- no parser / generator / manifest validator changes by TASK-135
+- no push by TASK-135
+- no real trading by TASK-135
+- no profit optimization by TASK-135
+- current next boundary updated to TASK-136
+- current next boundary remains TASK-136
+- do not directly enter TASK-136
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-037 results
+
+- TASK-TAG-037 completed
+- current latest commit updated to 29acb6b TASK-DOC-169 update state after TASK-135
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.11-first-official-manifest-dry-run-summary-closure
+- stable tag target updated to 29acb6b TASK-DOC-169 update state after TASK-135
+- stable tag created: v0.5.11-first-official-manifest-dry-run-summary-closure
+- stable tag target: 29acb6b TASK-DOC-169 update state after TASK-135
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- first official manifest dry-run summary closure fixed as stable tag
+- backtest/reports/manifests/ still not created
+- no official manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no tools changes
+- no push
+- no real trading
+- no profit optimization
+- current next boundary remains TASK-136
+- do not directly enter TASK-136
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-136 results
+
+- TASK-136 completed
+- first official manifest promotion readiness audit passed
+- current latest commit updated to 2176692 TASK-DOC-170 update state after TASK-TAG-037
+- current HEAD is 2176692 TASK-DOC-170 update state after TASK-TAG-037
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.11-first-official-manifest-dry-run-summary-closure
+- v0.5.11-first-official-manifest-dry-run-summary-closure points to 29acb6b TASK-DOC-169 update state after TASK-135
+- first official manifest dry-run closed loop completed
+- backtest/reports/manifests/ still not created
+- no official repository manifest exists
+- no official manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- official manifest storage policy defined
+- official manifest naming policy defined
+- official manifest path validator completed
+- generator completed
+- schema validator completed
+- HTML parser completed
+- log parser completed
+- task_acceptance_report.ps1 available
+- current gap: none
+- suitable for future first official manifest creation authorization task
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no parser / generator / manifest validator changes
+- no push
+- no real trading
+- no profit optimization
+- current next boundary updated to TASK-137
+- current next boundary remains TASK-137
+- do not directly enter TASK-137
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-038 results
+
+- TASK-TAG-038 completed
+- current latest commit updated to 1d3dd4e TASK-DOC-171 update state after TASK-136
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.12-first-official-manifest-promotion-readiness-audit
+- stable tag target updated to 1d3dd4e TASK-DOC-171 update state after TASK-136
+- stable tag created: v0.5.12-first-official-manifest-promotion-readiness-audit
+- stable tag target: 1d3dd4e TASK-DOC-171 update state after TASK-136
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- first official manifest promotion readiness audit fixed as stable tag
+- backtest/reports/manifests/ still not created
+- no official repository manifest exists
+- no official manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- current gap: none
+- suitable for future first official manifest creation authorization task
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no tools changes
+- no push
+- no real trading
+- no profit optimization
+- current next boundary remains TASK-137
+- do not directly enter TASK-137
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-137 results
+
+- TASK-137 completed
+- commit recorded: 7103cd0 TASK-137 define first official manifest creation authorization boundary
+- first official manifest creation authorization boundary defined
+- future creation task must be separately authorized by a future explicit task
+- TASK-137 did not create official manifest
+- TASK-137 did not create backtest/reports/manifests/
+- TASK-137 did not create fixture
+- TASK-137 did not copy external evidence
+- TASK-137 did not run MT5
+- TASK-137 did not enter real trading
+- TASK-137 did not perform profit optimization
+- future creation task must use path policy validator
+- future creation task must use {taskId}_{evidenceSetId}_manifest.json naming convention
+- future creation task must use backtest/reports/manifests/
+- future creation task must use generate_evidence_manifest.py
+- future creation task must use validate_evidence_manifest_schema.py
+- future creation task must use validate_official_manifest_path_policy.py
+- future creation task must use task_acceptance_report.ps1
+- future creation task must record repositoryState
+- future creation task must record tags
+- future creation task must record files[] metadata only
+- future creation task must not copy external evidence
+- future creation task must not claim live trading readiness / real trading availability / profitability
+- future creation task must not authorize real trading
+- v0.5.12 only means promotion readiness audit closed
+- v0.5.12 does not mean official manifest has been created
+- no official repository manifest exists
+- backtest/reports/manifests/ still not created
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.12-first-official-manifest-promotion-readiness-audit -> 1d3dd4e
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no parser / generator / manifest validator changes
+- no push
+- no real trading
+- no profit optimization
+- current next boundary updated to TASK-138
+- current next boundary remains TASK-138
+- do not directly enter TASK-138
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-039 results
+
+- TASK-TAG-039 completed
+- current latest commit updated to e869bef TASK-DOC-173 update state after TASK-137
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.13-first-official-manifest-creation-authorization-boundary
+- stable tag target updated to e869bef TASK-DOC-173 update state after TASK-137
+- stable tag created: v0.5.13-first-official-manifest-creation-authorization-boundary
+- stable tag target: e869bef TASK-DOC-173 update state after TASK-137
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- first official manifest creation authorization boundary fixed as stable tag
+- no official repository manifest exists
+- backtest/reports/manifests/ still not created
+- no manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- v0.5.13 does not mean official manifest has been created
+- v0.5.13 does not represent live trading readiness
+- v0.5.13 does not represent real trading availability
+- v0.5.13 does not represent profitability
+- v0.5.13 does not authorize real trading
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no tools changes
+- no push
+- no real trading
+- no profit optimization
+- current next boundary remains TASK-138
+- do not directly enter TASK-138
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-138 results
+
+- TASK-138 completed
+- first official manifest creation authorization boundary coverage audit passed
+- current HEAD is a8e5993 TASK-DOC-174 update state after TASK-TAG-039
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.13-first-official-manifest-creation-authorization-boundary
+- v0.5.13-first-official-manifest-creation-authorization-boundary points to e869bef TASK-DOC-173 update state after TASK-137
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- TASK-137 / TASK-DOC-173 / TASK-TAG-039 / TASK-DOC-174 / TASK-138 closed loop completed
+- first official manifest creation authorization boundary coverage satisfied
+- creation task must use path policy validator
+- creation task must use {taskId}_{evidenceSetId}_manifest.json naming convention
+- creation task must use backtest/reports/manifests/
+- creation task must use generate_evidence_manifest.py
+- creation task must use validate_evidence_manifest_schema.py
+- creation task must use validate_official_manifest_path_policy.py
+- creation task must use task_acceptance_report.ps1
+- creation task must record repositoryState / tags / metadata-only files[]
+- creation task must not copy external evidence
+- creation task must not claim live trading readiness / real trading availability / profitability
+- creation task must not authorize real trading
+- backtest/reports/manifests/ still not created
+- no official repository manifest exists
+- no external evidence copied
+- no MT5 run
+- current gap: none
+- suitable for future first official manifest creation implementation task
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no parser / generator / manifest validator changes
+- no push
+- no real trading
+- no profit optimization
+- current next boundary updated to TASK-139
+- current next boundary remains TASK-139
+- do not directly enter TASK-139
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-040 results
+
+- TASK-TAG-040 completed
+- current latest commit updated to e5f1405 TASK-DOC-175 update state after TASK-138
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.14-first-official-manifest-creation-authorization-coverage-audit
+- stable tag target updated to e5f1405 TASK-DOC-175 update state after TASK-138
+- stable tag created: v0.5.14-first-official-manifest-creation-authorization-coverage-audit
+- stable tag target: e5f1405 TASK-DOC-175 update state after TASK-138
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- first official manifest creation authorization coverage audit fixed as stable tag
+- no official repository manifest exists
+- backtest/reports/manifests/ still not created
+- no manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- v0.5.14 does not mean official manifest has been created
+- v0.5.14 does not represent live trading readiness
+- v0.5.14 does not represent real trading availability
+- v0.5.14 does not represent profitability
+- v0.5.14 does not authorize real trading
+- no MQ5 changes
+- no backtest/sets changes
+- no backtest/reports changes
+- no docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md changes
+- no tools changes
+- no push
+- no real trading
+- no profit optimization
+- current next boundary remains TASK-139
+- do not directly enter TASK-139
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-139 results
+
+- TASK-139 completed
+- commit recorded: 1a57ed1 TASK-139 create first official evidence manifest
+- first official repository manifest created
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- backtest/reports/manifests/ directory created
+- this manifest is the only authorized manifest created
+- no other manifest / report created
+- no fixture created
+- no external evidence copied
+- no MT5 run
+- no tools / docs / AGENTS.md / MQ5 / backtest/sets changes by TASK-139
+- no backtest/reports/generated/ changes
+- no backtest/reports/samples/ changes
+- path policy validator passed with --no-check-overwrite
+- schema validator passed
+- engineering toolchain checks passed, 18/18 PASS
+- noTradeAssertions.passed = true
+- riskApproved = 0
+- executionAttempts = 0
+- totalTrades = 0
+- totalDeals = 0
+- buyTrades = 0
+- sellTrades = 0
+- InpEnableTrading = false
+- stable tag recorded as v0.5.14-first-official-manifest-creation-authorization-coverage-audit -> e5f1405
+- files[] records external evidence metadata only; no evidence copy
+- safetyAssertions all true
+- official manifest does not represent live trading readiness
+- official manifest does not represent real trading availability
+- official manifest does not represent profitability
+- official manifest does not authorize real trading
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag remains v0.5.14-first-official-manifest-creation-authorization-coverage-audit -> e5f1405
+- current latest engineering task updated to 1a57ed1 TASK-139 create first official evidence manifest
+- current next boundary updated to TASK-140
+- current next boundary remains TASK-140
+- do not directly enter TASK-140
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-041 results
+
+- TASK-TAG-041 completed
+- current latest commit updated to 0a57e91 TASK-DOC-177 update state after TASK-139
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.15-first-official-evidence-manifest
+- stable tag target updated to 0a57e91 TASK-DOC-177 update state after TASK-139
+- stable tag created: v0.5.15-first-official-evidence-manifest
+- stable tag target: 0a57e91 TASK-DOC-177 update state after TASK-139
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- first official evidence manifest fixed as stable tag
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- current phase remains v0.5.0
+- no new manifest / fixture / directory created
+- no external evidence copied
+- no MT5 run
+- v0.5.15 does not represent live trading readiness
+- v0.5.15 does not represent real trading availability
+- v0.5.15 does not represent profitability
+- v0.5.15 does not authorize real trading
+- current next boundary remains TASK-140
+- do not directly enter TASK-140
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-140 results
+
+- TASK-140 completed
+- first official evidence manifest archive closure readiness audit passed
+- current HEAD is 54e8e6a TASK-DOC-178 update state after TASK-TAG-041
+- current stable tag is v0.5.15-first-official-evidence-manifest
+- v0.5.15-first-official-evidence-manifest points to 0a57e91 TASK-DOC-177 update state after TASK-139
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- official manifest archive closure readiness satisfied
+- official manifest exists
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 18/18 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- noTradeAssertions.passed = true
+- riskApproved = 0
+- executionAttempts = 0
+- totalTrades = 0
+- totalDeals = 0
+- buyTrades = 0
+- sellTrades = 0
+- InpEnableTrading = false
+- files[] records external evidence metadata only
+- TesterBacktest.html was not copied
+- 日志.txt was not copied
+- safetyAssertions all true
+- current phase remains v0.5.0
+- official manifest does not represent live trading readiness
+- official manifest does not represent real trading availability
+- official manifest does not represent profitability
+- official manifest does not authorize real trading
+- current gap: none
+- suitable for future v0.5.0 official evidence archive closure audit / tag
+- current next boundary updated to TASK-141
+- current next boundary remains TASK-141
+- do not directly enter TASK-141
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-042 results
+
+- TASK-TAG-042 completed
+- current latest commit updated to ed5eb4b TASK-DOC-179 update state after TASK-140
+- current phase remains v0.5.0 official evidence archive policy and reproducibility boundary
+- current stable tag updated to v0.5.16-official-evidence-archive-closure-readiness-audit
+- stable tag target updated to ed5eb4b TASK-DOC-179 update state after TASK-140
+- stable tag created: v0.5.16-official-evidence-archive-closure-readiness-audit
+- stable tag target: ed5eb4b TASK-DOC-179 update state after TASK-140
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- first official evidence manifest archive closure readiness audit fixed as stable tag
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest / fixture / directory created
+- no external evidence copied
+- no MT5 run
+- v0.5.16 does not represent live trading readiness
+- v0.5.16 does not represent real trading availability
+- v0.5.16 does not represent profitability
+- v0.5.16 does not authorize real trading
+- current next boundary remains TASK-141
+- do not directly enter TASK-141
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-141 results
+
+- TASK-141 completed
+- v0.5.0 official evidence archive closure readiness audit passed
+- current HEAD is 0543a09 TASK-DOC-180 update state after TASK-TAG-042
+- current stable tag is v0.5.16-official-evidence-archive-closure-readiness-audit
+- v0.5.16-official-evidence-archive-closure-readiness-audit points to ed5eb4b TASK-DOC-179 update state after TASK-140
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- v0.5.0 official evidence archive policy defined
+- official manifest storage policy defined
+- official manifest naming policy defined
+- official manifest path validator completed
+- evidence manifest generator completed
+- evidence manifest schema validator completed
+- Strategy Tester HTML parser completed
+- MT5 log no-trade parser completed
+- task_acceptance_report.ps1 available
+- first official manifest creation authorization boundary defined
+- first official evidence manifest created
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 18/18 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- noTradeAssertions.passed = true
+- riskApproved = 0
+- executionAttempts = 0
+- totalTrades = 0
+- totalDeals = 0
+- buyTrades = 0
+- sellTrades = 0
+- InpEnableTrading = false
+- files[] records external evidence metadata only
+- TesterBacktest.html was not copied
+- 日志.txt was not copied
+- safetyAssertions all true
+- official manifest does not represent live trading readiness
+- official manifest does not represent real trading availability
+- official manifest does not represent profitability
+- official manifest does not authorize real trading
+- current gap: none
+- suitable for future v0.5.0 phase closure audit / tag
+- current next boundary updated to TASK-142
+- current next boundary remains TASK-142
+- do not directly enter TASK-142
+- do not directly modify MQ5
+- do not directly modify backtest/sets
+- do not directly enter real trading
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-043 results
+
+- TASK-TAG-043 completed
+- current stable tag updated to v0.5.17-v050-official-evidence-archive-closure-readiness
+- v0.5.17-v050-official-evidence-archive-closure-readiness points to 8702fd5 TASK-DOC-181 update state after TASK-141
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.5.0 official evidence archive closure readiness fixed as stable tag
+- first official evidence manifest exists and was not modified
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- v0.5.17 does not represent live trading readiness
+- v0.5.17 does not represent real trading availability
+- v0.5.17 does not represent profitability
+- v0.5.17 does not authorize real trading
+- current next boundary remains TASK-142
+- do not directly enter TASK-142
+
+## TASK-142 results
+
+- TASK-142 completed
+- v0.5.0 official evidence archive phase closure readiness audit passed
+- current HEAD is e35bcf2 TASK-DOC-182 update state after TASK-TAG-043
+- current stable tag is v0.5.17-v050-official-evidence-archive-closure-readiness
+- v0.5.17-v050-official-evidence-archive-closure-readiness points to 8702fd5 TASK-DOC-181 update state after TASK-141
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- v0.5.0 official evidence archive policy defined
+- official manifest storage policy defined
+- official manifest naming policy defined
+- official manifest path validator completed
+- evidence manifest generator completed
+- evidence manifest schema validator completed
+- Strategy Tester HTML parser completed
+- MT5 log no-trade parser completed
+- task_acceptance_report.ps1 available
+- first official manifest creation authorization boundary defined
+- first official evidence manifest created
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 18/18 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- noTradeAssertions.passed = true
+- riskApproved = 0
+- executionAttempts = 0
+- totalTrades = 0
+- totalDeals = 0
+- buyTrades = 0
+- sellTrades = 0
+- InpEnableTrading = false
+- files[] records external evidence metadata only
+- TesterBacktest.html was not copied
+- 日志.txt was not copied
+- safetyAssertions all true
+- official manifest does not represent live trading readiness
+- official manifest does not represent real trading availability
+- official manifest does not represent profitability
+- official manifest does not authorize real trading
+- current gap: none
+- suitable for future v0.5.0 phase closure stable tag
+- current next boundary updated to TASK-143
+- current next boundary remains TASK-143
+- do not directly enter TASK-143
+
+## TASK-TAG-044 results
+
+- TASK-TAG-044 completed
+- current stable tag updated to v0.5.18-v050-official-evidence-archive-phase-closure-readiness
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness points to ed4017b TASK-DOC-183 update state after TASK-142
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.5.0 official evidence archive phase closure readiness fixed as stable tag
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- v0.5.18 does not represent live trading readiness
+- v0.5.18 does not represent real trading availability
+- v0.5.18 does not represent profitability
+- v0.5.18 does not authorize real trading
+- current next boundary remains TASK-143
+- do not directly enter TASK-143
+
+## TASK-143 results
+
+- TASK-143 completed
+- v0.5.0 official evidence archive final phase closure audit passed
+- current HEAD is c6edc02 TASK-DOC-184 update state after TASK-TAG-044
+- current stable tag is v0.5.18-v050-official-evidence-archive-phase-closure-readiness
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness points to ed4017b TASK-DOC-183 update state after TASK-142
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- v0.5.0 official evidence archive policy defined
+- official manifest storage policy defined
+- official manifest naming policy defined
+- official manifest path validator completed
+- evidence manifest generator completed
+- evidence manifest schema validator completed
+- Strategy Tester HTML parser completed
+- MT5 log no-trade parser completed
+- task_acceptance_report.ps1 available
+- first official manifest creation authorization boundary defined
+- first official evidence manifest created
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 18/18 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- noTradeAssertions.passed = true
+- riskApproved = 0
+- executionAttempts = 0
+- totalTrades = 0
+- totalDeals = 0
+- buyTrades = 0
+- sellTrades = 0
+- InpEnableTrading = false
+- files[] records external evidence metadata only
+- TesterBacktest.html was not copied
+- 日志.txt was not copied
+- safetyAssertions all true
+- official manifest does not represent live trading readiness
+- official manifest does not represent real trading availability
+- official manifest does not represent profitability
+- official manifest does not authorize real trading
+- v0.5.0 final phase closure satisfied
+- current gap: none
+- suitable for future v0.5.0 final phase closure stable tag
+- current next boundary updated to TASK-144
+- current next boundary remains TASK-144
+- do not directly enter TASK-144
+
+## TASK-TAG-045 results
+
+- TASK-TAG-045 completed
+- current stable tag updated to v0.5.19-v050-official-evidence-archive-final-phase-closure
+- v0.5.19-v050-official-evidence-archive-final-phase-closure points to 38b343c TASK-DOC-185 update state after TASK-143
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.5.0 official evidence archive final phase closure fixed as stable tag
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- v0.5.19 does not represent live trading readiness
+- v0.5.19 does not represent real trading availability
+- v0.5.19 does not represent profitability
+- v0.5.19 does not authorize real trading
+- current next boundary remains TASK-144
+- do not directly enter TASK-144
+
+## TASK-144 results
+
+- TASK-144 completed
+- v0.5.0 final phase closure tag completion audit passed
+- current HEAD is 26caea9 TASK-DOC-186 update state after TASK-TAG-045
+- current stable tag is v0.5.19-v050-official-evidence-archive-final-phase-closure
+- v0.5.19-v050-official-evidence-archive-final-phase-closure points to 38b343c TASK-DOC-185 update state after TASK-143
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- v0.5.0 final phase closure fixed by v0.5.19
+- v0.5.0 official evidence archive policy defined
+- official manifest storage policy defined
+- official manifest naming policy defined
+- official manifest path validator completed
+- evidence manifest generator completed
+- evidence manifest schema validator completed
+- Strategy Tester HTML parser completed
+- MT5 log no-trade parser completed
+- task_acceptance_report.ps1 available
+- first official manifest creation authorization boundary defined
+- first official evidence manifest created
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- noTradeAssertions.passed = true
+- riskApproved = 0
+- executionAttempts = 0
+- totalTrades = 0
+- totalDeals = 0
+- buyTrades = 0
+- sellTrades = 0
+- InpEnableTrading = false
+- files[] records external evidence metadata only
+- TesterBacktest.html was not copied
+- 日志.txt was not copied
+- safetyAssertions all true
+- official manifest does not represent live trading readiness
+- official manifest does not represent real trading availability
+- official manifest does not represent profitability
+- official manifest does not authorize real trading
+- current gap: none
+- suitable for future v0.5.0 final closure documentation / transition boundary
+- current next boundary updated to TASK-145
+- current next boundary remains TASK-145
+- do not directly enter TASK-145
+
+## TASK-TAG-046 results
+
+- TASK-TAG-046 completed
+- current stable tag updated to v0.5.20-v050-final-closure-documentation-transition-boundary-readiness
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness points to 61fb9c0 TASK-DOC-187 update state after TASK-144
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.5.0 final closure documentation / transition boundary readiness fixed as stable tag
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- v0.5.20 does not represent live trading readiness
+- v0.5.20 does not represent real trading availability
+- v0.5.20 does not represent profitability
+- v0.5.20 does not authorize real trading
+- current next boundary remains TASK-145
+- do not directly enter TASK-145
+
+## TASK-145 results
+
+- TASK-145 completed
+- v0.5.0 final closure documentation transition boundary readiness audit passed
+- current HEAD is 30025ea TASK-DOC-188 update state after TASK-TAG-046
+- current stable tag is v0.5.20-v050-final-closure-documentation-transition-boundary-readiness
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness points to 61fb9c0 TASK-DOC-187 update state after TASK-144
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- v0.5.0 final closure documentation / transition boundary readiness fixed by v0.5.20
+- v0.5.0 official evidence archive final phase closure fixed by v0.5.19
+- first official evidence manifest fixed by v0.5.15
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- v0.5.20 does not represent live trading readiness
+- v0.5.20 does not represent real trading availability
+- v0.5.20 does not represent profitability
+- v0.5.20 does not authorize real trading
+- current gap: none
+- suitable for future v0.5.0 final closure documentation stable tag
+- suitable for future ChatGPT-defined v0.6.0 transition boundary
+- current next boundary updated to TASK-146
+- current next boundary remains TASK-146
+- do not directly enter TASK-146
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-047 results
+
+- TASK-TAG-047 completed
+- current stable tag updated to v0.5.21-v050-final-closure-documentation-transition-boundary
+- v0.5.21-v050-final-closure-documentation-transition-boundary points to 3d3cfd9 TASK-DOC-189 update state after TASK-145
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.5.0 final closure documentation / transition boundary fixed as stable tag
+- v0.5.21 does not represent live trading readiness
+- v0.5.21 does not represent real trading availability
+- v0.5.21 does not represent profitability
+- v0.5.21 does not authorize real trading
+- v0.5.21 does not automatically enter v0.6.0
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- current next boundary remains TASK-146
+- do not directly enter TASK-146
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-146 results
+
+- TASK-146 completed
+- v0.5.0 final closure documentation transition boundary completion audit passed
+- current HEAD is 924debc TASK-DOC-190 update state after TASK-TAG-047
+- current stable tag is v0.5.21-v050-final-closure-documentation-transition-boundary
+- v0.5.21-v050-final-closure-documentation-transition-boundary points to 3d3cfd9 TASK-DOC-189 update state after TASK-145
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- v0.5.0 final closure documentation / transition boundary fixed by v0.5.21
+- v0.5.0 final closure documentation / transition boundary readiness fixed by v0.5.20
+- v0.5.0 official evidence archive final phase closure fixed by v0.5.19
+- first official evidence manifest fixed by v0.5.15
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- v0.5.21 does not represent live trading readiness
+- v0.5.21 does not represent real trading availability
+- v0.5.21 does not represent profitability
+- v0.5.21 does not authorize real trading
+- v0.5.21 does not automatically enter v0.6.0
+- current gap: none
+- suitable for future v0.6.0 transition boundary planning task
+- current next boundary updated to TASK-147
+- current next boundary remains TASK-147
+- do not directly enter TASK-147
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-048 results
+
+- TASK-TAG-048 completed
+- current stable tag updated to v0.5.22-v050-final-closure-documentation-transition-boundary-completion
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion points to 362e934 TASK-DOC-191 update state after TASK-146
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.5.0 final closure documentation / transition boundary completion fixed as stable tag
+- v0.5.22 does not represent live trading readiness
+- v0.5.22 does not represent real trading availability
+- v0.5.22 does not represent profitability
+- v0.5.22 does not authorize real trading
+- v0.5.22 does not automatically enter v0.6.0
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- current next boundary remains TASK-147
+- do not directly enter TASK-147
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-147 results
+
+- TASK-147 completed
+- v0.5.0 to v0.6.0 transition boundary planning readiness audit passed
+- current HEAD is 906e1fa TASK-DOC-192 update state after TASK-TAG-048
+- current stable tag is v0.5.22-v050-final-closure-documentation-transition-boundary-completion
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion points to 362e934 TASK-DOC-191 update state after TASK-146
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- v0.5.0 final closure documentation / transition boundary completion fixed by v0.5.22
+- v0.5.0 final closure documentation / transition boundary fixed by v0.5.21
+- v0.5.0 final closure documentation / transition boundary readiness fixed by v0.5.20
+- v0.5.0 official evidence archive final phase closure fixed by v0.5.19
+- first official evidence manifest fixed by v0.5.15
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- v0.5.22 does not represent live trading readiness
+- v0.5.22 does not represent real trading availability
+- v0.5.22 does not represent profitability
+- v0.5.22 does not authorize real trading
+- v0.5.22 does not automatically enter v0.6.0
+- current gap: none
+- suitable for future ChatGPT-defined v0.6.0 transition boundary planning task
+- suitable for future v0.6.0 transition boundary stable tag
+- current next boundary updated to TASK-148
+- current next boundary remains TASK-148
+- do not directly enter TASK-148
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-049 results
+
+- TASK-TAG-049 completed
+- current stable tag updated to v0.5.23-v060-transition-boundary-planning-readiness
+- v0.5.23-v060-transition-boundary-planning-readiness points to c6cf555 TASK-DOC-193 update state after TASK-147
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.5.0 to v0.6.0 transition boundary planning readiness fixed as stable tag
+- v0.5.23 does not represent v0.6.0 started
+- v0.5.23 does not represent live trading readiness
+- v0.5.23 does not represent real trading availability
+- v0.5.23 does not represent profitability
+- v0.5.23 does not authorize real trading
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- current next boundary remains TASK-148
+- do not directly enter TASK-148
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-148 results
+
+- TASK-148 completed
+- v0.6.0 transition boundary planning readiness tag completion audit passed
+- current HEAD is 9c24913 TASK-DOC-194 update state after TASK-TAG-049
+- current stable tag is v0.5.23-v060-transition-boundary-planning-readiness
+- v0.5.23-v060-transition-boundary-planning-readiness points to c6cf555 TASK-DOC-193 update state after TASK-147
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- v0.5.0 to v0.6.0 transition boundary planning readiness fixed by v0.5.23
+- v0.5.23 does not represent v0.6.0 started
+- v0.5.23 does not represent live trading readiness
+- v0.5.23 does not represent real trading availability
+- v0.5.23 does not represent profitability
+- v0.5.23 does not authorize real trading
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- current gap: none
+- suitable for future ChatGPT-defined v0.6.0 transition boundary definition task
+- current next boundary updated to TASK-149
+- current next boundary remains TASK-149
+- do not directly enter TASK-149
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-050 results
+
+- TASK-TAG-050 completed
+- current stable tag updated to v0.5.24-v060-transition-boundary-planning-readiness-tag-completion
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion points to c211ce0 TASK-DOC-195 update state after TASK-148
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.6.0 transition boundary planning readiness tag completion fixed as stable tag
+- v0.5.24 does not represent v0.6.0 started
+- v0.5.24 does not represent live trading readiness
+- v0.5.24 does not represent real trading availability
+- v0.5.24 does not represent profitability
+- v0.5.24 does not authorize real trading
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- current next boundary remains TASK-149
+- do not directly enter TASK-149
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-149 results
+
+- TASK-149 completed
+- v0.6.0 transition boundary definition readiness audit passed
+- current HEAD is 8400eff TASK-DOC-196 update state after TASK-TAG-050
+- current stable tag is v0.5.24-v060-transition-boundary-planning-readiness-tag-completion
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion points to c211ce0 TASK-DOC-195 update state after TASK-148
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- v0.6.0 transition boundary definition readiness satisfied
+- v0.5.0 to v0.6.0 transition boundary planning readiness fixed by v0.5.24
+- v0.5.24 does not represent v0.6.0 started
+- v0.5.24 does not represent live trading readiness
+- v0.5.24 does not represent real trading availability
+- v0.5.24 does not represent profitability
+- v0.5.24 does not authorize real trading
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- current gap: none
+- suitable for future ChatGPT-defined v0.6.0 transition boundary definition task
+- suitable for future v0.6.0 transition boundary stable tag
+- current next boundary updated to TASK-150
+- current next boundary remains TASK-150
+- do not directly enter TASK-150
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-051 results
+
+- TASK-TAG-051 completed
+- current stable tag updated to v0.5.25-v060-transition-boundary-definition-readiness
+- v0.5.25-v060-transition-boundary-definition-readiness points to b7ab4b3 TASK-DOC-197 update state after TASK-149
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.6.0 transition boundary definition readiness fixed as stable tag
+- v0.5.25 does not represent v0.6.0 started
+- v0.5.25 does not represent live trading readiness
+- v0.5.25 does not represent real trading availability
+- v0.5.25 does not represent profitability
+- v0.5.25 does not authorize real trading
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- suitable for future ChatGPT-defined v0.6.0 transition boundary definition task
+- current next boundary remains TASK-150
+- do not directly enter TASK-150
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-150 results
+
+- TASK-150 completed
+- v0.6.0 transition boundary definition readiness tag completion audit passed
+- current HEAD is a7bab24 TASK-DOC-198 update state after TASK-TAG-051
+- current stable tag is v0.5.25-v060-transition-boundary-definition-readiness
+- v0.5.25-v060-transition-boundary-definition-readiness points to b7ab4b3 TASK-DOC-197 update state after TASK-149
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- v0.6.0 transition boundary definition readiness tag completion satisfied
+- v0.6.0 transition boundary definition readiness fixed by v0.5.25
+- v0.5.25 does not represent v0.6.0 started
+- v0.5.25 does not represent live trading readiness
+- v0.5.25 does not represent real trading availability
+- v0.5.25 does not represent profitability
+- v0.5.25 does not authorize real trading
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- current gap: none
+- suitable for future ChatGPT-defined v0.6.0 transition boundary definition task
+- suitable for future v0.6.0 transition boundary stable tag
+- current next boundary updated to TASK-151
+- current next boundary remains TASK-151
+- do not directly enter TASK-151
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-052 results
+
+- TASK-TAG-052 completed
+- current stable tag updated to v0.5.26-v060-transition-boundary-definition-readiness-tag-completion
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion points to ab635aa TASK-DOC-199 update state after TASK-150
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.6.0 transition boundary definition readiness tag completion fixed as stable tag
+- v0.5.26 does not represent v0.6.0 started
+- v0.5.26 does not represent live trading readiness
+- v0.5.26 does not represent real trading availability
+- v0.5.26 does not represent profitability
+- v0.5.26 does not authorize real trading
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- suitable for future ChatGPT-defined v0.6.0 transition boundary definition task
+- current next boundary remains TASK-151
+- do not directly enter TASK-151
+- do not directly enter v0.6.0
+- the next task boundary must be defined by ChatGPT
+
+## TASK-151 results
+
+- TASK-151 completed
+- commit f328fa2 TASK-151 define v0.6.0 transition boundary
+- docs/V060_TRANSITION_BOUNDARY.md created
+- v0.6.0 transition boundary defined
+- v0.6.0 only represents next-stage boundary planning
+- v0.6.0 does not represent the phase has started
+- current phase remains v0.5.0
+- v0.5.0 official evidence archive / official manifest / final closure / transition readiness closure loop completed
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion fixed readiness
+- any v0.6.0 implementation task must be separately authorized by a future ChatGPT task
+- Codex must not independently enter v0.6.0 implementation
+- Trae must not independently trigger v0.6.0 implementation
+- MT5 must not run unless a future task explicitly authorizes it
+- MQ5 must not be modified unless a future task explicitly authorizes it
+- backtest/sets must not be modified unless a future task explicitly authorizes it
+- official manifest must not be modified unless a future task explicitly authorizes it
+- external evidence must not be copied unless a future task explicitly authorizes it
+- v0.6.0 candidate scope recorded
+- v0.6.0 non-scope recorded
+- v0.6.0 entry conditions recorded
+- do not directly enter v0.6.0 implementation
+- do not directly enter TASK-152
+- whether to create a v0.6.0 transition boundary stable tag must be explicitly specified by ChatGPT
+- current stable tag remains v0.5.26-v060-transition-boundary-definition-readiness-tag-completion -> ab635aa
+- official manifest remains the only manifest and was not modified
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- current next boundary updated to TASK-152
+- current next boundary remains TASK-152
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-053 results
+
+- TASK-TAG-053 completed
+- current stable tag updated to v0.5.27-v060-transition-boundary-definition
+- v0.5.27-v060-transition-boundary-definition points to f98af3e TASK-DOC-201 update state after TASK-151
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.6.0 transition boundary definition fixed as stable tag
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.5.27 does not represent v0.6.0 started
+- v0.5.27 does not represent live trading readiness
+- v0.5.27 does not represent real trading availability
+- v0.5.27 does not represent profitability
+- v0.5.27 does not authorize real trading
+- v0.5.27 does not authorize MT5 run
+- v0.5.27 does not authorize MQ5 modification
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- do not directly enter TASK-152
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-152 results
+
+- TASK-152 completed
+- v0.6.0 transition boundary definition tag completion audit passed
+- current HEAD is e51b15b TASK-DOC-202 update state after TASK-TAG-053
+- current stable tag is v0.5.27-v060-transition-boundary-definition
+- v0.5.27-v060-transition-boundary-definition points to f98af3e TASK-DOC-201 update state after TASK-151
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.6.0 transition boundary definition fixed by v0.5.27
+- v0.5.27 does not represent v0.6.0 started
+- v0.5.27 does not represent live trading readiness
+- v0.5.27 does not represent real trading availability
+- v0.5.27 does not represent profitability
+- v0.5.27 does not authorize real trading
+- v0.5.27 does not authorize MT5 run
+- v0.5.27 does not authorize MQ5 modification
+- current docs explicitly require not directly entering TASK-152
+- current docs explicitly require not directly entering v0.6.0 implementation
+- current docs explicitly require ChatGPT to define the next task boundary first
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- current gap: none
+- suitable for future ChatGPT-defined v0.6.0 implementation planning boundary task
+- suitable for future v0.6.0 transition boundary definition tag completion stable tag
+- current next boundary updated to TASK-153
+- current next boundary remains TASK-153
+- do not directly enter TASK-153
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-054 results
+
+- TASK-TAG-054 completed
+- current stable tag updated to v0.5.28-v060-transition-boundary-definition-tag-completion
+- v0.5.28-v060-transition-boundary-definition-tag-completion points to bffa0f2 TASK-DOC-203 update state after TASK-152
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.6.0 transition boundary definition tag completion fixed as stable tag
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.5.28 does not represent v0.6.0 started
+- v0.5.28 does not represent v0.6.0 implementation authorized
+- v0.5.28 does not represent live trading readiness
+- v0.5.28 does not represent real trading availability
+- v0.5.28 does not represent profitability
+- v0.5.28 does not authorize real trading
+- v0.5.28 does not authorize MT5 run
+- v0.5.28 does not authorize MQ5 modification
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- suitable for future ChatGPT-defined v0.6.0 implementation planning boundary task
+- current next boundary remains TASK-153
+- do not directly enter TASK-153
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-153 results
+
+- TASK-153 completed
+- v0.6.0 implementation planning boundary readiness audit passed
+- current HEAD is 8f2dffc TASK-DOC-204 update state after TASK-TAG-054
+- current stable tag is v0.5.28-v060-transition-boundary-definition-tag-completion
+- v0.5.28-v060-transition-boundary-definition-tag-completion points to bffa0f2 TASK-DOC-203 update state after TASK-152
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.6.0 transition boundary definition fixed by v0.5.27
+- v0.6.0 transition boundary definition tag completion fixed by v0.5.28
+- v0.5.28 does not represent v0.6.0 started
+- v0.5.28 does not represent v0.6.0 implementation authorized
+- v0.5.28 does not represent live trading readiness
+- v0.5.28 does not represent real trading availability
+- v0.5.28 does not represent profitability
+- v0.5.28 does not authorize real trading
+- v0.5.28 does not authorize MT5 run
+- v0.5.28 does not authorize MQ5 modification
+- current docs explicitly require not directly entering TASK-153
+- current docs explicitly require not directly entering v0.6.0 implementation
+- current docs explicitly require ChatGPT to define the next task boundary first
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- current gap: none
+- suitable for future ChatGPT-defined v0.6.0 implementation planning boundary task
+- suitable for future v0.6.0 implementation planning boundary readiness stable tag
+- current next boundary updated to TASK-154
+- current next boundary remains TASK-154
+- do not directly enter TASK-154
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-055 results
+
+- TASK-TAG-055 completed
+- current stable tag updated to v0.5.29-v060-implementation-planning-boundary-readiness
+- v0.5.29-v060-implementation-planning-boundary-readiness points to b362c89 TASK-DOC-205 update state after TASK-153
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.6.0 implementation planning boundary readiness fixed as stable tag
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.5.29 does not represent v0.6.0 started
+- v0.5.29 does not represent v0.6.0 implementation authorized
+- v0.5.29 does not represent live trading readiness
+- v0.5.29 does not represent real trading availability
+- v0.5.29 does not represent profitability
+- v0.5.29 does not authorize real trading
+- v0.5.29 does not authorize MT5 run
+- v0.5.29 does not authorize MQ5 modification
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- suitable for future ChatGPT-defined v0.6.0 implementation planning boundary task
+- current next boundary remains TASK-154
+- do not directly enter TASK-154
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-154 results
+
+- TASK-154 completed
+- v0.6.0 implementation planning boundary readiness tag completion audit passed
+- current HEAD is 076eafd TASK-DOC-206 update state after TASK-TAG-055
+- current stable tag is v0.5.29-v060-implementation-planning-boundary-readiness
+- v0.5.29-v060-implementation-planning-boundary-readiness points to b362c89 TASK-DOC-205 update state after TASK-153
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.6.0 transition boundary definition fixed by v0.5.27
+- v0.6.0 transition boundary definition tag completion fixed by v0.5.28
+- v0.6.0 implementation planning boundary readiness fixed by v0.5.29
+- v0.5.29 does not represent v0.6.0 started
+- v0.5.29 does not represent v0.6.0 implementation authorized
+- v0.5.29 does not represent live trading readiness
+- v0.5.29 does not represent real trading availability
+- v0.5.29 does not represent profitability
+- v0.5.29 does not authorize real trading
+- v0.5.29 does not authorize MT5 run
+- v0.5.29 does not authorize MQ5 modification
+- current docs explicitly require not directly entering TASK-154
+- current docs explicitly require not directly entering v0.6.0 implementation
+- current docs explicitly require ChatGPT to define the next task boundary first
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- current gap: none
+- suitable for future ChatGPT-defined v0.6.0 implementation planning boundary task
+- suitable for future v0.6.0 implementation planning boundary readiness tag completion stable tag
+- current next boundary updated to TASK-155
+- current next boundary remains TASK-155
+- do not directly enter TASK-155
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-056 results
+
+- TASK-TAG-056 completed
+- current stable tag updated to v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion
+- v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion points to 5f416da TASK-DOC-207 update state after TASK-154
+- v0.5.29-v060-implementation-planning-boundary-readiness still points to b362c89
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.6.0 implementation planning boundary readiness tag completion fixed as stable tag
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.5.30 does not represent v0.6.0 started
+- v0.5.30 does not represent v0.6.0 implementation authorized
+- v0.5.30 does not represent live trading readiness
+- v0.5.30 does not represent real trading availability
+- v0.5.30 does not represent profitability
+- v0.5.30 does not authorize real trading
+- v0.5.30 does not authorize MT5 run
+- v0.5.30 does not authorize MQ5 modification
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- suitable for future ChatGPT-defined v0.6.0 implementation planning boundary task
+- current next boundary remains TASK-155
+- do not directly enter TASK-155
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-155 results
+
+- TASK-155 completed
+- commit 29a7d76 TASK-155 define v0.6.0 implementation planning boundary
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md created
+- v0.6.0 implementation planning boundary defined
+- v0.6.0 implementation planning only represents the implementation planning boundary and does not mean v0.6.0 implementation has started
+- current phase remains v0.5.0
+- current stable tag remains v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion -> 5f416da
+- current latest engineering task is 29a7d76 TASK-155 define v0.6.0 implementation planning boundary
+- v0.6.0 transition boundary definition fixed by v0.5.27
+- v0.6.0 transition boundary definition tag completion fixed by v0.5.28
+- v0.6.0 implementation planning boundary readiness fixed by v0.5.29
+- v0.6.0 implementation planning boundary readiness tag completion fixed by v0.5.30
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and must not be modified by this task
+- official manifest exists, is the only manifest, and was not modified
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- v0.6.0 implementation planning candidate scope recorded
+- v0.6.0 implementation planning non-scope recorded
+- future implementation task gate recorded
+- entry conditions recorded
+- safety boundary recorded
+- every implementation task must be separately authorized by ChatGPT
+- every implementation task must define allowed paths and forbidden paths
+- every implementation task must define whether tools / docs / MQ5 / backtest/sets modification is allowed
+- every implementation task must default to no MT5 run
+- every implementation task must default to no external evidence copying
+- every implementation task must default to no new official manifest creation unless a future task explicitly authorizes it
+- every implementation task must preserve no-live-trading / no-real-trading / no-profitability statements
+- every implementation task must pass the corresponding validator / self-test / engineering toolchain checks
+- future manifest tasks must continue to use the schema validator and path policy validator
+- future official manifest tasks must state whether --no-check-overwrite is used
+- TASK-155 itself did not enter v0.6.0 implementation
+- TASK-155 itself did not modify MQ5
+- TASK-155 itself did not modify tools
+- TASK-155 itself did not modify docs/V060_TRANSITION_BOUNDARY.md
+- TASK-155 itself did not modify docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md
+- TASK-155 itself did not modify the official manifest
+- TASK-155 itself did not run MT5
+- TASK-155 itself did not create a new manifest
+- TASK-155 itself did not create a fixture
+- TASK-155 itself did not copy external evidence
+- TASK-155 itself did not enter real trading
+- TASK-155 itself did not perform profit optimization
+- v0.6.0 implementation planning does not represent live trading readiness
+- v0.6.0 implementation planning does not represent real trading availability
+- v0.6.0 implementation planning does not represent profitability
+- v0.6.0 implementation planning does not authorize real trading
+- v0.6.0 implementation planning does not authorize MT5 run
+- v0.6.0 implementation planning does not authorize MQ5 modification
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- git diff --check PASS
+- forbidden files have no diff
+- no future TASK-DOC-209 commit hash written
+- current next boundary updated to TASK-156
+- current next boundary remains TASK-156
+- do not directly enter v0.6.0 implementation
+- do not directly enter TASK-156
+- whether to create a v0.6.0 implementation planning boundary stable tag must be explicitly specified by ChatGPT
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-057 results
+
+- TASK-TAG-057 completed
+- current stable tag updated to v0.5.31-v060-implementation-planning-boundary
+- v0.5.31-v060-implementation-planning-boundary points to 07c817e TASK-DOC-209 update state after TASK-155
+- v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion still points to 5f416da
+- v0.5.29-v060-implementation-planning-boundary-readiness still points to b362c89
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- v0.6.0 implementation planning boundary fixed as stable tag
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.5.31 does not represent v0.6.0 started
+- v0.5.31 does not represent v0.6.0 implementation authorized
+- v0.5.31 does not represent live trading readiness
+- v0.5.31 does not represent real trading availability
+- v0.5.31 does not represent profitability
+- v0.5.31 does not authorize real trading
+- v0.5.31 does not authorize MT5 run
+- v0.5.31 does not authorize MQ5 modification
+- v0.5.31 does not authorize tools modification
+- v0.5.31 does not authorize new manifest creation
+- v0.5.31 does not authorize external evidence copying
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- official manifest is the only manifest
+- current phase remains v0.5.0
+- no new manifest created
+- no fixture created
+- no directory created
+- no external evidence copied
+- no MT5 run
+- suitable for future ChatGPT-defined v0.6.0 implementation planning boundary tag completion audit task
+- current next boundary remains TASK-156
+- do not directly enter TASK-156
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-156 results
+
+- TASK-156 completed
+- v0.6.0 implementation planning boundary tag completion audit passed
+- current HEAD is 1fff956 TASK-DOC-210 update state after TASK-TAG-057
+- current stable tag is v0.5.31-v060-implementation-planning-boundary
+- v0.5.31-v060-implementation-planning-boundary points to 07c817e TASK-DOC-209 update state after TASK-155
+- v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion still points to 5f416da
+- v0.5.29-v060-implementation-planning-boundary-readiness still points to b362c89
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.6.0 implementation planning boundary fixed by v0.5.31
+- v0.6.0 implementation planning boundary readiness tag completion fixed by v0.5.30
+- v0.6.0 implementation planning boundary readiness fixed by v0.5.29
+- v0.6.0 transition boundary definition tag completion fixed by v0.5.28
+- v0.6.0 transition boundary definition fixed by v0.5.27
+- v0.5.31 does not represent v0.6.0 started
+- v0.5.31 does not represent v0.6.0 implementation authorized
+- v0.5.31 does not represent live trading readiness
+- v0.5.31 does not represent real trading availability
+- v0.5.31 does not represent profitability
+- v0.5.31 does not authorize real trading
+- v0.5.31 does not authorize MT5 run
+- v0.5.31 does not authorize MQ5 modification
+- v0.5.31 does not authorize tools modification
+- v0.5.31 does not authorize new manifest creation
+- v0.5.31 does not authorize external evidence copying
+- current docs explicitly require not directly entering TASK-156
+- current docs explicitly require not directly entering v0.6.0 implementation
+- current docs explicitly require ChatGPT to define the next task boundary first
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- current gap: none
+- suitable to enter TASK-DOC-211
+- suitable for future v0.6.0 implementation planning boundary tag completion stable tag
+- suitable for ChatGPT to define the next task boundary
+- still must not directly enter v0.6.0 implementation
+- current next boundary updated to TASK-157
+- current next boundary remains TASK-157
+- do not directly enter TASK-157
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-058 results
+
+- TASK-TAG-058 completed
+- current stable tag updated to v0.5.32-v060-implementation-planning-boundary-tag-completion
+- v0.5.32-v060-implementation-planning-boundary-tag-completion points to 02ea6b4 TASK-DOC-211 update state after TASK-156
+- v0.5.31-v060-implementation-planning-boundary still points to 07c817e
+- v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion still points to 5f416da
+- v0.5.29-v060-implementation-planning-boundary-readiness still points to b362c89
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- historical stable tags were not moved
+- v0.6.0 implementation planning boundary tag completion fixed as stable tag
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- v0.5.32 does not represent v0.6.0 started
+- v0.5.32 does not represent v0.6.0 implementation authorized
+- v0.5.32 does not represent live trading readiness
+- v0.5.32 does not represent real trading availability
+- v0.5.32 does not represent profitability
+- v0.5.32 does not authorize real trading
+- v0.5.32 does not authorize MT5 run
+- v0.5.32 does not authorize MQ5 modification
+- v0.5.32 does not authorize tools modification
+- v0.5.32 does not authorize new manifest creation
+- v0.5.32 does not authorize external evidence copying
+- no new manifest created
+- no fixture created
+- no directory created
+- no unauthorized report created
+- no external evidence copied
+- no MT5 run
+- current gap: none
+- suitable for ChatGPT to define the next task boundary
+- current next boundary remains TASK-157
+- do not directly enter TASK-157
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-157 results
+
+- TASK-157 completed
+- v0.6.0 implementation planning boundary tag completion audit passed
+- current HEAD is a37d35d TASK-DOC-212 update state after TASK-TAG-058
+- current stable tag is v0.5.32-v060-implementation-planning-boundary-tag-completion
+- v0.5.32-v060-implementation-planning-boundary-tag-completion points to 02ea6b4 TASK-DOC-211 update state after TASK-156
+- v0.5.31-v060-implementation-planning-boundary still points to 07c817e
+- v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion still points to 5f416da
+- v0.5.29-v060-implementation-planning-boundary-readiness still points to b362c89
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- historical stable tags were not moved
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.6.0 implementation planning boundary fixed by v0.5.31
+- v0.6.0 implementation planning boundary tag completion fixed by v0.5.32
+- v0.5.32 does not represent v0.6.0 started
+- v0.5.32 does not represent v0.6.0 implementation authorized
+- v0.5.32 does not represent live trading readiness
+- v0.5.32 does not represent real trading availability
+- v0.5.32 does not represent profitability
+- v0.5.32 does not authorize real trading
+- v0.5.32 does not authorize MT5 run
+- v0.5.32 does not authorize MQ5 modification
+- v0.5.32 does not authorize tools modification
+- v0.5.32 does not authorize new manifest creation
+- v0.5.32 does not authorize external evidence copying
+- current docs explicitly require not directly entering TASK-157
+- current docs explicitly require not directly entering v0.6.0 implementation
+- current docs explicitly require ChatGPT to define the next task boundary first
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- current gap: none
+- suitable to enter TASK-DOC-213
+- suitable for ChatGPT to define the next task boundary
+- still must not directly enter v0.6.0 implementation
+- current next boundary updated to TASK-158
+- current next boundary remains TASK-158
+- do not directly enter TASK-158
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-059 results
+
+- TASK-TAG-059 completed
+- current stable tag updated to v0.5.33-v060-implementation-planning-boundary-tag-completion-audit
+- v0.5.33-v060-implementation-planning-boundary-tag-completion-audit points to 33e2f47 TASK-DOC-213 update state after TASK-157
+- v0.5.32-v060-implementation-planning-boundary-tag-completion still points to 02ea6b4
+- v0.5.31-v060-implementation-planning-boundary still points to 07c817e
+- v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion still points to 5f416da
+- v0.5.29-v060-implementation-planning-boundary-readiness still points to b362c89
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- historical stable tags were not moved
+- v0.6.0 implementation planning boundary tag completion audit fixed as stable tag
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- v0.5.33 does not represent v0.6.0 started
+- v0.5.33 does not represent v0.6.0 implementation authorized
+- v0.5.33 does not represent live trading readiness
+- v0.5.33 does not represent real trading availability
+- v0.5.33 does not represent profitability
+- v0.5.33 does not authorize real trading
+- v0.5.33 does not authorize MT5 run
+- v0.5.33 does not authorize MQ5 modification
+- v0.5.33 does not authorize tools modification
+- v0.5.33 does not authorize new manifest creation
+- v0.5.33 does not authorize external evidence copying
+- no new manifest created
+- no fixture created
+- no directory created
+- no unauthorized report created
+- no external evidence copied
+- no MT5 run
+- current gap: none
+- suitable for ChatGPT to define the next task boundary
+- current next boundary remains TASK-158
+- do not directly enter TASK-158
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-158 results
+
+- TASK-158 completed
+- v0.6.0 implementation planning boundary tag completion audit stable tag completion audit passed
+- current HEAD is 04974a9 TASK-DOC-214 update state after TASK-TAG-059
+- current stable tag is v0.5.33-v060-implementation-planning-boundary-tag-completion-audit
+- v0.5.33-v060-implementation-planning-boundary-tag-completion-audit points to 33e2f47 TASK-DOC-213 update state after TASK-157
+- v0.5.32-v060-implementation-planning-boundary-tag-completion still points to 02ea6b4
+- v0.5.31-v060-implementation-planning-boundary still points to 07c817e
+- v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion still points to 5f416da
+- v0.5.29-v060-implementation-planning-boundary-readiness still points to b362c89
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- historical stable tags were not moved
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.6.0 implementation planning boundary fixed by v0.5.31
+- v0.6.0 implementation planning boundary tag completion fixed by v0.5.32
+- v0.6.0 implementation planning boundary tag completion audit fixed by v0.5.33
+- v0.5.33 does not represent v0.6.0 started
+- v0.5.33 does not represent v0.6.0 implementation authorized
+- v0.5.33 does not represent live trading readiness
+- v0.5.33 does not represent real trading availability
+- v0.5.33 does not represent profitability
+- v0.5.33 does not authorize real trading
+- v0.5.33 does not authorize MT5 run
+- v0.5.33 does not authorize MQ5 modification
+- v0.5.33 does not authorize tools modification
+- v0.5.33 does not authorize new manifest creation
+- v0.5.33 does not authorize external evidence copying
+- current docs explicitly require not directly entering TASK-158
+- current docs explicitly require not directly entering v0.6.0 implementation
+- current docs explicitly require ChatGPT to define the next task boundary first
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- official manifest exists and was not modified
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- current gap: none
+- suitable to enter TASK-DOC-215
+- suitable for ChatGPT to define the next task boundary
+- still must not directly enter v0.6.0 implementation
+- pre-existing untracked tools/__pycache__/ was not created by this task and was not modified by this task
+- pre-existing untracked root file 新建 文本文档.txt was not created by this task and was not modified by this task
+- current next boundary updated to TASK-159
+- current next boundary remains TASK-159
+- do not directly enter TASK-159
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-060 results
+
+- TASK-TAG-060 completed
+- current stable tag updated to v0.5.34-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion
+- v0.5.34-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion points to 0ed0ebc TASK-DOC-215 update state after TASK-158
+- v0.5.33-v060-implementation-planning-boundary-tag-completion-audit still points to 33e2f47
+- v0.5.32-v060-implementation-planning-boundary-tag-completion still points to 02ea6b4
+- v0.5.31-v060-implementation-planning-boundary still points to 07c817e
+- v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion still points to 5f416da
+- v0.5.29-v060-implementation-planning-boundary-readiness still points to b362c89
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- historical stable tags were not moved
+- v0.6.0 implementation planning boundary tag completion audit stable tag completion fixed as stable tag
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- v0.5.34 does not represent v0.6.0 started
+- v0.5.34 does not represent v0.6.0 implementation authorized
+- v0.5.34 does not represent live trading readiness
+- v0.5.34 does not represent real trading availability
+- v0.5.34 does not represent profitability
+- v0.5.34 does not authorize real trading
+- v0.5.34 does not authorize MT5 run
+- v0.5.34 does not authorize MQ5 modification
+- v0.5.34 does not authorize tools modification
+- v0.5.34 does not authorize new manifest creation
+- v0.5.34 does not authorize external evidence copying
+- no new manifest created
+- no fixture created
+- no directory created
+- no unauthorized report created
+- no external evidence copied
+- no MT5 run
+- pre-existing untracked tools/__pycache__/ was not created by this task and was not modified by this task
+- pre-existing untracked root file 新建 文本文档.txt was not created by this task and was not modified by this task
+- current gap: none
+- suitable for ChatGPT to define the next task boundary
+- current next boundary remains TASK-159
+- do not directly enter TASK-159
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-159 results
+
+- TASK-159 completed
+- v0.6.0 implementation planning boundary tag completion audit stable tag completion audit passed
+- current HEAD is 38d6702 TASK-DOC-216 update state after TASK-TAG-060
+- current stable tag is v0.5.34-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion
+- v0.5.34-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion points to 0ed0ebc TASK-DOC-215 update state after TASK-158
+- v0.5.33-v060-implementation-planning-boundary-tag-completion-audit still points to 33e2f47
+- v0.5.32-v060-implementation-planning-boundary-tag-completion still points to 02ea6b4
+- v0.5.31-v060-implementation-planning-boundary still points to 07c817e
+- v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion still points to 5f416da
+- v0.5.29-v060-implementation-planning-boundary-readiness still points to b362c89
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- historical stable tags were not moved
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- v0.6.0 implementation planning boundary fixed by v0.5.31
+- v0.6.0 implementation planning boundary tag completion fixed by v0.5.32
+- v0.6.0 implementation planning boundary tag completion audit fixed by v0.5.33
+- v0.6.0 implementation planning boundary tag completion audit stable tag completion fixed by v0.5.34
+- v0.5.34 does not represent v0.6.0 started
+- v0.5.34 does not represent v0.6.0 implementation authorized
+- v0.5.34 does not represent live trading readiness
+- v0.5.34 does not represent real trading availability
+- v0.5.34 does not represent profitability
+- v0.5.34 does not authorize real trading
+- v0.5.34 does not authorize MT5 run
+- v0.5.34 does not authorize MQ5 modification
+- v0.5.34 does not authorize tools modification
+- v0.5.34 does not authorize new manifest creation
+- v0.5.34 does not authorize external evidence copying
+- current docs explicitly require not directly entering TASK-159
+- current docs explicitly require not directly entering v0.6.0 implementation
+- current docs explicitly require ChatGPT to define the next task boundary first
+- official manifest is the only manifest
+- official manifest path is correct: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- current gap: none
+- suitable to enter TASK-DOC-217
+- suitable for ChatGPT to define the next task boundary
+- still must not directly enter v0.6.0 implementation
+- pre-existing untracked tools/__pycache__/ was not created by this task and was not modified by this task
+- pre-existing untracked root file 新建 文本文档.txt was not created by this task and was not modified by this task
+- current next boundary updated to TASK-160
+- current next boundary remains TASK-160
+- do not directly enter TASK-160
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-TAG-061 results
+
+- TASK-TAG-061 completed
+- current stable tag updated to v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit
+- v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit points to 1bcc4fc TASK-DOC-217 update state after TASK-159
+- v0.5.34-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion still points to 0ed0ebc
+- v0.5.33-v060-implementation-planning-boundary-tag-completion-audit still points to 33e2f47
+- v0.5.32-v060-implementation-planning-boundary-tag-completion still points to 02ea6b4
+- v0.5.31-v060-implementation-planning-boundary still points to 07c817e
+- v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion still points to 5f416da
+- v0.5.29-v060-implementation-planning-boundary-readiness still points to b362c89
+- v0.5.28-v060-transition-boundary-definition-tag-completion still points to bffa0f2
+- v0.5.27-v060-transition-boundary-definition still points to f98af3e
+- v0.5.26-v060-transition-boundary-definition-readiness-tag-completion still points to ab635aa
+- v0.5.25-v060-transition-boundary-definition-readiness still points to b7ab4b3
+- v0.5.24-v060-transition-boundary-planning-readiness-tag-completion still points to c211ce0
+- v0.5.23-v060-transition-boundary-planning-readiness still points to c6cf555
+- v0.5.22-v050-final-closure-documentation-transition-boundary-completion still points to 362e934
+- v0.5.21-v050-final-closure-documentation-transition-boundary still points to 3d3cfd9
+- v0.5.20-v050-final-closure-documentation-transition-boundary-readiness still points to 61fb9c0
+- v0.5.19-v050-official-evidence-archive-final-phase-closure still points to 38b343c
+- v0.5.18-v050-official-evidence-archive-phase-closure-readiness still points to ed4017b
+- v0.5.17-v050-official-evidence-archive-closure-readiness still points to 8702fd5
+- v0.5.16-official-evidence-archive-closure-readiness-audit still points to ed5eb4b
+- v0.5.15-first-official-evidence-manifest still points to 0a57e91
+- v0.5.14-first-official-manifest-creation-authorization-coverage-audit still points to e5f1405
+- v0.5.13-first-official-manifest-creation-authorization-boundary still points to e869bef
+- v0.5.12-first-official-manifest-promotion-readiness-audit still points to 1d3dd4e
+- v0.5.11-first-official-manifest-dry-run-summary-closure still points to 29acb6b
+- v0.5.10-official-manifest-creation-preflight-audit still points to 890dfa5
+- historical stable tags were not moved
+- v0.6.0 implementation planning boundary tag completion audit stable tag completion audit fixed as stable tag
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- v0.5.35 does not represent v0.6.0 started
+- v0.5.35 does not represent v0.6.0 implementation authorized
+- v0.5.35 does not represent live trading readiness
+- v0.5.35 does not represent real trading availability
+- v0.5.35 does not represent profitability
+- v0.5.35 does not authorize real trading
+- v0.5.35 does not authorize MT5 run
+- v0.5.35 does not authorize MQ5 modification
+- v0.5.35 does not authorize tools modification
+- v0.5.35 does not authorize new manifest creation
+- v0.5.35 does not authorize external evidence copying
+- no new manifest created
+- no fixture created
+- no directory created
+- no unauthorized report created
+- no external evidence copied
+- no MT5 run
+- pre-existing untracked .vscode/ was not created by this task and was not modified by this task
+- pre-existing untracked tools/__pycache__/ was not created by this task and was not modified by this task
+- pre-existing untracked root file 新建 文本文档.txt was not created by this task and was not modified by this task
+- current gap: none
+- suitable for ChatGPT to define the next task boundary
+- do not directly enter TASK-160
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-160 reconciliation results
+
+- TASK-160 completed
+- TASK-160 post-ac25601 state and workflow simplification readiness audit passed
+- current HEAD is ac25601 TASK-DOC-208 update state after TASK-TAG-056
+- current stable tag remains v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit
+- v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit points to 1bcc4fc TASK-DOC-217 update state after TASK-159
+- v0.5.34-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion still points to 0ed0ebc
+- v0.5.33-v060-implementation-planning-boundary-tag-completion-audit still points to 33e2f47
+- v0.5.32-v060-implementation-planning-boundary-tag-completion still points to 02ea6b4
+- v0.5.31-v060-implementation-planning-boundary still points to 07c817e
+- v0.5.30-v060-implementation-planning-boundary-readiness-tag-completion still points to 5f416da
+- v0.5.29 through v0.5.10 historical stable tags were not moved
+- historical stable tags were not moved
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- engineering toolchain 19/19 PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- anomaly: ac25601 commit message is TASK-DOC-208 update state after TASK-TAG-056
+- anomaly: ac25601 is actually located after 1bcc4fc TASK-DOC-217 update state after TASK-159
+- anomaly: TASK-DOC-208 already has original historical commit f241e87 in the historical chain
+- anomaly: ac25601 is a task-id / commit message anomaly
+- this task only records the anomaly through docs reconciliation
+- this task does not rewrite Git history
+- this task does not amend commit
+- this task does not move any tag
+- this task does not create any tag
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- current workflow/process gap: ac25601 task-id anomaly recorded and included for later workflow simplification handling
+- suitable for ChatGPT to define a workflow simplification boundary task
+- still must not directly enter TASK-164
+- still must not directly enter v0.6.0 implementation
+- still must not run MT5
+- still must not modify MQ5
+- still must not modify forbidden tools
+- the next task boundary must be defined by ChatGPT
+- pre-existing untracked .vscode/ was not created by this task and was not modified by this task
+- pre-existing untracked tools/__pycache__/ was not created by this task and was not modified by this task
+- pre-existing untracked root file 新建 文本文档.txt was not created by this task and was not modified by this task
+
+## TASK-161 results
+
+- TASK-161 completed
+- current HEAD is e93e087 TASK-161 implement workflow simplification validation bundle
+- current latest commit is e93e087 TASK-161 implement workflow simplification validation bundle
+- current latest engineering task is e93e087 TASK-161 implement workflow simplification validation bundle
+- current stable tag is v0.5.31-v060-implementation-planning-boundary
+- v0.5.31-v060-implementation-planning-boundary points to 07c817e TASK-DOC-209 update state after TASK-155
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- current phase remains v0.5.0
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- engineering toolchain PASS
+- schema validator PASS
+- path policy validator PASS with --no-check-overwrite
+- git diff --check PASS
+- no forbidden V060 planning / transition docs modified
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md was not modified
+- official manifest was not modified
+- no forbidden tools modified
+- AGENTS.md was not modified
+- MQ5 was not modified
+- backtest/sets was not modified
+- backtest/reports/generated was not modified
+- backtest/reports/samples was not modified
+- no new manifest created
+- no fixture created
+- no unauthorized report created
+- no directory created by this task
+- no external evidence copied
+- no MT5 run
+- current gap: none
+- do not directly enter TASK-164
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-162 reconciliation results
+
+- TASK-162 completed
+- TASK-162 post-ac25601 state and workflow simplification readiness audit passed
+- workflow simplification / reconciliation audit PASS
+- current HEAD is 2c36181 TASK-DOC-218 define v0.6.0 implementation planning boundary
+- current stable tag remains v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit
+- v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit points to 1bcc4fc TASK-DOC-217 update state after TASK-159
+- v0.5.34 points to 0ed0ebc
+- v0.5.33 points to 33e2f47
+- v0.5.32 points to 02ea6b4
+- v0.5.31 points to 07c817e
+- v0.5.30 points to 5f416da
+- v0.5.29 points to b362c89
+- v0.5.28 points to bffa0f2
+- v0.5.27 points to f98af3e
+- v0.5.26 points to ab635aa
+- v0.5.25 points to b7ab4b3
+- v0.5.24 points to c211ce0
+- v0.5.23 points to c6cf555
+- v0.5.22 points to 362e934
+- v0.5.21 points to 3d3cfd9
+- v0.5.20 points to 61fb9c0
+- v0.5.19 points to 38b343c
+- v0.5.18 points to ed4017b
+- v0.5.17 points to 8702fd5
+- v0.5.16 points to ed5eb4b
+- v0.5.15 points to 0a57e91
+- v0.5.14 points to e5f1405
+- v0.5.13 points to e869bef
+- v0.5.12 points to 1d3dd4e
+- v0.5.11 points to 29acb6b
+- v0.5.10 points to 890dfa5
+- historical stable tags were not moved
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and currently has empty tracked diff
+- docs/V060_TRANSITION_BOUNDARY.md exists and currently has empty tracked diff
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- release validation bundle exists and is tracked / committed
+- tools/run_release_validation_bundle.py PASS
+- run_release_validation_bundle.py result PASS 6/6
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- run_engineering_toolchain_checks.py PASS 19/19
+- validate_evidence_manifest_schema.py PASS
+- validate_official_manifest_path_policy.py PASS with --no-check-overwrite
+- git diff --check PASS
+- anomaly: ac25601 commit message is TASK-DOC-208 update state after TASK-TAG-056
+- anomaly: ac25601 is actually located after 1bcc4fc TASK-DOC-217 update state after TASK-159
+- anomaly: TASK-DOC-208 already has original historical commit f241e87 in the historical chain
+- anomaly: ac25601 is a task-id / commit message anomaly
+- anomaly: TASK-DOC-218 modified docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md again
+- anomaly: docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md was originally defined by TASK-155 and fixed by v0.5.31
+- anomaly: TASK-DOC-218 is a duplicate boundary definition / baseline wording adjustment
+- anomaly: TASK-DOC-218 did not change the core boundary definition
+- anomaly: be28400 commit name is TASK-DOC-217, but its parent chain actually corresponds to the post-TASK-161 workflow
+- anomaly: be28400 is a task-id sequencing anomaly
+- the anomalies above do not change current engineering validation results
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- current workflow/process gap: ac25601 task-id anomaly, TASK-DOC-218 duplicate boundary definition, and be28400 task-id sequencing anomaly
+- this task only records and reconciles anomalies in docs
+- this task does not rewrite Git history
+- this task does not amend commit
+- this task does not move any tag
+- this task does not create any tag
+- this task does not modify V060 docs
+- this task does not modify official manifest
+- this task does not run MT5
+- this task does not modify MQ5
+- this task does not enter v0.6.0 implementation
+- future work should enter a workflow simplification boundary task
+- future work should stop reusing old TASK-DOC ids
+- future work should stop redefining already-fixed boundaries
+- future work should prefer tools/run_release_validation_bundle.py to reduce validation cost
+- future Trae instructions should continue using compressed format
+- future Codex instructions may preserve complete boundaries
+- future work must not continue an infinite tag completion / audit stable tag completion chain
+- do not directly enter TASK-164
+- do not directly enter v0.6.0 implementation
+- the workflow simplification boundary must be defined by ChatGPT
+- pre-existing untracked .vscode/ was not created by this task and was not modified by this task
+- pre-existing untracked tools/__pycache__/ was not created by this task and was not modified by this task
+- pre-existing untracked root file 新建 文本文档.txt was not created by this task and was not modified by this task
+
+## TASK-163 workflow simplification boundary results
+
+- TASK-163 completed
+- workflow simplification boundary defined
+- docs/WORKFLOW_SIMPLIFICATION_BOUNDARY.md created
+- efficient workflow mode is now enabled
+- current HEAD is f8f8d1f TASK-DOC-220 reconciliation / workflow simplification boundary
+- current stable tag remains v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit
+- v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit points to 1bcc4fc TASK-DOC-217 update state after TASK-159
+- v0.5.34 points to 0ed0ebc
+- v0.5.33 points to 33e2f47
+- v0.5.32 points to 02ea6b4
+- v0.5.31 points to 07c817e
+- v0.5.30 points to 5f416da
+- v0.5.29 through v0.5.10 historical stable tags were not moved
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- release validation bundle exists and is tracked / committed
+- workflow/process gap was recorded by TASK-DOC-220
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- role routing rules recorded: GPT defines boundaries, Codex edits allowed files, Trae reviews / validates / commits / tags / audits
+- Codex instruction may remain complete when full boundaries are needed
+- Trae instruction must be compressed and focused
+- every instruction must start with target role: Codex or Trae
+- TASK-DOC modification tasks go to Codex first
+- Codex completion review / validation / commit may go to Trae
+- TASK-TAG creation goes to Trae
+- TASK read-only audit goes to Trae
+- no repeated continue prompts by default when the next boundary is clear
+- each milestone should avoid more than one modification task, one review / commit task, one stable tag if necessary, and one state sync if necessary
+- no infinite tag completion / audit stable tag completion chain
+- no repeated definition of a stable-tag-fixed boundary
+- no reuse of old TASK-DOC ids
+- no old task id should appear at the new chain tip
+- task-id anomaly handling is reconciliation only, with no Git history rewrite, no amend commit, and no tag move
+- future validation should use tools/run_release_validation_bundle.py by default
+- expand individual validators only when a failure needs localization
+- release validation bundle must not run MT5
+- release validation bundle must not modify files
+- release validation bundle must not create report / manifest / directory
+- release validation bundle must not copy external evidence
+- ordinary future docs updates should not fully expand v0.5.10 through current tags unless explicitly required
+- ordinary future review / commit instructions should list only current stable tag, recent key tags, forbidden items, validation commands, and commit information
+- future tag tasks should confirm only current tag, target tag, recent key historical tags, and old tags not moved
+- future audit tasks should stay read-only and must not produce meta-audit chains
+- workflow simplification boundary does not authorize v0.6.0 implementation
+- workflow simplification boundary does not authorize MT5
+- workflow simplification boundary does not authorize MQ5
+- workflow simplification boundary does not authorize forbidden tools modification
+- workflow simplification boundary does not authorize new manifest
+- workflow simplification boundary does not authorize external evidence copy
+- workflow simplification boundary does not authorize real trading
+- workflow simplification boundary does not authorize profit optimization
+- do not directly enter TASK-164
+- do not directly enter v0.6.0 implementation
+- next step should first be Trae review and commit for this task
+- after this task is committed, GPT may define the first real low-risk tooling task for v0.6.0 implementation planning
+- the next task boundary must be defined by ChatGPT
+- pre-existing untracked .vscode/ was not created by this task and was not modified by this task
+- pre-existing untracked tools/__pycache__/ was not created by this task and was not modified by this task
+- pre-existing untracked root file 新建 文本文档.txt was not created by this task and was not modified by this task
+
+## TASK-DOC-221 update state after TASK-165 results
+
+- TASK-165 completed
+- current HEAD is 30eff6d TASK-165 implement v0.6.0 transition boundary validator
+- current phase remains v0.5.0
+- current stable tag remains v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit
+- v0.5.35 still points to 1bcc4fc TASK-DOC-217 update state after TASK-159
+- v0.5.34 still points to 0ed0ebc
+- v0.5.33 still points to 33e2f47
+- v0.5.32 still points to 02ea6b4
+- v0.5.31 still points to 07c817e
+- v0.5.30 through v0.5.10 historical stable tags were not moved
+- workflow simplification boundary is active
+- release validation bundle exists and is tracked / committed
+- TASK-165 added the v0.6.0 transition boundary validator
+- tools/validate_v060_transition_boundary.py was created and committed
+- tools/test_validate_v060_transition_boundary.py was created and committed
+- tools/run_release_validation_bundle.py was integrated with the v0.6.0 transition boundary validator
+- tools/test_run_release_validation_bundle.py was updated
+- release validation bundle current result PASS 8/8
+- test_validate_v060_transition_boundary.py PASS
+- validate_v060_transition_boundary.py PASS
+- test_run_release_validation_bundle.py PASS
+- run_release_validation_bundle.py PASS 8/8
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- git diff --check PASS
+- v0.6.0 transition boundary validator is read-only
+- validator did not call task_acceptance_report.ps1
+- validator did not run MT5
+- validator did not modify MQ5
+- validator did not modify docs
+- validator did not modify official manifest
+- validator did not create manifest / fixture / report / directory
+- validator did not copy external evidence
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/WORKFLOW_SIMPLIFICATION_BOUNDARY.md exists and was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- efficient workflow mode continues: future Trae instructions should stay compressed and future validation should prefer tools/run_release_validation_bundle.py
+- do not directly enter TASK-166
+- do not directly enter v0.6.0 implementation
+- do not directly modify MQ5
+- do not directly run MT5
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-222 update state after TASK-166 results
+
+- TASK-166 completed
+- current HEAD is 915b6c4 TASK-166 implement v0.6.0 implementation planning boundary validator
+- current phase remains v0.5.0
+- current stable tag remains v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit
+- v0.5.35 still points to 1bcc4fc TASK-DOC-217 update state after TASK-159
+- v0.5.34 through v0.5.10 historical stable tags were not moved
+- workflow simplification boundary is active
+- release validation bundle exists and is tracked / committed
+- TASK-165 completed and made release validation bundle PASS 8/8
+- TASK-166 added the v0.6.0 implementation planning boundary validator
+- tools/validate_v060_implementation_planning_boundary.py was created and committed
+- tools/test_validate_v060_implementation_planning_boundary.py was created and committed
+- tools/run_release_validation_bundle.py was integrated with the v0.6.0 implementation planning boundary validator
+- tools/test_run_release_validation_bundle.py was updated
+- release validation bundle current result PASS 9/9
+- test_validate_v060_implementation_planning_boundary.py PASS
+- validate_v060_implementation_planning_boundary.py PASS
+- test_run_release_validation_bundle.py PASS
+- run_release_validation_bundle.py PASS 9/9
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- git diff --check PASS
+- v0.6.0 implementation planning boundary validator is read-only
+- validator did not call task_acceptance_report.ps1
+- validator did not run MT5
+- validator did not modify MQ5
+- validator did not modify docs
+- validator did not modify official manifest
+- validator did not create manifest / fixture / report / directory
+- validator did not copy external evidence
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- docs/WORKFLOW_SIMPLIFICATION_BOUNDARY.md exists and was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- efficient workflow mode continues: future Trae instructions should stay compressed and future validation should prefer tools/run_release_validation_bundle.py
+- do not directly enter TASK-167
+- do not directly enter v0.6.0 implementation
+- do not directly modify MQ5
+- do not directly run MT5
+- suitable for ChatGPT to define the first low-risk v0.6.0 implementation planning tooling task
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-223 define v0.6.0 implementation boundary
+
+- current HEAD is 7f7557c TASK-167 implement read-only MQ5 strategy inventory scanner
+- current phase remains v0.5.0
+- current stable tag remains v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit
+- v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit is fixed
+- v0.5.35 still points to 1bcc4fc TASK-DOC-217 update state after TASK-159
+- v0.5.34 through v0.5.10 historical stable tags were not moved
+- v0.5.0 closure remains complete
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- workflow simplification is completed and remains active
+- v0.6.0 implementation boundary is defined only as a planning and validation boundary
+- this task does not start v0.6.0 implementation
+- this task does not authorize live trading readiness
+- this task does not authorize real trading availability
+- this task does not authorize profitability claims
+- this task does not authorize real trading
+- this task does not authorize MT5 run
+- this task does not authorize MQ5 modification
+- this task does not authorize new manifest creation
+- this task does not authorize external evidence copying
+- this task does not authorize backtest/sets modification
+- this task does not authorize official manifest modification
+- docs/V060_TRANSITION_BOUNDARY.md remains unchanged
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md remains unchanged
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md remains unchanged
+- official manifest remains unchanged and remains the only official manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- release validation bundle baseline before this task was PASS 9/9
+- release validation bundle is allowed to run for this task
+- tools/validate_v060_implementation_boundary.py was created as a read-only validator
+- tools/test_validate_v060_implementation_boundary.py was created
+- tools/run_release_validation_bundle.py was integrated with the v0.6.0 implementation boundary validator
+- validator tooling was created and connected to the release validation bundle
+- validate_v060_implementation_boundary.py PASS
+- test_validate_v060_implementation_boundary.py PASS
+- run_release_validation_bundle.py PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- git diff --check PASS
+- do not directly enter TASK-224
+- do not directly enter v0.6.0 implementation
+- do not directly run MT5
+- do not directly modify MQ5
+- do not create a new manifest
+- do not copy external evidence
+- the next task must be explicitly issued by ChatGPT
+
+## TASK-DOC-224 prepare v0.6.0 implementation readiness
+
+- current HEAD is 78437d8 TASK-DOC-223 define v0.6.0 implementation boundary
+- current phase remains v0.5.0
+- current stable tag remains v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit
+- v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit remains fixed
+- workflow simplification is completed and remains active
+- docs/V060_TRANSITION_BOUNDARY.md exists and remains unchanged
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and remains unchanged
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md remains unchanged
+- v0.6.0 transition boundary validator is ready
+- v0.6.0 implementation planning boundary validator is ready
+- v0.6.0 implementation boundary validator is ready
+- workflow simplification policy validator is ready
+- project state docs validator is ready
+- release validation bundle includes workflow simplification, project state, transition boundary, implementation planning boundary, and implementation boundary validators
+- release validation bundle baseline before this task was PASS 10/10
+- tools/validate_v060_implementation_readiness.py was created as a read-only validator
+- tools/test_validate_v060_implementation_readiness.py was created
+- tools/run_release_validation_bundle.py was integrated with the v0.6.0 implementation readiness validator
+- v0.6.0 implementation readiness is a readiness gate only
+- this task does not enter v0.6.0 implementation
+- this task does not run MT5
+- this task does not modify MQ5
+- this task does not create a new manifest
+- this task does not create a fixture
+- this task does not copy external evidence
+- this task does not enter real trading
+- this task does not do profitability optimization
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- workspace should be clean or contain only pre-existing untracked files after this task
+- validate_v060_implementation_readiness.py PASS
+- test_validate_v060_implementation_readiness.py PASS
+- run_release_validation_bundle.py PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- git diff --check PASS
+- do not directly enter TASK-225
+- do not directly enter v0.6.0 implementation
+- the next task must be explicitly issued by ChatGPT
+
+## TASK-DOC-226 update state after TASK-225
+
+- TASK-225 completed
+- TASK-225 read-only audit PASS
+- current HEAD is 52eb8eb TASK-DOC-224 prepare v0.6.0 implementation readiness
+- current stable tag remains v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit
+- v0.5.35 points to 1bcc4fc
+- v0.5.34 through v0.5.10 historical stable tags were not moved
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- docs/WORKFLOW_SIMPLIFICATION_BOUNDARY.md exists and was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- v0.6.0 implementation readiness validator was created and integrated into the release validation bundle
+- release validation bundle current result PASS 11/11
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- run_engineering_toolchain_checks.py PASS 19/19
+- validate_evidence_manifest_schema.py PASS
+- validate_official_manifest_path_policy.py PASS with --no-check-overwrite
+- git diff --check PASS
+- current gap: none
+- v0.6.0 implementation planning boundary tag completion is satisfied
+- v0.5.35 does not represent v0.6.0 started
+- v0.5.35 does not represent v0.6.0 implementation authorized
+- v0.5.35 does not represent live trading readiness
+- v0.5.35 does not represent real trading availability
+- v0.5.35 does not represent profitability
+- v0.5.35 does not authorize real trading
+- v0.5.35 does not authorize MT5 run
+- v0.5.35 does not authorize MQ5 modification
+- v0.5.35 does not authorize restricted tools modification
+- v0.5.35 does not authorize new manifest creation
+- v0.5.35 does not authorize external evidence copying
+- suitable for ChatGPT to define the v0.6.0 implementation stable tag
+- still must not directly enter v0.6.0 implementation
+- do not directly enter TASK-227
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-227 update state after TASK-226
+
+- TASK-226 completed
+- current HEAD is 52eb8eb TASK-DOC-224 prepare v0.6.0 implementation readiness
+- current stable tag is v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion-audit -> 1bcc4fc
+- v0.5.34 through v0.5.10 historical stable tags were not moved
+- current phase remains v0.5.0
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- docs/WORKFLOW_SIMPLIFICATION_BOUNDARY.md exists and was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- v0.5.35 does not represent v0.6.0 started
+- v0.5.35 does not represent v0.6.0 implementation authorized
+- v0.5.35 does not represent live trading readiness
+- v0.5.35 does not represent real trading availability
+- v0.5.35 does not represent profitability
+- v0.5.35 does not authorize real trading
+- v0.5.35 does not authorize MT5 run
+- v0.5.35 does not authorize MQ5 modification
+- v0.5.35 does not authorize tools modification
+- v0.5.35 does not authorize new manifest creation
+- v0.5.35 does not authorize external evidence copying
+- workflow simplification, v0.6.0 readiness, implementation, and boundary validators were created and integrated into the release validation bundle
+- release validation bundle PASS all checks
+- current gap: none
+- do not directly enter TASK-228
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-228 update state after TASK-TAG-062
+
+- TASK-TAG-062 completed
+- current stable tag updated to v0.5.36-v060-implementation-readiness-tooling-baseline
+- v0.5.36 points to d3aad87 TASK-DOC-227 update state after TASK-226
+- v0.5.35-v060-implementation-planning-boundary-tag-completion-audit-stable-tag-completion remains fixed
+- v0.5.34 through v0.5.10 historical stable tags were not moved
+- current phase remains v0.5.0
+- docs/V060 implementation planning and transition docs exist and were not modified
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- official manifest exists and was not modified
+- v0.5.36 does not represent v0.6.0 started
+- v0.5.36 does not represent v0.6.0 implementation authorized
+- v0.5.36 does not represent live trading
+- v0.5.36 does not represent real trading
+- v0.5.36 does not represent profitability
+- v0.5.36 does not authorize real trading
+- v0.5.36 does not authorize MT5 run
+- v0.5.36 does not authorize MQ5 modification
+- v0.5.36 does not authorize tools modification
+- v0.5.36 does not authorize new manifest creation
+- v0.5.36 does not authorize external evidence copying
+- do not directly enter TASK-229
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-229 update state after TASK-TAG-063
+
+- TASK-TAG-063 completed
+- current stable tag updated to v0.5.37-v060-implementation-readiness-tooling-validation
+- v0.5.37 points to 915b6c4 TASK-166 implement v0.6.0 implementation planning boundary validator
+- v0.5.36 through v0.5.10 historical stable tags were not moved
+- current phase remains v0.5.0
+- docs/V060 implementation planning and transition docs exist and were not modified
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- official manifest exists and was not modified
+- v0.5.37 does not represent v0.6.0 started
+- v0.5.37 does not represent v0.6.0 implementation authorized
+- v0.5.37 does not represent live trading
+- v0.5.37 does not represent real trading
+- v0.5.37 does not represent profitability
+- v0.5.37 does not authorize real trading
+- v0.5.37 does not authorize MT5 run
+- v0.5.37 does not authorize MQ5 modification
+- v0.5.37 does not authorize tools modification
+- v0.5.37 does not authorize new manifest creation
+- v0.5.37 does not authorize external evidence copying
+- do not directly enter TASK-230
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-232 update state after TASK-231
+
+- TASK-231 completed
+- current HEAD is 68f39c4 TASK-231 integrate v0.6.0 implementation boundary validator into release validation bundle
+- TASK-231 added explicit release validation bundle self-test coverage for validate_v060_implementation_boundary.py
+- release validation bundle currently PASS 12/12
+- test_run_release_validation_bundle.py PASS
+- run_release_validation_bundle.py PASS 12/12
+- validate_v060_implementation_boundary.py PASS
+- validate_project_state_docs.py PASS
+- test_validate_project_state_docs.py PASS
+- git diff --check PASS
+- current phase remains v0.5.0
+- current stable tag remains v0.5.37-v060-implementation-readiness-tooling-validation
+- v0.5.37 points to 915b6c4 TASK-166 implement v0.6.0 implementation planning boundary validator
+- v0.5.36 points to d3aad87
+- v0.5.35 points to 1bcc4fc
+- v0.5.34 through v0.5.10 historical stable tags were not moved
+- docs/WORKFLOW_SIMPLIFICATION_BOUNDARY.md exists and was not modified
+- docs/V060_TRANSITION_BOUNDARY.md exists and was not modified
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and was not modified
+- docs/EVIDENCE_ARCHIVE_AND_MANIFEST.md was not modified
+- official manifest exists, was not modified, and remains the only manifest
+- official manifest path: backtest/reports/manifests/TASK-139_external-mt5-eurusd-m5-20240101-20240131-no-trade_manifest.json
+- TASK-231 did not run MT5
+- TASK-231 did not modify MQ5
+- TASK-231 did not modify docs / V060 docs / workflow docs / official manifest
+- TASK-231 did not create manifest / fixture / report / directory
+- TASK-231 did not copy external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- workflow simplification remains active
+- future Trae instructions continue using compressed format
+- prefer tools/run_release_validation_bundle.py for future validation
+- do not directly enter TASK-233
+- do not directly enter v0.6.0 implementation
+- do not directly run MT5
+- do not directly modify MQ5
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-234 update state after TASK-233
+
+- TASK-233 completed
+- current HEAD is 4335b46 TASK-233 implement selective release validation bundle execution
+- current phase remains v0.5.0
+- current stable tag remains v0.5.37-v060-implementation-readiness-tooling-validation
+- v0.5.37 points to 915b6c4 TASK-166 implement v0.6.0 implementation planning boundary validator
+- v0.5.36 points to d3aad87
+- v0.5.35 points to 1bcc4fc
+- v0.5.34 through v0.5.10 historical stable tags were not moved
+- TASK-233 enhanced tools/run_release_validation_bundle.py
+- release validation bundle default run currently PASS 12/12
+- tools/run_release_validation_bundle.py supports --list
+- --list lists 12 checks
+- tools/run_release_validation_bundle.py supports --only and --only is repeatable
+- --only project-state-docs PASS
+- tools/run_release_validation_bundle.py supports --skip and --skip is repeatable
+- --skip engineering-toolchain PASS 11/11
+- --skip-engineering-toolchain compatibility remains preserved
+- unknown check-id fails and prints available check ids
+- combining --only with --skip fails
+- combining --only with --skip-engineering-toolchain fails
+- TASK-233 did not call task_acceptance_report.ps1
+- TASK-233 did not run MT5
+- TASK-233 did not modify MQ5
+- TASK-233 did not modify docs / V060 docs / workflow simplification doc
+- TASK-233 did not modify official manifest
+- TASK-233 did not modify restricted tools / AGENTS.md / MQ5 / backtest
+- TASK-233 did not create manifest / fixture / report / directory
+- TASK-233 did not copy external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- workflow simplification remains active
+- future Trae instructions continue using compressed format
+- prefer tools/run_release_validation_bundle.py for future validation
+- future validation may use --list / --only / --skip to reduce validation cost
+- do not directly enter TASK-235
+- do not directly enter v0.6.0 implementation
+- do not directly run MT5
+- do not directly modify MQ5
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-236 update state after TASK-235
+
+- current task is TASK-DOC-236 update state after TASK-235
+- TASK-DOC-236 target is to sync TASK-235 read-only MQ5 strategy inventory audit results
+- TASK-235 completed
+- TASK-235 read-only MQ5 strategy inventory audit PASS
+- current HEAD is 0fc2b95 TASK-DOC-234 update state after TASK-233
+- tracked working tree clean before TASK-DOC-236 edits
+- current phase remains v0.5.0
+- current stable tag remains v0.5.37-v060-implementation-readiness-tooling-validation
+- v0.5.37 points to 915b6c4 TASK-166 implement v0.6.0 implementation planning boundary validator
+- MQ5 root exists
+- scanned 7 MQ5 files: 1 .mq5 and 6 .mqh
+- scanned file: config/InputConfig.mqh
+- scanned file: core/EaController.mqh
+- scanned file: execution/ExecutionManager.mqh
+- scanned file: logger/Logger.mqh
+- scanned file: risk/RiskManager.mqh
+- scanned file: signals/SignalEngine.mqh
+- scanned file: TradingSystem.mq5
+- input parameter lines: 34
+- InpEnableTrading appears in 4 files
+- RiskManager appears in 2 files
+- SignalEngine appears in 4 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade trading keywords are all false
+- current MQ5 codebase is pure framework / no active trading instructions
+- OnInit / OnTick / OnDeinit are present in framework files
+- inventory output includes: Inventory only; no MT5 run; no trading authorization.
+- tools/run_release_validation_bundle.py --only mq5-inventory PASS
+- tools/run_release_validation_bundle.py --only project-state-docs PASS
+- tools/run_release_validation_bundle.py --only project-state-docs-self-test PASS
+- git diff --check PASS
+- TASK-235 did not modify MQ5 files
+- TASK-235 did not run MT5
+- TASK-235 did not create manifest / fixture / report / directory
+- TASK-235 did not copy external evidence
+- TASK-235 did not modify official manifest
+- TASK-235 did not modify backtest/sets
+- v0.6.0 implementation has not started
+- workflow simplification remains active
+- GPT defines task boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not repeat already fixed boundary definitions
+- do not reuse old TASK-DOC ids
+- prefer tools/run_release_validation_bundle.py by default
+- suitable for ChatGPT to define the first v0.6.0 low-risk implementation planning task
+- do not directly enter TASK-237
+- do not directly enter v0.6.0 implementation
+- do not directly run MT5
+- do not directly modify MQ5
+- do not enter real trading
+- do not optimize profitability
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-237 create first v0.6.0 low-risk implementation planning packet
+
+- TASK-DOC-236 completed
+- TASK-DOC-236 was synced and tagged as v0.5.38-task-236-project-state-synced
+- current task is TASK-DOC-237 create first v0.6.0 low-risk implementation planning packet
+- TASK-DOC-237 is a doc-only planning task
+- TASK-DOC-237 creates docs/V060_FIRST_LOW_RISK_IMPLEMENTATION_PLAN.md
+- docs/V060_FIRST_LOW_RISK_IMPLEMENTATION_PLAN.md exists and records the first v0.6.0 low-risk implementation planning packet
+- docs/V060_FIRST_LOW_RISK_IMPLEMENTATION_PLAN.md is planning-only and not implementation authorization
+- TASK-DOC-237 does not enter v0.6.0 implementation
+- TASK-DOC-237 does not modify MQ5
+- TASK-DOC-237 does not run MT5
+- TASK-DOC-237 does not authorize trading
+- current phase remains v0.5.0
+- current HEAD remains b3a981d TASK-DOC-236 update state after TASK-235
+- current latest tag is v0.5.38-task-236-project-state-synced
+- tracked working tree was clean after TASK-DOC-236 commit
+- docs/V060_TRANSITION_BOUNDARY.md exists and remains fixed
+- docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md exists and remains fixed
+- docs/WORKFLOW_SIMPLIFICATION_BOUNDARY.md exists and remains fixed
+- TASK-DOC-237 does not redefine stable boundaries
+- future candidate slice is TASK-238 v0.6.0 no-trade observability scaffold
+- TASK-238 is a future candidate only and is not authorized by TASK-DOC-237
+- future TASK-238 candidate must remain no-trade observability scaffold only
+- future TASK-238 candidate must keep InpEnableTrading false by default
+- future TASK-238 candidate must not introduce Buy / Sell / OrderSend / PositionOpen / CTrade
+- future TASK-238 candidate must not trigger real trading, simulated trading, backtest trading, or order sending
+- future TASK-238 candidate must not create official evidence or manifest
+- future TASK-238 candidate must not copy external evidence
+- future TASK-238 candidate must not modify backtest/sets
+- future TASK-238 candidate must not optimize profitability
+- future TASK-238 candidate must not run MT5 unless ChatGPT later explicitly authorizes it
+- high-efficiency mode remains active
+- GPT defines task boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not repeat already fixed boundary definitions
+- do not reuse old TASK-DOC ids
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter TASK-238
+- do not directly enter v0.6.0 implementation
+- do not directly run MT5
+- do not directly modify MQ5
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-238 define low-risk no-trade observability scaffold boundary
+
+- TASK-DOC-237 completed
+- TASK-DOC-237 created docs/V060_FIRST_LOW_RISK_IMPLEMENTATION_PLAN.md
+- current task is TASK-DOC-238 define low-risk no-trade observability scaffold boundary
+- TASK-DOC-238 target is to define the first low-risk no-trade observability scaffold boundary
+- TASK-DOC-238 is planning-only and defines a future candidate boundary
+- TASK-DOC-238 is not TASK-238 implementation
+- TASK-DOC-238 does not enter TASK-238 implementation
+- TASK-DOC-238 does not enter v0.6.0 implementation
+- TASK-DOC-238 creates docs/V060_TASK_238_NO_TRADE_SCAFFOLD_BOUNDARY.md
+- docs/V060_TASK_238_NO_TRADE_SCAFFOLD_BOUNDARY.md exists
+- docs/V060_TASK_238_NO_TRADE_SCAFFOLD_BOUNDARY.md records TASK-238 no-trade scaffold boundary
+- current phase remains v0.5.0
+- current HEAD is c905fa2 TASK-DOC-237 update state after TASK-235
+- current latest tag is v0.5.39-task-237-first-low-risk-plan
+- TASK-238 future candidate scope is no-trade observability scaffold only
+- TASK-238 future candidate may only plan read-only state observability, logging / telemetry contract, and safety guard visibility
+- InpEnableTrading false remains the safety baseline
+- Buy / Sell / OrderSend / PositionOpen / CTrade 均 false
+- current MQ5 codebase remains pure framework / no active trading instructions
+- Inventory only; no MT5 run; no trading authorization.
+- TASK-DOC-238 does not modify MQ5
+- TASK-DOC-238 does not run MT5
+- TASK-DOC-238 does not execute trading, simulation, or backtest
+- TASK-DOC-238 does not create manifest / fixture / report / directory
+- TASK-DOC-238 does not copy external evidence
+- TASK-DOC-238 does not modify official manifest / backtest/sets
+- TASK-DOC-238 does not modify docs/V060_TRANSITION_BOUNDARY.md
+- TASK-DOC-238 does not modify docs/V060_IMPLEMENTATION_PLANNING_BOUNDARY.md
+- TASK-DOC-238 does not modify docs/WORKFLOW_SIMPLIFICATION_BOUNDARY.md
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not repeat already fixed boundary definitions
+- do not reuse old TASK-DOC ids
+- prefer tools/run_release_validation_bundle.py by default
+- v0.6.0 implementation has not started
+- do not directly enter TASK-238 implementation
+- do not directly enter v0.6.0 implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-239 define first authorized v0.6.0 low-risk implementation slice boundary
+
+- current task is TASK-DOC-239 define first authorized v0.6.0 low-risk implementation slice boundary
+- TASK-DOC-239 defines the first authorized low-risk implementation slice boundary
+- TASK-DOC-239 is planning + boundary only
+- TASK-DOC-239 is not MQ5 source implementation
+- TASK-DOC-239 is not v0.6.0 full implementation
+- TASK-DOC-239 creates docs/V060_TASK_239_FIRST_IMPLEMENTATION_SLICE_BOUNDARY.md
+- docs/V060_TASK_239_FIRST_IMPLEMENTATION_SLICE_BOUNDARY.md exists
+- current phase remains v0.5.0
+- current HEAD is e439e1e TASK-DOC-238 update state after TASK-237
+- current latest tag is v0.5.40-task-238-no-trade-scaffold-boundary
+- TASK-DOC-237 first low-risk implementation plan remains the planning reference
+- TASK-DOC-238 no-trade scaffold boundary remains the reference baseline
+- InpEnableTrading false remains the safety baseline
+- Buy / Sell / OrderSend / PositionOpen / CTrade 均 false
+- current MQ5 codebase remains pure framework / no active trading instructions
+- Inventory only; no MT5 run; no trading authorization.
+- planned low-risk scope is logging / telemetry contract, read-only state observability, non-trading signal / risk / controller outputs, and safety guard / validator coverage
+- TASK-DOC-239 does not modify MQ5
+- TASK-DOC-239 does not run MT5
+- TASK-DOC-239 does not trigger trading, simulation trading, or backtest trading
+- TASK-DOC-239 does not create manifest / fixture / report / directory
+- TASK-DOC-239 does not copy external evidence
+- TASK-DOC-239 does not modify official manifest / backtest/sets
+- TASK-DOC-239 does not modify stable boundary docs
+- TASK-DOC-239 does not authorize real trading
+- TASK-DOC-239 does not authorize profitability optimization
+- TASK-DOC-239 does not enter TASK-240
+- TASK-DOC-239 does not enter v0.6.0 full implementation
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not repeat already fixed boundary definitions
+- do not reuse old TASK-DOC ids
+- prefer tools/run_release_validation_bundle.py by default
+- v0.6.0 implementation has not started
+- do not directly enter TASK-240
+- do not directly enter v0.6.0 full implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-240 implement v0.6.0 no-trade observability scaffold
+
+- TASK-DOC-239 completed and is tagged as v0.5.41-task-239-first-implementation-slice-boundary
+- current task is TASK-240 implement v0.6.0 no-trade observability scaffold
+- TASK-240 is first authorized v0.6.0 low-risk implementation slice
+- TASK-240 is limited to no-trade observability scaffold
+- TASK-240 remains limited to no-trade observability scaffold
+- TASK-240 does not enter v0.6.0 full implementation
+- current phase remains v0.5.0 while this restricted slice is executed
+- current HEAD is 583b3e9 TASK-DOC-239 update state after TASK-238
+- current latest tag is v0.5.41-task-239-first-implementation-slice-boundary
+- InpEnableTrading false remains the safety baseline
+- Buy / Sell / OrderSend / PositionOpen / CTrade 均 false
+- current MQ5 codebase remains pure framework / no active trading instructions
+- no-trade observability scaffold output is read-only
+- no-trade observability scaffold logs include: Inventory only; no MT5 run; no trading authorization.
+- no-trade observability scaffold logs include: no-trade observability scaffold
+- TASK-240 adds only read-only observability input controls
+- TASK-240 adds only no-trade logging / telemetry contract helper output
+- TASK-240 adds only OnInit and optional throttled OnTick observability state output
+- TASK-240 does not modify execution/ExecutionManager.mqh
+- TASK-240 does not modify risk/RiskManager.mqh
+- TASK-240 does not modify signals/SignalEngine.mqh
+- TASK-240 does not run MT5
+- TASK-240 does not run backtest
+- TASK-240 does not trigger real trading
+- TASK-240 does not trigger simulated trading
+- TASK-240 does not send orders
+- TASK-240 does not create manifest / fixture / report / directory
+- TASK-240 does not copy external evidence
+- TASK-240 does not modify official manifest / backtest/sets
+- TASK-240 does not authorize profitability optimization
+- MQ5 inventory must remain PASS with trading keywords false
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter v0.6.0 full implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-241 sync TASK-240 no-trade observability scaffold state to project docs
+
+- current task is TASK-DOC-241 sync TASK-240 no-trade observability scaffold state to project docs
+- TASK-DOC-241 objective is to sync TASK-240 no-trade observability scaffold state to project docs
+- TASK-240 completed no-trade observability scaffold
+- TASK-DOC-240 completed and is tagged as v0.5.42-task-240-v060-no-trade-observability-scaffold
+- TASK-240 remains first authorized v0.6.0 low-risk implementation slice
+- TASK-240 remains limited to no-trade observability scaffold
+- TASK-240 completed only a no-trade observability scaffold, not v0.6.0 full implementation
+- current phase remains v0.5.0 with first v0.6.0 implementation slice in progress
+- current HEAD is f9771d9 TASK-240 implement no-trade observability scaffold
+- current latest tag is v0.5.42-task-240-v060-no-trade-observability-scaffold
+- InpEnableTrading false remains the safety baseline
+- Buy / Sell / OrderSend / PositionOpen / CTrade 均 false
+- current MQ5 codebase remains pure framework / no active trading instructions
+- no-trade observability scaffold output is read-only
+- no-trade observability scaffold logs include: Inventory only; no MT5 run; no trading authorization.
+- no-trade observability scaffold logs include: no-trade observability scaffold
+- TASK-240 MQ5 inventory remains PASS
+- TASK-240 trading keywords remain all false
+- TASK-DOC-241 does not modify MQ5 / MQH
+- TASK-DOC-241 does not run MT5
+- TASK-DOC-241 does not run backtest or real trading
+- TASK-DOC-241 does not create manifest / fixture / report / directory
+- TASK-DOC-241 does not copy external evidence
+- TASK-DOC-241 does not modify official manifest / backtest/sets
+- TASK-DOC-241 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter v0.6.0 full implementation
+- the next task boundary must be defined by ChatGPT
+
+## TASK-242 implement mq5 no-trade observability contract validator
+
+- current task is TASK-242 implement mq5 no-trade observability contract validator
+- TASK-DOC-241 completed and is tagged as v0.5.43-task-241-sync-task-240-state
+- TASK-242 objective is to implement a read-only MQ5 no-trade observability contract validator
+- TASK-242 creates tools/validate_mq5_no_trade_observability.py
+- TASK-242 creates tools/test_validate_mq5_no_trade_observability.py
+- TASK-242 integrates mq5-no-trade-observability into tools/run_release_validation_bundle.py
+- current HEAD is d5babfa TASK-DOC-241 update state after TASK-240
+- current latest tag is v0.5.43-task-241-sync-task-240-state
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- TASK-242 static validation confirms TASK-240 no-trade observability scaffold remains present
+- mq5 no-trade observability contract validator checks InpEnableTrading default false
+- mq5 no-trade observability contract validator checks no MT5 run
+- mq5 no-trade observability contract validator checks no trading authorization
+- mq5 no-trade observability contract validator checks no-trade observability scaffold
+- mq5 no-trade observability contract validator checks Inventory only; no MT5 run; no trading authorization.
+- mq5 no-trade observability contract validator checks Buy / Sell / OrderSend / PositionOpen / CTrade remain absent from mq5 source files
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- TASK-242 does not modify MQ5 / MQH
+- TASK-242 does not run MT5
+- TASK-242 does not run backtest
+- TASK-242 does not enter real trading
+- TASK-242 does not enter simulated trading
+- TASK-242 does not send orders
+- TASK-242 does not create manifest / fixture / report / directory
+- TASK-242 does not copy external evidence
+- TASK-242 does not modify official manifest / backtest/sets
+- TASK-242 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, atomic commit && tag, and audits when explicitly assigned
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-243 implement structured no-trade observability status snapshot
+
+- current task is TASK-243 implement structured no-trade observability status snapshot
+- TASK-243 is a low-risk MQ5 implementation slice
+- TASK-243 implementation scope is limited to structured no-trade observability status snapshot
+- TASK-242 completed mq5 no-trade observability contract validator
+- TASK-242 commit is 8f59b3b TASK-242 implement mq5 no-trade observability contract validator
+- TASK-242 tag is v0.5.44-task-242-mq5-no-trade-observability-validator
+- current HEAD is 8f59b3b TASK-242 implement mq5 no-trade observability contract validator
+- current latest tag is v0.5.44-task-242-mq5-no-trade-observability-validator
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- structured no-trade observability status snapshot records mode=no-trade observability scaffold
+- structured no-trade observability status snapshot records inventory_notice=Inventory only; no MT5 run; no trading authorization.
+- structured no-trade observability status snapshot records enable_trading
+- structured no-trade observability status snapshot records observability_enabled
+- structured no-trade observability status snapshot records init_log_enabled
+- structured no-trade observability status snapshot records tick_log_enabled
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-243 does not run MT5
+- TASK-243 does not execute backtest
+- TASK-243 does not enter real trading
+- TASK-243 does not enter simulated trading
+- TASK-243 does not send orders
+- TASK-243 does not create manifest / fixture / report / directory
+- TASK-243 does not copy external evidence
+- TASK-243 does not modify official manifest / backtest/sets
+- TASK-243 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- subsequent Trae commit/tag must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-244 implement read-only MQ5 component status snapshot contract
+
+- current task is TASK-244 implement read-only MQ5 component status snapshot contract
+- TASK-244 is a low-risk MQ5 implementation slice
+- TASK-244 implementation scope is limited to read-only MQ5 component status snapshot contract
+- TASK-243 completed structured no-trade observability status snapshot
+- TASK-243 commit is f28f788 TASK-243 implement structured no-trade observability status snapshot
+- TASK-243 tag is v0.5.45-task-243-structured-no-trade-observability-snapshot
+- current HEAD is f28f788 TASK-243 implement structured no-trade observability status snapshot
+- current latest tag is v0.5.45-task-243-structured-no-trade-observability-snapshot
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only MQ5 component status snapshot contract records controller_status=ready
+- read-only MQ5 component status snapshot contract records logger_status=ready
+- read-only MQ5 component status snapshot contract records signal_status=read-only framework
+- read-only MQ5 component status snapshot contract records risk_status=read-only framework
+- read-only MQ5 component status snapshot contract records execution_status=read-only framework
+- read-only MQ5 component status snapshot contract records all_components_no_trade=true
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-244 does not run MT5
+- TASK-244 does not run backtest
+- TASK-244 does not enter real trading
+- TASK-244 does not enter simulated trading
+- TASK-244 does not send orders
+- TASK-244 does not create manifest / fixture / report / directory
+- TASK-244 does not copy external evidence
+- TASK-244 does not modify official manifest / backtest/sets
+- TASK-244 does not commit
+- subsequent Trae commit/tag must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-245 implement no-trade lifecycle telemetry event contract
+
+- current task is TASK-245 implement no-trade lifecycle telemetry event contract
+- TASK-245 is a low-risk MQ5 implementation slice
+- TASK-245 implementation scope is limited to no-trade lifecycle telemetry event contract
+- TASK-244 completed read-only MQ5 component status snapshot contract
+- TASK-244 commit is 98fb991 TASK-244 implement read-only MQ5 component status snapshot contract
+- TASK-244 tag is v0.5.46-task-244-read-only-component-status-snapshot
+- current HEAD is 98fb991 TASK-244 implement read-only MQ5 component status snapshot contract
+- current latest tag is v0.5.46-task-244-read-only-component-status-snapshot
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- no-trade lifecycle telemetry event contract records lifecycle_event=init
+- no-trade lifecycle telemetry event contract records lifecycle_event=tick
+- no-trade lifecycle telemetry event contract records lifecycle_event=deinit
+- no-trade lifecycle telemetry event contract records no_trade_guard=active
+- no-trade lifecycle telemetry event contract records trading_authorization=false
+- no-trade lifecycle telemetry event contract records mt5_run_required=false
+- no-trade lifecycle telemetry event contract records evidence_generation=false
+- no-trade lifecycle telemetry event contract records manifest_generation=false
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-245 does not run MT5
+- TASK-245 does not run backtest
+- TASK-245 does not enter real trading
+- TASK-245 does not enter simulated trading
+- TASK-245 does not send orders
+- TASK-245 does not create manifest / fixture / report / directory
+- TASK-245 does not copy external evidence
+- TASK-245 does not modify official manifest / backtest/sets
+- TASK-245 does not commit
+- subsequent Trae commit/tag must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-246 implement MQ5 read-only runtime status snapshot logging
+
+- current task is TASK-246 implement MQ5 read-only runtime status snapshot logging
+- TASK-246 is a low-risk MQ5 implementation slice
+- TASK-246 implementation scope is limited to read-only runtime status snapshot logging
+- TASK-245 completed no-trade lifecycle telemetry event contract
+- TASK-245 commit is 8f6762c TASK-245 implement no-trade lifecycle telemetry event contract
+- TASK-245 tag is v0.5.47-task-245-no-trade-lifecycle-telemetry
+- current HEAD is 8f6762c TASK-245 implement no-trade lifecycle telemetry event contract
+- current latest tag is v0.5.47-task-245-no-trade-lifecycle-telemetry
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only runtime status snapshot logging records runtime_status_snapshot=true
+- read-only runtime status snapshot logging records controller_status
+- read-only runtime status snapshot logging records logger_status
+- read-only runtime status snapshot logging records signal_status
+- read-only runtime status snapshot logging records risk_status
+- read-only runtime status snapshot logging records execution_status
+- read-only runtime status snapshot logging records no_trade_guard=active
+- read-only runtime status snapshot logging records trading_authorization=false
+- read-only runtime status snapshot logging records mt5_run_required=false
+- read-only runtime status snapshot logging records evidence_generation=false
+- read-only runtime status snapshot logging records manifest_generation=false
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-246 does not run MT5
+- TASK-246 does not run backtest
+- TASK-246 does not enter real trading
+- TASK-246 does not enter simulated trading
+- TASK-246 does not send orders
+- TASK-246 does not create manifest / fixture / report / directory
+- TASK-246 does not copy external evidence
+- TASK-246 does not modify official manifest / backtest/sets
+- TASK-246 does not commit
+- subsequent Trae commit/tag must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-247 implement MQ5 no-trade performance metrics contract
+
+- current task is TASK-247 implement MQ5 no-trade performance metrics contract
+- TASK-247 is a low-risk MQ5 implementation slice
+- TASK-247 implementation scope is limited to MQ5 no-trade performance metrics contract
+- TASK-246 completed read-only runtime status snapshot logging
+- TASK-246 commit is b85b824 TASK-246 implement read-only runtime status snapshot logging
+- TASK-246 tag is v0.5.48-task-246-read-only-runtime-status-snapshot
+- current HEAD is b85b824 TASK-246 implement read-only runtime status snapshot logging
+- current latest tag is v0.5.48-task-246-read-only-runtime-status-snapshot
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- MQ5 no-trade performance metrics contract records runtime_metrics_snapshot=true
+- MQ5 no-trade performance metrics contract records tick_count
+- MQ5 no-trade performance metrics contract records oninit_call_count
+- MQ5 no-trade performance metrics contract records ondeinit_call_count
+- MQ5 no-trade performance metrics contract records last_tick_timestamp
+- MQ5 no-trade performance metrics contract records all_components_no_trade=true
+- MQ5 no-trade performance metrics contract records trading_authorization=false
+- MQ5 no-trade performance metrics contract records mt5_run_required=false
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-247 does not run MT5
+- TASK-247 does not run backtest
+- TASK-247 does not enter real trading
+- TASK-247 does not enter simulated trading
+- TASK-247 does not send orders
+- TASK-247 does not create manifest / fixture / report / directory
+- TASK-247 does not copy external evidence
+- TASK-247 does not modify official manifest / backtest/sets
+- TASK-247 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-248 implement MQ5 no-trade safety guard invariant contract
+
+- current task is TASK-248 implement MQ5 no-trade safety guard invariant contract
+- TASK-248 is a low-risk MQ5 implementation slice
+- TASK-248 implementation scope is limited to no-trade safety guard invariant contract
+- TASK-247 completed no-trade performance metrics contract
+- TASK-247 commit is 99e3763 TASK-247 implement no-trade performance metrics contract
+- TASK-247 tag is v0.5.49-task-247-no-trade-performance-metrics
+- current HEAD is 99e3763 TASK-247 implement no-trade performance metrics contract
+- current latest tag is v0.5.49-task-247-no-trade-performance-metrics
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- no-trade safety guard invariant contract records safety_guard_snapshot=true
+- no-trade safety guard invariant contract records no_trade_guard=active
+- no-trade safety guard invariant contract records invariant_trading_disabled=true
+- no-trade safety guard invariant contract records invariant_execution_disabled=true
+- no-trade safety guard invariant contract records invariant_order_submission_disabled=true
+- no-trade safety guard invariant contract records invariant_position_management_disabled=true
+- no-trade safety guard invariant contract records invariant_external_evidence_disabled=true
+- no-trade safety guard invariant contract records invariant_manifest_generation_disabled=true
+- no-trade safety guard invariant contract records invariant_mt5_run_required=false
+- no-trade safety guard invariant contract records invariant_all_components_no_trade=true
+- no-trade safety guard invariant contract records trading_authorization=false
+- MQ5 inventory must remain 7 files
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-248 does not run MT5
+- TASK-248 does not run backtest
+- TASK-248 does not enter real trading
+- TASK-248 does not enter simulated trading
+- TASK-248 does not send orders
+- TASK-248 does not create manifest / fixture / report / directory
+- TASK-248 does not copy external evidence
+- TASK-248 does not modify official manifest / backtest/sets
+- TASK-248 does not add MQ5 / MQH files
+- TASK-248 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- Trae must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-249 implement MQ5 read-only metrics aggregation & historical events contract
+
+- current task is TASK-249 implement MQ5 read-only metrics aggregation & historical events contract
+- TASK-249 is a low-risk MQ5 implementation slice
+- TASK-249 implementation scope is limited to read-only metrics aggregation & historical events contract
+- TASK-248 completed no-trade safety guard invariant contract
+- TASK-248 commit is 26ecbfe TASK-248 implement no-trade safety guard invariant contract
+- TASK-248 tag is v0.5.50-task-248-no-trade-safety-guard-invariant
+- current HEAD is 26ecbfe TASK-248 implement no-trade safety guard invariant contract
+- current latest tag is v0.5.50-task-248-no-trade-safety-guard-invariant
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only metrics aggregation & historical events contract records metrics_aggregation_snapshot=true
+- read-only metrics aggregation & historical events contract records historical_events_count
+- read-only metrics aggregation & historical events contract records last_n_ticks_metrics
+- read-only metrics aggregation & historical events contract records aggregated_component_status
+- read-only metrics aggregation & historical events contract records no_trade_guard=active
+- read-only metrics aggregation & historical events contract records trading_authorization=false
+- read-only metrics aggregation & historical events contract records mt5_run_required=false
+- read-only metrics aggregation & historical events contract records evidence_generation=false
+- read-only metrics aggregation & historical events contract records manifest_generation=false
+- read-only metrics aggregation & historical events contract records Inventory only; no MT5 run; no trading authorization.
+- MQ5 inventory must remain 7 files
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-249 does not run MT5
+- TASK-249 does not run backtest
+- TASK-249 does not enter real trading
+- TASK-249 does not enter simulated trading
+- TASK-249 does not send orders
+- TASK-249 does not create manifest / fixture / report / directory
+- TASK-249 does not copy external evidence
+- TASK-249 does not modify official manifest / backtest/sets
+- TASK-249 does not add MQ5 / MQH files
+- TASK-249 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- Trae must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-250 implement MQ5 read-only system health & observability summary contract
+
+- current task is TASK-250 implement MQ5 read-only system health & observability summary contract
+- TASK-250 is a low-risk MQ5 implementation slice
+- TASK-250 implementation scope is limited to read-only system health & observability summary contract
+- TASK-249 completed read-only metrics aggregation & historical events contract
+- TASK-249 commit is 1ad896a TASK-249 implement read-only metrics aggregation & historical events contract
+- TASK-249 tag is v0.5.51-task-249-read-only-metrics-aggregation
+- current HEAD is 1ad896a TASK-249 implement read-only metrics aggregation & historical events contract
+- current latest tag is v0.5.51-task-249-read-only-metrics-aggregation
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only system health & observability summary contract records system_health_snapshot=true
+- read-only system health & observability summary contract records observability_enabled
+- read-only system health & observability summary contract records last_snapshot_timestamp
+- read-only system health & observability summary contract records aggregated_component_status
+- read-only system health & observability summary contract records all_components_no_trade=true
+- read-only system health & observability summary contract records trading_authorization=false
+- read-only system health & observability summary contract records mt5_run_required=false
+- read-only system health & observability summary contract records evidence_generation=false
+- read-only system health & observability summary contract records manifest_generation=false
+- read-only system health & observability summary contract records Inventory only; no MT5 run; no trading authorization.
+- MQ5 inventory must remain 7 files
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-250 does not run MT5
+- TASK-250 does not run backtest
+- TASK-250 does not enter real trading
+- TASK-250 does not enter simulated trading
+- TASK-250 does not send orders
+- TASK-250 does not create manifest / fixture / report / directory
+- TASK-250 does not copy external evidence
+- TASK-250 does not modify official manifest / backtest/sets
+- TASK-250 does not add MQ5 / MQH files
+- TASK-250 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- Trae must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-251 implement MQ5 read-only signal context snapshot contract
+
+- current task is TASK-251 implement MQ5 read-only signal context snapshot contract
+- TASK-251 is a low-risk MQ5 implementation slice
+- TASK-251 implementation scope is limited to read-only signal context snapshot contract
+- TASK-250 completed read-only system health & observability summary contract
+- TASK-250 commit is d50c34b TASK-250 implement read-only system health & observability summary contract
+- TASK-250 tag is v0.5.52-task-250-read-only-system-health-observability
+- current HEAD is d50c34b TASK-250 implement read-only system health & observability summary contract
+- current latest tag is v0.5.52-task-250-read-only-system-health-observability
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only signal context snapshot contract records signal_context_snapshot=true
+- read-only signal context snapshot contract records signal_layer_mode=read-only framework
+- read-only signal context snapshot contract records signal_context_available=true
+- read-only signal context snapshot contract records signal_direction_authorized=false
+- read-only signal context snapshot contract records signal_execution_authorized=false
+- read-only signal context snapshot contract records signal_order_intent=false
+- read-only signal context snapshot contract records signal_external_evidence_required=false
+- read-only signal context snapshot contract records signal_manifest_generation=false
+- read-only signal context snapshot contract records no_trade_guard=active
+- read-only signal context snapshot contract records Inventory only; no MT5 run; no trading authorization.
+- MQ5 inventory must remain 7 files
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-251 does not run MT5
+- TASK-251 does not run backtest
+- TASK-251 does not enter real trading
+- TASK-251 does not enter simulated trading
+- TASK-251 does not send orders
+- TASK-251 does not create manifest / fixture / report / directory
+- TASK-251 does not copy external evidence
+- TASK-251 does not modify official manifest / backtest/sets
+- TASK-251 does not add MQ5 / MQH files
+- TASK-251 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- Trae must not rely on PowerShell unsupported &&
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-252 implement MQ5 read-only risk context snapshot contract
+
+- current task is TASK-252 implement MQ5 read-only risk context snapshot contract
+- TASK-252 is a low-risk MQ5 implementation slice
+- TASK-252 implementation scope is limited to read-only risk context snapshot contract
+- TASK-251 completed read-only signal context snapshot contract
+- TASK-251 commit is 56a8fae TASK-251 implement read-only signal context snapshot contract
+- TASK-251 tag is v0.5.53-task-251-read-only-signal-context
+- current HEAD is 56a8fae TASK-251 implement read-only signal context snapshot contract
+- current latest tag is v0.5.53-task-251-read-only-signal-context
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only risk context snapshot contract records risk_context_snapshot=true
+- read-only risk context snapshot contract records risk_layer_mode=read-only framework
+- read-only risk context snapshot contract records risk_context_available=true
+- read-only risk context snapshot contract records risk_authorization=false
+- read-only risk context snapshot contract records risk_sizing_authorized=false
+- read-only risk context snapshot contract records risk_exposure_authorized=false
+- read-only risk context snapshot contract records risk_execution_authorized=false
+- read-only risk context snapshot contract records risk_external_evidence_required=false
+- read-only risk context snapshot contract records risk_manifest_generation=false
+- read-only risk context snapshot contract records no_trade_guard=active
+- read-only risk context snapshot contract records Inventory only; no MT5 run; no trading authorization.
+- MQ5 inventory must remain 7 files
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-252 does not run MT5
+- TASK-252 does not run backtest
+- TASK-252 does not enter real trading
+- TASK-252 does not enter simulated trading
+- TASK-252 does not send orders
+- TASK-252 does not create manifest / fixture / report / directory
+- TASK-252 does not copy external evidence
+- TASK-252 does not modify official manifest / backtest/sets
+- TASK-252 does not add MQ5 / MQH files
+- TASK-252 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- Trae must not rely on PowerShell unsupported &&
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-253 implement MQ5 read-only execution context snapshot contract
+
+- current task is TASK-253 implement MQ5 read-only execution context snapshot contract
+- TASK-253 is a low-risk MQ5 implementation slice
+- TASK-253 implementation scope is limited to read-only execution context snapshot contract
+- TASK-252 completed read-only risk context snapshot contract
+- TASK-252 commit is 3dd463d TASK-252 implement read-only risk context snapshot contract
+- TASK-252 tag is v0.5.54-task-252-read-only-risk-context
+- current HEAD is 3dd463d TASK-252 implement read-only risk context snapshot contract
+- current latest tag is v0.5.54-task-252-read-only-risk-context
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only execution context snapshot contract records execution_context_snapshot=true
+- read-only execution context snapshot contract records execution_layer_mode=read-only framework
+- read-only execution context snapshot contract records execution_context_available=true
+- read-only execution context snapshot contract records execution_authorization=false
+- read-only execution context snapshot contract records execution_request_authorized=false
+- read-only execution context snapshot contract records execution_route_authorized=false
+- read-only execution context snapshot contract records execution_dispatch_authorized=false
+- read-only execution context snapshot contract records execution_external_evidence_required=false
+- read-only execution context snapshot contract records execution_manifest_generation=false
+- read-only execution context snapshot contract records no_trade_guard=active
+- read-only execution context snapshot contract records Inventory only; no MT5 run; no trading authorization.
+- MQ5 inventory must remain 7 files
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-253 does not run MT5
+- TASK-253 does not run backtest
+- TASK-253 does not enter real trading
+- TASK-253 does not enter simulated trading
+- TASK-253 does not send orders
+- TASK-253 does not create manifest / fixture / report / directory
+- TASK-253 does not copy external evidence
+- TASK-253 does not modify official manifest / backtest/sets
+- TASK-253 does not add MQ5 / MQH files
+- TASK-253 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- Trae must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-254 update project state docs after TASK-253
+
+- current task is TASK-DOC-254 update project state docs after TASK-253
+- TASK-DOC-254 is a project state docs sync task
+- TASK-253 completed read-only execution context snapshot contract
+- TASK-253 commit is 7773a2f TASK-253 implement read-only execution context snapshot contract
+- TASK-253 tag is v0.5.55-task-253-read-only-execution-context
+- current HEAD is 7773a2f TASK-253 implement read-only execution context snapshot contract
+- current latest tag is v0.5.55-task-253-read-only-execution-context
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only execution context snapshot contract is synced to project state docs
+- read-only execution context snapshot contract fields remain execution_context_snapshot=true
+- read-only execution context snapshot contract fields remain execution_layer_mode=read-only framework
+- read-only execution context snapshot contract fields remain execution_context_available=true
+- read-only execution context snapshot contract fields remain execution_authorization=false
+- read-only execution context snapshot contract fields remain execution_request_authorized=false
+- read-only execution context snapshot contract fields remain execution_route_authorized=false
+- read-only execution context snapshot contract fields remain execution_dispatch_authorized=false
+- read-only execution context snapshot contract fields remain execution_external_evidence_required=false
+- read-only execution context snapshot contract fields remain execution_manifest_generation=false
+- read-only execution context snapshot contract fields remain no_trade_guard=active
+- validate_mq5_no_trade_observability.py covers TASK-253 execution context fields and controller path
+- test_validate_mq5_no_trade_observability.py covers TASK-253 execution context fields and controller path
+- MQ5 inventory remains 7 files
+- trading keywords remain false for Buy / Sell / OrderSend / PositionOpen / CTrade
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory created
+- no external evidence copied
+- official manifest remains unchanged
+- backtest/sets remains unchanged
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- Trae must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- TASK-DOC-254 does not modify MQ5
+- TASK-DOC-254 does not run MT5
+- TASK-DOC-254 does not create manifest / fixture / report / directory
+- TASK-DOC-254 does not copy external evidence
+- TASK-DOC-254 does not commit
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- the next task boundary must be defined by ChatGPT
+
+## TASK-255 implement MQ5 read-only pipeline context aggregation snapshot contract
+
+- current task is TASK-255 implement MQ5 read-only pipeline context aggregation snapshot contract
+- TASK-255 is a low-risk MQ5 implementation slice
+- TASK-255 implementation scope is limited to read-only pipeline context aggregation snapshot contract
+- TASK-DOC-254 completed project state docs sync after TASK-253
+- TASK-DOC-254 commit is 44369dd TASK-DOC-254 update project state docs after TASK-253
+- TASK-DOC-254 tag is v0.5.56-task-254-sync-task-253-state
+- current HEAD is 44369dd TASK-DOC-254 update project state docs after TASK-253
+- current latest tag is v0.5.56-task-254-sync-task-253-state
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only pipeline context aggregation snapshot contract records pipeline_context_snapshot=true
+- read-only pipeline context aggregation snapshot contract records pipeline_layer_mode=read-only framework
+- read-only pipeline context aggregation snapshot contract records signal_context_linked=true
+- read-only pipeline context aggregation snapshot contract records risk_context_linked=true
+- read-only pipeline context aggregation snapshot contract records execution_context_linked=true
+- read-only pipeline context aggregation snapshot contract records pipeline_authorization=false
+- read-only pipeline context aggregation snapshot contract records pipeline_direction_authorized=false
+- read-only pipeline context aggregation snapshot contract records pipeline_risk_authorized=false
+- read-only pipeline context aggregation snapshot contract records pipeline_execution_authorized=false
+- read-only pipeline context aggregation snapshot contract records pipeline_dispatch_authorized=false
+- read-only pipeline context aggregation snapshot contract records pipeline_intent=false
+- read-only pipeline context aggregation snapshot contract records all_pipeline_layers_no_trade=true
+- read-only pipeline context aggregation snapshot contract records no_trade_guard=active
+- read-only pipeline context aggregation snapshot contract records trading_authorization=false
+- read-only pipeline context aggregation snapshot contract records mt5_run_required=false
+- read-only pipeline context aggregation snapshot contract records evidence_generation=false
+- read-only pipeline context aggregation snapshot contract records manifest_generation=false
+- read-only pipeline context aggregation snapshot contract records Inventory only; no MT5 run; no trading authorization.
+- MQ5 inventory must remain 7 files
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- TASK-255 does not run MT5
+- TASK-255 does not run backtest
+- TASK-255 does not enter real trading
+- TASK-255 does not enter simulated trading
+- TASK-255 does not send orders
+- TASK-255 does not create manifest / fixture / report / directory
+- TASK-255 does not copy external evidence
+- TASK-255 does not modify official manifest / backtest/sets
+- TASK-255 does not add MQ5 / MQH files
+- TASK-255 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- Trae must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-256 update state after TASK-255
+
+- current task is TASK-DOC-256 update state after TASK-255
+- TASK-DOC-256 is a doc-only project state sync task
+- TASK-DOC-256 only syncs project state docs
+- TASK-255 completed read-only pipeline context aggregation snapshot contract
+- TASK-255 commit is fc215ea TASK-255 implement read-only pipeline context aggregation snapshot contract
+- TASK-255 tag is v0.5.57-task-255-read-only-pipeline-context
+- current HEAD is fc215ea TASK-255 implement read-only pipeline context aggregation snapshot contract
+- current latest tag is v0.5.57-task-255-read-only-pipeline-context
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only pipeline context aggregation snapshot contract is synced to project state docs
+- MQ5 inventory remains 7 files
+- mq5-no-trade-observability PASS
+- mq5-inventory PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- trading keywords remain false for Buy / Sell / OrderSend / PositionOpen / CTrade
+- Inventory only; no MT5 run; no trading authorization.
+- TASK-DOC-256 confirms MQ5 inventory remains 7 files
+- TASK-DOC-256 confirms no MT5 run
+- TASK-DOC-256 confirms no trading authorization
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory created
+- no external evidence copied
+- official manifest remains unchanged
+- backtest/sets remains unchanged
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- Trae must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- TASK-DOC-256 does not modify MQ5
+- TASK-DOC-256 does not modify MQH
+- TASK-DOC-256 does not run MT5
+- TASK-DOC-256 does not run backtest
+- TASK-DOC-256 does not enter simulated trading
+- TASK-DOC-256 does not enter real trading
+- TASK-DOC-256 does not create manifest / fixture / report / directory
+- TASK-DOC-256 does not copy external evidence
+- TASK-DOC-256 does not commit
+- TASK-DOC-256 does not create tag
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-257 implement MQ5 read-only authorization matrix snapshot contract
+
+- current task is TASK-257 implement MQ5 read-only authorization matrix snapshot contract
+- TASK-257 is a low-risk MQ5 implementation slice
+- TASK-257 implementation scope is limited to read-only authorization matrix snapshot contract
+- TASK-DOC-256 completed project state docs sync after TASK-255
+- TASK-DOC-256 commit is 678a77f TASK-DOC-256 update state after TASK-255
+- TASK-DOC-256 tag is v0.5.58-task-256-sync-task-255-state
+- current HEAD is 678a77f TASK-DOC-256 update state after TASK-255
+- current latest tag is v0.5.58-task-256-sync-task-255-state
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only authorization matrix snapshot contract records authorization_matrix_snapshot=true
+- read-only authorization matrix snapshot contract records authorization_matrix_mode=read-only framework
+- read-only authorization matrix snapshot contract records signal_authorization=false
+- read-only authorization matrix snapshot contract records signal_direction_authorized=false
+- read-only authorization matrix snapshot contract records risk_authorization=false
+- read-only authorization matrix snapshot contract records risk_sizing_authorized=false
+- read-only authorization matrix snapshot contract records risk_exposure_authorized=false
+- read-only authorization matrix snapshot contract records execution_authorization=false
+- read-only authorization matrix snapshot contract records execution_request_authorized=false
+- read-only authorization matrix snapshot contract records execution_dispatch_authorized=false
+- read-only authorization matrix snapshot contract records pipeline_authorization=false
+- read-only authorization matrix snapshot contract records pipeline_intent=false
+- read-only authorization matrix snapshot contract records trading_authorization=false
+- read-only authorization matrix snapshot contract records all_authorizations_false=true
+- read-only authorization matrix snapshot contract records all_pipeline_layers_no_trade=true
+- read-only authorization matrix snapshot contract records no_trade_guard=active
+- read-only authorization matrix snapshot contract records mt5_run_required=false
+- read-only authorization matrix snapshot contract records evidence_generation=false
+- read-only authorization matrix snapshot contract records manifest_generation=false
+- read-only authorization matrix snapshot contract records Inventory only; no MT5 run; no trading authorization.
+- MQ5 inventory must remain 7 files
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- trading keywords remain false for Buy / Sell / OrderSend / PositionOpen / CTrade
+- TASK-257 does not run MT5
+- TASK-257 does not run backtest
+- TASK-257 does not enter real trading
+- TASK-257 does not enter simulated trading
+- TASK-257 does not send orders
+- TASK-257 does not create manifest / fixture / report / directory
+- TASK-257 does not copy external evidence
+- TASK-257 does not modify official manifest / backtest/sets
+- TASK-257 does not add MQ5 / MQH files
+- TASK-257 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- Trae must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- no more doc-only completion chain; continue directly with low-risk no-trade implementation slice only when ChatGPT defines the boundary
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-258 implement MQ5 read-only decision gate snapshot contract
+
+- current task is TASK-258 implement MQ5 read-only decision gate snapshot contract
+- TASK-258 is a low-risk MQ5 implementation slice
+- TASK-258 implementation scope is limited to read-only decision gate snapshot contract
+- TASK-257 completed read-only authorization matrix snapshot contract
+- TASK-257 commit is 950a71e TASK-257 implement read-only authorization matrix snapshot contract
+- TASK-257 tag is v0.5.59-task-257-read-only-authorization-matrix
+- current HEAD is 950a71e TASK-257 implement read-only authorization matrix snapshot contract
+- current latest tag is v0.5.59-task-257-read-only-authorization-matrix
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only decision gate snapshot contract records decision_gate_snapshot=true
+- read-only decision gate snapshot contract records decision_gate_mode=read-only framework
+- read-only decision gate snapshot contract records decision_state=blocked_no_trade
+- read-only decision gate snapshot contract records decision_candidate_available=false
+- read-only decision gate snapshot contract records decision_direction_authorized=false
+- read-only decision gate snapshot contract records decision_risk_authorized=false
+- read-only decision gate snapshot contract records decision_execution_authorized=false
+- read-only decision gate snapshot contract records decision_dispatch_authorized=false
+- read-only decision gate snapshot contract records decision_output_authorized=false
+- read-only decision gate snapshot contract records decision_intent=false
+- read-only decision gate snapshot contract records all_authorizations_false=true
+- read-only decision gate snapshot contract records all_pipeline_layers_no_trade=true
+- read-only decision gate snapshot contract records no_trade_guard=active
+- read-only decision gate snapshot contract records trading_authorization=false
+- read-only decision gate snapshot contract records mt5_run_required=false
+- read-only decision gate snapshot contract records evidence_generation=false
+- read-only decision gate snapshot contract records manifest_generation=false
+- read-only decision gate snapshot contract records Inventory only; no MT5 run; no trading authorization.
+- MQ5 inventory must remain 7 files
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- trading keywords remain false for Buy / Sell / OrderSend / PositionOpen / CTrade
+- TASK-258 does not run MT5
+- TASK-258 does not run backtest
+- TASK-258 does not enter real trading
+- TASK-258 does not enter simulated trading
+- TASK-258 does not send orders
+- TASK-258 does not create manifest / fixture / report / directory
+- TASK-258 does not copy external evidence
+- TASK-258 does not modify official manifest / backtest/sets
+- TASK-258 does not add MQ5 / MQH files
+- TASK-258 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files only and does not commit for this task
+- Trae reviews, validates, commits, tags, and audits when explicitly assigned
+- Trae must not rely on PowerShell unsupported &&
+- subsequent Trae commit/tag must be continuous and prove tag points to HEAD
+- do not endlessly append tag completion / audit stable tag completion chains
+- do not reuse old TASK-DOC numbers
+- prefer tools/run_release_validation_bundle.py by default
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-259 implement MQ5 read-only decision rejection reason snapshot contract
+
+- current task is TASK-259 implement MQ5 read-only decision rejection reason snapshot contract
+- TASK-259 is a low-risk MQ5 implementation slice
+- TASK-259 implementation scope is limited to read-only decision rejection reason snapshot contract
+- TASK-258 completed read-only decision gate snapshot contract
+- TASK-258 commit is f1f53e6 TASK-258 implement read-only decision gate snapshot contract
+- TASK-258 tag is v0.5.60-task-258-read-only-decision-gate
+- current HEAD is f1f53e6 TASK-258 implement read-only decision gate snapshot contract
+- current latest tag is v0.5.60-task-258-read-only-decision-gate
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- read-only decision rejection reason snapshot contract records decision_rejection_snapshot=true
+- read-only decision rejection reason snapshot contract records decision_rejection_mode=read-only framework
+- read-only decision rejection reason snapshot contract records rejection_reason=no_trade_guard_active
+- read-only decision rejection reason snapshot contract records rejection_trading_authorization=false
+- read-only decision rejection reason snapshot contract records rejection_signal_authorization=false
+- read-only decision rejection reason snapshot contract records rejection_risk_authorization=false
+- read-only decision rejection reason snapshot contract records rejection_execution_authorization=false
+- read-only decision rejection reason snapshot contract records rejection_pipeline_authorization=false
+- read-only decision rejection reason snapshot contract records rejection_external_evidence=false
+- read-only decision rejection reason snapshot contract records rejection_manifest_generation=false
+- read-only decision rejection reason snapshot contract records rejection_mt5_run_required=false
+- read-only decision rejection reason snapshot contract records decision_state=blocked_no_trade
+- read-only decision rejection reason snapshot contract records decision_intent=false
+- read-only decision rejection reason snapshot contract records all_authorizations_false=true
+- read-only decision rejection reason snapshot contract records no_trade_guard=active
+- read-only decision rejection reason snapshot contract records trading_authorization=false
+- read-only decision rejection reason snapshot contract records Inventory only; no MT5 run; no trading authorization.
+- MQ5 inventory must remain 7 files
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- MQ5 inventory and no-trade observability contract must continue PASS
+- trading keywords remain false for Buy / Sell / OrderSend / PositionOpen / CTrade
+- TASK-259 does not run MT5
+- TASK-259 does not run backtest
+- TASK-259 does not enter real trading
+- TASK-259 does not enter simulated trading
+- TASK-259 does not send orders
+- TASK-259 does not create manifest / fixture / report / directory
+- TASK-259 does not copy external evidence
+- TASK-259 does not modify official manifest / backtest/sets
+- TASK-259 does not add MQ5 / MQH files
+- TASK-259 does not commit
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-260 create first observability extension planning packet
+
+- current task is TASK-DOC-260 create first observability extension planning packet
+- TASK-DOC-260 is planning-only
+- TASK-DOC-260 creates docs/V060_TASK_260_FIRST_OBSERVABILITY_EXTENSION_PLAN.md
+- TASK-DOC-260 does not authorize implementation
+- TASK-259 completed read-only decision rejection reason snapshot contract
+- TASK-259 commit is 6451e78 TASK-259 implement read-only decision rejection reason snapshot contract
+- TASK-259 tag is v0.5.61-task-259-read-only-decision-rejection-reason
+- current HEAD is 6451e78 TASK-259 implement read-only decision rejection reason snapshot contract
+- current latest tag is v0.5.61-task-259-read-only-decision-rejection-reason
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- first observability extension planning packet is future candidate only
+- no-trade observability extension remains planning-only
+- not implementation authorization
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae do not rely on &&
+- commit and tag must be completed continuously and tag must point to HEAD
+- MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- TASK-DOC-260 does not modify MQ5 / MQH
+- TASK-DOC-260 does not run MT5
+- TASK-DOC-260 does not run backtest
+- TASK-DOC-260 does not enter real trading
+- TASK-DOC-260 does not enter simulated trading
+- TASK-DOC-260 does not create manifest / fixture / report / directory
+- TASK-DOC-260 does not copy external evidence
+- TASK-DOC-260 does not modify official manifest / backtest/sets
+- TASK-DOC-260 does not commit
+- TASK-DOC-260 does not tag
+- TASK-261 must not be entered directly
+- GPT must define a separate future TASK-261 boundary
+- do not directly enter TASK-261 / MT5 run / trading / manifest / backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-261 create next observability extension planning packet
+
+- current task is TASK-DOC-261 create next observability extension planning packet
+- TASK-DOC-261 is planning-only
+- TASK-DOC-261 creates docs/V060_TASK_261_OBSERVABILITY_EXTENSION_NEXT_PLAN.md
+- TASK-DOC-261 does not authorize implementation
+- TASK-DOC-260 completed first observability extension planning packet
+- TASK-DOC-260 commit is cb7675f TASK-DOC-260 create first observability extension planning packet
+- TASK-DOC-260 tag is v0.5.62-task-260-first-observability-extension-plan
+- current HEAD is cb7675f TASK-DOC-260 create first observability extension planning packet
+- current latest tag is v0.5.62-task-260-first-observability-extension-plan
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- next observability extension planning packet is future candidate only
+- no-trade observability extension remains planning-only
+- no-trade scaffold remains the active safety boundary
+- not implementation authorization
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae do not rely on &&
+- commit and tag must be completed continuously and tag must point to HEAD
+- MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- TASK-DOC-261 does not modify MQ5 / MQH
+- TASK-DOC-261 does not run MT5
+- TASK-DOC-261 does not run backtest
+- TASK-DOC-261 does not enter real trading
+- TASK-DOC-261 does not enter simulated trading
+- TASK-DOC-261 does not create manifest / fixture / report / directory
+- TASK-DOC-261 does not copy external evidence
+- TASK-DOC-261 does not modify official manifest / backtest/sets
+- TASK-DOC-261 does not commit
+- TASK-DOC-261 does not tag
+- TASK-262 must not be entered directly
+- GPT must define a separate future boundary before TASK-262
+- do not directly enter TASK-262 / MT5 run / trading / manifest / backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-262 create follow-up observability extension planning packet
+
+- current task is TASK-DOC-262 create follow-up observability extension planning packet
+- TASK-DOC-262 is planning-only
+- TASK-DOC-262 creates docs/V060_TASK_262_OBSERVABILITY_EXTENSION_FOLLOWUP_PLAN.md
+- TASK-DOC-262 does not authorize implementation
+- TASK-DOC-261 completed next observability extension planning packet
+- TASK-DOC-261 commit is 527486d TASK-DOC-261 create next observability extension planning packet
+- TASK-DOC-261 tag is v0.5.63-task-261-observability-extension-next-plan
+- current HEAD is 527486d TASK-DOC-261 create next observability extension planning packet
+- current latest tag is v0.5.63-task-261-observability-extension-next-plan
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- follow-up observability extension planning packet is future candidate only
+- no-trade observability extension remains planning-only
+- no-trade scaffold remains the active safety boundary
+- not implementation authorization
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae do not rely on &&
+- commit and tag must be completed continuously and tag must point to HEAD
+- MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-DOC-262 does not modify MQ5 / MQH
+- TASK-DOC-262 does not run MT5
+- TASK-DOC-262 does not run backtest
+- TASK-DOC-262 does not enter real trading
+- TASK-DOC-262 does not enter simulated trading
+- TASK-DOC-262 does not create manifest / fixture / report / directory
+- TASK-DOC-262 does not copy external evidence
+- TASK-DOC-262 does not modify official manifest / backtest/sets
+- TASK-DOC-262 does not commit
+- TASK-DOC-262 does not tag
+- TASK-263 must not be entered directly
+- GPT must define a separate future boundary before TASK-263
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter TASK-263 / MT5 run / trading / manifest / backtest evidence
+- do not directly enter TASK-263, MT5 run, trading, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-263 create future observability extension planning packet
+
+- current task is TASK-DOC-263 create future observability extension planning packet
+- TASK-DOC-263 is planning-only
+- TASK-DOC-263 creates docs/V060_TASK_263_OBSERVABILITY_EXTENSION_FUTURE_PLAN.md
+- TASK-DOC-263 does not authorize implementation
+- TASK-DOC-262 completed follow-up observability extension planning packet
+- TASK-DOC-262 commit is 69f12a6 TASK-DOC-262 create follow-up observability extension planning packet
+- TASK-DOC-262 tag is v0.5.64-task-262-observability-extension-followup-plan
+- current HEAD is 69f12a6 TASK-DOC-262 create follow-up observability extension planning packet
+- current latest tag is v0.5.64-task-262-observability-extension-followup-plan
+- current phase remains v0.5.0 with v0.6.0 low-risk implementation slices in progress
+- future observability extension planning packet is future candidate only
+- no-trade observability extension remains planning-only
+- no-trade scaffold remains the active safety boundary
+- not implementation authorization
+- v0.6.0 implementation slices remain limited to no-trade scaffold / static validation
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae do not rely on &&
+- commit and tag must be completed continuously and tag must point to HEAD
+- MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-DOC-263 does not modify MQ5 / MQH
+- TASK-DOC-263 does not run MT5
+- TASK-DOC-263 does not run backtest
+- TASK-DOC-263 does not enter real trading
+- TASK-DOC-263 does not enter simulated trading
+- TASK-DOC-263 does not create manifest / fixture / report / directory
+- TASK-DOC-263 does not copy external evidence
+- TASK-DOC-263 does not modify official manifest / backtest/sets
+- TASK-DOC-263 does not commit
+- TASK-DOC-263 does not tag
+- TASK-264 must not be entered directly
+- GPT must define a separate future boundary before TASK-264
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter TASK-264 / MT5 run / trading / manifest / backtest evidence
+- do not directly enter TASK-264, MT5 run, trading, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-264 implement MQ5 read-only observability consolidation contract
+
+- current task is TASK-264 implement MQ5 read-only observability consolidation contract
+- TASK-264 is a low-risk MQ5 implementation slice
+- TASK-264 is not a planning packet
+- TASK-264 must not continue planning packet chain
+- TASK-DOC-263 completed future observability extension planning packet
+- TASK-DOC-263 commit is d7fe9b6 TASK-DOC-263 create future observability extension planning packet
+- TASK-DOC-263 tag is v0.5.65-task-263-observability-extension-future-plan
+- current HEAD is d7fe9b6 TASK-DOC-263 create future observability extension planning packet
+- current latest tag is v0.5.65-task-263-observability-extension-future-plan
+- implementation scope is limited to read-only observability consolidation contract
+- no-trade scaffold remains the active safety boundary
+- static validation remains required
+- MQ5 inventory remains 7 files
+- TASK-264 confirms MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-264 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- TASK-264 does not run MT5
+- TASK-264 does not run backtest
+- TASK-264 does not enter simulated trading
+- TASK-264 does not enter real trading
+- TASK-264 does not create manifest / fixture / report / directory
+- TASK-264 does not copy external evidence
+- TASK-264 does not modify official manifest / backtest/sets
+- TASK-264 does not add MQ5 / MQH files
+- TASK-264 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae do not rely on &&
+- commit and tag must be completed continuously and tag must point to HEAD
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-265 implement MQ5 read-only observability contract registry snapshot
+
+- current task is TASK-265 implement MQ5 read-only observability contract registry snapshot
+- TASK-265 is a low-risk MQ5 implementation slice
+- TASK-265 does not create a new planning packet
+- TASK-264 completed read-only observability consolidation contract
+- TASK-264 commit is 40896e9 TASK-264 implement read-only observability consolidation contract
+- TASK-264 tag is v0.5.66-task-264-read-only-observability-consolidation
+- current HEAD is 40896e9 TASK-264 implement read-only observability consolidation contract
+- current latest tag is v0.5.66-task-264-read-only-observability-consolidation
+- implementation scope is limited to read-only observability contract registry snapshot
+- no-trade scaffold remains the active safety boundary
+- static validation remains required
+- MQ5 inventory remains 7 files
+- TASK-265 confirms MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-265 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- TASK-265 does not run MT5
+- TASK-265 does not run backtest
+- TASK-265 does not enter simulated trading
+- TASK-265 does not enter real trading
+- TASK-265 does not create manifest / fixture / report / directory
+- TASK-265 does not copy external evidence
+- TASK-265 does not modify official manifest / backtest/sets
+- TASK-265 does not add MQ5 / MQH files
+- TASK-265 does not commit
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae do not rely on &&
+- commit and tag must be completed continuously and tag must point to HEAD
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-266 implement fast no-trade development validation profile
+
+- current task is TASK-266 implement fast no-trade development validation profile
+- TASK-266 implement fast no-trade development validation profile
+- TASK-266 is a tooling efficiency task
+- TASK-266 is tooling + docs + self-test update
+- TASK-266 does not modify MQ5 / MQH
+- TASK-266 does not run MT5
+- TASK-266 does not create manifest / fixture / report / directory
+- TASK-266 does not copy external evidence
+- TASK-266 does not commit
+- TASK-265 completed read-only observability contract registry snapshot
+- TASK-265 commit is 139265d TASK-265 implement read-only observability contract registry snapshot
+- TASK-265 tag is v0.5.67-task-265-observability-contract-registry
+- current HEAD is 139265d TASK-265 implement read-only observability contract registry snapshot
+- current latest tag is v0.5.67-task-265-observability-contract-registry
+- implementation scope is limited to fast no-trade development validation profile
+- new profile is fast-no-trade-dev
+- fast no-trade development validation profile
+- python tools/run_release_validation_bundle.py --profile fast-no-trade-dev
+- no-trade scaffold remains the active safety boundary
+- static validation remains required
+- MQ5 inventory remains 7 files
+- TASK-266 confirms MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- v060-implementation-boundary PASS
+- v060-implementation-readiness PASS
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-266 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae do not rely on &&
+- commit and tag must be completed continuously and tag must point to HEAD
+- future default preference is python tools/run_release_validation_bundle.py --profile fast-no-trade-dev
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-267 implement one-command fast no-trade preflight runner
+
+- current task is TASK-267 implement one-command fast no-trade preflight runner
+- TASK-267 implement one-command fast no-trade preflight runner
+- TASK-267 is a tooling efficiency task
+- TASK-267 is tooling + docs + self-test update
+- TASK-266 completed fast no-trade development validation profile
+- TASK-266 commit is f23ce3e TASK-266 implement fast no-trade development validation profile
+- TASK-266 tag is v0.5.68-task-266-fast-no-trade-dev-profile
+- current HEAD is f23ce3e TASK-266 implement fast no-trade development validation profile
+- current latest tag is v0.5.68-task-266-fast-no-trade-dev-profile
+- implementation scope is limited to one-command fast no-trade preflight runner
+- new runner is tools/run_fast_no_trade_preflight.py
+- one-command fast no-trade preflight runner
+- python tools/run_fast_no_trade_preflight.py
+- future default preference is python tools/run_fast_no_trade_preflight.py --strict-mq5
+- doc-only task default preference is python tools/run_fast_no_trade_preflight.py --doc-only
+- fast-no-trade-dev profile remains the default release validation profile
+- runner supports --doc-only
+- runner supports --strict-mq5
+- runner supports --skip-profile
+- TASK-267 does not modify MQ5 / MQH
+- TASK-267 does not run MT5
+- TASK-267 does not run backtest
+- TASK-267 does not enter simulated trading
+- TASK-267 does not enter real trading
+- TASK-267 does not create manifest / fixture / report / directory
+- TASK-267 does not copy external evidence
+- TASK-267 does not commit
+- MQ5 inventory remains 7 files
+- TASK-267 confirms MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- fast-no-trade-dev profile PASS
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-267 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae do not rely on &&
+- commit and tag must be completed continuously and tag must point to HEAD
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-268 implement allowed-change guard for fast no-trade preflight
+
+- current task is TASK-268 implement allowed-change guard for fast no-trade preflight
+- TASK-268 implement allowed-change guard for fast no-trade preflight
+- TASK-268 is a tooling efficiency task
+- TASK-268 is tooling + docs + self-test update
+- TASK-267 completed one-command fast no-trade preflight runner
+- TASK-267 commit is 1f2de5c TASK-267 implement one-command fast no-trade preflight runner
+- TASK-267 tag is v0.5.69-task-267-fast-no-trade-preflight
+- current HEAD is 1f2de5c TASK-267 implement one-command fast no-trade preflight runner
+- current latest tag is v0.5.69-task-267-fast-no-trade-preflight
+- implementation scope is limited to allowed-change guard for fast no-trade preflight
+- allowed-change guard
+- new guard remains in tools/run_fast_no_trade_preflight.py
+- run_fast_no_trade_preflight.py
+- --check-allowed-changes
+- --allow
+- --allow-prefix
+- future default preference is python tools/run_fast_no_trade_preflight.py --strict-mq5 --check-allowed-changes ...
+- doc-only task default preference is python tools/run_fast_no_trade_preflight.py --doc-only --check-allowed-changes ...
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- fast-no-trade-dev profile remains the default release validation profile
+- TASK-268 does not modify MQ5 / MQH
+- TASK-268 does not run MT5
+- TASK-268 does not run backtest
+- TASK-268 does not enter simulated trading
+- TASK-268 does not enter real trading
+- TASK-268 does not create manifest / fixture / report / directory
+- TASK-268 does not copy external evidence
+- TASK-268 does not commit
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-268 confirms MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- fast-no-trade-dev profile PASS
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-268 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-269 implement read-only observability error/exception logging contract
+
+- current task is TASK-269 implement read-only observability error/exception logging contract
+- TASK-269 implement read-only observability error/exception logging contract
+- TASK-269 is a low-risk MQ5 implementation slice
+- TASK-269 implementation scope is limited to read-only observability error/exception logging contract
+- TASK-268 completed allowed-change guard for fast no-trade preflight
+- TASK-268 commit is a0f0200 TASK-268 implement allowed-change guard for fast no-trade preflight
+- TASK-268 tag is v0.5.70-task-268-fast-no-trade-allowed-change-guard
+- current HEAD is a0f0200 TASK-268 implement allowed-change guard for fast no-trade preflight
+- current latest tag is v0.5.70-task-268-fast-no-trade-allowed-change-guard
+- read-only observability error/exception logging contract records error_snapshot=true
+- read-only observability error/exception logging contract records error_type=read-only framework
+- read-only observability error/exception logging contract records error_timestamp
+- read-only observability error/exception logging contract records component_origin
+- read-only observability error/exception logging contract records error_details
+- read-only observability error/exception logging contract records all_observability_outputs_read_only=true
+- read-only observability error/exception logging contract records all_authorizations_false=true
+- read-only observability error/exception logging contract records no_trade_guard=active
+- read-only observability error/exception logging contract records trading_authorization=false
+- read-only observability error/exception logging contract records mt5_run_required=false
+- read-only observability error/exception logging contract records evidence_generation=false
+- read-only observability error/exception logging contract records manifest_generation=false
+- read-only observability error/exception logging contract records Inventory only; no MT5 run; no trading authorization.
+- LogReadOnlyObservabilityErrorSnapshot
+- OnTick error/exception logging remains gated by InpObservabilityLogOnTick
+- TASK-269 preserves TASK-243 through TASK-268 no-trade observability outputs
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-269 does not run MT5
+- TASK-269 does not run backtest
+- TASK-269 does not enter simulated trading
+- TASK-269 does not enter real trading
+- TASK-269 does not send orders
+- TASK-269 does not create manifest / fixture / report / directory
+- TASK-269 does not copy external evidence
+- TASK-269 does not modify official manifest / backtest/sets
+- TASK-269 does not add MQ5 / MQH files
+- TASK-269 does not commit
+- MQ5 inventory remains 7 files
+- TASK-269 confirms MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- fast-no-trade-dev profile remains the default release validation profile
+- future default preference is python tools/run_fast_no_trade_preflight.py --strict-mq5 --check-allowed-changes ...
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-269 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-270 implement fast preflight allowed-change presets
+
+- current task is TASK-270 implement fast preflight allowed-change presets
+- TASK-270 implement fast preflight allowed-change presets
+- TASK-270 is a tooling efficiency task
+- TASK-270 is tooling + docs + self-test update
+- TASK-269 completed read-only observability error/exception logging contract
+- TASK-269 commit is 5ebdf74 TASK-269 implement read-only observability error/exception logging contract
+- TASK-269 tag is v0.5.71-task-269-read-only-observability-error-snapshot
+- current HEAD is 5ebdf74 TASK-269 implement read-only observability error/exception logging contract
+- current latest tag is v0.5.71-task-269-read-only-observability-error-snapshot
+- implementation scope is limited to fast preflight allowed-change presets
+- --allow-preset
+- doc-state
+- tooling-preflight
+- mq5-observability
+- allowed-change guard can now use short preset commands
+- python tools/run_fast_no_trade_preflight.py --doc-only --check-allowed-changes --allow-preset doc-state
+- python tools/run_fast_no_trade_preflight.py --doc-only --check-allowed-changes --allow-preset tooling-preflight
+- python tools/run_fast_no_trade_preflight.py --strict-mq5 --check-allowed-changes --allow-preset mq5-observability
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-270 does not modify MQ5 / MQH
+- TASK-270 does not run MT5
+- TASK-270 does not run backtest
+- TASK-270 does not enter simulated trading
+- TASK-270 does not enter real trading
+- TASK-270 does not create manifest / fixture / report / directory
+- TASK-270 does not copy external evidence
+- TASK-270 does not commit
+- TASK-270 does not tag
+- TASK-270 does not push
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-270 confirms MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- fast-no-trade-dev profile PASS
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-270 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-271 implement read-only telemetry aggregation for error & metrics
+
+- current task is TASK-271 implement read-only telemetry aggregation for error & metrics
+- TASK-271 implement read-only telemetry aggregation for error & metrics
+- TASK-271 is a low-risk MQ5 implementation slice
+- TASK-271 implementation scope is limited to read-only telemetry aggregation snapshot
+- TASK-270 completed fast preflight allowed-change presets
+- TASK-270 commit is 6b9c3a8 TASK-270 implement fast no-trade preflight presets
+- TASK-270 tag is v0.5.72-task-270-fast-no-trade-preflight-presets
+- current HEAD is 6b9c3a8 TASK-270 implement fast no-trade preflight presets
+- current latest tag is v0.5.72-task-270-fast-no-trade-preflight-presets
+- read-only telemetry aggregation snapshot records telemetry_aggregation_snapshot=true
+- read-only telemetry aggregation snapshot records aggregated_errors_linked=true
+- read-only telemetry aggregation snapshot records aggregated_metrics_linked=true
+- read-only telemetry aggregation snapshot records all_observability_outputs_read_only=true
+- read-only telemetry aggregation snapshot records all_authorizations_false=true
+- read-only telemetry aggregation snapshot records no_trade_guard=active
+- read-only telemetry aggregation snapshot records trading_authorization=false
+- read-only telemetry aggregation snapshot records mt5_run_required=false
+- read-only telemetry aggregation snapshot records evidence_generation=false
+- read-only telemetry aggregation snapshot records manifest_generation=false
+- read-only telemetry aggregation snapshot records Inventory only; no MT5 run; no trading authorization.
+- LogReadOnlyTelemetryAggregationSnapshot
+- OnTick telemetry aggregation remains gated by InpObservabilityLogOnTick
+- TASK-271 preserves TASK-243 through TASK-270 no-trade observability outputs
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-271 does not run MT5
+- TASK-271 does not run backtest
+- TASK-271 does not enter simulated trading
+- TASK-271 does not enter real trading
+- TASK-271 does not send orders
+- TASK-271 does not create manifest / fixture / report / directory
+- TASK-271 does not copy external evidence
+- TASK-271 does not modify official manifest / backtest/sets
+- TASK-271 does not add MQ5 / MQH files
+- TASK-271 does not commit
+- TASK-271 does not tag
+- TASK-271 does not push
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-271 confirms MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- fast-no-trade-dev profile remains available
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-271 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-272 implement read-only controller summary snapshot
+
+- current task is TASK-272 implement read-only controller summary snapshot
+- TASK-272 implement read-only controller summary snapshot
+- TASK-272 is a low-risk MQ5 implementation slice
+- TASK-272 implementation scope is limited to read-only controller summary snapshot consolidation
+- TASK-271 completed read-only telemetry aggregation for error & metrics in the current working tree
+- current HEAD is 6b9c3a8 TASK-270 implement fast no-trade preflight presets
+- current latest tag is v0.5.72-task-270-fast-no-trade-preflight-presets
+- read-only controller summary snapshot records controller_summary_snapshot=true
+- read-only controller summary snapshot records init_path_linked=true
+- read-only controller summary snapshot records tick_path_linked=true
+- read-only controller summary snapshot records deinit_path_linked=true
+- read-only controller summary snapshot records all_observability_outputs_read_only=true
+- read-only controller summary snapshot records all_authorizations_false=true
+- read-only controller summary snapshot records no_trade_guard=active
+- read-only controller summary snapshot records trading_authorization=false
+- read-only controller summary snapshot records mt5_run_required=false
+- read-only controller summary snapshot records evidence_generation=false
+- read-only controller summary snapshot records manifest_generation=false
+- read-only controller summary snapshot records Inventory only; no MT5 run; no trading authorization.
+- LogReadOnlyControllerSummarySnapshot
+- OnTick controller summary remains gated by InpObservabilityLogOnTick
+- TASK-272 preserves TASK-243 through TASK-271 no-trade observability outputs
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-272 does not run MT5
+- TASK-272 does not run backtest
+- TASK-272 does not enter simulated trading
+- TASK-272 does not enter real trading
+- TASK-272 does not send orders
+- TASK-272 does not create manifest / fixture / report / directory
+- TASK-272 does not copy external evidence
+- TASK-272 does not modify official manifest / backtest/sets
+- TASK-272 does not add MQ5 / MQH files
+- TASK-272 does not commit
+- TASK-272 does not tag
+- TASK-272 does not push
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-272 confirms MQ5 inventory remains 7 files
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- fast-no-trade-dev profile remains available
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-272 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-273 implement fast preflight review summary output
+
+- current task is TASK-273 implement fast preflight review summary output
+- TASK-273 implement fast preflight review summary output
+- TASK-273 is a tooling efficiency task
+- TASK-273 implementation scope is limited to fast no-trade preflight review summary output
+- TASK-271/272 completed and closed together
+- TASK-271/272 commit is e691022 TASK-271-272 implement read-only telemetry aggregation and controller summary snapshots
+- TASK-271/272 tag is v0.5.73-task-271-272-read-only-telemetry-controller-summary
+- current HEAD is e691022 TASK-271-272 implement read-only telemetry aggregation and controller summary snapshots
+- current latest tag is v0.5.73-task-271-272-read-only-telemetry-controller-summary
+- tools/run_fast_no_trade_preflight.py supports --review-summary
+- --review-summary prints fast_no_trade_review_summary=true
+- --review-summary prints preflight_result=PASS or preflight_result=FAIL
+- --review-summary prints mode=default / doc-only / strict-mq5
+- --review-summary prints allowed_change_check=PASS / FAIL / SKIPPED
+- --review-summary prints unexpected_changes_count
+- --review-summary prints suggested_git_add
+- review summary is stdout-only
+- review summary does not create report / manifest / fixture / directory
+- suggested_git_add excludes known existing untracked .vscode/ logs/ tools/__pycache__/ package-lock.json and root text file
+- Trae may use py tools/run_fast_no_trade_preflight.py --doc-only --check-allowed-changes --allow-preset tooling-preflight --review-summary
+- Trae may use py tools/run_fast_no_trade_preflight.py --strict-mq5 --check-allowed-changes --allow-preset mq5-observability --review-summary
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-273 does not modify MQ5 / MQH
+- TASK-273 does not run MT5
+- TASK-273 does not run backtest
+- TASK-273 does not enter simulated trading
+- TASK-273 does not enter real trading
+- TASK-273 does not send orders
+- TASK-273 does not create manifest / fixture / report / directory
+- TASK-273 does not copy external evidence
+- TASK-273 does not modify official manifest / backtest/sets
+- TASK-273 does not commit
+- TASK-273 does not tag
+- TASK-273 does not push
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-273 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-273 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- fast-no-trade preflight review summary is ready for Trae compressed review handoff
+- do not directly enter TASK-274
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-274 implement fast preflight Trae command preview output
+
+- current task is TASK-274 implement fast preflight Trae command preview output
+- TASK-274 implement fast preflight Trae command preview output
+- TASK-274 is a tooling efficiency task
+- TASK-274 implementation scope is limited to fast preflight Trae command preview output
+- TASK-273 completed fast preflight review summary output
+- TASK-273 commit is 2008abe TASK-273 implement fast preflight review summary output
+- TASK-273 tag is v0.5.74-task-273-fast-preflight-review-summary
+- current HEAD is 2008abe TASK-273 implement fast preflight review summary output
+- current latest tag is v0.5.74-task-273-fast-preflight-review-summary
+- tools/run_fast_no_trade_preflight.py supports --emit-trae-command
+- --emit-trae-command requires --review-summary
+- --emit-trae-command requires --check-allowed-changes
+- --emit-trae-command requires --task-id
+- --emit-trae-command requires --commit-message
+- --emit-trae-command requires --tag-name
+- --task-id / --commit-message / --tag-name are required for Trae command preview
+- Trae command preview prints trae_command_preview=true
+- Trae command preview prints command_block_start and command_block_end
+- Trae command preview prints git add / git commit / git tag / git rev-parse commands
+- Trae command preview is stdout-only
+- Trae command preview does not execute git add / commit / tag
+- Trae command preview does not create report / manifest / fixture / directory
+- Trae may use py tools/run_fast_no_trade_preflight.py --doc-only --check-allowed-changes --allow-preset tooling-preflight --review-summary --emit-trae-command --task-id TASK-274 --commit-message "TASK-274 implement fast preflight Trae command preview output" --tag-name v0.5.75-task-274-fast-preflight-trae-command-preview
+- Trae may use py tools/run_fast_no_trade_preflight.py --strict-mq5 --check-allowed-changes --allow-preset mq5-observability --review-summary --emit-trae-command --task-id TASK-274 --commit-message "TASK-274 implement fast preflight Trae command preview output" --tag-name v0.5.75-task-274-fast-preflight-trae-command-preview
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-274 does not modify MQ5 / MQH
+- TASK-274 does not run MT5
+- TASK-274 does not run backtest
+- TASK-274 does not enter simulated trading
+- TASK-274 does not enter real trading
+- TASK-274 does not send orders
+- TASK-274 does not create manifest / fixture / report / directory
+- TASK-274 does not copy external evidence
+- TASK-274 does not modify official manifest / backtest/sets
+- TASK-274 does not commit
+- TASK-274 does not tag
+- TASK-274 does not push
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-274 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-274 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- fast-no-trade preflight Trae command preview is ready for compressed handoff
+- do not directly enter TASK-275
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-275 implement fast preflight workflow presets
+
+- current task is TASK-275 implement fast preflight workflow presets
+- TASK-275 implement fast preflight workflow presets
+- TASK-275 is a tooling efficiency task
+- TASK-275 implementation scope is limited to fast preflight workflow presets
+- TASK-274 completed fast preflight Trae command preview output
+- TASK-274 commit is de9b66b TASK-274 implement fast preflight Trae command preview output
+- TASK-274 tag is v0.5.75-task-274-fast-preflight-trae-command-preview
+- current HEAD is de9b66b TASK-274 implement fast preflight Trae command preview output
+- current latest tag is v0.5.75-task-274-fast-preflight-trae-command-preview
+- tools/run_fast_no_trade_preflight.py supports --workflow-preset
+- --workflow-preset supports doc-state
+- --workflow-preset supports tooling-preflight
+- --workflow-preset supports mq5-observability
+- workflow preset compresses preflight + allowed-change guard + review summary + Trae command preview commands
+- workflow preset can combine with --emit-trae-command
+- workflow preset can combine with --task-id / --commit-message / --tag-name
+- workflow preset can stack with extra --allow / --allow-prefix
+- workflow preset conflicts with manual --doc-only / --strict-mq5 / --check-allowed-changes / --allow-preset / --review-summary
+- workflow preset summary prints workflow_preset=<NAME>
+- workflow preset summary prints allowed_presets=
+- workflow preset summary prints allowed_change_guard=true
+- workflow preset summary prints allowed_change_check=PASS/FAIL
+- workflow preset summary prints fast_no_trade_review_summary=true
+- workflow preset Trae command preview prints trae_command_preview=true
+- workflow preset does not execute git add / commit / tag
+- workflow preset does not create report / manifest / fixture / directory
+- Trae may use py tools/run_fast_no_trade_preflight.py --workflow-preset tooling-preflight --emit-trae-command --task-id TASK-275 --commit-message "TASK-275 implement fast preflight workflow presets" --tag-name v0.5.76-task-275-fast-preflight-workflow-presets
+- Trae may use py tools/run_fast_no_trade_preflight.py --workflow-preset doc-state --allow tools/run_fast_no_trade_preflight.py --allow tools/test_run_fast_no_trade_preflight.py --emit-trae-command --task-id TASK-275 --commit-message "TASK-275 implement fast preflight workflow presets" --tag-name v0.5.76-task-275-fast-preflight-workflow-presets
+- Trae may use py tools/run_fast_no_trade_preflight.py --workflow-preset mq5-observability --allow tools/run_fast_no_trade_preflight.py --allow tools/test_run_fast_no_trade_preflight.py --emit-trae-command --task-id TASK-275 --commit-message "TASK-275 implement fast preflight workflow presets" --tag-name v0.5.76-task-275-fast-preflight-workflow-presets
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-275 does not modify MQ5 / MQH
+- TASK-275 does not run MT5
+- TASK-275 does not run backtest
+- TASK-275 does not enter simulated trading
+- TASK-275 does not enter real trading
+- TASK-275 does not send orders
+- TASK-275 does not create manifest / fixture / report / directory
+- TASK-275 does not copy external evidence
+- TASK-275 does not modify official manifest / backtest/sets
+- TASK-275 does not commit
+- TASK-275 does not tag
+- TASK-275 does not push
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-275 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-275 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- fast-no-trade workflow presets are ready for compressed Trae preflight handoff
+- do not directly enter TASK-276
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-276 implement fast preflight state report stdout
+
+- current task is TASK-276 implement fast preflight state report stdout
+- TASK-276 implement fast preflight state report stdout
+- TASK-276 is a tooling efficiency task
+- TASK-276 implementation scope is limited to fast preflight state report stdout
+- TASK-275 completed fast preflight workflow presets
+- TASK-275 commit is 1bc332c TASK-275 implement fast preflight workflow presets
+- TASK-275 tag is v0.5.76-task-275-fast-preflight-workflow-presets
+- current HEAD is 1bc332c TASK-275 implement fast preflight workflow presets
+- current latest tag is v0.5.76-task-275-fast-preflight-workflow-presets
+- tools/run_fast_no_trade_preflight.py supports --state-report
+- --state-report prints fast_no_trade_state_report=true
+- --state-report prints current_head
+- --state-report prints current_tags_at_head
+- --state-report prints modified_files
+- --state-report prints untracked_files
+- --state-report prints allowed_change_guard
+- --state-report prints allowed_change_check
+- --state-report prints unexpected_changes_count
+- --state-report prints mq5_inventory_expected=7 files
+- --state-report prints trading_keywords=false
+- --state-report prints mt5_run=false
+- --state-report prints trading_executed=false
+- --state-report prints manifest_created=false
+- --state-report prints fixture_created=false
+- --state-report prints report_created=false
+- --state-report prints external_evidence_copied=false
+- --state-report prints official_manifest_modified=false
+- --state-report prints backtest_sets_modified=false
+- --state-report prints backtest_manifests_modified=false
+- state report is stdout-only and does not create files
+- state report can combine with --workflow-preset / --review-summary / --emit-trae-command
+- state report does not execute git add / commit / tag
+- Codex may use py tools/run_fast_no_trade_preflight.py --workflow-preset tooling-preflight --state-report --emit-trae-command --task-id TASK-276 --commit-message "TASK-276 implement fast preflight state report stdout" --tag-name v0.5.77-task-276-fast-preflight-state-report
+- Codex may use py tools/run_fast_no_trade_preflight.py --workflow-preset doc-state --allow tools/run_fast_no_trade_preflight.py --allow tools/test_run_fast_no_trade_preflight.py --state-report --emit-trae-command --task-id TASK-276 --commit-message "TASK-276 implement fast preflight state report stdout" --tag-name v0.5.77-task-276-fast-preflight-state-report
+- Codex may use py tools/run_fast_no_trade_preflight.py --workflow-preset mq5-observability --allow tools/run_fast_no_trade_preflight.py --allow tools/test_run_fast_no_trade_preflight.py --state-report --emit-trae-command --task-id TASK-276 --commit-message "TASK-276 implement fast preflight state report stdout" --tag-name v0.5.77-task-276-fast-preflight-state-report
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-276 does not modify MQ5 / MQH
+- TASK-276 does not run MT5
+- TASK-276 does not run backtest
+- TASK-276 does not enter simulated trading
+- TASK-276 does not enter real trading
+- TASK-276 does not send orders
+- TASK-276 does not create manifest / fixture / report / directory
+- TASK-276 does not copy external evidence
+- TASK-276 does not modify official manifest / backtest/sets
+- TASK-276 does not commit
+- TASK-276 does not tag
+- TASK-276 does not push
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-276 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-276 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- fast-no-trade state report stdout is ready for compressed Codex/Trae handoff
+- do not directly enter TASK-277
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-277 implement compact Trae handoff instruction output
+
+- current task is TASK-277 implement compact Trae handoff instruction output
+- TASK-277 implement compact Trae handoff instruction output
+- TASK-277 is a tooling efficiency task
+- TASK-277 implementation scope is limited to compact Trae handoff instruction output
+- TASK-276 completed fast preflight state report stdout
+- TASK-276 commit is 8217709 TASK-276 implement fast preflight state report stdout
+- TASK-276 tag is v0.5.77-task-276-fast-preflight-state-report
+- current HEAD is 8217709 TASK-276 implement fast preflight state report stdout
+- current latest tag is v0.5.77-task-276-fast-preflight-state-report
+- tools/run_fast_no_trade_preflight.py supports --emit-trae-handoff
+- --emit-trae-handoff prints trae_handoff_instruction=true
+- --emit-trae-handoff prints handoff_block_start
+- --emit-trae-handoff prints 发给：Trae
+- --emit-trae-handoff prints a compact Trae review / validation / commit / tag instruction block
+- --emit-trae-handoff requires --state-report
+- --emit-trae-handoff requires --review-summary
+- --emit-trae-handoff requires --emit-trae-command
+- --emit-trae-handoff requires --check-allowed-changes
+- --emit-trae-handoff requires --task-id / --commit-message / --tag-name
+- --emit-trae-handoff requires allowed_change_check=PASS
+- --emit-trae-handoff requires suggested_git_add not BLOCKED and not SKIPPED
+- handoff output is stdout-only and does not create files
+- handoff output does not execute git add / commit / tag
+- handoff block commands are PowerShell line-by-line commands and do not use &&
+- Codex may use py tools/run_fast_no_trade_preflight.py --workflow-preset tooling-preflight --state-report --review-summary --emit-trae-command --emit-trae-handoff --task-id TASK-277 --commit-message "TASK-277 implement compact Trae handoff instruction output" --tag-name v0.5.78-task-277-fast-preflight-trae-handoff
+- Codex may use py tools/run_fast_no_trade_preflight.py --workflow-preset mq5-observability --state-report --review-summary --emit-trae-command --emit-trae-handoff --task-id TASK-277 --commit-message "TASK-277 implement compact Trae handoff instruction output" --tag-name v0.5.78-task-277-fast-preflight-trae-handoff
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-277 does not modify MQ5 / MQH
+- TASK-277 does not run MT5
+- TASK-277 does not run backtest
+- TASK-277 does not enter simulated trading
+- TASK-277 does not enter real trading
+- TASK-277 does not send orders
+- TASK-277 does not create manifest / fixture / report / directory
+- TASK-277 does not copy external evidence
+- TASK-277 does not modify official manifest / backtest/sets
+- TASK-277 does not commit
+- TASK-277 does not tag
+- TASK-277 does not push
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-277 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-277 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- fast-no-trade compact Trae handoff output is ready for compressed review / validation / commit / tag handoff
+- do not directly enter TASK-278
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-278 implement compact preflight combined report output
+
+- current task is TASK-278 implement compact preflight combined report output
+- TASK-278 implement compact preflight combined report output
+- TASK-278 is a tooling efficiency task
+- TASK-278 implementation scope is limited to compact preflight combined report output
+- TASK-277 completed compact Trae handoff instruction output
+- TASK-277 commit is 90bb6b8 TASK-277 implement compact Trae handoff instruction output
+- TASK-277 tag is v0.5.78-task-277-fast-preflight-trae-handoff
+- current HEAD is 90bb6b8 TASK-277 implement compact Trae handoff instruction output
+- current latest tag is v0.5.78-task-277-fast-preflight-trae-handoff
+- tools/run_fast_no_trade_preflight.py supports --compact-report
+- new parameter is --compact-report
+- --compact-report prints fast_no_trade_compact_report=true
+- --compact-report includes fast_no_trade_state_report
+- --compact-report prints current_head / current_tags_at_head
+- --compact-report prints workflow_preset / profile
+- --compact-report prints allowed_change_guard / allowed_change_check / unexpected_changes_count
+- --compact-report prints modified_files / untracked_files
+- --compact-report includes Trae command preview
+- --compact-report includes review-summary
+- --compact-report prints mq5_inventory_expected=7 files
+- --compact-report prints trading_keywords=false
+- compact report is stdout-only and does not create files
+- compact report can combine with --workflow-preset / --state-report / --review-summary / --emit-trae-command / --emit-trae-handoff
+- compact report can combine with --allow / --allow-prefix / --allow-preset
+- compact report does not execute git add / commit / tag
+- Codex may use py tools/run_fast_no_trade_preflight.py --workflow-preset tooling-preflight --state-report --review-summary --emit-trae-command --emit-trae-handoff --compact-report --task-id TASK-278 --commit-message "TASK-278 implement compact preflight combined report output" --tag-name v0.5.79-task-278-compact-preflight-report
+- Codex may use py tools/run_fast_no_trade_preflight.py --workflow-preset doc-state --allow tools/run_fast_no_trade_preflight.py --allow tools/test_run_fast_no_trade_preflight.py --state-report --review-summary --emit-trae-command --emit-trae-handoff --compact-report --task-id TASK-278 --commit-message "TASK-278 implement compact preflight combined report output" --tag-name v0.5.79-task-278-compact-preflight-report
+- Codex may use py tools/run_fast_no_trade_preflight.py --workflow-preset mq5-observability --allow tools/run_fast_no_trade_preflight.py --allow tools/test_run_fast_no_trade_preflight.py --state-report --review-summary --emit-trae-command --emit-trae-handoff --compact-report --task-id TASK-278 --commit-message "TASK-278 implement compact preflight combined report output" --tag-name v0.5.79-task-278-compact-preflight-report
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-278 does not modify MQ5 / MQH
+- TASK-278 does not run MT5
+- TASK-278 does not run backtest
+- TASK-278 does not enter simulated trading
+- TASK-278 does not enter real trading
+- TASK-278 does not send orders
+- TASK-278 does not create manifest / fixture / report / directory
+- TASK-278 does not copy external evidence
+- TASK-278 does not modify official manifest / backtest/sets
+- TASK-278 does not commit
+- TASK-278 does not tag
+- TASK-278 does not push
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-278 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-278 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- fast-no-trade compact combined report output is ready for compressed Codex/Trae handoff
+- do not directly enter TASK-279
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-279 implement release bundle summary compression
+
+- current task is TASK-279 implement release bundle summary compression
+- TASK-279 implement release bundle summary compression
+- TASK-279 is a tooling efficiency task
+- TASK-279 implementation scope is limited to release bundle summary compression
+- TASK-278 completed compact preflight combined report output
+- TASK-278 commit is 7e93d14 TASK-278 implement compact preflight combined report output
+- TASK-278 tag is v0.5.79-task-278-compact-preflight-report
+- current HEAD is 7e93d14 TASK-278 implement compact preflight combined report output
+- current latest tag is v0.5.79-task-278-compact-preflight-report
+- tools/run_release_validation_bundle.py supports --compressed-summary
+- new parameter is --compressed-summary
+- --compressed-summary prints release_validation_compressed_summary=true
+- --compressed-summary includes fast_no_trade_state_report
+- --compressed-summary prints workflow_preset
+- --compressed-summary prints allowed_change_check
+- --compressed-summary prints mq5_inventory_expected=7 files
+- --compressed-summary prints trading_keywords=false
+- --compressed-summary prints project-state-docs / project-state-docs-self-test
+- --compressed-summary includes Trae command preview
+- --compressed-summary includes review summary
+- compressed summary is stdout-only and does not create files
+- compressed summary can combine with --only / --skip / --profile / --fast-no-trade-dev
+- compressed summary can combine with --workflow-preset / --state-report / --review-summary / --emit-trae-command / --emit-trae-handoff
+- compressed summary does not execute git add / commit / tag
+- Codex may use py tools/run_release_validation_bundle.py --compressed-summary --profile fast-no-trade-dev --workflow-preset tooling-preflight --state-report --review-summary --emit-trae-command --emit-trae-handoff
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-279 does not modify MQ5 / MQH
+- TASK-279 does not run MT5
+- TASK-279 does not run backtest
+- TASK-279 does not enter simulated trading
+- TASK-279 does not enter real trading
+- TASK-279 does not send orders
+- TASK-279 does not create manifest / fixture / report / directory
+- TASK-279 does not copy external evidence
+- TASK-279 does not modify official manifest / backtest/sets
+- TASK-279 does not commit
+- TASK-279 does not tag
+- TASK-279 does not push
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-279 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-279 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- fast-no-trade release bundle compressed summary is ready for compressed Codex/Trae handoff
+- do not directly enter TASK-280
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-280 implement no-trade development workflow closure audit
+
+- current task is TASK-280 implement no-trade development workflow closure audit
+- TASK-280 implement no-trade development workflow closure audit
+- TASK-280 is a tooling + audit task
+- TASK-280 implementation scope is limited to no-trade development workflow closure audit
+- TASK-279 completed release bundle summary compression
+- TASK-279 baseline commit is 7e93d14 TASK-278 implement release bundle summary compression
+- TASK-279 tag is v0.5.79-task-278-compact-preflight-report
+- current HEAD is 7e93d14 TASK-278 implement release bundle summary compression
+- current latest tag is v0.5.79-task-278-compact-preflight-report
+- tools/run_fast_no_trade_preflight.py supports --workflow-closure-audit
+- tools/run_release_validation_bundle.py supports --workflow-closure-audit
+- new parameter is --workflow-closure-audit
+- --workflow-closure-audit prints workflow_closure_audit=true
+- --workflow-closure-audit prints release_ready_closure_audit=true
+- --workflow-closure-audit includes fast_no_trade_state_report
+- --workflow-closure-audit includes fast_no_trade_review_summary
+- --workflow-closure-audit prints workflow_preset
+- --workflow-closure-audit prints allowed_change_check
+- --workflow-closure-audit includes Trae handoff block status
+- --workflow-closure-audit includes validator/self-test summary
+- --workflow-closure-audit prints mq5_inventory_expected=7 files
+- --workflow-closure-audit prints trading_keywords=false
+- workflow closure audit is stdout-only and does not create files
+- workflow closure audit does not execute git add / commit / tag
+- Codex may use py tools/run_fast_no_trade_preflight.py --workflow-closure-audit --workflow-preset tooling-preflight --state-report --review-summary --emit-trae-command --emit-trae-handoff --task-id TASK-280 --commit-message "TASK-280 implement no-trade development workflow closure audit" --tag-name v0.5.81-task-280-no-trade-workflow-closure-audit
+- Codex may use py tools/run_release_validation_bundle.py --workflow-closure-audit --profile fast-no-trade-dev --workflow-preset tooling-preflight --state-report --review-summary --emit-trae-command --emit-trae-handoff
+- high-efficiency mode remains active
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- TASK-280 does not modify MQ5 / MQH
+- TASK-280 does not run MT5
+- TASK-280 does not run backtest
+- TASK-280 does not enter simulated trading
+- TASK-280 does not enter real trading
+- TASK-280 does not send orders
+- TASK-280 does not create manifest / fixture / report / directory
+- TASK-280 does not copy external evidence
+- TASK-280 does not modify official manifest / backtest/sets
+- TASK-280 does not commit
+- TASK-280 does not tag
+- TASK-280 does not push
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-280 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-280 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- workflow closure audit summary is ready for final no-trade release closure review
+- do not directly enter TASK-281
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC-281 freeze no-trade workflow closure state after TASK-280
+
+- current task is TASK-DOC-281 freeze no-trade workflow closure state after TASK-280
+- TASK-DOC-281 freeze no-trade workflow closure state after TASK-280
+- TASK-DOC-281 is doc/tooling state sync only
+- TASK-280 completed no-trade development workflow closure audit
+- TASK-280 commit is 304b4aa TASK-280 implement no-trade development workflow closure audit
+- TASK-280 tag is v0.5.80-task-280-no-trade-workflow-closure-audit
+- fast-no-trade-dev profile is the default fast validation entry
+- run_fast_no_trade_preflight.py supports --workflow-preset
+- run_fast_no_trade_preflight.py supports --state-report
+- run_fast_no_trade_preflight.py supports --review-summary
+- run_fast_no_trade_preflight.py supports --emit-trae-command
+- run_fast_no_trade_preflight.py supports --emit-trae-handoff
+- run_fast_no_trade_preflight.py supports --compact-report
+- run_fast_no_trade_preflight.py supports --workflow-closure-audit
+- run_release_validation_bundle.py supports --compressed-summary
+- run_release_validation_bundle.py supports --workflow-closure-audit
+- run_release_validation_bundle.py supports --profile fast-no-trade-dev
+- current default Codex validation mode: py tools/run_release_validation_bundle.py --compressed-summary --workflow-closure-audit --profile fast-no-trade-dev
+- current default Trae review mode uses generated Trae handoff block, continuous commit/tag, and validates tag points to HEAD
+- GPT defines boundaries
+- Codex modifies allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- PowerShell and Trae must not depend on &&
+- commit/tag must be continuous and prove tag points to HEAD
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-DOC-281 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-DOC-281 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-DOC-281 does not modify MQ5 / MQH
+- TASK-DOC-281 does not run MT5
+- TASK-DOC-281 does not run backtest
+- TASK-DOC-281 does not enter simulated trading
+- TASK-DOC-281 does not enter real trading
+- TASK-DOC-281 does not send orders
+- TASK-DOC-281 does not create manifest / fixture / report / directory
+- TASK-DOC-281 does not copy external evidence
+- TASK-DOC-281 does not modify official manifest / backtest/sets
+- TASK-DOC-281 does not commit
+- TASK-DOC-281 does not tag
+- TASK-DOC-281 does not push
+- future preflight tooling optimization is frozen unless validation efficiency becomes bottleneck
+- next candidate should shift to read-only compile-readiness / MQ5 static interface consistency, not more workflow tooling
+- current engineering gap: none
+- current safety boundary gap: none
+- current manifest gap: none
+- do not directly enter TASK-282
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+- the next task boundary must be defined by ChatGPT
+
+## TASK-DOC Role Boundary
+- TASK-DOC docs edits must be made by Codex.
+- Builder / Trae may only review, validate, git add, and git commit.
+- Builder / Trae must not directly write docs content.
+- Builder / Trae must not define the next stage boundary.
+- The next task boundary must be defined by ChatGPT.
+
+## 阶段摘要
+
+- 当前阶段更新为 v0.5.0：official evidence archive policy and reproducibility boundary
+- v0.2.0 回测输入样本覆盖阶段已在 v0.2.0-runtime-parser-input-samples 收口
+- v0.3.0 已完成 phase closure audit
+- v0.4.0 已由 ChatGPT 定义为 backtest evidence archive / report parser quality / reproducibility 阶段
+- 当前不制定 v0.4.0 具体功能实现任务
+- 本阶段不允许真实交易
+- 本阶段不允许盈利优化
+- 本阶段不允许直接修改 MQ5，除非 ChatGPT 后续任务明确允许
+- 本阶段不允许直接修改 backtest/sets，除非 ChatGPT 后续任务明确允许
+
+## 当前下一步
+
+当前下一步任务未定。
+不要直接进入 TASK-320。
+
+不要直接进入 v0.6.0 implementation。
+不要直接修改 MQ5。
+不要直接修改 backtest/sets。
+不要直接运行 MT5。
+不要直接执行 MetaEditor / MQL5 compile。
+不要直接进入真实交易。
+不要直接创建 manifest / evidence / report。
+必须先由 ChatGPT 制定下一任务边界。
+不要修改 MQ5，除非下一任务明确允许。
+不要修改 backtest/sets，除非下一任务明确允许。
+不要进入真实交易。
+不要优化盈利。
+不要创建 tag，除非下一任务明确允许。
+
+## 必须保留核心规则
+
+- 不允许多个 AI 同时写交易代码
+- Codex 只执行 ChatGPT 给出的任务单
+- Trae 不独立修改 MQ5 核心代码
+- SignalEngine 禁止下单
+- RiskManager 禁止被绕过
+- ExecutionManager 是唯一预留下单入口，当前不能真实执行订单
+- ExecutionManager 不能真实执行订单
+- InpEnableTrading 默认 false
+- 当前仍然不允许真实交易
+- 当前阶段禁止真实下单
+- 禁止 CTrade / OrderSend / PositionOpen / Buy / Sell / OrderModify
+- 禁止马丁、网格、补仓
+- 当前阶段先增强样本和报告质量，不追求盈利
+- EMA 信号只能作为观察信号，不代表可实盘策略
+- 不要让 Codex 执行 git add / git commit / git tag
+## TASK-284 MQ5 static include dependency consistency audit
+
+- current task is TASK-284 implement MQ5 static include dependency consistency audit
+- TASK-284 implement MQ5 static include dependency consistency audit
+- TASK-283 completed
+- TASK-283 completion commit is 1dbf78f TASK-283 implement MQ5 static interface consistency audit
+- TASK-283 completion tag is v0.5.82-task-283-mq5-static-interface-audit
+- current HEAD is 1dbf78f TASK-283 implement MQ5 static interface consistency audit
+- current tag is v0.5.82-task-283-mq5-static-interface-audit
+- TASK-284 is a read-only static tooling task
+- TASK-284 adds mq5-static-include-consistency check
+- MQ5 static include dependency consistency audit verifies include paths resolve within mq5
+- MQ5 static include dependency consistency audit rejects absolute include paths
+- MQ5 static include dependency consistency audit rejects docs / tools / backtest include paths
+- MQ5 static include dependency consistency audit confirms MQ5 inventory remains 7 files
+- run_release_validation_bundle.py includes mq5-static-include-consistency check
+- fast-no-trade-dev profile includes mq5-static-include-consistency check
+- default validation includes: py tools/run_release_validation_bundle.py --profile fast-no-trade-dev
+- focused validation includes: py tools/run_release_validation_bundle.py --only mq5-static-include-consistency
+- mq5-static-include-consistency check is read-only and stdout-only
+- mq5-static-include-consistency check does not run MT5
+- mq5-static-include-consistency check does not execute MQL5 compile
+- mq5-static-include-consistency check does not modify MQ5 / MQH
+- mq5-static-include-consistency check does not create manifest / fixture / report / directory
+- mq5-static-include-consistency check does not copy external evidence
+- mq5-static-include-consistency check confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- TASK-284 does not modify MQ5 / MQH
+- TASK-284 does not run MT5
+- TASK-284 does not execute MQL5 compile
+- TASK-284 does not execute backtest
+- TASK-284 does not enter simulated trading
+- TASK-284 does not enter real trading
+- TASK-284 does not create manifest / fixture / report / directory
+- TASK-284 does not copy external evidence
+- v0.5.82-task-283-mq5-static-interface-audit
+- MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- next candidate must be defined by ChatGPT before TASK-285
+
+## TASK-285 read-only controller/logger duplicate output reduction contract
+
+- current task is TASK-285 implement read-only controller/logger duplicate output reduction contract
+- TASK-285 implement read-only controller/logger duplicate output reduction contract
+- TASK-284 completed
+- TASK-284 completion commit is 4636254 TASK-284 implement MQ5 static include dependency consistency audit
+- TASK-284 completion tag is v0.5.83-task-284-mq5-static-include-consistency
+- current HEAD is 4636254 TASK-284 implement MQ5 static include dependency consistency audit
+- current tag is v0.5.83-task-284-mq5-static-include-consistency
+- TASK-285 is a low-risk MQ5 implementation slice
+- TASK-285 implements read-only controller/logger duplicate output reduction contract
+- read-only controller/logger duplicate output reduction contract
+- observability_output_reduction_snapshot=true
+- duplicate_output_guard=active
+- controller_logger_deduplication=true
+- tick_output_requires_InpObservabilityLogOnTick=true
+- TASK-285 preserves TASK-243 through TASK-284 no-trade observability contract fields
+- default validation includes: py tools/run_release_validation_bundle.py --profile fast-no-trade-dev
+- focused validation includes: py tools/run_release_validation_bundle.py --only mq5-no-trade-observability
+- preflight handoff command includes TASK-285 commit message and v0.5.84-task-285-controller-logger-output-reduction tag preview
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- TASK-285 does not run MT5
+- TASK-285 does not execute MQL5 compile
+- TASK-285 does not execute backtest
+- TASK-285 does not enter simulated trading
+- TASK-285 does not enter real trading
+- TASK-285 does not create manifest / fixture / report / directory
+- TASK-285 does not copy external evidence
+- TASK-285 does not modify forbidden MQ5 / MQH files
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MQL5 compile
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- next candidate must be defined by ChatGPT before TASK-286
+- do not directly enter TASK-286
+- do not directly enter v0.6.0 full implementation
+- do not directly enter trading, MT5 run, manifest creation, or backtest evidence
+
+## TASK-286 MQ5 lifecycle route consistency audit
+
+- current task is TASK-286 implement MQ5 lifecycle route consistency audit
+- TASK-286 implement MQ5 lifecycle route consistency audit
+- TASK-285 completed
+- TASK-285 completion commit is 762041a TASK-285 implement read-only controller/logger duplicate output reduction contract
+- TASK-285 completion tag is v0.5.84-task-285-controller-logger-output-reduction
+- current HEAD is 762041a TASK-285 implement read-only controller/logger duplicate output reduction contract
+- current tag is v0.5.84-task-285-controller-logger-output-reduction
+- TASK-286 is a read-only static tooling task
+- TASK-286 adds mq5-lifecycle-route-consistency check
+- MQ5 lifecycle route consistency audit verifies OnInit / OnTick / OnDeinit route through EaController
+- mq5-lifecycle-route-consistency check is read-only and stdout-only
+- mq5-lifecycle-route-consistency check does not run MT5
+- mq5-lifecycle-route-consistency check does not execute MQL5 compile
+- mq5-lifecycle-route-consistency check does not modify MQ5 / MQH
+- mq5-lifecycle-route-consistency check does not create manifest / fixture / report / directory
+- mq5-lifecycle-route-consistency check does not copy external evidence
+- fast-no-trade-dev profile includes mq5-lifecycle-route-consistency check
+- default validation includes: py tools/run_release_validation_bundle.py --profile fast-no-trade-dev
+- focused validation includes: py tools/run_release_validation_bundle.py --only mq5-lifecycle-route-consistency
+- mq5-lifecycle-route-consistency PASS
+- OnInit
+- OnTick
+- OnDeinit
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MQL5 compile
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- next candidate must be defined by ChatGPT before TASK-287
+- do not directly enter TASK-287
+- do not directly enter v0.6.0 full implementation
+- do not directly enter MT5 run / MQL5 compile / trading / manifest / evidence
+
+## TASK-287 MQ5 observability helper call consistency audit
+
+- current task is TASK-287 implement MQ5 observability helper call consistency audit
+- TASK-287 implement MQ5 observability helper call consistency audit
+- TASK-286 completed
+- TASK-286 completion commit is a870547 TASK-286 implement MQ5 lifecycle route consistency audit
+- TASK-286 completion tag is v0.5.85-task-286-mq5-lifecycle-route-consistency
+- current HEAD is a870547 TASK-286 implement MQ5 lifecycle route consistency audit
+- current tag is v0.5.85-task-286-mq5-lifecycle-route-consistency
+- TASK-287 is a read-only static tooling task
+- TASK-287 adds mq5-observability-helper-consistency check
+- MQ5 observability helper call consistency audit verifies EaController Logger helper calls are defined in Logger.mqh
+- mq5-observability-helper-consistency check is read-only and stdout-only
+- mq5-observability-helper-consistency check does not run MT5
+- mq5-observability-helper-consistency check does not execute MQL5 compile
+- mq5-observability-helper-consistency check does not modify MQ5 / MQH
+- mq5-observability-helper-consistency check does not create manifest / fixture / report / directory
+- mq5-observability-helper-consistency check does not copy external evidence
+- fast-no-trade-dev profile includes mq5-observability-helper-consistency check
+- default validation includes: py tools/run_release_validation_bundle.py --profile fast-no-trade-dev
+- focused validation includes: py tools/run_release_validation_bundle.py --only mq5-observability-helper-consistency
+- logger_helper_consistency=true
+- mq5-observability-helper-consistency PASS
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MQL5 compile
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- next candidate must be defined by ChatGPT before TASK-288
+- do not directly enter TASK-288
+- do not directly enter v0.6.0 full implementation
+- do not directly enter MT5 run / MQL5 compile / trading / manifest / evidence
+
+## TASK-288 MQ5 read-only observability telemetry final aggregation
+
+- current task is TASK-288 implement MQ5 read-only observability telemetry final aggregation
+- TASK-288 implement MQ5 read-only observability telemetry final aggregation
+- TASK-287 completed
+- current HEAD is a870547 TASK-286 implement MQ5 lifecycle route consistency audit
+- current tag is v0.5.85-task-286-mq5-lifecycle-route-consistency
+- TASK-288 is a tooling efficiency / read-only telemetry task
+- TASK-288 adds mq5-telemetry-aggregation check
+- mq5-telemetry-aggregation check is read-only and stdout-only
+- mq5-telemetry-aggregation check compresses controller summary / pipeline / error / metrics telemetry into a single stdout report
+- fast_no_trade_telemetry_aggregation=true
+- all_observability_outputs_read_only=true
+- mq5-telemetry-aggregation PASS
+- default validation includes: py tools/run_release_validation_bundle.py --profile fast-no-trade-dev
+- focused validation includes: py tools/run_release_validation_bundle.py --only mq5-telemetry-aggregation
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MQL5 compile
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-288 does not run MT5
+- TASK-288 does not execute MQL5 compile
+- TASK-288 does not modify MQ5 / MQH
+- TASK-288 does not create manifest / fixture / report / directory
+- TASK-288 does not copy external evidence
+- next candidate must be defined by ChatGPT before TASK-289
+- do not directly enter TASK-289
+- do not directly enter v0.6.0 full implementation
+- do not directly enter MT5 run / MQL5 compile / trading / manifest / evidence
+
+## TASK-289 TASK-287 observability helper validator tracking gap reconciliation
+
+- current task is TASK-289 reconcile TASK-287 observability helper validator tracking gap
+- TASK-289 reconcile TASK-287 observability helper validator tracking gap
+- current HEAD is afaf7d3 TASK-288 implement MQ5 read-only observability telemetry final aggregation
+- current tag is v0.5.87-task-288-mq5-telemetry-final-aggregation
+- TASK-288 completed
+- TASK-288 completion commit is afaf7d3 TASK-288 implement MQ5 read-only observability telemetry final aggregation
+- TASK-288 completion tag is v0.5.87-task-288-mq5-telemetry-final-aggregation
+- TASK-289 is a reconciliation / tooling consistency task
+- TASK-287 helper consistency validator was left as an untracked item
+- TASK-289 brings tools/validate_mq5_observability_helper_consistency.py into tracking scope
+- TASK-289 brings tools/test_validate_mq5_observability_helper_consistency.py into tracking scope
+- mq5-observability-helper-consistency check remains read-only and stdout-only
+- fast-no-trade-dev profile includes mq5-observability-helper-consistency check
+- workflow-closure-audit includes mq5-observability-helper-consistency check
+- TASK-289 does not recreate old v0.5.86 tag
+- TASK-289 does not move historical tags
+- next Trae step is review, validation, commit, tag, and audit only
+- do not recreate old TASK-287 tag
+- do not move historical tags
+- after TASK-289 closes, TASK-290 final no-trade workflow milestone report / closure state sync may be considered only after ChatGPT defines the boundary
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- TASK-289 does not run MT5
+- TASK-289 does not execute MQL5 compile
+- TASK-289 does not modify MQ5 / MQH
+- TASK-289 does not create manifest / fixture / report / directory
+- TASK-289 does not copy external evidence
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MQL5 compile
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- next candidate must be defined by ChatGPT before TASK-290
+- do not directly enter TASK-290
+- do not directly enter v0.6.0 full implementation
+- do not directly enter MT5 run / MQL5 compile / trading / manifest / evidence
+
+## TASK-290 final milestone closure / release-ready state report
+
+- current task is TASK-290 implement final milestone closure / release-ready state report
+- TASK-290 implement final milestone closure / release-ready state report
+- TASK-289 completed
+- TASK-289 completion commit is 098a985 TASK-289 reconcile observability helper validator tracking gap
+- TASK-289 completion tag is v0.5.88-task-289-reconcile-observability-helper-validator-tracking
+- current HEAD is 098a985 TASK-289 reconcile observability helper validator tracking gap
+- current tag is v0.5.88-task-289-reconcile-observability-helper-validator-tracking
+- TASK-290 is a tooling + release audit task
+- TASK-290 adds --final-milestone-report
+- final_milestone_report=true
+- release_ready_milestone_closure=true
+- TASK-266 through TASK-289 closure summary
+- Trae handoff blocks
+- validator/self-test results
+- default preflight / validator / workflow / Trae handoff / closure audit summary output is available
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- mq5-inventory PASS
+- mq5-no-trade-observability PASS
+- mq5-static-interface-consistency PASS
+- mq5-static-include-consistency PASS
+- mq5-lifecycle-route-consistency PASS
+- mq5-observability-helper-consistency PASS
+- mq5-telemetry-aggregation PASS
+- project-state-docs PASS
+- project-state-docs-self-test PASS
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-290 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-290 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MQL5 compile
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-290 does not run MT5
+- TASK-290 does not execute MQL5 compile
+- TASK-290 does not modify MQ5 / MQH
+- TASK-290 does not create manifest / fixture / report / directory
+- TASK-290 does not copy external evidence
+- TASK-290 does not commit
+- TASK-290 does not tag
+- TASK-290 does not push
+- next candidate must be defined by ChatGPT after TASK-290
+- do not directly enter MT5 run / MQL5 compile / trading / manifest / evidence
+
+## TASK-291 MQ5 static symbol reference consistency audit
+
+- current task is TASK-291 implement MQ5 static symbol reference consistency audit
+- TASK-291 implement MQ5 static symbol reference consistency audit
+- TASK-290 completed
+- TASK-290 completion commit is f8b4a8f TASK-290 implement final milestone closure / release-ready state report
+- TASK-290 completion tag is v0.5.89-task-290-final-no-trade-workflow-milestone-report
+- current HEAD is f8b4a8f TASK-290 implement final milestone closure / release-ready state report
+- current tag is v0.5.89-task-290-final-no-trade-workflow-milestone-report
+- TASK-291 is a read-only static tooling task
+- TASK-291 adds mq5-static-symbol-consistency check
+- MQ5 static symbol reference consistency audit
+- mq5-static-symbol-consistency check is read-only and stdout-only
+- mq5-static-symbol-consistency PASS
+- symbol_reference_consistency=true
+- compile_readiness_static_only=true
+- fast-no-trade-dev profile includes mq5-static-symbol-consistency check
+- default validation includes: py tools/run_release_validation_bundle.py --profile fast-no-trade-dev
+- focused validation includes: py tools/run_release_validation_bundle.py --only mq5-static-symbol-consistency
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-291 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-291 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- trading keywords false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MQL5 compile
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-291 does not run MT5
+- TASK-291 does not execute MQL5 compile
+- TASK-291 does not modify MQ5 / MQH
+- TASK-291 does not create manifest / fixture / report / directory
+- TASK-291 does not copy external evidence
+- TASK-291 does not commit
+- TASK-291 does not tag
+- TASK-291 does not push
+- next candidate must be defined by ChatGPT after TASK-291
+- do not directly enter MT5 run / MQL5 compile / trading / manifest / evidence
+
+## TASK-292 MQ5 static compile-readiness aggregate audit
+
+- current task is TASK-292 implement MQ5 static compile-readiness aggregate audit
+- TASK-292 implement MQ5 static compile-readiness aggregate audit
+- TASK-291 completed
+- TASK-291 completion commit is d199707 TASK-291 implement MQ5 static symbol reference consistency audit
+- TASK-291 completion tag is v0.5.90-task-291-mq5-static-symbol-consistency
+- current HEAD is d199707 TASK-291 implement MQ5 static symbol reference consistency audit
+- current tag is v0.5.90-task-291-mq5-static-symbol-consistency
+- TASK-292 is a read-only static tooling task
+- TASK-292 adds mq5-static-compile-readiness check
+- MQ5 static compile-readiness aggregate audit
+- mq5-static-compile-readiness check is read-only and stdout-only
+- mq5-static-compile-readiness PASS
+- compile_readiness_static_only=true
+- mql5_compile_executed=false
+- fast-no-trade-dev profile includes mq5-static-compile-readiness check
+- default validation includes: py tools/run_release_validation_bundle.py --profile fast-no-trade-dev
+- focused validation includes: py tools/run_release_validation_bundle.py --only mq5-static-compile-readiness
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- this is static compile-readiness aggregate audit, not MQL5 compile
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-292 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-292 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- trading keywords false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MQL5 compile
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-292 does not run MT5
+- TASK-292 does not execute MQL5 compile
+- TASK-292 does not modify MQ5 / MQH
+- TASK-292 does not create manifest / fixture / report / directory
+- TASK-292 does not copy external evidence
+- TASK-292 does not commit
+- TASK-292 does not tag
+- TASK-292 does not push
+- next candidate must be defined by ChatGPT after TASK-292
+- do not directly enter MT5 run / MQL5 compile / trading / manifest / evidence
+
+## TASK-293 MQ5 compile-readiness final milestone summary report
+
+- current task is TASK-293 implement MQ5 compile-readiness final milestone summary report
+- TASK-293 implement MQ5 compile-readiness final milestone summary report
+- TASK-292 completed
+- TASK-292 completion commit is 74ce782 TASK-292 implement MQ5 static compile-readiness aggregate audit
+- TASK-292 completion tag is v0.5.91-task-292-mq5-static-compile-readiness
+- current HEAD is 74ce782 TASK-292 implement MQ5 static compile-readiness aggregate audit
+- current tag is v0.5.91-task-292-mq5-static-compile-readiness
+- TASK-293 is a tooling + release audit task
+- TASK-293 adds mq5-static-compile-readiness-summary check
+- TASK-293 adds --final-milestone-summary in release validation bundle
+- MQ5 compile-readiness final milestone summary report
+- final_milestone_summary=true
+- tasks_covered=TASK-266..TASK-292
+- fast_no_trade_state_report=true
+- fast_no_trade_review_summary=true
+- trae_handoff_summary=true
+- workflow_closure_audit=true
+- validator_self_test_summary=PASS
+- mq5-static-compile-readiness-summary PASS
+- milestone_closure_ready=PASS
+- default validation includes: py tools/run_release_validation_bundle.py --profile fast-no-trade-dev
+- focused validation includes: py tools/run_release_validation_bundle.py --only mq5-static-compile-readiness-summary
+- release summary validation includes: py tools/run_release_validation_bundle.py --final-milestone-summary --profile fast-no-trade-dev
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-293 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-293 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- trading keywords false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MQL5 compile
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-293 does not run MT5
+- TASK-293 does not execute MQL5 compile
+- TASK-293 does not modify MQ5 / MQH
+- TASK-293 does not create manifest / fixture / report / directory
+- TASK-293 does not copy external evidence
+- TASK-293 does not commit
+- TASK-293 does not tag
+- TASK-293 does not push
+- next candidate must be defined by ChatGPT after TASK-293
+- do not directly enter MT5 run / MQL5 compile / trading / manifest / evidence
+
+## TASK-DOC-294 future MQL5 compile-only boundary packet
+
+- current task is TASK-DOC-294 create future MQL5 compile-only boundary packet
+- TASK-DOC-294 create future MQL5 compile-only boundary packet
+- TASK-293 completed
+- TASK-293 completion commit is 47d942c TASK-293 implement MQ5 compile-readiness final milestone summary report
+- TASK-293 completion tag is v0.5.92-task-293-mq5-compile-readiness-final-summary
+- current HEAD is 47d942c TASK-293 implement MQ5 compile-readiness final milestone summary report
+- current tag is v0.5.92-task-293-mq5-compile-readiness-final-summary
+- TASK-DOC-294 is planning-only / boundary-only
+- TASK-DOC-294 creates docs/V060_TASK_294_MQL5_COMPILE_ONLY_BOUNDARY.md
+- TASK-DOC-294 defines a future MQL5 compile-only candidate
+- TASK-DOC-294 is not implementation authorization
+- TASK-DOC-294 is not MT5 run authorization
+- TASK-DOC-294 is not Strategy Tester authorization
+- TASK-DOC-294 is not backtest authorization
+- TASK-DOC-294 is not simulation trading authorization
+- TASK-DOC-294 is not real trading authorization
+- TASK-DOC-294 is not evidence generation authorization
+- TASK-DOC-294 is not manifest generation authorization
+- TASK-DOC-294 is not external evidence copy authorization
+- mql5-compile-only-boundary check is added to release validation bundle
+- mq5-compile-readiness-final-summary alias check remains read-only and stdout-only
+- fast-no-trade-dev profile includes mql5-compile-only-boundary check
+- no compile executed in TASK-DOC-294
+- no MetaEditor executed in TASK-DOC-294
+- no MetaEditor execution
+- no .ex5 artifact generated
+- no MQL5 compile
+- no MT5 run
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-DOC-294 does not modify MQ5 / MQH
+- TASK-DOC-294 does not run MT5
+- TASK-DOC-294 does not execute MQL5 compile
+- TASK-DOC-294 does not create manifest / fixture / report / directory
+- TASK-DOC-294 does not copy external evidence
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- future compile-only task must be separately authorized by GPT
+- future compile-only task must remain no-trade
+- future compile-only task must not create manifest / evidence / report
+- future compile-only task must only produce stdout / terminal result unless separately authorized
+- TASK-295 must not be entered directly without a new GPT boundary
+- GPT must define a separate future boundary before TASK-295
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- default Codex validation remains py tools/run_release_validation_bundle.py --compressed-summary --workflow-closure-audit --profile fast-no-trade-dev
+- default Trae review mode uses generated Trae handoff block, continuous commit/tag, and validates tag points to HEAD
+- do not directly enter TASK-295
+- do not directly enter MT5 run / MQL5 compile / MetaEditor / Strategy Tester / trading / manifest / evidence
+
+## TASK-295 MQL5 compile-only command discovery boundary
+
+- current task is TASK-295 implement MQL5 compile-only command discovery boundary
+- TASK-295 implement MQL5 compile-only command discovery boundary
+- TASK-DOC-294 completed
+- TASK-DOC-294 completion commit is 2de3d95 TASK-DOC-294 create future MQL5 compile-only boundary packet
+- TASK-DOC-294 completion tag is v0.5.93-task-294-future-mql5-compile-only-boundary
+- current HEAD is 2de3d95 TASK-DOC-294 create future MQL5 compile-only boundary packet
+- current tag is v0.5.93-task-294-future-mql5-compile-only-boundary
+- TASK-295 is command-discovery-only
+- TASK-295 creates docs/V060_TASK_295_MQL5_COMPILE_ONLY_COMMAND_DISCOVERY.md
+- mql5-compile-only-command-discovery check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-only-command-discovery check
+- mql5-compile-only-command-discovery PASS
+- metaeditor_executed=false
+- mql5_compile_executed=false
+- no MT5 run
+- no MQL5 compile
+- no MetaEditor execution
+- no .ex5 artifact
+- no compile log
+- no trading authorization
+- TASK-295 no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-295 does not modify MQ5 / MQH
+- TASK-295 does not run MT5
+- TASK-295 does not execute MetaEditor
+- TASK-295 does not execute MQL5 compile
+- TASK-295 does not create .ex5 artifact
+- TASK-295 does not create compile log
+- TASK-295 does not create manifest / fixture / report / directory
+- TASK-295 does not copy external evidence
+- TASK-295 confirms MQ5 inventory remains 7 files
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-295 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- trading keywords false
+- Inventory only; no MT5 run; no trading authorization.
+- future TASK-296 must be separately authorized by GPT before any compile execution
+- TASK-296 must not be entered directly
+- future compile-only task must remain no-trade
+- future compile-only task must not create manifest / evidence / report unless separately authorized
+- future compile-only task must quarantine or prevent .ex5 artifact generation before compile execution is allowed
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- default Codex validation remains py tools/run_release_validation_bundle.py --compressed-summary --workflow-closure-audit --profile fast-no-trade-dev
+- default Trae review mode uses generated Trae handoff block, continuous commit/tag, and validates tag points to HEAD
+- do not directly enter TASK-296
+- do not directly enter MT5 run / MQL5 compile / MetaEditor / Strategy Tester / trading / manifest / evidence
+
+## TASK-296 MQL5 compile-only artifact quarantine boundary
+
+- current task is TASK-296 implement MQL5 compile-only artifact quarantine boundary
+- TASK-296 implement MQL5 compile-only artifact quarantine boundary
+- TASK-295 completed
+- TASK-295 completion commit is acda17c TASK-295 implement MQL5 compile-only command discovery boundary
+- TASK-295 completion tag is v0.5.94-task-295-mql5-compile-only-command-discovery
+- current HEAD is acda17c TASK-295 implement MQL5 compile-only command discovery boundary
+- current tag is v0.5.94-task-295-mql5-compile-only-command-discovery
+- TASK-296 is artifact-quarantine-only
+- TASK-296 creates docs/V060_TASK_296_MQL5_COMPILE_ONLY_ARTIFACT_QUARANTINE.md
+- mql5-compile-only-artifact-quarantine check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-only-artifact-quarantine check
+- mql5-compile-only-artifact-quarantine PASS
+- repo_ex5_artifacts=false
+- repo_compile_logs=false
+- metaeditor_executed=false
+- mql5_compile_executed=false
+- no MT5 run
+- no MQL5 compile
+- no MetaEditor execution
+- no .ex5 artifact
+- no compile log
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-296 does not modify MQ5 / MQH
+- TASK-296 does not run MT5
+- TASK-296 does not execute MetaEditor
+- TASK-296 does not execute MQL5 compile
+- TASK-296 does not create .ex5 artifact
+- TASK-296 does not create compile log
+- TASK-296 does not create manifest / fixture / report / directory
+- TASK-296 does not copy external evidence
+- TASK-296 confirms MQ5 inventory remains 7 files
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-296 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- trading keywords false
+- Inventory only; no MT5 run; no trading authorization.
+- future TASK-297 must be separately authorized by GPT before any compile execution
+- TASK-297 must not be entered directly
+- future compile-only execution must quarantine outputs outside repository or prove no repo artifact writes
+- future compile-only execution must check repository has no .ex5 before and after compile
+- future compile-only execution must check repository has no compile log before and after compile
+- compile-only command may be executed only after GPT defines TASK-297 boundary
+- post-compile check: no MT5 run
+- post-compile check: no Strategy Tester
+- post-compile check: no trading
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- default Codex validation remains py tools/run_release_validation_bundle.py --compressed-summary --workflow-closure-audit --profile fast-no-trade-dev
+- default Trae review mode uses generated Trae handoff block, continuous commit/tag, and validates tag points to HEAD
+- do not directly enter TASK-297
+- do not directly enter MT5 run / MQL5 compile / MetaEditor / Strategy Tester / trading / manifest / evidence
+
+## TASK-297 MQL5 compile-only execution boundary
+
+- current task is TASK-297 implement future MQL5 compile-only execution boundary
+- TASK-297 implement future MQL5 compile-only execution boundary
+- TASK-296 completed
+- TASK-296 completion commit is 2423211 TASK-296 implement MQL5 compile-only artifact quarantine boundary
+- TASK-296 completion tag is v0.5.95-task-296-mql5-compile-only-artifact-quarantine
+- current HEAD is 2423211 TASK-296 implement MQL5 compile-only artifact quarantine boundary
+- current tag is v0.5.95-task-296-mql5-compile-only-artifact-quarantine
+- TASK-297 is compile-only-task
+- TASK-297 is future compile-only candidate
+- TASK-297 requires GPT explicit authorization
+- TASK-297 confirms artifact quarantine checked
+- TASK-297 creates docs/V060_TASK_297_MQL5_COMPILE_ONLY_EXECUTION_BOUNDARY.md
+- mql5-compile-only-execution-boundary check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-only-execution-boundary check
+- mql5-compile-only-execution-boundary PASS
+- no MT5 run
+- no Strategy Tester
+- no backtest
+- no trading
+- no MQL5 compile executed
+- no MetaEditor executed
+- no .ex5 artifact generated
+- no compile log
+- no manifest generated
+- no evidence generated
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-297 does not modify MQ5 / MQH
+- TASK-297 does not run MT5
+- TASK-297 does not execute MetaEditor
+- TASK-297 does not execute MQL5 compile
+- TASK-297 does not create .ex5 artifact
+- TASK-297 does not create compile log
+- TASK-297 does not create manifest / fixture / report / directory
+- TASK-297 does not copy external evidence
+- TASK-297 confirms MQ5 inventory remains 7 files
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-297 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- trading keywords false
+- Inventory only; no MT5 run; no trading authorization.
+- future TASK-298 must be separately authorized by GPT
+- future TASK-298 must not be entered directly
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- default Codex validation remains py tools/run_release_validation_bundle.py --compressed-summary --workflow-closure-audit --profile fast-no-trade-dev
+- default Trae review mode uses generated Trae handoff block, continuous commit/tag, and validates tag points to HEAD
+- do not directly enter TASK-298
+- do not directly enter MT5 run / MQL5 compile / MetaEditor / Strategy Tester / trading / manifest / evidence
+
+## TASK-298 MQL5 compile-only dry-run simulation
+
+- current task is TASK-298 implement MQL5 compile-only dry-run simulation
+- TASK-298 implement MQL5 compile-only dry-run simulation
+- TASK-298 is dry-run-only
+- TASK-298 enforces artifact-quarantine
+- TASK-298 uses stdout-only simulation
+- TASK-298 creates docs/V060_TASK_298_MQL5_COMPILE_ONLY_DRYRUN.md
+- mql5-compile-only-dryrun check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-only-dryrun check
+- mql5-compile-only-dryrun PASS
+- current HEAD is 2423211 TASK-296 implement MQL5 compile-only artifact quarantine boundary
+- current tag is v0.5.95-task-296-mql5-compile-only-artifact-quarantine
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- trading keywords false
+- no MT5 run
+- no MQL5 compile
+- no MetaEditor execution
+- no .ex5 artifact
+- no compile log
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-298 does not modify MQ5 / MQH
+- TASK-298 does not run MT5
+- TASK-298 does not execute MetaEditor
+- TASK-298 does not execute MQL5 compile
+- TASK-298 does not create .ex5 artifact
+- TASK-298 does not create compile log
+- TASK-298 does not create manifest / fixture / report / directory
+- TASK-298 does not copy external evidence
+- TASK-298 confirms MQ5 inventory remains 7 files
+- TASK-298 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+
+## TASK-299 reconcile TASK-297 MQL5 compile-only execution boundary tracking gap
+
+- current task is TASK-299 reconcile TASK-297 MQL5 compile-only execution boundary tracking gap
+- TASK-299 reconcile TASK-297 MQL5 compile-only execution boundary tracking gap
+- TASK-298 completed
+- TASK-298 completion commit is 2dab115 TASK-298 implement MQL5 compile-only dry-run boundary
+- TASK-298 completion tag is v0.5.96-task-298-mql5-compile-only-dryrun
+- current HEAD is 2dab115 TASK-298 implement MQL5 compile-only dry-run boundary
+- current tag is v0.5.96-task-298-mql5-compile-only-dryrun
+- TASK-297 files were untracked tracking gap items before TASK-299 reconciliation
+- TASK-299 reconciles docs/V060_TASK_297_MQL5_COMPILE_ONLY_EXECUTION_BOUNDARY.md
+- TASK-299 reconciles tools/validate_mql5_compile_only_execution_boundary.py
+- TASK-299 reconciles tools/test_validate_mql5_compile_only_execution_boundary.py
+- TASK-299 does not recreate old TASK-297 tag
+- TASK-299 does not move historical tags
+- TASK-299 keeps mql5-compile-only-execution-boundary in release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-only-execution-boundary check
+- workflow-closure-audit includes mql5-compile-only-execution-boundary check
+- mql5-compile-only-execution-boundary PASS
+- next Trae step is review, validation, commit, tag, and audit only
+- after TASK-299, GPT must define TASK-300 before any next boundary
+- MQ5 inventory remains 7 files
+- MQ5 inventory 仍为 7 files
+- TASK-299 confirms MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- TASK-299 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- trading keywords false
+- Inventory only; no MT5 run; no trading authorization.
+- no MT5 run
+- no MetaEditor execution
+- no MQL5 compile
+- no .ex5 artifact
+- no compile log
+- no trading authorization
+- no manifest / fixture / report / directory
+- no external evidence
+- TASK-299 does not modify MQ5 / MQH
+- TASK-299 does not run MT5
+- TASK-299 does not execute MetaEditor
+- TASK-299 does not execute MQL5 compile
+- TASK-299 does not create .ex5 artifact
+- TASK-299 does not create compile log
+- TASK-299 does not create manifest / fixture / report / directory
+- TASK-299 does not copy external evidence
+- TASK-300 must not be entered directly
+- do not directly enter TASK-300
+- do not directly enter MT5 run / MQL5 compile / MetaEditor / Strategy Tester / trading / manifest / evidence
+- future compile-only task must be separately authorized by GPT
+- TASK-299 must not be entered directly
+- Inventory only; no MT5 run; no trading authorization.
+- GPT defines boundaries
+- Codex modifies only allowed files and does not commit
+- Trae reviews, validates, commits, tags, and audits
+- default Codex validation remains py tools/run_release_validation_bundle.py --compressed-summary --workflow-closure-audit --profile fast-no-trade-dev
+- default Trae review mode uses generated Trae handoff block, continuous commit/tag, and validates tag points to HEAD
+- do not directly enter TASK-299
+- do not directly enter MT5 run / MQL5 compile / MetaEditor / Strategy Tester / trading / manifest / evidence
+
+## TASK-300 MQL5 compile-only dry-run execution simulation
+
+- current task is TASK-300 implement MQL5 compile-only dry-run execution simulation
+- TASK-300 implement MQL5 compile-only dry-run execution simulation
+- TASK-299 completed
+- TASK-299 reconciled TASK-297 MQL5 compile-only execution boundary tracking gap
+- current HEAD is 2dab115 TASK-298 implement MQL5 compile-only dry-run boundary
+- current tag is v0.5.96-task-298-mql5-compile-only-dryrun
+- TASK-300 creates docs/V060_TASK_300_MQL5_COMPILE_ONLY_DRYRUN_SIMULATION.md
+- mql5-compile-only-dryrun-execution check is added to release validation bundle
+- fast-no-trade-dev profile includes mql5-compile-only-dryrun-execution check
+- workflow-closure-audit includes mql5-compile-only-dryrun-execution check
+- mql5-compile-only-dryrun-execution PASS
+- TASK-300 is dry-run-execution-only
+- TASK-300 uses stdout-only simulation
+- TASK-300 enforces artifact-quarantine
+- TASK-300 generates stdout-only candidate output
+- TASK-300 does not modify MQ5 / MQH
+- TASK-300 does not run MT5
+- TASK-300 does not execute MetaEditor
+- TASK-300 does not execute MQL5 compile
+- TASK-300 does not create .ex5 artifact
+- TASK-300 does not create compile log
+- TASK-300 does not create manifest / fixture / report / directory
+- TASK-300 does not copy external evidence
+- TASK-300 confirms MQ5 inventory remains 7 files
+- TASK-300 confirms Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- MQ5 inventory remains 7 files
+- Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+- Inventory only; no MT5 run; no trading authorization.
+- future compile-only execution must remain no-trade
+- future compile-only execution must not create manifest / evidence / report unless separately authorized
+- TASK-301 must not be entered directly
+- GPT must define TASK-301 before any future compile-only execution boundary
+- High-efficiency mode remains active: GPT defines boundaries, Codex modifies allowed files without committing, Trae reviews / validates / commits / tags / audits
+- Trae must use a continuous commit/tag flow and prove any future tag points at HEAD
+- Follow-up must not directly enter MT5 run, MetaEditor execution, MQL5 compile, trading, manifest generation, backtest evidence, or external evidence copy

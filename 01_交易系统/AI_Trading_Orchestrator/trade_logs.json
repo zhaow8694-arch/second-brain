@@ -1,0 +1,12 @@
+[
+  {
+    "timestamp": "2026-04-13 22:06:49",
+    "direction": "做空",
+    "entry_zone": "4430.0 附近",
+    "stop_loss": 4445,
+    "lots": 0.03,
+    "reason": "4H/Daily Bear OB + EMA9向下",
+    "result": "待执行",
+    "pnl": 0.0
+  }
+]

@@ -1,0 +1,77 @@
+; Full explicit anchor parameters extracted from grok8.6 r35 report, then v8.66 structure-score overrides.
+=== ???????v8.61?====
+InpFilterPreset=2
+=== MACD ?? ====
+InpFastEMA=12
+InpSlowEMA=26
+InpSignalSMA=9
+=== MA200 ?????v8.5: Buffer ?? ATR ???====
+InpMA200Period=200
+InpUseMA200Filter=true
+InpMA200BufferATR=0.2
+=== ???????v8.5?? FILTER_CUSTOM ????====
+InpBodyRatio=0.55
+InpMaxCandleATR=3.0
+InpMaxOppositeShadow=0.3
+InpRequireFollowThrough=false
+InpFollowThroughBars=3
+InpConfirmBars=3
+InpRequireMACDDir=false
+=== ???????v8.6?? FILTER_CUSTOM ????====
+InpUseWickConflictFilter=true
+InpMaxWickToBodyRatio=1.5
+InpRequireMomentumDominance=true
+InpMomentumLookback=5
+InpMomentumMinRatio=0.85
+=== ADX ???? (v8.4) ====
+InpUseADX=false
+InpADXPeriod=14
+InpADXThreshold=25.0
+=== ???? (v8.4) ====
+InpUseTimeFilter=false
+InpStartHour=8
+InpEndHour=20
+=== ????? (v8.4) ====
+InpUseATRFilter=false
+InpATRFilterPeriod=20
+InpATRFilterRatio=1.0
+=== ?????? (v8.4) ====
+InpUseDailyFilter=false
+=== ???? ====
+InpRiskPercent=0.500
+InpATRMultiplier=1.5
+InpATRPeriod=14
+InpTrailingStart=5.0
+InpTrailingStep=2.5
+InpMaxPositions=1
+=== ?????v8.6 ???====
+InpUseIgnitionExit=true
+InpIgnitionMaxBars=3
+InpIgnitionEngulfRatio=0.85
+InpIgnitionMaxLossATR=1.0
+=== ???? ====
+InpMagicNumber=20260618
+InpComment=SniperEA_v8.62
+InpEnableBuy=true
+InpEnableSell=true
+InpDebugMode=true
+InpUseRiskThrottle=true
+InpMaxDailyDDPercent=0.0
+InpConsecutiveLossLimit=0
+InpCooldownBars=0
+InpMaxOpenPositions=1
+InpRiskLotScale=0.995
+InpRiskWarningDDRatio=0.80
+InpMaxPeakDDPercent=24.0
+InpPeakDDWarningRatio=0.98
+InpUseStructureScore=true
+InpRejectNoStructure=false
+InpSwingLookback=3
+InpStructureScanBars=80
+InpMinTrendlineTouches=3
+InpTrendlineTouchATR=0.25
+InpMinBreakoutDistanceATR=0.10
+InpMinBreakoutScore=70.0
+InpShowStructureDebug=false
+InpNoStructurePenalty=0.70
+InpMinStructureQualityFloor=0.35

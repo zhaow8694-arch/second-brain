@@ -1,0 +1,2 @@
+run_id,net_profit,profit_factor,max_balance_dd,max_balance_dd_pct,max_equity_dd,max_equity_dd_pct,relative_equity_dd,relative_equity_dd_pct,total_trades,win_rate,buy_trades,sell_trades,max_consecutive_winning_trades,max_consecutive_losing_trades,max_consecutive_winning_count,max_consecutive_losing_count,status
+"v86_A_quarterly_2016Q2_20260620_051710_case0069",2981.95,1.73,2899.99,14.38,5828.74,23.46,5828.74,23.46,8,50.00,6,2,3461.04,-2899.99,1,3,completed

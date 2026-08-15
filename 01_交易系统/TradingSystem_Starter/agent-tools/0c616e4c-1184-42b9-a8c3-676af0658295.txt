@@ -1,0 +1,1086 @@
+Running validation profile: fast-no-trade-dev
+
+Skipped validation checks:
+  - workflow-simplification-policy: workflow simplification policy validator
+  - v060-transition-boundary: v0.6.0 transition boundary validator
+  - v060-implementation-planning-boundary: v0.6.0 implementation planning boundary validator
+  - engineering-toolchain: engineering toolchain checks
+  - evidence-manifest-schema: evidence manifest schema validator
+  - official-manifest-path-policy: official manifest path policy validator
+  - git-diff-check: git diff check
+
+Running validation checks:
+  - project-state-docs: project state docs validator
+  - project-state-docs-self-test: project state docs self-test
+  - mq5-inventory: read-only MQ5 strategy inventory scanner
+  - mq5-no-trade-observability: MQ5 no-trade observability contract validator
+  - v060-implementation-boundary: v0.6.0 implementation boundary validator
+  - v060-implementation-readiness: v0.6.0 implementation readiness validator
+  - read-only-compile-readiness-boundary: read-only compile-readiness boundary validator
+  - mq5-static-interface-consistency: MQ5 static interface consistency validator
+  - mq5-static-symbol-consistency: MQ5 static symbol/reference consistency validator
+  - mq5-static-include-consistency: MQ5 static include dependency consistency validator
+  - mq5-lifecycle-route-consistency: MQ5 lifecycle route consistency validator
+  - mq5-observability-helper-consistency: MQ5 observability helper consistency validator
+  - mq5-telemetry-aggregation: MQ5 telemetry aggregation validator
+  - mq5-static-compile-readiness: MQ5 static compile-readiness aggregate validator
+  - mq5-static-compile-readiness-summary: MQ5 compile-readiness final milestone summary validator
+  - mq5-compile-readiness-final-summary: MQ5 compile-readiness final milestone summary validator alias
+  - mql5-compile-only-boundary: future MQL5 compile-only boundary validator
+  - mql5-compile-only-command-discovery: MQL5 compile-only command discovery validator
+  - mql5-compile-only-artifact-quarantine: MQL5 compile-only artifact quarantine validator
+  - mql5-compile-only-execution-boundary: MQL5 compile-only execution boundary validator
+  - mql5-compile-only-dryrun: MQL5 compile-only dry-run validator
+  - mql5-compile-only-dryrun-execution: MQL5 compile-only dry-run execution validator
+  - v060-compile-readiness-planning: v0.6.0 compile-readiness planning validator
+  - mql5-compile-only-preflight-gate: MQL5 compile-only preflight gate validator
+  - mql5-compile-only-execution-authorization-plan: MQL5 compile-only execution authorization plan validator
+  - mql5-compile-only-failure-diagnostic: MQL5 compile-only failure diagnostic validator
+  - mql5-compile-diagnostic-result-classification: MQL5 compile diagnostic result classification validator
+  - mql5-compile-diagnostic-artifact-classification: MQL5 compile diagnostic artifact classification validator
+  - mql5-compile-diagnostic-artifact-proof-boundary: MQL5 compile diagnostic artifact proof boundary validator
+  - mql5-compile-success-reclassification-boundary: MQL5 compile success reclassification boundary validator
+  - mql5-compile-artifact-hash-capture-boundary: MQL5 compile artifact hash capture boundary validator
+  - mql5-compile-success-reclassification-decision-boundary: MQL5 compile success reclassification decision boundary validator
+  - mql5-compile-success-reclassification-decision: MQL5 compile success reclassification decision validator
+  - mt5-no-trade-startup-boundary: MT5 no-trade startup boundary validator
+  - mt5-no-trade-startup-command-discovery: MT5 no-trade startup command discovery validator
+  - mt5-no-trade-startup-quarantine-preparation: MT5 no-trade startup quarantine preparation validator
+  - mt5-no-trade-startup-dryrun-config-boundary: MT5 no-trade startup dry-run config boundary validator
+  - mt5-no-trade-startup-config-template: MT5 no-trade startup config template validator
+  - mt5-no-trade-startup-authorization-plan: MT5 no-trade startup authorization plan validator
+  - mt5-no-trade-startup-preflight-gate: MT5 no-trade startup preflight gate validator
+  - parser-manifest-integration: parser manifest integration validator
+  - backtest-set-params: backtest set params validator
+
+[1/42] project state docs validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_project_state_docs.py
+  stdout:
+    Project state docs validation passed
+    Current latest commit: 9dfb42b
+    Current next boundary: 不要直接进入 TASK-320。
+    不要直接进入 v0.6.0 implementation。
+    不要直接修改 MQ5。
+    不要直接修改 backtest/sets。
+    不要直接进入真实交易。
+    必须先由 ChatGPT 制定下一任务边界。
+  result: PASS
+[2/42] project state docs self-test
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\test_validate_project_state_docs.py
+  stdout:
+    Project state docs self-test passed
+  result: PASS
+[3/42] read-only MQ5 strategy inventory scanner
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\inspect_mq5_strategy_inventory.py --mq5-root MQ5 --json
+  stdout:
+    {
+      "fileCounts": {
+        "mq5": 1,
+        "mqh": 6,
+        "total": 7
+      },
+      "files": [
+        {
+          "extension": ".mqh",
+          "hasInpEnableTrading": true,
+          "hasRiskManager": false,
+          "hasSignalEngine": false,
+          "hasTradingKeywords": false,
+          "inputParameterLines": 37,
+          "lifecycle": {
+            "OnDeinit": false,
+            "OnInit": true,
+            "OnTick": true
+          },
+          "path": "config/InputConfig.mqh",
+          "tradingKeywords": {
+            "Buy": false,
+            "CTrade": false,
+            "OrderClose": false,
+            "OrderModify": false,
+            "OrderSend": false,
+            "OrderSendAsync": false,
+            "PositionClose": false,
+            "PositionOpen": false,
+            "Sell": false
+          }
+        },
+        {
+          "extension": ".mqh",
+          "hasInpEnableTrading": true,
+          "hasRiskManager": true,
+          "hasSignalEngine": true,
+          "hasTradingKeywords": false,
+          "inputParameterLines": 0,
+          "lifecycle": {
+            "OnDeinit": true,
+            "OnInit": true,
+            "OnTick": true
+          },
+          "path": "core/EaController.mqh",
+          "tradingKeywords": {
+            "Buy": false,
+            "CTrade": false,
+            "OrderClose": false,
+            "OrderModify": false,
+            "OrderSend": false,
+            "OrderSendAsync": false,
+            "PositionClose": false,
+            "PositionOpen": false,
+            "Sell": false
+          }
+        },
+        {
+          "extension": ".mqh",
+          "hasInpEnableTrading": true,
+          "hasRiskManager": false,
+          "hasSignalEngine": true,
+          "hasTradingKeywords": false,
+          "inputParameterLines": 0,
+          "lifecycle": {
+            "OnDeinit": false,
+            "OnInit": false,
+            "OnTick": false
+          },
+          "path": "execution/ExecutionManager.mqh",
+          "tradingKeywords": {
+            "Buy": false,
+            "CTrade": false,
+            "OrderClose": false,
+            "OrderModify": false,
+            "OrderSend": false,
+            "OrderSendAsync": false,
+            "PositionClose": false,
+            "PositionOpen": false,
+            "Sell": false
+          }
+        },
+        {
+          "extension": ".mqh",
+          "hasInpEnableTrading": false,
+          "hasRiskManager": false,
+          "hasSignalEngine": false,
+          "hasTradingKeywords": false,
+          "inputParameterLines": 0,
+          "lifecycle": {
+            "OnDeinit": false,
+            "OnInit": false,
+            "OnTick": true
+          },
+          "path": "logger/Logger.mqh",
+          "tradingKeywords": {
+            "Buy": false,
+            "CTrade": false,
+            "OrderClose": false,
+            "OrderModify": false,
+            "OrderSend": false,
+            "OrderSendAsync": false,
+            "PositionClose": false,
+            "PositionOpen": false,
+            "Sell": false
+          }
+        },
+        {
+          "extension": ".mqh",
+          "hasInpEnableTrading": true,
+          "hasRiskManager": true,
+          "hasSignalEngine": true,
+          "hasTradingKeywords": false,
+          "inputParameterLines": 0,
+          "lifecycle": {
+            "OnDeinit": false,
+            "OnInit": true,
+            "OnTick": false
+          },
+          "path": "risk/RiskManager.mqh",
+          "tradingKeywords": {
+            "Buy": false,
+            "CTrade": false,
+            "OrderClose": false,
+            "OrderModify": false,
+            "OrderSend": false,
+            "OrderSendAsync": false,
+            "PositionClose": false,
+            "PositionOpen": false,
+            "Sell": false
+          }
+        },
+        {
+          "extension": ".mqh",
+          "hasInpEnableTrading": false,
+          "hasRiskManager": false,
+          "hasSignalEngine": true,
+          "hasTradingKeywords": false,
+          "inputParameterLines": 0,
+          "lifecycle": {
+            "OnDeinit": false,
+            "OnInit": false,
+            "OnTick": false
+          },
+          "path": "signals/SignalEngine.mqh",
+          "tradingKeywords": {
+            "Buy": false,
+            "CTrade": false,
+            "OrderClose": false,
+            "OrderModify": false,
+            "OrderSend": false,
+            "OrderSendAsync": false,
+            "PositionClose": false,
+            "PositionOpen": false,
+            "Sell": false
+          }
+        },
+        {
+          "extension": ".mq5",
+          "hasInpEnableTrading": false,
+          "hasRiskManager": false,
+          "hasSignalEngine": false,
+          "hasTradingKeywords": false,
+          "inputParameterLines": 0,
+          "lifecycle": {
+            "OnDeinit": true,
+            "OnInit": true,
+            "OnTick": true
+          },
+          "path": "TradingSystem.mq5",
+          "tradingKeywords": {
+            "Buy": false,
+            "CTrade": false,
+            "OrderClose": false,
+            "OrderModify": false,
+            "OrderSend": false,
+            "OrderSendAsync": false,
+            "PositionClose": false,
+            "PositionOpen": false,
+            "Sell": false
+          }
+        }
+      ],
+      "notice": "Inventory only; no MT5 run; no trading authorization.",
+      "rootExists": true,
+      "scannedRoot": "D:\\TradingSystem_Starter\\mq5",
+      "status": "PASS",
+      "summary": {
+        "filesWithInpEnableTrading": 4,
+        "filesWithRiskManager": 2,
+        "filesWithSignalEngine": 4,
+        "filesWithTradingKeywords": 0,
+        "inputParameterLines": 37,
+        "lifecycleFileCounts": {
+          "OnDeinit": 2,
+          "OnInit": 4,
+          "OnTick": 4
+        },
+        "mq5Files": 1,
+        "mqhFiles": 6,
+        "rootExists": true,
+        "totalFiles": 7,
+        "tradingKeywordFileCounts": {
+          "Buy": 0,
+          "CTrade": 0,
+          "OrderClose": 0,
+          "OrderModify": 0,
+          "OrderSend": 0,
+          "OrderSendAsync": 0,
+          "PositionClose": 0,
+          "PositionOpen": 0,
+          "Sell": 0
+        }
+      }
+    }
+  result: PASS
+[4/42] MQ5 no-trade observability contract validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mq5_no_trade_observability.py
+  stdout:
+    MQ5 no-trade observability contract validator PASS
+    Inventory only; no MT5 run; no trading authorization.
+    scanned root: D:\TradingSystem_Starter\mq5
+    contract: no-trade observability scaffold is present and static-safe
+  result: PASS
+[5/42] v0.6.0 implementation boundary validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_v060_implementation_boundary.py
+  stdout:
+    v0.6.0 implementation boundary validator PASS
+  result: PASS
+[6/42] v0.6.0 implementation readiness validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_v060_implementation_readiness.py
+  stdout:
+    v0.6.0 implementation readiness validator PASS
+  result: PASS
+[7/42] read-only compile-readiness boundary validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_project_state_docs.py
+  stdout:
+    Project state docs validation passed
+    Current latest commit: 9dfb42b
+    Current next boundary: 不要直接进入 TASK-320。
+    不要直接进入 v0.6.0 implementation。
+    不要直接修改 MQ5。
+    不要直接修改 backtest/sets。
+    不要直接进入真实交易。
+    必须先由 ChatGPT 制定下一任务边界。
+  result: PASS
+[8/42] MQ5 static interface consistency validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_project_state_docs.py --mq5-static-interface-consistency
+  stdout:
+    MQ5 static interface consistency validation passed
+    MQ5 inventory remains 7 files
+    Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[9/42] MQ5 static symbol/reference consistency validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mq5_static_symbol_consistency.py
+  stdout:
+    MQ5 static symbol consistency validation passed
+    Inventory only; no MT5 run; no trading authorization.
+    mq5_inventory_files=7
+    trading_keywords=false
+    symbol_reference_consistency=true
+    compile_readiness_static_only=true
+  result: PASS
+[10/42] MQ5 static include dependency consistency validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mq5_static_include_consistency.py
+  stdout:
+    MQ5 static include consistency validation passed
+    Inventory only; no MT5 run; no trading authorization.
+    mq5_inventory_files=7
+    trading_keywords=false
+  result: PASS
+[11/42] MQ5 lifecycle route consistency validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mq5_lifecycle_route_consistency.py
+  stdout:
+    MQ5 lifecycle route consistency validation passed
+    Inventory only; no MT5 run; no trading authorization.
+    mq5_inventory_files=7
+    trading_keywords=false
+    lifecycle_routes=OnInit,OnTick,OnDeinit
+  result: PASS
+[12/42] MQ5 observability helper consistency validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mq5_observability_helper_consistency.py
+  stdout:
+    MQ5 observability helper consistency validation passed
+    Inventory only; no MT5 run; no trading authorization.
+    mq5_inventory_files=7
+    trading_keywords=false
+    logger_helper_consistency=true
+  result: PASS
+[13/42] MQ5 telemetry aggregation validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mq5_telemetry_aggregation.py
+  stdout:
+    MQ5 telemetry aggregation validation passed
+    fast_no_trade_telemetry_aggregation=true
+    stdout_only=true
+    mq5_inventory_expected=7 files
+    trading_keywords=false
+    controller_summary_linked=true
+    pipeline_context_linked=true
+    error_snapshot_linked=true
+    metrics_and_system_health_linked=true
+    all_observability_outputs_read_only=true
+    no_trade_guard=active
+    mt5_run_required=false
+    trading_authorization=false
+    manifest_generation=false
+    evidence_generation=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[14/42] MQ5 static compile-readiness aggregate validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mq5_static_compile_readiness.py
+  stdout:
+    MQ5 static compile-readiness aggregate validation passed
+    Inventory only; no MT5 run; no trading authorization.
+    mq5_inventory_files=7
+    trading_keywords=false
+    compile_readiness_static_only=true
+    mql5_compile_executed=false
+    mt5_run=false
+    trading_authorization=false
+    static_include_consistency=true
+    lifecycle_route_consistency=true
+    observability_helper_consistency=true
+    telemetry_aggregation_consistency=true
+    static_symbol_consistency=true
+    static_interface_consistency=true
+    no_trade_observability_consistency=true
+  result: PASS
+[15/42] MQ5 compile-readiness final milestone summary validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mq5_compile_readiness_summary.py
+  stdout:
+    MQ5 compile-readiness final milestone summary validation passed
+    final_milestone_summary=true
+    tasks_covered=TASK-266..TASK-292
+    fast_no_trade_state_report=true
+    fast_no_trade_review_summary=true
+    trae_handoff_summary=true
+    workflow_closure_audit=true
+    validator_self_test_summary=PASS
+    preflight_summary=PASS
+    static_validation_summary=PASS
+    telemetry_observability_summary=PASS
+    mq5_inventory_expected=7 files
+    trading_keywords=false
+    no_mt5_run=true
+    no_mql5_compile=true
+    no_trading=true
+    no_manifest=true
+    no_fixture=true
+    no_report=true
+    no_external_evidence=true
+    milestone_closure_ready=PASS
+    Inventory only; no MT5 run; no trading authorization.
+    mq5-static-compile-readiness=PASS
+    project-state-docs=PASS
+    project-state-docs-self-test=PASS
+  result: PASS
+[16/42] MQ5 compile-readiness final milestone summary validator alias
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mq5_compile_readiness_summary.py
+  stdout:
+    MQ5 compile-readiness final milestone summary validation passed
+    final_milestone_summary=true
+    tasks_covered=TASK-266..TASK-292
+    fast_no_trade_state_report=true
+    fast_no_trade_review_summary=true
+    trae_handoff_summary=true
+    workflow_closure_audit=true
+    validator_self_test_summary=PASS
+    preflight_summary=PASS
+    static_validation_summary=PASS
+    telemetry_observability_summary=PASS
+    mq5_inventory_expected=7 files
+    trading_keywords=false
+    no_mt5_run=true
+    no_mql5_compile=true
+    no_trading=true
+    no_manifest=true
+    no_fixture=true
+    no_report=true
+    no_external_evidence=true
+    milestone_closure_ready=PASS
+    Inventory only; no MT5 run; no trading authorization.
+    mq5-static-compile-readiness=PASS
+    project-state-docs=PASS
+    project-state-docs-self-test=PASS
+  result: PASS
+[17/42] future MQL5 compile-only boundary validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_project_state_docs.py --mql5-compile-only-boundary
+  stdout:
+    MQL5 compile-only boundary validation passed
+    mql5_compile_only_boundary=true
+    planning_only_boundary_only=true
+    future_mql5_compile_only_candidate=true
+    no_mt5_run=true
+    no_mql5_compile=true
+    no_metaeditor_execution=true
+    no_ex5_artifact=true
+    no_trading_authorization=true
+    MQ5 inventory remains 7 files
+    Buy / Sell / OrderSend / PositionOpen / CTrade remain false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[18/42] MQL5 compile-only command discovery validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_only_command_discovery.py
+  stdout:
+    MQL5 compile-only command discovery validation passed
+    mql5_compile_only_command_discovery=true
+    command_discovery_only=true
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    mt5_run=false
+    trading_authorization=false
+    ex5_artifact_generated=false
+    compile_log_generated=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    Inventory only; no MT5 run; no trading authorization.
+    repository_root=D:\TradingSystem_Starter
+    metaeditor_candidate_found=true
+    metaeditor_candidate_path=C:\Program Files\MetaTrader 5\metaeditor64.exe
+    future_compile_command_template="C:\Program Files\MetaTrader 5\metaeditor64.exe" /compile:"mq5/TradingSystem.mq5" /log:"<stdout-only-or-quarantined-log-path-if-separately-authorized>"
+    future_compile_command_executed=false
+    discovered_mq5_inventory_count=7
+  result: PASS
+[19/42] MQL5 compile-only artifact quarantine validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_only_artifact_quarantine.py
+  stdout:
+    MQL5 compile-only artifact quarantine validation passed
+    mql5_compile_only_artifact_quarantine=true
+    artifact_quarantine_only=true
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    mt5_run=false
+    trading_authorization=false
+    ex5_artifact_generated=false
+    compile_log_generated=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    Inventory only; no MT5 run; no trading authorization.
+    repository_root=D:\TradingSystem_Starter
+    discovered_mq5_inventory_count=7
+  result: PASS
+[20/42] MQL5 compile-only execution boundary validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_only_execution_boundary.py
+  stdout:
+    MQL5 compile-only execution boundary validation passed
+    mql5_compile_only_execution_boundary=true
+    compile_only_task=true
+    future_compile_only_candidate=true
+    requires_gpt_explicit_authorization=true
+    artifact_quarantine_checked=true
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    mt5_run=false
+    strategy_tester=false
+    backtest=false
+    trading_authorization=false
+    ex5_artifact_generated=false
+    compile_log_generated=false
+    manifest_generated=false
+    evidence_generated=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    future_TASK_298_requires_GPT_authorization=true
+    future_TASK_298_must_not_be_entered_directly=true
+    Inventory only; no MT5 run; no trading authorization.
+    repository_root=D:\TradingSystem_Starter
+    discovered_mq5_inventory_count=7
+  result: PASS
+[21/42] MQL5 compile-only dry-run validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_only_dryrun.py
+  stdout:
+    MQL5 compile-only dry-run validation passed
+    mql5_compile_only_dryrun=true
+    dry_run_only=true
+    stdout_only_simulation=true
+    artifact_quarantine_enforced=true
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    mt5_run=false
+    ex5_artifact_generated=false
+    compile_log_generated=false
+    manifest_generated=false
+    evidence_generated=false
+    report_generated=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    future_compile_only_task_requires_GPT_authorization=true
+    TASK_299_must_not_be_entered_directly=true
+    Inventory only; no MT5 run; no trading authorization.
+    repository_root=D:\TradingSystem_Starter
+    discovered_mq5_inventory_count=7
+  result: PASS
+[22/42] MQL5 compile-only dry-run execution validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_only_dryrun_execution.py
+  stdout:
+    MQL5 compile-only dry-run execution validation passed
+    mql5_compile_only_dryrun_execution=true
+    dry_run_execution_only=true
+    stdout_only_simulation=true
+    artifact_quarantine_enforced=true
+    future_compile_only_task_requires_GPT_authorization=true
+    candidate_compile_command_generated=true
+    candidate_compile_command_executed=false
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    mt5_run=false
+    strategy_tester=false
+    backtest=false
+    trading_authorization=false
+    ex5_artifact_generated=false
+    compile_log_generated=false
+    manifest_generated=false
+    evidence_generated=false
+    report_generated=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    TASK_301_must_not_be_entered_directly=true
+    Inventory only; no MT5 run; no trading authorization.
+    repository_root=D:\TradingSystem_Starter
+    discovered_mq5_inventory_count=7
+  result: PASS
+[23/42] v0.6.0 compile-readiness planning validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_project_state_docs.py --v060-compile-readiness-planning
+  stdout:
+    v0.6.0 compile-readiness planning validation passed
+    v060_compile_readiness_planning=true
+    planning_only=true
+    future_compile_readiness_candidate=true
+    not_implementation_authorization=true
+    no_mt5_run=true
+    no_strategy_tester_run=true
+    no_mql5_compile=true
+    no_metaeditor_execution=true
+    no_ex5_artifact=true
+    no_manifest=true
+    no_evidence=true
+    no_report=true
+    MQ5 inventory 7 files
+    Buy / Sell / OrderSend / PositionOpen / CTrade false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[24/42] MQL5 compile-only preflight gate validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_only_preflight_gate.py
+  stdout:
+    MQL5 compile-only preflight gate validation passed
+    mql5_compile_only_preflight_gate=true
+    preflight_gate_only=true
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    mt5_run=false
+    trading_authorization=false
+    ex5_artifact_generated=false
+    compile_log_generated=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    future_task_303_requires_gpt_boundary=true
+    compile_execution_authorized=false
+    Inventory only; no MT5 run; no trading authorization.
+    repository_root=D:\TradingSystem_Starter
+    discovered_mq5_inventory_count=7
+  result: PASS
+[25/42] MQL5 compile-only execution authorization plan validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_only_execution_authorization_plan.py
+  stdout:
+    MQL5 compile-only execution authorization plan validation passed
+    mql5_compile_only_execution_authorization_plan=true
+    planning_only=true
+    authorization_boundary_only=true
+    compile_execution_authorized=false
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    mt5_run=false
+    trading_authorization=false
+    ex5_artifact_generated=false
+    compile_log_generated=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    future_task_304_requires_gpt_boundary=true
+    all_preflight_gates_required=true
+    Inventory only; no MT5 run; no trading authorization.
+    repository_root=D:\TradingSystem_Starter
+    discovered_mq5_inventory_count=7
+  result: PASS
+[26/42] MQL5 compile-only failure diagnostic validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_only_failure_diagnostic.py
+  stdout:
+    MQL5 compile-only failure diagnostic validation passed
+    mql5_compile_only_failure_diagnostic=true
+    diagnostic_only=true
+    compile_success=false
+    task304_success_result_created=false
+    metaeditor_execution_allowed_for_diagnostic=true
+    compile_log_stdout_only=true
+    compile_log_saved_to_repo=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    mt5_terminal_run=false
+    strategy_tester_run=false
+    trading_executed=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[27/42] MQL5 compile diagnostic result classification validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_diagnostic_result_classification.py
+  stdout:
+    MQL5 compile diagnostic result classification validation passed
+    mql5_compile_diagnostic_result_classification=true
+    diagnostic_classification_only=true
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    compile_exit_code=1
+    compile_log_semantic_success=true
+    compile_result_classification=metaeditor_exit_code_anomaly
+    compile_success=false
+    task304_success_result_created=false
+    followup_required=true
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    mt5_terminal_run=false
+    strategy_tester_run=false
+    trading_executed=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[28/42] MQL5 compile diagnostic artifact classification validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_diagnostic_artifact_classification.py
+  stdout:
+    MQL5 compile diagnostic artifact classification validation passed
+    mql5_compile_diagnostic_artifact_classification=true
+    diagnostic_artifact_classification_only=true
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    task304_success_result_created=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    mt5_terminal_run=false
+    strategy_tester_run=false
+    trading_executed=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[29/42] MQL5 compile diagnostic artifact proof boundary validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_diagnostic_artifact_proof_boundary.py
+  stdout:
+    MQL5 compile diagnostic artifact proof boundary validation passed
+    mql5_compile_diagnostic_artifact_proof_boundary=true
+    diagnostic_proof_boundary_only=true
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    success_reclassification_done=false
+    task304_success_result_created=false
+    compile_exit_code=1
+    compile_log_semantic_success=true
+    previous_classification=compiled_artifact_with_metaeditor_exit_code_anomaly
+    future_task_309_requires_gpt_boundary=true
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    mt5_terminal_run=false
+    strategy_tester_run=false
+    trading_executed=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[30/42] MQL5 compile success reclassification boundary validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_success_reclassification_boundary.py
+  stdout:
+    MQL5 compile success reclassification boundary validation passed
+    mql5_compile_success_reclassification_boundary=true
+    success_reclassification_boundary_only=true
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    success_reclassification_done=false
+    task304_success_result_created=false
+    compile_exit_code=1
+    compile_log_semantic_success=true
+    previous_classification=compiled_artifact_with_metaeditor_exit_code_anomaly
+    compile_success=false
+    future_task_310_requires_gpt_boundary=true
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    mt5_terminal_run=false
+    strategy_tester_run=false
+    trading_executed=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[31/42] MQL5 compile artifact hash capture boundary validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_artifact_hash_capture_boundary.py
+  stdout:
+    MQL5 compile artifact hash capture boundary validation passed
+    mql5_compile_artifact_hash_capture_boundary=true
+    artifact_hash_capture_diagnostic_only=true
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    success_reclassification_done=false
+    task304_success_result_created=false
+    compile_success=false
+    artifact_hash_stdout_only=true
+    artifact_hash_saved_to_repo=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    mt5_terminal_run=false
+    strategy_tester_run=false
+    trading_executed=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[32/42] MQL5 compile success reclassification decision boundary validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_success_reclassification_decision_boundary.py
+  stdout:
+    MQL5 compile success reclassification decision boundary validation passed
+    mql5_compile_success_reclassification_decision_boundary=true
+    success_reclassification_decision_boundary_only=true
+    metaeditor_executed=false
+    mql5_compile_executed=false
+    success_reclassification_done=false
+    task304_success_result_created=false
+    compile_exit_code=1
+    compile_log_semantic_success=true
+    previous_classification=artifact_hash_captured_with_metaeditor_exit_code_anomaly
+    compile_success=false
+    artifact_hash_stored_in_repo=false
+    future_task_312_requires_gpt_boundary=true
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    mt5_terminal_run=false
+    strategy_tester_run=false
+    trading_executed=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[33/42] MQL5 compile success reclassification decision validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mql5_compile_success_reclassification_decision.py
+  stdout:
+    MQL5 compile success reclassification decision validation passed
+    mql5_compile_success_reclassification_decision=true
+    success_reclassification_decision=PASS
+    compile_only_reclassified_success=true
+    compile_success=true
+    compile_success_scope=compile-only-diagnostic
+    trading_authorization=false
+    deployment_readiness=false
+    backtest_readiness=false
+    strategy_readiness=false
+    artifact_hash_stdout_only=true
+    artifact_hash_saved_to_repo=false
+    actual_artifact_hash_stored_in_repo=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    mt5_terminal_run=false
+    strategy_tester_run=false
+    trading_executed=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[34/42] MT5 no-trade startup boundary validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mt5_no_trade_startup_boundary.py
+  stdout:
+    MT5 no-trade startup boundary validation passed
+    mt5_no_trade_startup_boundary=true
+    mt5_startup_boundary_only=true
+    mt5_terminal_executed=false
+    terminal64_executed=false
+    strategy_tester_executed=false
+    backtest_executed=false
+    trading_executed=false
+    trading_authorization=false
+    deployment_readiness=false
+    backtest_readiness=false
+    strategy_readiness=false
+    future_task_314_requires_gpt_boundary=true
+    mq5_inventory_files=7
+    trading_keywords=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[35/42] MT5 no-trade startup command discovery validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mt5_no_trade_startup_command_discovery.py
+  stdout:
+    MT5 no-trade startup command discovery validation passed
+    mt5_no_trade_startup_command_discovery=true
+    command_discovery_only=true
+    mt5_startup_preparation_only=true
+    mt5_terminal_executed=false
+    terminal64_executed=false
+    terminal_executed=false
+    strategy_tester_executed=false
+    backtest_executed=false
+    trading_executed=false
+    trading_authorization=false
+    deployment_readiness=false
+    backtest_readiness=false
+    strategy_readiness=false
+    future_task_315_requires_gpt_boundary=true
+    mq5_inventory_files=7
+    trading_keywords=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    mt5_terminal_candidate_found=true
+    mt5_terminal_candidate_path=C:\Program Files\MetaTrader 5\terminal64.exe
+    future_no_trade_startup_command_template="C:\Program Files\MetaTrader 5\terminal64.exe" /portable /skipupdate
+    future_startup_command_executed=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[36/42] MT5 no-trade startup quarantine preparation validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mt5_no_trade_startup_quarantine_preparation.py
+  stdout:
+    MT5 no-trade startup quarantine preparation validation passed
+    mt5_no_trade_startup_quarantine_preparation=true
+    startup_quarantine_preparation_only=true
+    mt5_terminal_executed=false
+    terminal64_executed=false
+    terminal_executed=false
+    strategy_tester_executed=false
+    backtest_executed=false
+    trading_executed=false
+    trading_authorization=false
+    deployment_readiness=false
+    backtest_readiness=false
+    strategy_readiness=false
+    future_task_316_requires_gpt_boundary=true
+    startup_quarantine_outside_repo_required=true
+    repo_terminal_data_directory=false
+    repo_startup_logs=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[37/42] MT5 no-trade startup dry-run config boundary validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mt5_no_trade_startup_dryrun_config_boundary.py
+  stdout:
+    MT5 no-trade startup dry-run config boundary validation passed
+    mt5_no_trade_startup_dryrun_config_boundary=true
+    startup_dryrun_config_boundary_only=true
+    mt5_terminal_executed=false
+    terminal64_executed=false
+    terminal_executed=false
+    strategy_tester_executed=false
+    backtest_executed=false
+    trading_executed=false
+    trading_authorization=false
+    deployment_readiness=false
+    backtest_readiness=false
+    strategy_readiness=false
+    future_task_317_requires_gpt_boundary=true
+    no_trade_config_generated_in_repo=false
+    startup_quarantine_outside_repo_required=true
+    repo_terminal_data_directory=false
+    repo_startup_logs=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[38/42] MT5 no-trade startup config template validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mt5_no_trade_startup_config_template.py
+  stdout:
+    MT5 no-trade startup config template validation passed
+    mt5_no_trade_startup_config_template=true
+    stdout_only_config_template_preview=true
+    config_file_generated=false
+    mt5_terminal_executed=false
+    terminal64_executed=false
+    terminal_executed=false
+    strategy_tester_executed=false
+    backtest_executed=false
+    trading_executed=false
+    trading_authorization=false
+    deployment_readiness=false
+    backtest_readiness=false
+    strategy_readiness=false
+    future_task_318_requires_gpt_boundary=true
+    no_trade_config_generated_in_repo=false
+    startup_quarantine_outside_repo_required=true
+    repo_terminal_data_directory=false
+    repo_startup_logs=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    template_InpEnableTrading=false
+    template_strategy_tester_enabled=false
+    template_backtest_enabled=false
+    template_trading_enabled=false
+    template_evidence_generation=false
+    template_manifest_generation=false
+    template_report_generation=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[39/42] MT5 no-trade startup authorization plan validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mt5_no_trade_startup_authorization_plan.py
+  stdout:
+    MT5 no-trade startup authorization plan validation passed
+    mt5_no_trade_startup_authorization_plan=true
+    planning_only=true
+    authorization_boundary_only=true
+    stdout_only_static_check=true
+    config_file_generated=false
+    mt5_terminal_executed=false
+    terminal64_executed=false
+    terminal_executed=false
+    strategy_tester_executed=false
+    backtest_executed=false
+    trading_executed=false
+    trading_authorization=false
+    mql5_compile_executed=false
+    metaeditor_executed=false
+    future_task_319_requires_gpt_boundary=true
+    no_trade_config_generated_in_repo=false
+    startup_quarantine_outside_repo_required=true
+    repo_terminal_data_directory=false
+    repo_startup_logs=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[40/42] MT5 no-trade startup preflight gate validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_mt5_no_trade_startup_preflight_gate.py
+  stdout:
+    MT5 no-trade startup preflight gate validation passed
+    mt5_no_trade_startup_preflight_gate=true
+    startup_preflight_gate_only=true
+    stdout_only_static_check=true
+    config_file_generated=false
+    mt5_terminal_executed=false
+    terminal64_executed=false
+    terminal_executed=false
+    strategy_tester_executed=false
+    backtest_executed=false
+    trading_executed=false
+    trading_authorization=false
+    deployment_readiness=false
+    backtest_readiness=false
+    strategy_readiness=false
+    mql5_compile_executed=false
+    metaeditor_executed=false
+    future_task_320_requires_gpt_boundary=true
+    no_trade_config_generated_in_repo=false
+    startup_quarantine_outside_repo_required=true
+    repo_terminal_data_directory=false
+    repo_startup_logs=false
+    mq5_inventory_files=7
+    trading_keywords=false
+    repo_ex5_artifacts=false
+    repo_compile_logs=false
+    repo_mq5_modified=false
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[41/42] parser manifest integration validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_parser_manifest_integration.py
+  stdout:
+    Parser manifest integration validation passed
+    parser_manifest_integration=true
+    parser_pipeline_full_mode=true
+    backtest_set_params=true
+    strategy_pipeline_architecture_doc=true
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+[42/42] backtest set params validator
+  command: C:\Users\Administrator\AppData\Local\Python\pythoncore-3.14-64\python.exe D:\TradingSystem_Starter\tools\validate_backtest_set_params.py
+  stdout:
+    Backtest set params validation passed
+    backtest_set_count=6
+    inp_enable_trading_guard=true
+    observation_mode_exceptions_allowed=true
+    Inventory only; no MT5 run; no trading authorization.
+  result: PASS
+
+Release validation bundle PASS

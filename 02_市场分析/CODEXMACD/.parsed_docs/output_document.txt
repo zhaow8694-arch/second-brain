@@ -1,0 +1,30 @@
+市场结构转变的趋势线确认
+26-2-4 Using Trendlines to Confirm Market Structure Shifts
+Trendlines to Confirm Market Structure Shifts
+1. BTC
+BTC Chart
+First, we notice that this decline in BTC triggered a bottom warning signal (marked by the thick pink line on the chart). Many traders tend to guess where the bottom might form during a decline like this, but that is one of the most common mistakes. The market does not reverse based on our guesses — it reverses when the price structure shows objective confirmation.
+In this case, the downward move was developing in accordance with Trendline 1. Although a few wicks pierced the trendline, the penetration was minimal and can be considered noise. Therefore, Trendline 1 represented the dominant structural rule of the market at that time.
+Later, at point a, price broke above the trendline with strong momentum. Only at the close of point a could we conclude that the bearish structure had shifted into a bullish one. The correct decision is not to anticipate a bottom during the decline, but to wait for structural confirmation.
+Point a represents nearly a 2% move. If that size of movement implies an uncomfortable stop-loss distance, traders may choose to skip the trade, reduce leverage, or lower position size. Analysis is one thing, but risk tolerance varies from trader to trader. Risk management should always come first.
+After this, BTC did not produce any further reversal warning signals.
+2. ETH
+ETH Chart
+Today’s ETH session provides examples of both bullish and bearish structural confirmation.
+First, a bottom warning signal (pink thick line) appeared, and price formed Trendline 1. Price then broke upward strongly at point a. Notice how ETH and BTC displayed very similar structures — this is common, as they are the two most influential assets in the crypto market and often react similarly to market catalysts.
+Thus, the close at point a also represents a bearish-to-bullish structure confirmation, following the same logic explained in the BTC section.
+Later, ETH produced a top warning signal (blue thick line). However, we cannot assume a bearish reversal immediately — we must observe the market’s response.
+We saw a strong bullish candle with an upper wick nearly equal to its body, followed by two smaller bullish candles with similar wick-to-body proportions. The overlapping upper wicks (highlighted by the pink box) indicate that price reached that level twice within a short time and was rejected both times. This reveals strong selling pressure.
+Then we observed bearish candle b, which served as confirmation of the previously identified selling pressure. The market gave a clear answer: supply overcame demand, and structure shifted.
+Point b therefore marked the reversal from bullish to bearish structure.
+No further reversal warning signals appeared in ETH afterward.
+3. Gold
+Gold Chart
+Gold first formed a sideways consolidation range (Range 1). In such environments, staying on the sidelines is often the best decision. Entering positions within a range can easily result in unnecessary stop-outs. Traders should strictly follow their system rules and only execute trades that match their model.
+Later, an extended top warning zone appeared (blue line). Here, trendline quality becomes important.
+We can draw Trendline 2, but its structural quality is questionable. Price action along this line shows irregular “jumping” behavior — points a, b, and c form an upward-pointing triangular spike. Compared to BTC and ETH earlier, this market was not respecting the trendline consistently. Such irregularities often indicate random volatility rather than clean structural development. Therefore, even if Trendline 2 is broken, we should remain cautious.
+Next, Trendline 3 shows stronger regularity. Price followed it more cleanly, without the irregular spikes seen on Trendline 2. The break at point d can therefore be treated as a valid bullish-to-bearish structural confirmation.
+Then comes Trendline 4, located very close to Trendline 3. Although it has fewer validation touches, price broke it downward at point e, which can also be seen as structural confirmation.
+Which one is correct, d or e? There is no absolute answer. Both can be valid confirmations. Trendline 3 has more validation touches, while Trendline 4 has fewer. Since they are close in position, point d may be viewed as the first confirmation, and e as a secondary confirmation after the last bullish attempt failed.
+Summary
+Today’s price action clearly demonstrates the importance of using trendlines to confirm structural shifts. A signal alone should never be treated as an entry trigger. Instead, traders must observe market behavior step by step, read candlestick information, and understand what that behavior represents in terms of buying and selling pressure. Only after the market provides confirmation should a reversal be considered.

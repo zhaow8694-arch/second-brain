@@ -1,0 +1,6 @@
+Copied files/directories:
+  - E:\CODEXMACD\mt5_configs\sniper_v864_softmerge_fix1_soft_risk_H4_XAUUSD_2020_2025.ini
+  - D:\MT5≤‚ ‘\MetaTrader 5\MQL5\Profiles\Tester\SniperTrendEA_v8.64_softmerge_soft_risk.set
+  - D:\MT5≤‚ ‘\MetaTrader 5\MQL5\Experts\SniperTrendEA_v8.64_softmerge_fix1.ex5
+Missing files/directories:
+  - SingleEAReports\sniper_v864_softmerge_fix1_soft_risk_2020_2025

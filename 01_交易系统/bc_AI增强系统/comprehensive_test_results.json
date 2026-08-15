@@ -1,0 +1,220 @@
+{
+  "timestamp": "2025-07-28T12:55:50.287162",
+  "total_tests": 35,
+  "passed_tests": 32,
+  "failed_tests": 3,
+  "test_details": [
+    {
+      "test_name": "市场数据文件生成",
+      "status": "PASS",
+      "details": "文件大小: 2944 bytes",
+      "timestamp": "2025-07-28T12:55:50.300890"
+    },
+    {
+      "test_name": "分号分隔符支持",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:50.301878"
+    },
+    {
+      "test_name": "AI预测文件写入",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:50.302388"
+    },
+    {
+      "test_name": "AI预测器初始化",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.666630"
+    },
+    {
+      "test_name": "市场数据解析",
+      "status": "PASS",
+      "details": "解析49行数据",
+      "timestamp": "2025-07-28T12:55:52.678324"
+    },
+    {
+      "test_name": "AI预测生成",
+      "status": "FAIL",
+      "details": "'EATradingPredictor' object has no attribute 'predict_from_data'",
+      "timestamp": "2025-07-28T12:55:52.678527"
+    },
+    {
+      "test_name": "便捷预测方法",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.708427"
+    },
+    {
+      "test_name": "交易逻辑-正常开仓条件",
+      "status": "PASS",
+      "details": "场景定义正确",
+      "timestamp": "2025-07-28T12:55:52.709439"
+    },
+    {
+      "test_name": "交易逻辑-扛单触发场景",
+      "status": "PASS",
+      "details": "场景定义正确",
+      "timestamp": "2025-07-28T12:55:52.709549"
+    },
+    {
+      "test_name": "交易逻辑-智能锁仓触发",
+      "status": "PASS",
+      "details": "场景定义正确",
+      "timestamp": "2025-07-28T12:55:52.709655"
+    },
+    {
+      "test_name": "交易逻辑-盈利平仓触发",
+      "status": "PASS",
+      "details": "场景定义正确",
+      "timestamp": "2025-07-28T12:55:52.709735"
+    },
+    {
+      "test_name": "交易逻辑-账户保护触发",
+      "status": "PASS",
+      "details": "场景定义正确",
+      "timestamp": "2025-07-28T12:55:52.709814"
+    },
+    {
+      "test_name": "风险参数-最大持仓损失",
+      "status": "PASS",
+      "details": "值: 10000.0",
+      "timestamp": "2025-07-28T12:55:52.710088"
+    },
+    {
+      "test_name": "风险参数-锁仓触发损失",
+      "status": "PASS",
+      "details": "值: 2000.0",
+      "timestamp": "2025-07-28T12:55:52.710182"
+    },
+    {
+      "test_name": "风险参数-盈利目标",
+      "status": "PASS",
+      "details": "值: 200.0",
+      "timestamp": "2025-07-28T12:55:52.710276"
+    },
+    {
+      "test_name": "风险参数-移动止损倍数",
+      "status": "PASS",
+      "details": "值: 1.0",
+      "timestamp": "2025-07-28T12:55:52.710355"
+    },
+    {
+      "test_name": "风险参数-账户保护阈值",
+      "status": "PASS",
+      "details": "值: 30.0",
+      "timestamp": "2025-07-28T12:55:52.710431"
+    },
+    {
+      "test_name": "风险参数-最大开仓数",
+      "status": "PASS",
+      "details": "值: 10",
+      "timestamp": "2025-07-28T12:55:52.710505"
+    },
+    {
+      "test_name": "损失阈值-小损失",
+      "status": "PASS",
+      "details": "500点 -> 锁仓: False",
+      "timestamp": "2025-07-28T12:55:52.710586"
+    },
+    {
+      "test_name": "损失阈值-触发锁仓",
+      "status": "PASS",
+      "details": "2500点 -> 锁仓: True",
+      "timestamp": "2025-07-28T12:55:52.710680"
+    },
+    {
+      "test_name": "损失阈值-超大损失",
+      "status": "PASS",
+      "details": "12000点 -> 锁仓: True",
+      "timestamp": "2025-07-28T12:55:52.710770"
+    },
+    {
+      "test_name": "文件存在性-AI_Enhanced_Risk_EA.mq4",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.711050"
+    },
+    {
+      "test_name": "文件存在性-continuous_ai_monitor.py",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.711161"
+    },
+    {
+      "test_name": "文件存在性-trading_transformer_model.py",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.711263"
+    },
+    {
+      "test_name": "性能优化-OnTick频率控制",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.712055"
+    },
+    {
+      "test_name": "性能优化-指标缓存",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.712187"
+    },
+    {
+      "test_name": "性能优化-移动止损管理",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.712323"
+    },
+    {
+      "test_name": "性能优化-统一利润计算",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.712450"
+    },
+    {
+      "test_name": "性能优化-统一订单过滤",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.712564"
+    },
+    {
+      "test_name": "性能优化-错误处理",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.712665"
+    },
+    {
+      "test_name": "性能优化-日志管理",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.712765"
+    },
+    {
+      "test_name": "启动脚本-start_ai_for_mt4.bat",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.713063"
+    },
+    {
+      "test_name": "启动脚本-start_realtime_ai.bat",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-07-28T12:55:52.713159"
+    },
+    {
+      "test_name": "数据格式-逗号分隔",
+      "status": "FAIL",
+      "details": "object of type 'NoneType' has no len()",
+      "timestamp": "2025-07-28T12:55:52.750971"
+    },
+    {
+      "test_name": "数据格式-分号分隔",
+      "status": "FAIL",
+      "details": "object of type 'NoneType' has no len()",
+      "timestamp": "2025-07-28T12:55:52.780141"
+    }
+  ],
+  "duration_seconds": 2.5,
+  "success_rate": 91.43
+}

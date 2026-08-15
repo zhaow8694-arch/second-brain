@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "safetyNotice": "Inventory only; no MT5 run; no trading authorization.",
+  "strategyTypes": {
+    "ema_cross": {
+      "baseParameters": {
+        "InpEnableTrading": false,
+        "InpEnableRiskObservation": true,
+        "InpEnableEmaSignal": true,
+        "InpFastEmaPeriod": 20,
+        "InpSlowEmaPeriod": 50
+      },
+      "variants": [
+        {
+          "variantId": "ema_cross_default",
+          "parameters": {
+            "InpFastEmaPeriod": 20,
+            "InpSlowEmaPeriod": 50
+          }
+        },
+        {
+          "variantId": "ema_cross_fast",
+          "parameters": {
+            "InpFastEmaPeriod": 10,
+            "InpSlowEmaPeriod": 30
+          }
+        }
+      ]
+    }
+  }
+}

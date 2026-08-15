@@ -1,0 +1,23 @@
+﻿{
+    "expert":  "EA31337-Lite-v2.013.1",
+    "symbol":  "XAUUSD",
+    "timeframe":  "H1",
+    "mode":  "quarterly chained, H1-only, every tick based on real ticks",
+    "period":  "2020.01.01 - 2021.12.31",
+    "initialDeposit":  10000,
+    "totalNetProfit":  621.35,
+    "theoreticalEndingDepositBySummedNetProfit":  10621.35,
+    "lastQuarterReportEndingDeposit":  10621,
+    "depositRoundingGap":  -0.35,
+    "totalGrossProfit":  1084.28,
+    "totalGrossLoss":  -462.93,
+    "aggregateProfitFactor":  2.34,
+    "totalTrades":  279,
+    "profitTrades":  101,
+    "lossTrades":  178,
+    "winRatePercent":  36.2,
+    "maxQuarterlyEquityDrawdown":  "434.85 (4.08%)",
+    "maxQuarterlyEquityDrawdownQuarter":  "2020Q2",
+    "activeQuarters":  "2020Q1, 2020Q2, 2021Q2, 2021Q3",
+    "zeroTradeQuarters":  "2020Q3, 2020Q4, 2021Q1, 2021Q4"
+}

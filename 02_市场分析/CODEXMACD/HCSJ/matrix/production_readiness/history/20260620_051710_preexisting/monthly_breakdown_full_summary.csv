@@ -1,0 +1,5 @@
+﻿"object_id","version","set_role","month_count","completed_count","total_net_profit","profitable_month_count","profitable_month_ratio","worst_month","best_month","worst_month_profit","best_month_profit","max_single_month_profit_share","max_consecutive_losing_months","max_consecutive_losing_month_loss","pf_avg","pf_min","monthly_stability_rating","decision","notes"
+"B","v8.66","v8.66 robust case0010","144","144","84730.36","66","45.83","201903","201304","-4540.94","19779.39","23.34","7","-10225.9","1.85","0","watch","watch","full monthly summary"
+"C","v8.66","v8.66 aggressive case0005","144","144","92960.06","66","45.83","201903","201304","-4957.81","21756.71","23.4","7","-11224.94","1.84","0","watch","watch","full monthly summary"
+"A","v8.6","v8.6 robust case0502","144","144","108546.04","65","45.14","201903","201304","-4551.61","23098.30","21.28","7","-10683.42","2.83","0","watch","watch","full monthly summary"
+"D","v8.66","v8.66 conservative case0401","144","144","73352.9","66","45.83","201903","201304","-3962.40","17147.20","23.38","7","-8820.29","1.85","0","watch","watch","full monthly summary"

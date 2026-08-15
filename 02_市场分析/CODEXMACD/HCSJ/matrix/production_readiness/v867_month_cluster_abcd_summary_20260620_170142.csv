@@ -1,0 +1,5 @@
+﻿"object","total_months","active_months","green_months","red_months","no_trade_months","active_positive_rate","total_net_profit","worst_month","worst_profit","best_month","best_profit","source_runs"
+"A","24","23","23","23","23","1","-21091.98","m201701","-3152.39","m201501","1800.26","20260620_1645_month_cluster"
+"B","24","23","23","23","23","1","-21615.45","m201701","-3181.82","m201501","1519.23","20260620_1653_month_cluster"
+"C","24","23","23","23","23","1","-23720.62","m201701","-3506.87","m201501","1689.26","20260620_1653_month_cluster"
+"D","24","23","23","23","23","1","-18540.58","m201701","-2767.08","m201501","1301.79","20260620_1645_month_cluster"

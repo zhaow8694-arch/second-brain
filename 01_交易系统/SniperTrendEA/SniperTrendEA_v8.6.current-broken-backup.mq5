@@ -1,0 +1,1079 @@
+﻿//+------------------------------------------------------------------+
+//|                                         SniperTrendEA_v8.62.mq5 |
+//|                    鍩轰簬濞佺澶秼鍔跨嚎绐佺牬 + Evil MACD 鐙欏嚮寮忎氦鏄撶郴缁?|
+//|                    v8.6 - 鍔ㄨ兘纭涓庣偣鐏け璐ョ鐞嗙増                |
+//|                                                                  |
+//|  v8.6 鍦?v8.5 鍩虹涓婃柊澧烇細                                        |
+//|                                                                  |
+//|  銆?銆戝弻鍚戝崥寮堣繃婊?(WickConflict)锛?                              |
+//|       鎬诲奖绾?> 瀹炰綋鏃舵嫆缁濆叆鍦猴紝杩囨护鍗佸瓧鏄?閽堝舰绛変綆璐ㄩ噺绐佺牬銆?      |
+//|       鈥斺€?瀵瑰簲銆奛ot All Breakouts Are Equal銆嬨€奣rade Like a Pro銆? |
+//|                                                                  |
+//|  銆?銆戝姩鑳戒紭鍔跨‘璁?(MomentumDominance)锛?                         |
+//|       绐佺牬K绾垮疄浣撻』寮轰簬杩慛鏍瑰弽鍚慘绾挎渶澶у疄浣擄紝纭鍔ㄨ兘杞崲銆?      |
+//|       鈥斺€?瀵瑰簲銆婂競鍦虹粨鏋勮瀵熴€嬨€奌igh-Probability Structure Shift銆?|
+//|                                                                  |
+//|  銆?銆戠偣鐏け璐ュ揩閫熷钩浠?(IgnitionExit)锛?                          |
+//|       鍏ュ満鍚庤嫢鍑虹幇鍙嶅悜鍚炴病/鏃犺窡闅忥紝鍦ㄥ皬浜忔崯鑼冨洿鍐呭揩閫熺鍦恒€?      |
+//|       鈥斺€?瀵瑰簲銆婄偣鐏笌璺熼殢 (Ignition and Follow-Through)銆?      |
+//|                                                                  |
+//|  瀹屾暣淇濈暀 v8.5 浜斿眰杩囨护 + v8.4 澶氬洜瀛愭鏋躲€?                      |
+//|                                                                  |
+//|  v8.61 鏂板杩囨护寮哄害棰勮锛氫繚瀹?v8.5) / 鍧囪　(榛樿) / 绉瀬           |
+//|  v8.62 蹇呬慨锛歱ending淇濈暀鑷宠秴鏃?/ 鐐瑰樊淇濇姢 / stops level鏍￠獙        |
+//+------------------------------------------------------------------+
+#property copyright "SniperTrendEA v8.62 - Wyckoff + Evil MACD + Z-Wei Philosophy"
+#property version   "8.62"
+#property strict
+
+//--- 杩囨护寮哄害棰勮锛堣В鍐?v8.5 寮€浠撹繃灏戦棶棰橈級
+enum ENUM_FILTER_PRESET
+{
+   FILTER_CONSERVATIVE = 0,  // 淇濆畧锛歷8.5 鍘熺増鍙傛暟锛屼笅鍗曞皯銆佽川閲忛珮
+   FILTER_BALANCED     = 1,  // 鍧囪　锛氭帹鑽愰粯璁わ紝閫傚害澧炲姞涓嬪崟棰戠巼
+   FILTER_AGGRESSIVE   = 2,  // 绉瀬锛氭槑鏄炬斁瀹斤紝涓嬪崟鏇村
+   FILTER_CUSTOM       = 3   // 鑷畾涔夛細浣跨敤涓嬫柟鎵嬪姩鍙傛暟
+};
+
+//--- 杈撳叆鍙傛暟
+input group "=== 杩囨护寮哄害棰勮锛坴8.62锛?=="
+input ENUM_FILTER_PRESET InpFilterPreset = FILTER_BALANCED; // 杩囨护寮哄害锛氫繚瀹?鍧囪　/绉瀬/鑷畾涔?
+input group "=== MACD 鍙傛暟 ==="
+input int    InpFastEMA        = 12;
+input int    InpSlowEMA        = 26;
+input int    InpSignalSMA      = 9;
+
+input group "=== MA200 过滤（参考8.5）: Buffer 使用 ATR 倍数 ==="
+input int    InpMA200Period    = 200;
+input bool   InpUseMA200Filter = true;
+input double InpMA200BufferATR = 0.2;       // 仅 FILTER_CUSTOM 模式生效
+
+input group "=== 蜡烛质量过滤 (v8.5) ==="
+input double InpBodyRatio          = 0.55;  // K线实体占比（默认 0.55）
+input double InpMaxCandleATR       = 3.0;   // 危险K线阈值（默认 3.0）
+input double InpMaxOppositeShadow  = 0.30;  // 逆向阴影上限（默认30%）
+input bool   InpRequireFollowThrough = false;
+input int    InpFollowThroughBars  = 3;
+input int    InpConfirmBars        = 3;     // 观察待入场K线数（默认3）
+input bool   InpRequireMACDDir     = false;
+
+input group "=== Structure Filter (v8.6) ==="
+input bool   InpUseStructureFilter      = true;  // 启用趋势线结构过滤
+input bool   InpRejectNoStructure       = false; // 不存在结构时是否拒绝下单
+input int    InpSwingLookback           = 3;     // 左右摆动确认的回看柱数
+input int    InpStructureScanBars       = 80;    // 扫描历史K线条数
+input int    InpMinTrendlineTouches     = 3;     // 趋势线最少有效触及数
+input double InpTrendlineTouchATR       = 0.25;  // 触及容差（ATR倍数）
+input double InpMinBreakoutDistanceATR  = 0.10;  // 趋势线突破最小距离（ATR倍数）
+input double InpMinBreakoutScore        = 70.0;  // 结构评分最低阈值
+input bool   InpShowStructureDebug      = false; // 打印结构评分信息
+
+input group "=== ADX 过滤 (v8.4) ==="
+input bool   InpUseADX          = false;
+input int    InpADXPeriod       = 14;
+input double InpADXThreshold    = 25.0;
+
+input group "=== 鏃堕棿杩囨护 (v8.4) ==="
+input bool   InpUseTimeFilter   = false;
+input int    InpStartHour       = 8;
+input int    InpEndHour         = 20;
+
+input group "=== 娉㈠姩鐜囪繃婊?(v8.4) ==="
+input bool   InpUseATRFilter    = false;
+input int    InpATRFilterPeriod = 20;
+input double InpATRFilterRatio  = 1.0;
+
+input group "=== 鏃ョ嚎瓒嬪娍纭 (v8.4) ==="
+input bool   InpUseDailyFilter  = false;
+
+input group "=== 椋庨櫓绠＄悊 ==="
+input double InpRiskPercent    = 0.5;
+input double InpATRMultiplier  = 1.5;
+input int    InpATRPeriod      = 14;
+input double InpTrailingStart  = 5.0;
+input double InpTrailingStep   = 2.5;
+input int    InpMaxPositions   = 1;
+
+input group "=== 鎸佷粨绠＄悊锛坴8.6 鏂板锛?=="
+input bool   InpUseIgnitionExit     = true;   // 鐐圭伀澶辫触蹇€熷钩浠?input int    InpIgnitionMaxBars     = 3;      // 鍏ュ満鍚庤瀵烱绾挎暟
+input double InpIgnitionEngulfRatio = 0.85;   // 鍙嶅悜瀹炰綋/鍏ュ満瀹炰綋 瑙﹀彂闃堝€?input double InpIgnitionMaxLossATR  = 1.0;    // 浠呭湪姝TR浜忔崯鑼冨洿鍐呮墽琛岀偣鐏鎹?
+input group "=== 浜ゆ槗淇濇姢锛坴8.62锛?=="
+input bool   InpUseSpreadFilter = true;   // 鐐瑰樊杩囧ぇ鏃惰烦杩囧紑浠?input int    InpMaxSpreadPoints = 50;     // 鏈€澶у厑璁哥偣宸紙points锛?=浠呭綋寮€鍏冲紑鍚椂鐢ㄩ粯璁わ級
+
+input group "=== 浜ゆ槗璁剧疆 ==="
+input int    InpMagicNumber    = 20260618;
+input string InpComment        = "SniperEA_v8.62";
+input bool   InpEnableBuy      = true;
+input bool   InpEnableSell     = true;
+input bool   InpDebugMode      = true;
+
+//--- 鎸囨爣鍙ユ焺
+int g_macdHandle;
+int g_atrHandle;
+int g_ma200Handle;
+int g_adxHandle = INVALID_HANDLE;
+int g_atrFilterHandle = INVALID_HANDLE;
+int g_dailyMA200Handle = INVALID_HANDLE;
+
+//--- 寰呭叆鍦虹姸鎬?bool     g_pendingBuy  = false;
+bool     g_pendingSell = false;
+int      g_pendingBars = 0;
+
+//--- K绾挎椂闂存埑
+datetime g_lastTrailBarTime = 0;
+datetime g_lastEntryBarTime = 0;
+
+//--- 鍏ュ満璺熻釜锛堢偣鐏け璐ユ娴嬶級
+datetime g_entryBarTime  = 0;
+double   g_entryBodySize = 0;
+
+//--- 鐢熸晥涓殑杩囨护鍙傛暟锛堢敱棰勮鎴栨墜鍔ㄥ弬鏁板啓鍏ワ級
+double g_bodyRatio;
+double g_maxCandleATR;
+double g_maxOppositeShadow;
+double g_ma200BufferATR;
+int    g_confirmBars;
+bool   g_requireFollowThrough;
+int    g_followThroughBars;
+bool   g_useWickConflict;
+double g_maxWickToBody;
+bool   g_requireMomentum;
+int    g_momentumLookback;
+double g_momentumMinRatio;
+string g_presetName = "";
+
+//+------------------------------------------------------------------+
+//| 搴旂敤杩囨护寮哄害棰勮                                                  |
+//+------------------------------------------------------------------+
+void ApplyFilterPreset()
+{
+   switch(InpFilterPreset)
+   {
+      case FILTER_CONSERVATIVE:
+         g_bodyRatio            = 0.60;
+         g_maxCandleATR         = 2.5;
+         g_maxOppositeShadow    = 0.20;
+         g_ma200BufferATR       = 0.0;
+         g_confirmBars          = 4;
+         g_requireFollowThrough = false;
+         g_followThroughBars    = 3;
+         g_useWickConflict      = true;
+         g_maxWickToBody        = 1.0;
+         g_requireMomentum      = true;
+         g_momentumLookback     = 5;
+         g_momentumMinRatio     = 1.0;
+         g_presetName           = "淇濆畧(v8.5)";
+         break;
+
+      case FILTER_BALANCED:
+         g_bodyRatio            = 0.55;
+         g_maxCandleATR         = 3.0;
+         g_maxOppositeShadow    = 0.30;
+         g_ma200BufferATR       = 0.2;
+         g_confirmBars          = 3;
+         g_requireFollowThrough = false;
+         g_followThroughBars    = 3;
+         g_useWickConflict      = true;
+         g_maxWickToBody        = 1.5;
+         g_requireMomentum      = true;
+         g_momentumLookback     = 5;
+         g_momentumMinRatio     = 0.85;
+         g_presetName           = "鍧囪　(鎺ㄨ崘)";
+         break;
+
+      case FILTER_AGGRESSIVE:
+         g_bodyRatio            = 0.50;
+         g_maxCandleATR         = 3.5;
+         g_maxOppositeShadow    = 0.35;
+         g_ma200BufferATR       = 0.3;
+         g_confirmBars          = 3;
+         g_requireFollowThrough = false;
+         g_followThroughBars    = 2;
+         g_useWickConflict      = false;
+         g_maxWickToBody        = 2.0;
+         g_requireMomentum      = false;
+         g_momentumLookback     = 5;
+         g_momentumMinRatio     = 0.75;
+         g_presetName           = "绉瀬";
+         break;
+
+      default:
+         g_bodyRatio            = InpBodyRatio;
+         g_maxCandleATR         = InpMaxCandleATR;
+         g_maxOppositeShadow    = InpMaxOppositeShadow;
+         g_ma200BufferATR       = InpMA200BufferATR;
+         g_confirmBars          = InpConfirmBars;
+         g_requireFollowThrough = InpRequireFollowThrough;
+         g_followThroughBars    = InpFollowThroughBars;
+         g_useWickConflict      = InpUseWickConflictFilter;
+         g_maxWickToBody        = InpMaxWickToBodyRatio;
+         g_requireMomentum      = InpRequireMomentumDominance;
+         g_momentumLookback     = InpMomentumLookback;
+         g_momentumMinRatio     = InpMomentumMinRatio;
+         g_presetName           = "鑷畾涔?;
+         break;
+   }
+}
+
+//+------------------------------------------------------------------+
+//| 鍒濆鍖?                                                           |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+   g_macdHandle = iMACD(_Symbol, PERIOD_CURRENT, InpFastEMA, InpSlowEMA, InpSignalSMA, PRICE_CLOSE);
+   if(g_macdHandle == INVALID_HANDLE) return INIT_FAILED;
+
+   g_atrHandle = iATR(_Symbol, PERIOD_CURRENT, InpATRPeriod);
+   if(g_atrHandle == INVALID_HANDLE) return INIT_FAILED;
+
+   g_ma200Handle = iMA(_Symbol, PERIOD_CURRENT, InpMA200Period, 0, MODE_SMA, PRICE_CLOSE);
+   if(g_ma200Handle == INVALID_HANDLE) return INIT_FAILED;
+
+   if(InpUseADX)
+   {
+      g_adxHandle = iADX(_Symbol, PERIOD_CURRENT, InpADXPeriod);
+      if(g_adxHandle == INVALID_HANDLE) return INIT_FAILED;
+   }
+
+   if(InpUseATRFilter)
+   {
+      g_atrFilterHandle = iMA(_Symbol, PERIOD_CURRENT, InpATRFilterPeriod, 0, MODE_SMA, g_atrHandle);
+      if(g_atrFilterHandle == INVALID_HANDLE) return INIT_FAILED;
+   }
+
+   if(InpUseDailyFilter)
+   {
+      g_dailyMA200Handle = iMA(_Symbol, PERIOD_D1, 200, 0, MODE_SMA, PRICE_CLOSE);
+      if(g_dailyMA200Handle == INVALID_HANDLE) return INIT_FAILED;
+   }
+
+   g_pendingBuy       = false;
+   g_pendingSell      = false;
+   g_pendingBars      = 0;
+   g_lastTrailBarTime = 0;
+   g_lastEntryBarTime = 0;
+   g_entryBarTime     = 0;
+   g_entryBodySize    = 0;
+
+   ApplyFilterPreset();
+
+   Print("SniperTrendEA v8.62 鍒濆鍖栨垚鍔?| ", _Symbol, " ", EnumToString(Period()),
+         " | 棰勮:", g_presetName,
+         " | 瀹炰綋鈮?, DoubleToString(g_bodyRatio * 100, 0), "%",
+         " | 鍙嶅悜褰扁墹", DoubleToString(g_maxOppositeShadow * 100, 0), "%",
+         " | 鍗遍櫓K鈮?, g_maxCandleATR, "脳ATR",
+         " | 鍗氬紙:", g_useWickConflict ? "ON" : "OFF",
+         " | 鍔ㄨ兘:", g_requireMomentum ? "ON" : "OFF",
+         " | 鐐圭伀姝㈡崯:", InpUseIgnitionExit ? "ON" : "OFF");
+   return INIT_SUCCEEDED;
+}
+
+//+------------------------------------------------------------------+
+//| 閲婃斁                                                              |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+   if(g_macdHandle  != INVALID_HANDLE) IndicatorRelease(g_macdHandle);
+   if(g_atrHandle   != INVALID_HANDLE) IndicatorRelease(g_atrHandle);
+   if(g_ma200Handle != INVALID_HANDLE) IndicatorRelease(g_ma200Handle);
+   if(g_adxHandle   != INVALID_HANDLE) IndicatorRelease(g_adxHandle);
+   if(g_atrFilterHandle  != INVALID_HANDLE) IndicatorRelease(g_atrFilterHandle);
+   if(g_dailyMA200Handle != INVALID_HANDLE) IndicatorRelease(g_dailyMA200Handle);
+   Comment("");
+}
+
+//+------------------------------------------------------------------+
+//| 涓婚€昏緫                                                            |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+   datetime currentBarTime = iTime(_Symbol, PERIOD_CURRENT, 0);
+   if(currentBarTime == 0) return;
+
+   int posCount = CountPositions();
+
+   // 鎸佷粨绠＄悊锛堟瘡鏍筀绾夸竴娆★級
+   if(currentBarTime != g_lastTrailBarTime && posCount > 0)
+   {
+      g_lastTrailBarTime = currentBarTime;
+      double atrBuf[]; ArrayResize(atrBuf, 2); ArraySetAsSeries(atrBuf, true);
+      if(CopyBuffer(g_atrHandle, 0, 1, 2, atrBuf) >= 2 && atrBuf[0] > 0)
+      {
+         SyncEntryTracking();
+         ManageIgnitionExit(atrBuf[0]);
+         if(CountPositions() > 0)
+            ManageTrailingStop(atrBuf[0]);
+      }
+   }
+
+   if(posCount == 0)
+   {
+      g_entryBarTime  = 0;
+      g_entryBodySize = 0;
+   }
+
+   // 鍏ュ満閫昏緫锛堟瘡鏍筀绾夸竴娆★級
+   if(currentBarTime == g_lastEntryBarTime) return;
+   g_lastEntryBarTime = currentBarTime;
+
+   double macdMain[], macdSig[], atrBuf2[], ma200Buf[];
+   ArrayResize(macdMain, 4); ArrayResize(macdSig, 4); ArrayResize(atrBuf2, 4); ArrayResize(ma200Buf, 3);
+   ArraySetAsSeries(macdMain, true); ArraySetAsSeries(macdSig, true);
+   ArraySetAsSeries(atrBuf2, true); ArraySetAsSeries(ma200Buf, true);
+
+   if(CopyBuffer(g_macdHandle, 0, 0, 4, macdMain) < 4 ||
+      CopyBuffer(g_macdHandle, 1, 0, 4, macdSig) < 4 ||
+      CopyBuffer(g_atrHandle, 0, 0, 4, atrBuf2) < 4 ||
+      CopyBuffer(g_ma200Handle, 0, 0, 3, ma200Buf) < 3) return;
+
+   double hist1 = macdMain[1] - macdSig[1];
+   double hist2 = macdMain[2] - macdSig[2];
+   double macd1 = macdMain[1];
+   double macd2 = macdMain[2];
+   double atr1  = atrBuf2[1];
+   double ma200 = ma200Buf[1];
+
+   if(atr1 <= 0 || ma200 <= 0) return;
+
+   double prevClose = iClose(_Symbol, PERIOD_CURRENT, 1);
+   double bodyRatio = GetBodyRatio(1);
+
+   double ma200Buffer = atr1 * g_ma200BufferATR;
+   bool aboveMA200 = (prevClose > ma200 + ma200Buffer);
+   bool belowMA200 = (prevClose < ma200 - ma200Buffer);
+
+   bool adxOk = true, timeOk = true, atrFilterOk = true;
+   bool dailyUp = true, dailyDown = true;
+
+   if(InpUseADX && g_adxHandle != INVALID_HANDLE)
+   {
+      double adxBuf[]; ArrayResize(adxBuf, 2); ArraySetAsSeries(adxBuf, true);
+      if(CopyBuffer(g_adxHandle, 0, 0, 2, adxBuf) >= 2)
+         adxOk = (adxBuf[1] > InpADXThreshold);
+   }
+
+   if(InpUseTimeFilter)
+   {
+      MqlDateTime dt; TimeToStruct(currentBarTime, dt);
+      if(InpStartHour <= InpEndHour)
+         timeOk = (dt.hour >= InpStartHour && dt.hour <= InpEndHour);
+      else
+         timeOk = (dt.hour >= InpStartHour || dt.hour <= InpEndHour);
+   }
+
+   if(InpUseATRFilter && g_atrFilterHandle != INVALID_HANDLE)
+   {
+      double atrAvgBuf[]; ArrayResize(atrAvgBuf, 2); ArraySetAsSeries(atrAvgBuf, true);
+      if(CopyBuffer(g_atrFilterHandle, 0, 0, 2, atrAvgBuf) >= 2)
+         atrFilterOk = (atr1 > atrAvgBuf[1] * InpATRFilterRatio);
+   }
+
+   if(InpUseDailyFilter && g_dailyMA200Handle != INVALID_HANDLE)
+   {
+      double dMaBuf[]; ArrayResize(dMaBuf, 2); ArraySetAsSeries(dMaBuf, true);
+      if(CopyBuffer(g_dailyMA200Handle, 0, 0, 2, dMaBuf) >= 2)
+      {
+         double dClose = iClose(_Symbol, PERIOD_D1, 1);
+         dailyUp   = (dClose > dMaBuf[1]);
+         dailyDown = (dClose < dMaBuf[1]);
+      }
+   }
+
+   if(InpDebugMode)
+   {
+      string trendStr = "闇囪崱鍖?;
+      if(aboveMA200) trendStr = "澶氬ご瓒嬪娍";
+      if(belowMA200) trendStr = "绌哄ご瓒嬪娍";
+      Comment("SniperEA v8.62 | 棰勮:", g_presetName, " | ", _Symbol, " ", EnumToString(Period()), "\n",
+              "瓒嬪娍:", trendStr, " | MA200:", DoubleToString(ma200, _Digits),
+              " | 鏀剁洏:", DoubleToString(prevClose, _Digits), "\n",
+              "ATR:", DoubleToString(atr1, _Digits),
+              " | 瀹炰綋:", DoubleToString(bodyRatio * 100, 1), "%",
+              " (闇€鈮?, DoubleToString(g_bodyRatio * 100, 0), "%)",
+              " | 褰?浣?", DoubleToString(GetWickToBodyRatio(1), 2), "\n",
+              "鍔ㄨ兘:", g_requireMomentum ?
+                     (HasMomentumDominance(true, 1) ? "澶歄K" : "澶氬急") : "OFF",
+              " | 鍗氬紙:", IsWickConflictCandle(1) ? "鍐茬獊" : "骞插噣", "\n",
+              "ADX:", adxOk ? "OK" : "FAIL",
+              " | 鎸佷粨:", CountPositions(), "/", InpMaxPositions,
+              " | 鐐圭伀鐩戞帶:", (g_entryBarTime > 0 && InpUseIgnitionExit) ? "ON" : "OFF");
+   }
+
+   posCount = CountPositions();
+   if(posCount < InpMaxPositions)
+   {
+      bool flipUp   = (hist1 > 0 && hist2 <= 0);
+      bool flipDown = (hist1 < 0 && hist2 >= 0);
+
+      if(flipUp && InpEnableBuy && !g_pendingBuy)
+      {
+         if(!InpUseMA200Filter || aboveMA200)
+         { g_pendingSell = false; g_pendingBuy = true; g_pendingBars = 0; }
+      }
+
+      if(flipDown && InpEnableSell && !g_pendingSell)
+      {
+         if(!InpUseMA200Filter || belowMA200)
+         { g_pendingBuy = false; g_pendingSell = true; g_pendingBars = 0; }
+      }
+
+      if(g_pendingBuy || g_pendingSell)
+      {
+         g_pendingBars++;
+         if(g_pendingBars > g_confirmBars)
+         { g_pendingBuy = false; g_pendingSell = false; g_pendingBars = 0; }
+         else
+         {
+            bool macdUp   = (macd1 >= macd2);
+            bool macdDown = (macd1 <= macd2);
+            bool dangerCandle = IsDangerousCandle(1, atr1);
+            bool wickConflict = IsWickConflictCandle(1);
+
+            if(g_pendingBuy && IsBullishCandle(1) && bodyRatio >= g_bodyRatio &&
+               (!InpRequireMACDDir || macdUp) && (!InpUseMA200Filter || aboveMA200) &&
+               adxOk && timeOk && atrFilterOk && (!InpUseDailyFilter || dailyUp))
+            {
+               if(dangerCandle)
+               {
+                  Print("銆愬嵄闄㎏绾?澶氥€戞尟骞?", g_maxCandleATR, "脳ATR锛屾湰鏍硅烦杩囷紝淇濈暀pending");
+               }
+               else if(wickConflict)
+               {
+                  Print("銆愬弻鍚戝崥寮?澶氥€戞€诲奖绾?瀹炰綋=", DoubleToString(GetWickToBodyRatio(1), 2),
+                        " > ", g_maxWickToBody, "锛屾湰鏍硅烦杩囷紝淇濈暀pending");
+               }
+               else if(GetUpperShadowRatio(1) > g_maxOppositeShadow)
+               {
+                  Print("銆愪笂褰辫繃闀?澶氥€戞湰鏍硅烦杩囷紝淇濈暀pending");
+               }
+               else if(g_requireMomentum && !HasMomentumDominance(true, 1))
+               {
+                  Print("銆愬姩鑳戒笉瓒?澶氥€戝疄浣撴湭寮轰簬杩?, g_momentumLookback, "鏍归槾绾匡紝鏈牴璺宠繃锛屼繚鐣檖ending");
+               }
+               else if(g_requireFollowThrough && !IsHighestClose(1, g_followThroughBars))
+               {
+                  Print("銆愯窡闅忕‘璁ゅけ璐?澶氥€戞湭鍒涙柊楂橈紝绛夊緟");
+               }
+               else if(!IsSpreadAcceptable())
+               {
+                  Print("銆愮偣宸繃澶?澶氥€戝綋鍓嶇偣宸?", SymbolInfoInteger(_Symbol, SYMBOL_SPREAD),
+                        " > ", InpMaxSpreadPoints, "锛屾湰鏍硅烦杩囷紝淇濈暀pending");
+               }
+               else
+               {
+                  double ep = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
+                  double sl = NormalizeDouble(ep - atr1 * InpATRMultiplier, _Digits);
+                  if(!NormalizeStopForOpen(ORDER_TYPE_BUY, ep, sl))
+                  {
+                     Print("銆愭鎹熻窛绂讳笉瓒?澶氥€戞棤娉曟弧瓒崇粡绾晢鏈€灏忔鎹熻窛绂伙紝鏈牴璺宠繃锛屼繚鐣檖ending");
+                  }
+                  else
+                  {
+                     double lot = CalculateLotSize(ep - sl);
+                     Print("銆愬紑澶氥€戝疄浣?", DoubleToString(bodyRatio * 100, 1), "%",
+                           " | 褰?浣?", DoubleToString(GetWickToBodyRatio(1), 2),
+                           " | EP:", ep, " SL:", sl, " Lot:", lot);
+                     if(lot > 0 && OpenPosition(ORDER_TYPE_BUY, ep, sl, lot))
+                     {
+                        g_pendingBuy = false; g_pendingBars = 0;
+                     }
+                  }
+               }
+            }
+
+            if(g_pendingSell && IsBearishCandle(1) && bodyRatio >= g_bodyRatio &&
+               (!InpRequireMACDDir || macdDown) && (!InpUseMA200Filter || belowMA200) &&
+               adxOk && timeOk && atrFilterOk && (!InpUseDailyFilter || dailyDown))
+            {
+               if(dangerCandle)
+               {
+                  Print("銆愬嵄闄㎏绾?绌恒€戞尟骞?", g_maxCandleATR, "脳ATR锛屾湰鏍硅烦杩囷紝淇濈暀pending");
+               }
+               else if(wickConflict)
+               {
+                  Print("銆愬弻鍚戝崥寮?绌恒€戞€诲奖绾?瀹炰綋=", DoubleToString(GetWickToBodyRatio(1), 2),
+                        " > ", g_maxWickToBody, "锛屾湰鏍硅烦杩囷紝淇濈暀pending");
+               }
+               else if(GetLowerShadowRatio(1) > g_maxOppositeShadow)
+               {
+                  Print("銆愪笅褰辫繃闀?绌恒€戞湰鏍硅烦杩囷紝淇濈暀pending");
+               }
+               else if(g_requireMomentum && !HasMomentumDominance(false, 1))
+               {
+                  Print("銆愬姩鑳戒笉瓒?绌恒€戝疄浣撴湭寮轰簬杩?, g_momentumLookback, "鏍归槼绾匡紝鏈牴璺宠繃锛屼繚鐣檖ending");
+               }
+               else if(g_requireFollowThrough && !IsLowestClose(1, g_followThroughBars))
+               {
+                  Print("銆愯窡闅忕‘璁ゅけ璐?绌恒€戞湭鍒涙柊浣庯紝绛夊緟");
+               }
+               else if(!IsSpreadAcceptable())
+               {
+                  Print("銆愮偣宸繃澶?绌恒€戝綋鍓嶇偣宸?", SymbolInfoInteger(_Symbol, SYMBOL_SPREAD),
+                        " > ", InpMaxSpreadPoints, "锛屾湰鏍硅烦杩囷紝淇濈暀pending");
+               }
+               else
+               {
+                  double ep = SymbolInfoDouble(_Symbol, SYMBOL_BID);
+                  double sl = NormalizeDouble(ep + atr1 * InpATRMultiplier, _Digits);
+                  if(!NormalizeStopForOpen(ORDER_TYPE_SELL, ep, sl))
+                  {
+                     Print("銆愭鎹熻窛绂讳笉瓒?绌恒€戞棤娉曟弧瓒崇粡绾晢鏈€灏忔鎹熻窛绂伙紝鏈牴璺宠繃锛屼繚鐣檖ending");
+                  }
+                  else
+                  {
+                     double lot = CalculateLotSize(sl - ep);
+                     Print("銆愬紑绌恒€戝疄浣?", DoubleToString(bodyRatio * 100, 1), "%",
+                           " | 褰?浣?", DoubleToString(GetWickToBodyRatio(1), 2),
+                           " | EP:", ep, " SL:", sl, " Lot:", lot);
+                     if(lot > 0 && OpenPosition(ORDER_TYPE_SELL, ep, sl, lot))
+                     {
+                        g_pendingSell = false; g_pendingBars = 0;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   else
+   { g_pendingBuy = false; g_pendingSell = false; g_pendingBars = 0; }
+}
+
+//+------------------------------------------------------------------+
+//| 銆恦8.6銆戠偣鐏け璐ュ揩閫熷钩浠?                                         |
+//+------------------------------------------------------------------+
+void ManageIgnitionExit(double atr)
+{
+   if(!InpUseIgnitionExit || atr <= 0 || g_entryBarTime == 0) return;
+
+   int entryShift = iBarShift(_Symbol, PERIOD_CURRENT, g_entryBarTime, true);
+   if(entryShift < 0) { g_entryBarTime = 0; return; }
+
+   int barsSinceEntry = entryShift - 1;
+   if(barsSinceEntry < 1 || barsSinceEntry > InpIgnitionMaxBars) return;
+
+   double entryBody = g_entryBodySize;
+   if(entryBody <= 0) entryBody = GetCandleBody(entryShift);
+
+   double entryOpen  = iOpen (_Symbol, PERIOD_CURRENT, entryShift);
+   double entryClose = iClose(_Symbol, PERIOD_CURRENT, entryShift);
+
+   for(int i = PositionsTotal() - 1; i >= 0; i--)
+   {
+      ulong ticket = PositionGetTicket(i);
+      if(!PositionSelectByTicket(ticket)) continue;
+      if(PositionGetInteger(POSITION_MAGIC) != InpMagicNumber) continue;
+      if(PositionGetString(POSITION_SYMBOL) != _Symbol) continue;
+
+      ENUM_POSITION_TYPE posType = (ENUM_POSITION_TYPE)PositionGetInteger(POSITION_TYPE);
+      double openPrice = PositionGetDouble(POSITION_PRICE_OPEN);
+      bool ignitionFailed = false;
+      string failReason = "";
+
+      if(posType == POSITION_TYPE_BUY)
+      {
+         if(IsIgnitionFailedLong(entryShift, entryBody, entryOpen, entryClose, failReason))
+            ignitionFailed = true;
+      }
+      else if(posType == POSITION_TYPE_SELL)
+      {
+         if(IsIgnitionFailedShort(entryShift, entryBody, entryOpen, entryClose, failReason))
+            ignitionFailed = true;
+      }
+
+      if(!ignitionFailed) continue;
+
+      double curPrice = (posType == POSITION_TYPE_BUY) ?
+                        SymbolInfoDouble(_Symbol, SYMBOL_BID) :
+                        SymbolInfoDouble(_Symbol, SYMBOL_ASK);
+      double lossDist = (posType == POSITION_TYPE_BUY) ?
+                        (openPrice - curPrice) : (curPrice - openPrice);
+
+      if(lossDist <= atr * InpIgnitionMaxLossATR)
+      {
+         Print("銆愮偣鐏け璐ュ钩浠撱€?, failReason, " | 浜忔崯:", DoubleToString(lossDist, _Digits),
+               " (鈮?, InpIgnitionMaxLossATR, "脳ATR)");
+         ClosePosition(ticket);
+      }
+   }
+}
+
+//+------------------------------------------------------------------+
+//| 澶氬ご鐐圭伀澶辫触锛氬弽鍚戝悶娌?/ 鏃犺窡闅?                                   |
+//+------------------------------------------------------------------+
+bool IsIgnitionFailedLong(int entryShift, double entryBody, double entryOpen,
+                          double entryClose, string &reason)
+{
+   double body1 = GetCandleBody(1);
+   if(body1 <= 0) return false;
+
+   if(IsBearishCandle(1) && body1 >= entryBody * InpIgnitionEngulfRatio)
+   {
+      reason = "鍙嶅悜闃寸嚎瀹炰綋鈮ュ叆鍦哄疄浣?;
+      return true;
+   }
+
+   if(IsBearishCandle(1) &&
+      iOpen(_Symbol, PERIOD_CURRENT, 1) >= entryClose &&
+      iClose(_Symbol, PERIOD_CURRENT, 1) <= entryOpen)
+   {
+      reason = "鐪嬭穼鍚炴病鍏ュ満K绾?;
+      return true;
+   }
+
+   if(IsBullishCandle(1) && GetUpperShadowRatio(1) > 0.45)
+   {
+      reason = "涓婂奖绾胯繃闀匡紝澶氭柟鍔ㄨ兘琛扮";
+      return true;
+   }
+
+   if(IsBullishCandle(1) && entryShift >= 2)
+   {
+      double body2 = GetCandleBody(2);
+      if(body2 > 0 && body1 < body2 * 0.6 && !IsHighestClose(1, 1))
+      {
+         reason = "璺熼殢涔忓姏锛氶槼绾跨缉閲忎笖鏈垱鏂伴珮";
+         return true;
+      }
+   }
+
+   return false;
+}
+
+//+------------------------------------------------------------------+
+//| 绌哄ご鐐圭伀澶辫触锛氬弽鍚戝悶娌?/ 鏃犺窡闅?                                   |
+//+------------------------------------------------------------------+
+bool IsIgnitionFailedShort(int entryShift, double entryBody, double entryOpen,
+                           double entryClose, string &reason)
+{
+   double body1 = GetCandleBody(1);
+   if(body1 <= 0) return false;
+
+   if(IsBullishCandle(1) && body1 >= entryBody * InpIgnitionEngulfRatio)
+   {
+      reason = "鍙嶅悜闃崇嚎瀹炰綋鈮ュ叆鍦哄疄浣?;
+      return true;
+   }
+
+   if(IsBullishCandle(1) &&
+      iOpen(_Symbol, PERIOD_CURRENT, 1) <= entryClose &&
+      iClose(_Symbol, PERIOD_CURRENT, 1) >= entryOpen)
+   {
+      reason = "鐪嬫定鍚炴病鍏ュ満K绾?;
+      return true;
+   }
+
+   if(IsBearishCandle(1) && GetLowerShadowRatio(1) > 0.45)
+   {
+      reason = "涓嬪奖绾胯繃闀匡紝绌烘柟鍔ㄨ兘琛扮";
+      return true;
+   }
+
+   if(IsBearishCandle(1) && entryShift >= 2)
+   {
+      double body2 = GetCandleBody(2);
+      if(body2 > 0 && body1 < body2 * 0.6 && !IsLowestClose(1, 1))
+      {
+         reason = "璺熼殢涔忓姏锛氶槾绾跨缉閲忎笖鏈垱鏂颁綆";
+         return true;
+      }
+   }
+
+   return false;
+}
+
+//+------------------------------------------------------------------+
+//| 浠庢寔浠撴仮澶嶅叆鍦篕绾胯窡韪?                                            |
+//+------------------------------------------------------------------+
+void SyncEntryTracking()
+{
+   if(g_entryBarTime > 0) return;
+
+   for(int i = PositionsTotal() - 1; i >= 0; i--)
+   {
+      ulong ticket = PositionGetTicket(i);
+      if(!PositionSelectByTicket(ticket)) continue;
+      if(PositionGetInteger(POSITION_MAGIC) != InpMagicNumber) continue;
+      if(PositionGetString(POSITION_SYMBOL) != _Symbol) continue;
+
+      datetime posTime = (datetime)PositionGetInteger(POSITION_TIME);
+      int shift = iBarShift(_Symbol, PERIOD_CURRENT, posTime, true);
+      if(shift < 0) shift = 1;
+
+      g_entryBarTime  = iTime(_Symbol, PERIOD_CURRENT, shift);
+      g_entryBodySize = GetCandleBody(shift);
+      break;
+   }
+}
+
+//+------------------------------------------------------------------+
+//| 绉诲姩姝㈢泩                                                          |
+//+------------------------------------------------------------------+
+void ManageTrailingStop(double atr)
+{
+   if(atr <= 0) return;
+   double prevClose = iClose(_Symbol, PERIOD_CURRENT, 1);
+   if(prevClose <= 0) return;
+
+   for(int i = PositionsTotal() - 1; i >= 0; i--)
+   {
+      ulong ticket = PositionGetTicket(i);
+      if(!PositionSelectByTicket(ticket)) continue;
+      if(PositionGetInteger(POSITION_MAGIC) != InpMagicNumber) continue;
+      if(PositionGetString(POSITION_SYMBOL) != _Symbol) continue;
+
+      double openPrice = PositionGetDouble(POSITION_PRICE_OPEN);
+      double curSL     = PositionGetDouble(POSITION_SL);
+      ENUM_POSITION_TYPE posType = (ENUM_POSITION_TYPE)PositionGetInteger(POSITION_TYPE);
+
+      if(posType == POSITION_TYPE_BUY)
+      {
+         double startLevel = openPrice + atr * InpTrailingStart;
+         if(prevClose > startLevel)
+         {
+            double newSL = NormalizeDouble(prevClose - atr * InpTrailingStep, _Digits);
+            if(newSL > curSL + _Point) ModifyStopLoss(ticket, newSL);
+         }
+      }
+      else if(posType == POSITION_TYPE_SELL)
+      {
+         double startLevel = openPrice - atr * InpTrailingStart;
+         if(prevClose < startLevel)
+         {
+            double newSL = NormalizeDouble(prevClose + atr * InpTrailingStep, _Digits);
+            if(curSL == 0 || newSL < curSL - _Point) ModifyStopLoss(ticket, newSL);
+         }
+      }
+   }
+}
+
+//+------------------------------------------------------------------+
+//| 銆恦8.6銆戝弻鍚戝崥寮堬細鎬诲奖绾?vs 瀹炰綋                                   |
+//+------------------------------------------------------------------+
+bool IsWickConflictCandle(int shift)
+{
+   if(!g_useWickConflict) return false;
+   return (GetWickToBodyRatio(shift) > g_maxWickToBody);
+}
+
+double GetWickToBodyRatio(int shift)
+{
+   double body = GetCandleBody(shift);
+   if(body <= 0) return 999.0;
+   double open  = iOpen (_Symbol, PERIOD_CURRENT, shift);
+   double close = iClose(_Symbol, PERIOD_CURRENT, shift);
+   double high  = iHigh (_Symbol, PERIOD_CURRENT, shift);
+   double low   = iLow  (_Symbol, PERIOD_CURRENT, shift);
+   double wicks = (high - MathMax(open, close)) + (MathMin(open, close) - low);
+   return wicks / body;
+}
+
+//+------------------------------------------------------------------+
+//| 銆恦8.6銆戝姩鑳戒紭鍔匡細绐佺牬瀹炰綋寮轰簬杩戞湡鍙嶅悜K绾?                         |
+//+------------------------------------------------------------------+
+bool HasMomentumDominance(bool forBuy, int shift)
+{
+   if(!g_requireMomentum) return true;
+
+   double entryBody = GetCandleBody(shift);
+   if(entryBody <= 0) return false;
+
+   double maxOppBody = 0;
+   int lookback = MathMax(1, g_momentumLookback);
+
+   for(int i = shift + 1; i <= shift + lookback; i++)
+   {
+      bool isOpposite = forBuy ? IsBearishCandle(i) : IsBullishCandle(i);
+      if(!isOpposite) continue;
+      double b = GetCandleBody(i);
+      if(b > maxOppBody) maxOppBody = b;
+   }
+
+   if(maxOppBody <= 0) return true;
+   return (entryBody >= maxOppBody * g_momentumMinRatio);
+}
+
+//+------------------------------------------------------------------+
+//| K绾垮疄浣擄紙缁濆鍊硷級                                                  |
+//+------------------------------------------------------------------+
+double GetCandleBody(int shift)
+{
+   return MathAbs(iClose(_Symbol, PERIOD_CURRENT, shift) -
+                iOpen (_Symbol, PERIOD_CURRENT, shift));
+}
+
+//+------------------------------------------------------------------+
+//| 銆恦8.5銆戝嵄闄㎏绾垮垽鏂?                                               |
+//+------------------------------------------------------------------+
+bool IsDangerousCandle(int shift, double atr)
+{
+   if(g_maxCandleATR <= 0 || atr <= 0) return false;
+   double range = iHigh(_Symbol, PERIOD_CURRENT, shift) - iLow(_Symbol, PERIOD_CURRENT, shift);
+   return (range > atr * g_maxCandleATR);
+}
+
+double GetUpperShadowRatio(int shift)
+{
+   double open  = iOpen (_Symbol, PERIOD_CURRENT, shift);
+   double close = iClose(_Symbol, PERIOD_CURRENT, shift);
+   double high  = iHigh (_Symbol, PERIOD_CURRENT, shift);
+   double low   = iLow  (_Symbol, PERIOD_CURRENT, shift);
+   double range = high - low;
+   if(range <= 0) return 0;
+   return (high - MathMax(open, close)) / range;
+}
+
+double GetLowerShadowRatio(int shift)
+{
+   double open  = iOpen (_Symbol, PERIOD_CURRENT, shift);
+   double close = iClose(_Symbol, PERIOD_CURRENT, shift);
+   double high  = iHigh (_Symbol, PERIOD_CURRENT, shift);
+   double low   = iLow  (_Symbol, PERIOD_CURRENT, shift);
+   double range = high - low;
+   if(range <= 0) return 0;
+   return (MathMin(open, close) - low) / range;
+}
+
+bool IsHighestClose(int shift, int lookback)
+{
+   double targetClose = iClose(_Symbol, PERIOD_CURRENT, shift);
+   for(int i = shift + 1; i <= shift + lookback; i++)
+      if(iClose(_Symbol, PERIOD_CURRENT, i) >= targetClose) return false;
+   return true;
+}
+
+bool IsLowestClose(int shift, int lookback)
+{
+   double targetClose = iClose(_Symbol, PERIOD_CURRENT, shift);
+   for(int i = shift + 1; i <= shift + lookback; i++)
+      if(iClose(_Symbol, PERIOD_CURRENT, i) <= targetClose) return false;
+   return true;
+}
+
+double GetBodyRatio(int shift)
+{
+   double range = iHigh(_Symbol, PERIOD_CURRENT, shift) - iLow(_Symbol, PERIOD_CURRENT, shift);
+   if(range <= 0) return 0;
+   return GetCandleBody(shift) / range;
+}
+
+bool IsBullishCandle(int shift)
+{
+   return iClose(_Symbol, PERIOD_CURRENT, shift) > iOpen(_Symbol, PERIOD_CURRENT, shift);
+}
+
+bool IsBearishCandle(int shift)
+{
+   return iClose(_Symbol, PERIOD_CURRENT, shift) < iOpen(_Symbol, PERIOD_CURRENT, shift);
+}
+
+//+------------------------------------------------------------------+
+//| 銆恦8.62銆戠偣宸鏌?                                                 |
+//+------------------------------------------------------------------+
+bool IsSpreadAcceptable()
+{
+   if(!InpUseSpreadFilter) return true;
+   int maxSpread = InpMaxSpreadPoints;
+   if(maxSpread <= 0) maxSpread = 50;
+   long spread = SymbolInfoInteger(_Symbol, SYMBOL_SPREAD);
+   return (spread <= maxSpread);
+}
+
+//+------------------------------------------------------------------+
+//| 銆恦8.62銆戠粡绾晢鏈€灏忔鎹熻窛绂伙紙points 鈫?price锛?                     |
+//+------------------------------------------------------------------+
+double GetMinStopDistancePrice()
+{
+   long stopsLevel  = SymbolInfoInteger(_Symbol, SYMBOL_TRADE_STOPS_LEVEL);
+   long freezeLevel = SymbolInfoInteger(_Symbol, SYMBOL_TRADE_FREEZE_LEVEL);
+   long level = (long)MathMax((double)stopsLevel, (double)freezeLevel);
+   if(level <= 0) return 0;
+   return level * _Point;
+}
+
+//+------------------------------------------------------------------+
+//| 銆恦8.62銆戝紑浠撳墠鏍￠獙/淇姝㈡崯璺濈                                   |
+//+------------------------------------------------------------------+
+bool NormalizeStopForOpen(ENUM_ORDER_TYPE type, double price, double &sl)
+{
+   double minDist = GetMinStopDistancePrice();
+   if(minDist <= 0) return true;
+
+   if(type == ORDER_TYPE_BUY)
+   {
+      if(price - sl >= minDist) return true;
+      sl = NormalizeDouble(price - minDist, _Digits);
+      if(sl <= 0 || sl >= price)
+      {
+         Print("銆愭鎹熸牎楠屻€戝鍗曟鎹熸棤娉曟弧瓒虫渶灏忚窛绂?| price:", price, " minDist:", minDist);
+         return false;
+      }
+      Print("銆愭鎹熻皟鏁淬€戝鍗曟鎹熸墿灞曡嚦缁忕邯鍟嗘渶灏忚窛绂?| 鏂癝L:", sl);
+      return true;
+   }
+
+   if(sl - price >= minDist) return true;
+   sl = NormalizeDouble(price + minDist, _Digits);
+   if(sl <= price)
+   {
+      Print("銆愭鎹熸牎楠屻€戠┖鍗曟鎹熸棤娉曟弧瓒虫渶灏忚窛绂?| price:", price, " minDist:", minDist);
+      return false;
+   }
+   Print("銆愭鎹熻皟鏁淬€戠┖鍗曟鎹熸墿灞曡嚦缁忕邯鍟嗘渶灏忚窛绂?| 鏂癝L:", sl);
+   return true;
+}
+
+//+------------------------------------------------------------------+
+//| 銆恦8.62銆戜慨鏀规鎹熷墠鏍￠獙璺濈                                        |
+//+------------------------------------------------------------------+
+bool IsStopDistanceValidForModify(ENUM_POSITION_TYPE posType, double newSL)
+{
+   double minDist = GetMinStopDistancePrice();
+   if(minDist <= 0) return true;
+
+   if(posType == POSITION_TYPE_BUY)
+   {
+      double bid = SymbolInfoDouble(_Symbol, SYMBOL_BID);
+      return (bid - newSL >= minDist);
+   }
+
+   double ask = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
+   return (newSL - ask >= minDist);
+}
+
+//+------------------------------------------------------------------+
+//| 鎵嬫暟璁＄畻                                                          |
+//+------------------------------------------------------------------+
+double CalculateLotSize(double slDist)
+{
+   if(slDist <= 0) return 0;
+   double balance  = AccountInfoDouble(ACCOUNT_BALANCE);
+   double risk     = balance * InpRiskPercent / 100.0;
+   double tickVal  = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_TICK_VALUE);
+   double tickSize = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_TICK_SIZE);
+   if(tickSize <= 0 || tickVal <= 0) return 0;
+   double lot = risk / (slDist / tickSize * tickVal);
+   double minL = SymbolInfoDouble(_Symbol, SYMBOL_VOLUME_MIN);
+   double maxL = SymbolInfoDouble(_Symbol, SYMBOL_VOLUME_MAX);
+   double step = SymbolInfoDouble(_Symbol, SYMBOL_VOLUME_STEP);
+   lot = MathFloor(lot / step) * step;
+   return MathMax(minL, MathMin(maxL, lot));
+}
+
+//+------------------------------------------------------------------+
+//| 寮€浠擄紙鎴愬姛鏃惰褰曞叆鍦篕绾夸緵鐐圭伀妫€娴嬶級                                |
+//+------------------------------------------------------------------+
+bool OpenPosition(ENUM_ORDER_TYPE type, double price, double sl, double lot)
+{
+   MqlTradeRequest req = {}; MqlTradeResult res = {};
+   req.action = TRADE_ACTION_DEAL; req.symbol = _Symbol; req.volume = lot;
+   req.type = type; req.price = price; req.sl = sl; req.tp = 0;
+   req.deviation = 20; req.magic = InpMagicNumber; req.comment = InpComment;
+   req.type_filling = ORDER_FILLING_IOC;
+   if(!OrderSend(req, res))
+   {
+      Print("寮€浠撳け璐?| 閿欒:", GetLastError(), " | retcode:", res.retcode,
+            " | ", res.comment, " | 绫诲瀷:", EnumToString(type), " | 鎵嬫暟:", lot);
+      return false;
+   }
+   if(res.retcode != TRADE_RETCODE_DONE && res.retcode != TRADE_RETCODE_PLACED)
+   {
+      Print("寮€浠撴湭纭 | retcode:", res.retcode, " | ", res.comment);
+      return false;
+   }
+
+   g_entryBarTime  = iTime(_Symbol, PERIOD_CURRENT, 1);
+   g_entryBodySize = GetCandleBody(1);
+   Print("寮€浠撴垚鍔?| 绁ㄥ彿:", res.order, " | 浠锋牸:", res.price,
+         " | 鍏ュ満瀹炰綋:", DoubleToString(g_entryBodySize, _Digits));
+   return true;
+}
+
+//+------------------------------------------------------------------+
+//| 骞充粨                                                              |
+//+------------------------------------------------------------------+
+void ClosePosition(ulong ticket)
+{
+   if(!PositionSelectByTicket(ticket)) return;
+
+   ENUM_POSITION_TYPE posType = (ENUM_POSITION_TYPE)PositionGetInteger(POSITION_TYPE);
+   double volume = PositionGetDouble(POSITION_VOLUME);
+
+   MqlTradeRequest req = {}; MqlTradeResult res = {};
+   req.action    = TRADE_ACTION_DEAL;
+   req.position  = ticket;
+   req.symbol    = _Symbol;
+   req.volume    = volume;
+   req.deviation = 20;
+   req.magic     = InpMagicNumber;
+   req.comment   = InpComment;
+
+   if(posType == POSITION_TYPE_BUY)
+   {
+      req.type  = ORDER_TYPE_SELL;
+      req.price = SymbolInfoDouble(_Symbol, SYMBOL_BID);
+   }
+   else
+   {
+      req.type  = ORDER_TYPE_BUY;
+      req.price = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
+   }
+
+   if(!OrderSend(req, res))
+      Print("骞充粨澶辫触 | 绁ㄥ彿:", ticket, " | 閿欒:", GetLastError());
+   else
+   {
+      Print("骞充粨鎴愬姛 | 绁ㄥ彿:", ticket);
+      g_entryBarTime  = 0;
+      g_entryBodySize = 0;
+   }
+}
+
+//+------------------------------------------------------------------+
+//| 淇敼姝㈡崯                                                          |
+//+------------------------------------------------------------------+
+void ModifyStopLoss(ulong ticket, double newSL)
+{
+   if(!PositionSelectByTicket(ticket)) return;
+
+   double curSL = PositionGetDouble(POSITION_SL);
+   newSL = NormalizeDouble(newSL, _Digits);
+   if(MathAbs(newSL - curSL) < _Point) return;
+
+   ENUM_POSITION_TYPE posType = (ENUM_POSITION_TYPE)PositionGetInteger(POSITION_TYPE);
+   if(!IsStopDistanceValidForModify(posType, newSL))
+   {
+      Print("銆愪慨鏀规鎹熻烦杩囥€戣窛绂讳笉瓒?stops/freeze level | 绁ㄥ彿:", ticket, " | 鏂癝L:", newSL);
+      return;
+   }
+
+   MqlTradeRequest req = {}; MqlTradeResult res = {};
+   req.action = TRADE_ACTION_SLTP; req.position = ticket; req.symbol = _Symbol;
+   req.sl = newSL; req.tp = PositionGetDouble(POSITION_TP);
+   if(!OrderSend(req, res))
+   {
+      Print("淇敼姝㈡崯澶辫触 | 绁ㄥ彿:", ticket, " | 閿欒:", GetLastError(),
+            " | retcode:", res.retcode, " | ", res.comment);
+      return;
+   }
+   if(res.retcode != TRADE_RETCODE_DONE)
+      Print("淇敼姝㈡崯鏈敓鏁?| 绁ㄥ彿:", ticket, " | retcode:", res.retcode, " | ", res.comment);
+}
+
+//+------------------------------------------------------------------+
+//| 缁熻鎸佷粨鏁伴噺                                                       |
+//+------------------------------------------------------------------+
+int CountPositions()
+{
+   int count = 0;
+   for(int i = PositionsTotal() - 1; i >= 0; i--)
+   {
+      ulong ticket = PositionGetTicket(i);
+      if(!PositionSelectByTicket(ticket)) continue;
+      if(PositionGetInteger(POSITION_MAGIC) != InpMagicNumber) continue;
+      if(PositionGetString(POSITION_SYMBOL) != _Symbol) continue;
+      count++;
+   }
+   return count;
+}
+//+------------------------------------------------------------------+

@@ -1,0 +1,26 @@
+The Dangerous Candle: The Large Bullish Expansion # 26-2-15｜BTC
+We often see suddenly expanded candles in the market. Many traders fear missing out and rush to enter on these explosive moves.
+However, these impulsive entries are often the ones that get stopped out the most.
+Take today’s BTC as an example.
+BTC 15-Minute Chart Analysis
+BTC 15-Minute Chart Analysis
+After a period of consolidation, price gradually formed a short-term downtrend. At the bottom, a small reversal warning appeared (marked by the pink line in the chart). If we observe carefully, we can draw a gently descending trendline (Trendline 1), which was broken upward at point A.
+Let’s focus on candle A. This is the type of explosive bullish candle many retail traders love to chase. The candle is almost entirely body, with barely any wicks. Its size exceeds all nearby candles — a sudden, exaggerated expansion.
+Based on theory, you might conclude that bullish momentum here is extremely strong. And that’s true — momentum is strong. But in my own trading, this is exactly the kind of setup I would avoid.
+We need to understand one key concept: Strong momentum does not necessarily mean sustainable momentum.
+In markets like Gold, BTC, ETH, and forex, we often see sudden, unexpected volatility. Sometimes it’s not just noise — it becomes a strong one-sided move. These extreme moves create a psychological illusion that the strength will continue. But that is not always the case.
+When a candle suddenly expands, the movement is usually very fast. What appears to be a 15-minute bullish candle may have completed most of its body within just 1–3 minutes. During that rapid move, price changes so quickly that many opposing orders may not have had time to get filled before price has already moved away.
+Not everyone places passive limit orders waiting to be matched. Some traders execute manually, some do not use conditional orders. When price moves too quickly, certain price areas may contain many unfilled or skipped orders. This often leads to a new kind of market imbalance. Price may later revisit those thin-liquidity areas to rebalance orders — even if the broader trend continues afterward.
+This is essentially the core logic behind FVG (Fair Value Gap). In today’s BTC example, price at point A surged upward rapidly. There may have been unfilled sell orders left behind. The move could also have overextended bullish momentum, increasing the probability of a pullback.
+Again: Strong momentum does not guarantee continuation. If price had pulled back and continued downward, point A would have become a false breakout. On a higher timeframe, A and the following candles might even form a pin bar with an upper wick.
+In reality, what happened afterward was this: Price pulled back sharply, almost returning to the low of candle A, but then bulls regained control and pushed price higher again. That is what we see in hindsight.
+But in live market conditions, we cannot precisely predict such outcomes. The “abrupt” nature of that large candle introduces greater uncertainty into the market. The more abrupt the movement, the greater the uncertainty.
+That is why I would avoid entering at point A. Even though the move looks attractive, discipline and rational thinking are more important. Large impulsive moves often hide traps.
+BTC 15-Minute Chart Analysis (Continued)
+BTC 15-Minute Chart Analysis (Continued)
+Next, we observe a consolidation zone (Area 2). There was a blue top warning signal, but no valid upward trendline could be drawn. Therefore, trendline theory could not be applied here. (Every method has situations where it does not work — that is normal.)
+Later, we see Trendline 3, a clear upward structure. After a small bearish candle near the top, it was followed by a larger bearish candle breaking below Trendline 3. This marks a structural shift from bullish to bearish.
+Entering at this structural break, compared to point A:- Lower probability of extreme reversal- Smaller stop-loss distance- Higher probability of price moving in the expected direction
+From the outcome, we can see that entering at the break of Trendline 3 provided at least as much profit potential as chasing at point A — in fact, even more.
+If you had entered at A:- Larger stop-loss- Higher uncertainty- Questionable sustainability of bullish strength- Constant risk of reversal
+So don’t get overly excited when you see a large move. Stay rational. Big moves are often traps. On the other hand, the seemingly less dramatic structural shifts — those confirmed by logic and market validation — often provide clearer direction, more stable trades, and sometimes even unexpected rewards.

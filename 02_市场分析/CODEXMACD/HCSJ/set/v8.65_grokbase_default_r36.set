@@ -1,0 +1,10 @@
+InpUseRiskThrottle=false
+InpMaxDailyDDPercent=0.0
+InpConsecutiveLossLimit=0
+InpCooldownBars=0
+InpMaxOpenPositions=1
+InpRiskLotScale=1.00
+InpRiskWarningDDRatio=0.80
+InpMaxPeakDDPercent=0.0
+InpPeakDDWarningRatio=0.80
+InpComment=SniperEA_v8.65_grokbase_r36

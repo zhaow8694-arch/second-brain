@@ -1,0 +1,174 @@
+{
+  "evidenceSetId": "external-mt5-eurusd-m5-20240101-20240131-no-trade",
+  "expert": {
+    "name": "TradingSystem"
+  },
+  "externalEvidenceRoot": "E:\\GPT\\MT5测试\\Journal Experts Tester",
+  "files": [
+    {
+      "evidenceType": "strategy_tester_html",
+      "expectedFields": [
+        "expertName",
+        "symbol",
+        "period",
+        "dateFrom",
+        "dateTo",
+        "inputs",
+        "totalTrades",
+        "totalDeals",
+        "buyTrades",
+        "sellTrades"
+      ],
+      "expectedParser": "tools/parse_strategy_tester_html_report.py",
+      "fileName": "TesterBacktest.html",
+      "notes": [
+        "metadata-only external evidence reference",
+        "external evidence was not copied into repository"
+      ],
+      "relativePath": "TesterBacktest.html",
+      "required": true
+    },
+    {
+      "evidenceType": "experts_log",
+      "expectedFields": [
+        "riskApproved",
+        "executionAttempts",
+        "riskRejected",
+        "riskRejectTradingDisabled",
+        "orderSendEvidence",
+        "buySellEvidence",
+        "noTradeAssertions"
+      ],
+      "expectedParser": "tools/parse_mt5_log_no_trade_summary.py",
+      "fileName": "日志.txt",
+      "notes": [
+        "metadata-only external evidence reference",
+        "external evidence was not copied into repository"
+      ],
+      "relativePath": "日志.txt",
+      "required": true
+    }
+  ],
+  "inputs": {
+    "InpEaName": "TradingSystem_v0.1.7_core_signal_log_throttle",
+    "InpEmaLookbackShift": "1",
+    "InpEmaMinDistancePoints": "0.0",
+    "InpEnableDebugLog": true,
+    "InpEnableEmaSignal": true,
+    "InpEnableHeartbeatLog": false,
+    "InpEnableNewBarLog": true,
+    "InpEnableRiskObservation": true,
+    "InpEnableTrading": false,
+    "InpEnableTradingTimeFilter": false,
+    "InpFastEmaPeriod": "20",
+    "InpLogEveryNTicks": "100",
+    "InpMagicNumber": "2026050901",
+    "InpMaxOpenPositions": "1",
+    "InpMaxSpreadPoints": "300.0",
+    "InpNewBarLogEveryN": "1000",
+    "InpPrintAccountStateOnInit": true,
+    "InpPrintCoreLogStatsInSummary": true,
+    "InpPrintNewBarLog": true,
+    "InpPrintRiskLogStatsInSummary": true,
+    "InpPrintRiskObservationLog": true,
+    "InpPrintRiskRejectLog": true,
+    "InpPrintRiskRejectOnlyOnReasonChange": true,
+    "InpPrintRuntimeSummary": true,
+    "InpPrintSignalLog": true,
+    "InpPrintSignalLogOnlyOnDirectionChange": true,
+    "InpPrintSignalLogStatsInSummary": true,
+    "InpPrintStartupConfig": true,
+    "InpRiskRejectLogEveryN": "1000",
+    "InpSignalLogEveryN": "1000",
+    "InpSignalTimeframe": "5",
+    "InpSlowEmaPeriod": "50",
+    "InpTradingEndHour": "23",
+    "InpTradingStartHour": "0"
+  },
+  "mt5": {
+    "build": "5836"
+  },
+  "noTradeAssertions": {
+    "buySellEvidence": false,
+    "buyTrades": 0,
+    "executionAttempts": 0,
+    "orderSendEvidence": false,
+    "ordersOpened": 0,
+    "positionsOpened": 0,
+    "riskApproved": 0,
+    "sellTrades": 0,
+    "totalDeals": 0,
+    "totalTrades": 0,
+    "passed": true
+  },
+  "notes": [
+    "evidence manifest is metadata only",
+    "no live trading readiness",
+    "not real trading permission",
+    "not a profitability claim",
+    "no external evidence copied",
+    "no MT5 run during generation",
+    "model missing from parser output; recorded as unknown",
+    "ordersOpened inferred as 0 from zero trades/deals and no trade API evidence",
+    "positionsOpened inferred as 0 from zero trades/deals and no trade API evidence",
+    "official manifest was created from metadata-only external evidence references; no external evidence was copied into the repository",
+    "official manifest does not authorize real trading",
+    "official manifest does not prove profitability",
+    "noTradeAssertions passed: riskApproved=0, executionAttempts=0, totalTrades=0, totalDeals=0, no trade API evidence"
+  ],
+  "parserExpectations": {
+    "htmlParser": [
+      "strategyTester",
+      "inputs",
+      "trade stats"
+    ],
+    "knownGaps": [
+      "model may be unknown",
+      "ordersOpened / positionsOpened may be inferred"
+    ],
+    "logParser": [
+      "riskApproved",
+      "executionAttempts",
+      "risk rejection summary"
+    ],
+    "manifestValidator": [
+      "schema",
+      "no-trade assertions"
+    ]
+  },
+  "repositoryState": {
+    "backtestReportsChanged": false,
+    "backtestSetsChanged": false,
+    "externalEvidenceCopiedIntoRepo": false,
+    "head": "34ddee9 TASK-DOC-176 update state after TASK-TAG-040",
+    "mq5Changed": false,
+    "mt5RunDuringTask": false,
+    "stableTag": "v0.5.14-first-official-manifest-creation-authorization-coverage-audit"
+  },
+  "safetyAssertions": {
+    "noLiveTradingReadinessClaim": true,
+    "noProfitOptimization": true,
+    "noProfitabilityClaim": true,
+    "noRealTrading": true,
+    "noRealTradingAllowedClaim": true,
+    "noExternalEvidenceCopied": true
+  },
+  "schemaVersion": "1.0",
+  "source": "parser_metadata",
+  "strategyTester": {
+    "build": "5836",
+    "dateFrom": "2024.01.01",
+    "dateTo": "2024.01.31",
+    "deposit": "10000.00",
+    "expertName": "TradingSystem",
+    "leverage": "1:100",
+    "model": "unknown",
+    "period": "M5",
+    "symbol": "EURUSD"
+  },
+  "tags": {
+    "stableTag": "v0.5.14-first-official-manifest-creation-authorization-coverage-audit",
+    "stableTagTarget": "e5f1405 TASK-DOC-175 update state after TASK-138"
+  },
+  "taskId": "TASK-139"
+}

@@ -1,0 +1,10 @@
+Copied files/directories:
+  - E:\CODEXMACD\mt5_configs\sniper_v864_fix1_soft_nothrottle_r4_H4_XAUUSD_2020_2025.ini
+  - D:\MT5≤‚ ‘\MetaTrader 5\MQL5\Experts\SniperTrendEA_v8.64_softmerge_fix1.ex5
+  - D:\MT5≤‚ ‘\MetaTrader 5\SingleEAReports\sniper_v864_fix1_soft_nothrottle_r4_2020_2025-holding.png
+  - D:\MT5≤‚ ‘\MetaTrader 5\SingleEAReports\sniper_v864_fix1_soft_nothrottle_r4_2020_2025-hst.png
+  - D:\MT5≤‚ ‘\MetaTrader 5\SingleEAReports\sniper_v864_fix1_soft_nothrottle_r4_2020_2025-mfemae.png
+  - D:\MT5≤‚ ‘\MetaTrader 5\SingleEAReports\sniper_v864_fix1_soft_nothrottle_r4_2020_2025.htm
+  - D:\MT5≤‚ ‘\MetaTrader 5\SingleEAReports\sniper_v864_fix1_soft_nothrottle_r4_2020_2025.png
+Missing files/directories:
+  - D:\MT5ÊµãËØï\MetaTrader 5\MQL5\Profiles\Tester\SniperTrendEA_v8.64_softmerge_soft_nothrottle_r4.set

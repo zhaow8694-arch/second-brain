@@ -1,0 +1,2 @@
+run_id,net_profit,profit_factor,max_balance_dd,max_balance_dd_pct,max_equity_dd,max_equity_dd_pct,relative_equity_dd,relative_equity_dd_pct,total_trades,win_rate,buy_trades,sell_trades,max_consecutive_winning_trades,max_consecutive_losing_trades,max_consecutive_winning_count,max_consecutive_losing_count,status
+"v866_B_quarterly_2015Q1_20260620_051710_case0050",-1920.56,0.48,3480.78,16.18,5271.50,22.89,5271.50,22.89,10,40.00,5,5,1620.23,-1966.42,1,2,completed

@@ -1,0 +1,62 @@
+; saved automatically on 2026.06.13 00:33:56
+; this file contains last used input parameters for testing/optimizing SniperTrendEA_v8.7_RiskFix expert advisor
+;
+; === MACD 鍙傛暟 ===
+InpFastEMA=12||12||1||120||N
+InpSlowEMA=26||26||1||260||N
+InpSignalSMA=9||9||1||90||N
+; === MA200 瓒嬪娍杩囨护锛圔uffer 浣跨敤 ATR 鍊嶆暟锛?==
+InpMA200Period=200||200||1||2000||N
+InpUseMA200Filter=true||false||0||true||N
+InpMA200BufferATR=0||0.0||0.1||0.3||N
+; === 鍏ュ満璐ㄩ噺杩囨护锛圸-Wei 鍝插锛?==
+InpBodyRatio=0.6||0.6||0.060000||6.000000||N
+InpMaxCandleATR=2.0||2.0||0.5||3.5||N
+InpMaxOppositeShadow=0.10||0.1||0.05||0.3||N
+InpRequireFollowThrough=false||false||0||true||N
+InpFollowThroughBars=3||3||1||30||N
+InpConfirmBars=5||2||1||5||N
+InpRequireMACDDir=false||false||0||true||N
+InpCancelPendingOnOppositeFlip=true||false||0||true||N
+; === ADX 瓒嬪娍杩囨护 ===
+InpUseADX=false||false||0||true||N
+InpADXPeriod=14||14||1||140||N
+InpADXThreshold=25.0||25.0||2.500000||250.000000||N
+; === 鏃堕棿杩囨护 ===
+InpUseTimeFilter=false||false||0||true||N
+InpStartHour=8||8||1||80||N
+InpEndHour=20||20||1||200||N
+; === 娉㈠姩鐜囪繃婊?===
+InpUseATRFilter=false||false||0||true||N
+InpATRFilterPeriod=20||20||1||200||N
+InpATRFilterRatio=1.0||1.0||0.100000||10.000000||N
+; === 鏃ョ嚎瓒嬪娍纭 ===
+InpUseDailyFilter=false||false||0||true||N
+; === 椋庨櫓绠＄悊 ===
+InpRiskPercent=0.5||0.5||0.050000||5.000000||N
+InpUseEquityRisk=true||false||0||true||N
+InpUseOrderCalcProfitRisk=true||false||0||true||N
+InpAllowTickValueFallback=false||false||0||true||N
+InpPrintRiskDetails=true||false||0||true||N
+InpATRMultiplier=1.25||1.0||0.25||2.0||N
+InpATRPeriod=14||14||1||140||N
+InpAllowMinLotWhenRiskTooSmall=false||false||0||true||N
+InpMaxPositions=1||1||1||10||N
+; === 淇濇湰涓庣Щ鍔ㄦ鐩?===
+InpUseBreakEven=true||false||0||true||N
+InpBreakEvenStart=2.0||2.0||0.200000||20.000000||N
+InpBreakEvenBuffer=0.1||0.1||0.010000||1.000000||N
+InpUseTrailingStop=true||false||0||true||N
+InpTrailingStart=5||3.0||1.0||6.0||N
+InpTrailingStep=1.5||1.5||0.5||3.5||N
+InpMinStopImproveATR=0.05||0.05||0.005000||0.500000||N
+InpMinStopImprovePoints=10||10||1||100||N
+; === 浜ゆ槗鎵ц璁剧疆 ===
+InpMagicNumber=20260506||20260506||1||202605060||N
+InpComment=SniperEA_v8.7_riskfix
+InpEnableBuy=true||false||0||true||N
+InpEnableSell=true||false||0||true||N
+InpDeviationPoints=20||20||1||200||N
+InpUseSpreadFilter=false||false||0||true||N
+InpMaxSpreadPoints=30||30||1||300||N
+InpDebugMode=true||false||0||true||N

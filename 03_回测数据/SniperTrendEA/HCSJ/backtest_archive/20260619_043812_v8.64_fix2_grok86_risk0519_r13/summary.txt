@@ -1,0 +1,11 @@
+Backtest Archive
+================
+Time: 20260619_043812
+VersionTag: v8.64_fix2_grok86_risk0519_r13
+IniPath: E:\CODEXMACD\mt5_configs\sniper_v864_fix2_grok86_risk0519_r13_H4_XAUUSD_2020_2025.ini
+MQL5Root: D:\MT5≤‚ ‘\MetaTrader 5
+WorkspaceRoot: E:\CODEXMACD
+Expert: SniperTrendEA_v8.64_softmerge_fix2.ex5
+ExpertParameters: SniperTrendEA_v8.64_fix2_grok86_risk0519_r13.set
+ReportRelative: SingleEAReports\sniper_v864_fix2_grok86_risk0519_r13_2020_2025
+Note: r13 fix2 grok8.6 report-actual params with RiskPercent 0.519, risk throttle off

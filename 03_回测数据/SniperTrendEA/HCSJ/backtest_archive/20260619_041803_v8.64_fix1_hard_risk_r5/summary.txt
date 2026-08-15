@@ -1,0 +1,11 @@
+Backtest Archive
+================
+Time: 20260619_041803
+VersionTag: v8.64_fix1_hard_risk_r5
+IniPath: E:\CODEXMACD\mt5_configs\sniper_v864_fix1_hard_risk_r5_H4_XAUUSD_2020_2025.ini
+MQL5Root: D:\MT5²âÊÔ\MetaTrader 5
+WorkspaceRoot: E:\CODEXMACD
+Expert: SniperTrendEA_v8.64_softmerge_fix1.ex5
+ExpertParameters: D:\MT5æµ‹è¯•\MetaTrader 5\MQL5\Profiles\Tester\SniperTrendEA_v8.64_fix1_hard_risk_r5.set
+ReportRelative: SingleEAReports\sniper_v864_fix1_hard_risk_r5_2020_2025
+Note: r5 matrix: MT5-native set format; hardFallback + risk throttle

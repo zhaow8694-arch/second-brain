@@ -1,0 +1,11 @@
+Backtest Archive
+================
+Time: 20260619_042949
+VersionTag: v8.64_fix1_grok86_report_equiv_r8
+IniPath: E:\CODEXMACD\mt5_configs\sniper_v864_fix1_grok86_report_equiv_r8_H4_XAUUSD_2020_2025.ini
+MQL5Root: D:\MT5≤‚ ‘\MetaTrader 5
+WorkspaceRoot: E:\CODEXMACD
+Expert: SniperTrendEA_v8.64_softmerge_fix1.ex5
+ExpertParameters: SniperTrendEA_v8.64_fix1_grok86_report_equiv_r8.set
+ReportRelative: SingleEAReports\sniper_v864_fix1_grok86_report_equiv_r8_2020_2025
+Note: r8 v8.64 with v8.6 report-actual anchor parameters and neutral added risk/quality layers
