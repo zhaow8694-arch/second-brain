@@ -47,3 +47,12 @@ Excalidraw/*.excalidraw.md.bak
 # 零散缓存
 .tmp/
 *.log
+
+# 第三方开源EA（GitHub 有源仓库，本地保留、不入主库避免膨胀）
+01_交易系统/ea代码库/github-gold-ea-top3/
+01_交易系统/来自D盘_MT5测试/完整项目/EA31337/
+
+# photorec 恢复残留
+photorec.*
+recup_dir.*/
+summary_results.txt
