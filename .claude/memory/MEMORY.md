@@ -17,14 +17,14 @@
 |:-------|:------:|
 | backtest_results.db | 6,307 |
 | strategy_versions.db | 51（23个策略） |
-| knowledge_index.db | 114 |
+| knowledge_index.db | 119 |
 | learning_notes.db | 6 |
 | parameter_optimization.db | 0（空）|
 
 ## 知识库规模
 - 总文件：61,018（E 盘主库）+ 61,018（F 盘备份）
 - EA 源码：3,184（MQ5 2,148 + MQ4 1,036）
-- Git 提交：19 次
+- Git 提交：21 次
 
 ## SniperTrendEA 版本总结
 - v8.6 merge (r35probe)：平均 +$74,715，18次测试，推荐版本
